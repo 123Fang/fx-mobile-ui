@@ -3,6 +3,7 @@ export default [
   {
     path: '/',
     name: '主页',
+    // component: () => import('@/views/index.vue')
     redirect : '/ics/install'
   },
   {
@@ -35,6 +36,11 @@ export default [
        name: 'pickerGroup',
        meta: { iframe: true },
        component: () => import('/packages/pickerGroup/doc/doc.md')
+     },{
+       path: 'checkbox',
+       name: 'Checkbox 复选框',
+       meta: { iframe: true },
+       component: () => import('/packages/checkbox/doc/doc.md')
      }
     ]
   },
@@ -46,5 +52,9 @@ export default [
     path: '/iframe/ics/pickerGroup',
     name: 'iframe-pickerGroup',
     component: () => import('/packages/pickerGroup/doc/iframe.md')
+  },{
+    path: '/iframe/ics/checkbox',
+    name: 'iframe-Checkbox 复选框',
+    component: () => import('/packages/checkbox/doc/iframe.md')
   }
 ]

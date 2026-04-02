@@ -1,14 +1,17 @@
 <script setup>
 import demo1 from './demo1.vue'
+import Attributes from './Attributes.vue'
 import preview from '@/components/preview.vue'
 </script>
 
 
-<!-- ## 基本使用
-## vant demo -->
-<div class="componetnsBox">
- 基本使用
-</div>
+## 代码演示
+<div class="componetnsBox">基本使用</div>
 <preview compName="pickerGroup" demoName="demo1"/>
+<br/>
+
+## Attributes 参数
+<Attributes/>
+<br/>
 
 

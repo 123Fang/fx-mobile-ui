@@ -1,5 +1,5 @@
 {
   "calendar": "packages/calendar/index.js",
-  "input": "packages/input/index.js",
-  "inputs": "packages/inputs/index.js"
+  "checkbox": "packages/checkbox/index.js",
+  "pickerGroup": "packages/pickerGroup/index.js"
 }

@@ -28,6 +28,11 @@ export default [
         "title-cn": "PickerGroup 选择器组",
         "title-en": "pickerGroup",
         "path": "/ics/pickerGroup"
+      },
+      {
+        "title-cn": "Checkbox 复选框",
+        "title-en": "Checkbox",
+        "path": "/ics/checkbox"
       }
     ]
   },

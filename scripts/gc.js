@@ -56,7 +56,7 @@ fs.mkdirSync(DIRNAME, { recursive: true });
 const vueComponentContent = `
 <template>
   <div class="icsm-${NORMALIZED_NAME}-container">
-    {{NORMALIZED_NAME}} 组件
+    组件
     <slot />
   </div>
 </template>
@@ -81,10 +81,10 @@ fs.writeFileSync(path.join(DIRNAME, 'index.vue'), vueComponentContent);
 
 const INDEXJSName = NORMALIZED_NAME.slice(0, 1).toUpperCase() + NORMALIZED_NAME.slice(1)
 const indexJsContent = `
-import f${INDEXJSName} from './index.vue'
+import icsm${INDEXJSName} from './index.vue'
 
-f${INDEXJSName}.install = app => {
-  app.component(f${INDEXJSName}.name, f${INDEXJSName})
+icsm${INDEXJSName}.install = app => {
+  app.component(f${INDEXJSName}.name, icsm${INDEXJSName})
 } 
 
 export default f${INDEXJSName}
@@ -168,25 +168,12 @@ import preview from '@/components/preview.vue'
 </script>
 
 # ${NAME.slice(0, 1).toUpperCase() + NAME.slice(1)} 组件
-
-#### ${NAME}组件基本描述...
-
-<br/>
-
-## 基本使用
-
-#### ${NAME} 按钮的基本使用
-
-<br/>
-<div class="componetnsBox">
-  <demo1/>
-</div>
+## 代码演示
+<div class="componetnsBox">基本使用</div>
 <preview compName="${NAME}" demoName="demo1"/>
-
 <br/>
 
 ## Attributes 参数
-
 <Attributes/>
 <br/>
 `

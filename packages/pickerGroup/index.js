@@ -1,6 +1,6 @@
-import fInput from './index.vue';
-fInput.install = function (Vue) {
-  Vue.component(fInput.name, fInput)
+import icsmPickerGroup from './index.vue';
+icsmPickerGroup.install = function (Vue) {
+  Vue.component(icsmPickerGroup.name, icsmPickerGroup)
 }
 // end
-export default fInput
+export default icsmPickerGroup

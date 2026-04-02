@@ -1,6 +1,6 @@
-import fInput from './index.vue';
-fInput.install = function (Vue) {
-  Vue.component(fInput.name, fInput)
+import icsmCalendar from './index.vue';
+icsmCalendar.install = function (Vue) {
+  Vue.component(icsmCalendar.name, icsmCalendar)
 }
 // end
-export default fInput
+export default icsmCalendar

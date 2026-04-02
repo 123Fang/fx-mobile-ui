@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     DemoContainer: typeof import('./src/components/demo-container.vue')['default']
+    ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
     HeaderBlock: typeof import('./src/components/header-block.vue')['default']
     Preview: typeof import('./src/components/preview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -15,6 +16,7 @@ declare module 'vue' {
     Table: typeof import('./src/components/table.vue')['default']
     VanCalendar: typeof import('vant/es')['Calendar']
     VanCell: typeof import('vant/es')['Cell']
+    VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanDatePicker: typeof import('vant/es')['DatePicker']
     VanPickerGroup: typeof import('vant/es')['PickerGroup']
     VanTimePicker: typeof import('vant/es')['TimePicker']
