@@ -46,6 +46,11 @@ export default [
        name: 'DatePicker 日期选择',
        meta: { iframe: true },
        component: () => import('/packages/datePicker/doc/doc.md')
+     },{
+       path: 'timePicker',
+       name: 'TimePicker 时间选择',
+       meta: { iframe: true },
+       component: () => import('/packages/timePicker/doc/doc.md')
      }
     ]
   },
@@ -65,5 +70,9 @@ export default [
     path: '/iframe/ics/datePicker',
     name: 'iframe-DatePicker 日期选择',
     component: () => import('/packages/datePicker/doc/iframe.md')
+  },{
+    path: '/iframe/ics/timePicker',
+    name: 'iframe-TimePicker 时间选择',
+    component: () => import('/packages/timePicker/doc/iframe.md')
   }
 ]

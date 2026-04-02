@@ -2,6 +2,7 @@
 <template>
  <icsm-calendar v-model:show="show" @confirm="onConfirm"></icsm-calendar>
  <button @click="show = !show">show</button>
+ <div>{{date}}</div>
 </template>
 
 <!-- js -->

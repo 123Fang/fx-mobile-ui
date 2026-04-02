@@ -38,6 +38,11 @@ export default [
         "title-cn": "DatePicker 日期选择",
         "title-en": "DatePicker",
         "path": "/ics/datePicker"
+      },
+      {
+        "title-cn": "TimePicker 时间选择",
+        "title-en": "TimePicker",
+        "path": "/ics/timePicker"
       }
     ]
   },

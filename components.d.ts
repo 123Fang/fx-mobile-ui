@@ -16,6 +16,7 @@ declare module 'vue' {
     Table: typeof import('./src/components/table.vue')['default']
     VanCalendar: typeof import('vant/es')['Calendar']
     VanCell: typeof import('vant/es')['Cell']
+    VanCheckbox: typeof import('vant/es')['Checkbox']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanDatePicker: typeof import('vant/es')['DatePicker']
     VanPickerGroup: typeof import('vant/es')['PickerGroup']

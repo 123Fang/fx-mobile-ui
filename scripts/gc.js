@@ -220,4 +220,4 @@ it('should emit click event', () => {
   expect(wrapper.emitted('click')).toHaveLength(1);
 });
 `
-fs.writeFileSync(path.join(DIRNAM_TEST, `${NAME}.test.jsx`), DIRNAM_TEST);
+fs.writeFileSync(path.join(DIRNAM_TEST, `${NAME}.test.jsx`), testContext);
