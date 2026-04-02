@@ -1,0 +1,50 @@
+
+export default [
+  {
+    path: '/',
+    name: '主页',
+    redirect : '/ics/install'
+  },
+  {
+    path: '/ics',
+    name: '组件页面',
+    component: () => import('@/views/home.vue'),
+    children: [
+      {
+        path: '',
+        name: '贡献指南',
+        component: () => import('@/md/participation.md')
+      },
+      {
+        path: 'updatelog',
+        name: '更新日志',
+        component: () => import('@/md/updatelog.md')
+      },
+      {
+        path: 'install',
+        name: '安装使用',
+        component: () => import('@/md/install.md')
+      },
+      {
+       path: 'calendar',
+       name: 'calendar',
+       meta: { iframe: true },
+       component: () => import('/packages/calendar/doc/doc.md')
+     },{
+       path: 'pickerGroup',
+       name: 'pickerGroup',
+       meta: { iframe: true },
+       component: () => import('/packages/pickerGroup/doc/doc.md')
+     }
+    ]
+  },
+  {
+    path: '/iframe/ics/calendar',
+    name: 'iframe-calendar',
+    component: () => import('/packages/calendar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/pickerGroup',
+    name: 'iframe-pickerGroup',
+    component: () => import('/packages/pickerGroup/doc/iframe.md')
+  }
+]
