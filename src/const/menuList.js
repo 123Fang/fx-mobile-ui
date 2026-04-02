@@ -33,6 +33,11 @@ export default [
         "title-cn": "Checkbox 复选框",
         "title-en": "Checkbox",
         "path": "/ics/checkbox"
+      },
+      {
+        "title-cn": "DatePicker 日期选择",
+        "title-en": "DatePicker",
+        "path": "/ics/datePicker"
       }
     ]
   },

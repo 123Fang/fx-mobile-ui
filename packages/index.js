@@ -2,6 +2,7 @@
 
 import icsmCalendar from './calendar/index.js';
 import icsmCheckbox from './checkbox/index.js';
+import icsmDatePicker from './datePicker/index.js';
 import icsmPickerGroup from './pickerGroup/index.js';
 
 // 主题设置 & 版本号
@@ -13,6 +14,7 @@ import '../locale/index'
 const components = [
   icsmCalendar,
   icsmCheckbox,
+  icsmDatePicker,
   icsmPickerGroup
 ];
 
@@ -35,6 +37,7 @@ export {
   install,
   icsmCalendar,
   icsmCheckbox,
+  icsmDatePicker,
   icsmPickerGroup
 }
 

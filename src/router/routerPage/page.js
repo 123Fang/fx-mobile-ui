@@ -41,6 +41,11 @@ export default [
        name: 'Checkbox 复选框',
        meta: { iframe: true },
        component: () => import('/packages/checkbox/doc/doc.md')
+     },{
+       path: 'datePicker',
+       name: 'DatePicker 日期选择',
+       meta: { iframe: true },
+       component: () => import('/packages/datePicker/doc/doc.md')
      }
     ]
   },
@@ -56,5 +61,9 @@ export default [
     path: '/iframe/ics/checkbox',
     name: 'iframe-Checkbox 复选框',
     component: () => import('/packages/checkbox/doc/iframe.md')
+  },{
+    path: '/iframe/ics/datePicker',
+    name: 'iframe-DatePicker 日期选择',
+    component: () => import('/packages/datePicker/doc/iframe.md')
   }
 ]

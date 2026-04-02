@@ -84,10 +84,10 @@ const indexJsContent = `
 import icsm${INDEXJSName} from './index.vue'
 
 icsm${INDEXJSName}.install = app => {
-  app.component(f${INDEXJSName}.name, icsm${INDEXJSName})
+  app.component(icsm${INDEXJSName}.name, icsm${INDEXJSName})
 } 
 
-export default f${INDEXJSName}
+export default icsm${INDEXJSName}
 `
 fs.writeFileSync(path.join(DIRNAME, 'index.js'), indexJsContent);
 
@@ -179,7 +179,7 @@ import preview from '@/components/preview.vue'
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'doc.md'), docContext);
 
-console.log(`创建组件${NORMALIZED_NAME}成功，模版已生成`)
+// console.log(`创建组件${NORMALIZED_NAME}成功，模版已生成`)
 
 
 
@@ -195,5 +195,29 @@ import demoContainer from '@/components/demo-container.vue'
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'iframe.md'), iframeDocContext);
 
-console.log(`创建组件${NORMALIZED_NAME}成功，模版已生成`)
+// console.log(`创建组件${NORMALIZED_NAME}成功，模版已生成`)
 
+
+
+// 生成单元测试
+const DIRNAM_TEST = path.join(DIRNAME, '__test__')
+if (fs.existsSync(DIRNAM_TEST)) {
+  console.log(`${NAME} 测试目录已经存在！`);
+  process.exit(1);
+}
+fs.mkdirSync(DIRNAM_TEST, { recursive: true }); // 创建doc目录
+const testContext = `
+import { nextTick, ref } from 'vue'
+import { mount } from '@vue/test-utils'
+import { describe, expect, it, vi } from 'vitest'
+import ${NAME} from '../index.vue'
+
+
+// demo
+it('should emit click event', () => {
+  const wrapper = mount(${NAME});
+  wrapper.trigger('click');
+  expect(wrapper.emitted('click')).toHaveLength(1);
+});
+`
+fs.writeFileSync(path.join(DIRNAM_TEST, `${NAME}.test.jsx`), DIRNAM_TEST);
