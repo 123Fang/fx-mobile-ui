@@ -61,6 +61,21 @@ export default [
        name: 'Popup 弹出层',
        meta: { iframe: true },
        component: () => import('/packages/popup/doc/doc.md')
+     },{
+       path: 'cell',
+       name: 'Cell 单元格',
+       meta: { iframe: true },
+       component: () => import('/packages/cell/doc/doc.md')
+     },{
+       path: 'cellGroup',
+       name: 'CellGroup 单元格组',
+       meta: { iframe: true },
+       component: () => import('/packages/cellGroup/doc/doc.md')
+     },{
+       path: 'numberKeyboard',
+       name: 'NumberKeyboard 数字键盘',
+       meta: { iframe: true },
+       component: () => import('/packages/numberKeyboard/doc/doc.md')
      }
     ]
   },
@@ -92,5 +107,17 @@ export default [
     path: '/iframe/ics/popup',
     name: 'iframe-Popup 弹出层',
     component: () => import('/packages/popup/doc/iframe.md')
+  },{
+    path: '/iframe/ics/cell',
+    name: 'iframe-Cell 单元格',
+    component: () => import('/packages/cell/doc/iframe.md')
+  },{
+    path: '/iframe/ics/cellGroup',
+    name: 'iframe-CellGroup 单元格组',
+    component: () => import('/packages/cellGroup/doc/iframe.md')
+  },{
+    path: '/iframe/ics/numberKeyboard',
+    name: 'iframe-NumberKeyboard 数字键盘',
+    component: () => import('/packages/numberKeyboard/doc/iframe.md')
   }
 ]

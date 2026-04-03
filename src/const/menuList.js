@@ -23,6 +23,16 @@ export default [
         "title-cn": "Popup 弹出层",
         "title-en": "Popup",
         "path": "/ics/popup"
+      },
+      {
+        "title-cn": "Cell 单元格",
+        "title-en": "Cell",
+        "path": "/ics/cell"
+      },
+      {
+        "title-cn": "CellGroup 单元格组",
+        "title-en": "CellGroup",
+        "path": "/ics/cellGroup"
       }
     ]
   },
@@ -59,6 +69,11 @@ export default [
         "title-cn": "Cascader 级联选择",
         "title-en": "Cascader",
         "path": "/ics/cascader"
+      },
+      {
+        "title-cn": "NumberKeyboard 数字键盘",
+        "title-en": "NumberKeyboard",
+        "path": "/ics/numberKeyboard"
       }
     ]
   },

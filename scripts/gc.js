@@ -13,6 +13,11 @@ const args = process.argv.slice(2);
 const NAME = args[0]; // 组件名
 const FILE_PATH = path.join(path.resolve(__dirname), '..', 'packages');
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+
 if (!args.length) {
   console.log('请填写组件名');
   console.log('Usage: button（单个） 或 dropDown（小驼峰式）')
@@ -55,7 +60,7 @@ fs.mkdirSync(DIRNAME, { recursive: true });
 
 const vueComponentContent = `
 <template>
-  <div class="icsm-${NORMALIZED_NAME}-container">
+  <div class="icsm-${camelToKebab(NORMALIZED_NAME)}-container">
     组件
     <slot />
   </div>
@@ -65,7 +70,7 @@ const vueComponentContent = `
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-${NORMALIZED_NAME}',
+  name: 'icsm-${camelToKebab(NORMALIZED_NAME)}',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -73,7 +78,7 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-${NORMALIZED_NAME}-container {}
+.icsm-${camelToKebab(NORMALIZED_NAME)}-container {}
 </style>
 `
 fs.writeFileSync(path.join(DIRNAME, 'index.vue'), vueComponentContent);
@@ -105,7 +110,7 @@ fs.mkdirSync(DIRNAM_DOC, { recursive: true }); // 创建doc目录
 
 const demoContext = `<!-- html -->
 <template>
-  <icsm-${NORMALIZED_NAME}></icsm-${NORMALIZED_NAME}>
+  <icsm-${camelToKebab(NORMALIZED_NAME)}></icsm-${camelToKebab(NORMALIZED_NAME)}>
 </template>
 
 <!-- js -->

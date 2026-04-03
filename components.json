@@ -1,9 +1,12 @@
 {
   "calendar": "packages/calendar/index.js",
   "cascader": "packages/cascader/index.js",
+  "cell": "packages/cell/index.js",
+  "cellGroup": "packages/cellGroup/index.js",
+  "numberKeyboard": "packages/numberKeyboard/index.js",
   "pickerGroup": "packages/pickerGroup/index.js",
-  "checkbox": "packages/checkbox/index.js",
   "datePicker": "packages/datePicker/index.js",
+  "checkbox": "packages/checkbox/index.js",
   "popup": "packages/popup/index.js",
   "timePicker": "packages/timePicker/index.js"
 }

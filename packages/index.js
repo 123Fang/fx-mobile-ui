@@ -2,9 +2,12 @@
 
 import icsmCalendar from './calendar/index.js';
 import icsmCascader from './cascader/index.js';
+import icsmCell from './cell/index.js';
+import icsmCellGroup from './cellGroup/index.js';
+import icsmNumberKeyboard from './numberKeyboard/index.js';
 import icsmPickerGroup from './pickerGroup/index.js';
-import icsmCheckbox from './checkbox/index.js';
 import icsmDatePicker from './datePicker/index.js';
+import icsmCheckbox from './checkbox/index.js';
 import icsmPopup from './popup/index.js';
 import icsmTimePicker from './timePicker/index.js';
 
@@ -17,9 +20,12 @@ import '../locale/index'
 const components = [
   icsmCalendar,
   icsmCascader,
+  icsmCell,
+  icsmCellGroup,
+  icsmNumberKeyboard,
   icsmPickerGroup,
-  icsmCheckbox,
   icsmDatePicker,
+  icsmCheckbox,
   icsmPopup,
   icsmTimePicker
 ];
@@ -43,9 +49,12 @@ export {
   install,
   icsmCalendar,
   icsmCascader,
+  icsmCell,
+  icsmCellGroup,
+  icsmNumberKeyboard,
   icsmPickerGroup,
-  icsmCheckbox,
   icsmDatePicker,
+  icsmCheckbox,
   icsmPopup,
   icsmTimePicker
 }
