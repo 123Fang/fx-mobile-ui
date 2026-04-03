@@ -3,8 +3,8 @@ FROM harbor.chowtaifook.sz/devops/node:18.18.0-alpine AS builder
 WORKDIR /app
 COPY . .
 RUN npm config set registry=http://nexus-rep.chowtaifook.sz:8081/repository/npm-all/
-npm install && \
-npm run build:doc
+RUN npm install && \
+     npm run build:doc
 
 
 # ================= Runtime container =================
