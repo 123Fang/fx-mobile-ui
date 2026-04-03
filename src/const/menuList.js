@@ -16,6 +16,17 @@ export default [
     ]
   },
   {
+    "title-cn": "基础组件",
+    "title-en": "base components",
+    "list": [
+      {
+        "title-cn": "Popup 弹出层",
+        "title-en": "Popup",
+        "path": "/ics/popup"
+      }
+    ]
+  },
+  {
     "title-cn": "表单组件",
     "title-en": "form components",
     "list": [
@@ -43,8 +54,33 @@ export default [
         "title-cn": "TimePicker 时间选择",
         "title-en": "TimePicker",
         "path": "/ics/timePicker"
+      },
+      {
+        "title-cn": "Cascader 级联选择",
+        "title-en": "Cascader",
+        "path": "/ics/cascader"
       }
     ]
+  },
+  {
+    "title-cn": "反馈组件",
+    "title-en": "feedback components",
+    "list": []
+  },
+  {
+    "title-cn": "展示组件",
+    "title-en": "display components",
+    "list": []
+  },
+  {
+    "title-cn": "导航组件",
+    "title-en": "navigation components",
+    "list": []
+  },
+  {
+    "title-cn": "业务组件",
+    "title-en": "business components",
+    "list": []
   },
   {
     "title-cn": "其他",

@@ -51,6 +51,16 @@ export default [
        name: 'TimePicker 时间选择',
        meta: { iframe: true },
        component: () => import('/packages/timePicker/doc/doc.md')
+     },{
+       path: 'cascader',
+       name: 'Cascader 级联选择',
+       meta: { iframe: true },
+       component: () => import('/packages/cascader/doc/doc.md')
+     },{
+       path: 'popup',
+       name: 'Popup 弹出层',
+       meta: { iframe: true },
+       component: () => import('/packages/popup/doc/doc.md')
      }
     ]
   },
@@ -74,5 +84,13 @@ export default [
     path: '/iframe/ics/timePicker',
     name: 'iframe-TimePicker 时间选择',
     component: () => import('/packages/timePicker/doc/iframe.md')
+  },{
+    path: '/iframe/ics/cascader',
+    name: 'iframe-Cascader 级联选择',
+    component: () => import('/packages/cascader/doc/iframe.md')
+  },{
+    path: '/iframe/ics/popup',
+    name: 'iframe-Popup 弹出层',
+    component: () => import('/packages/popup/doc/iframe.md')
   }
 ]

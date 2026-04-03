@@ -1,7 +1,9 @@
 {
   "calendar": "packages/calendar/index.js",
+  "cascader": "packages/cascader/index.js",
+  "pickerGroup": "packages/pickerGroup/index.js",
   "checkbox": "packages/checkbox/index.js",
   "datePicker": "packages/datePicker/index.js",
-  "pickerGroup": "packages/pickerGroup/index.js",
+  "popup": "packages/popup/index.js",
   "timePicker": "packages/timePicker/index.js"
 }

@@ -7,7 +7,7 @@ import { genComponent, genDocRoute, genLibEntry } from './jobs/index.js'
 const CREATE_TYPES = ['component', 'lib-entry', 'doc-route']
 // 文档分类
 // const DOCS_CATEGORIES = ['常规', '通用', '数据', '交互', '其他']
-const DOCS_CATEGORIES = ['表单组件', '其他']
+const DOCS_CATEGORIES = ['基础组件', '表单组件', '反馈组件','展示组件','导航组件', '业务组件', '其他']
 
 
 //
