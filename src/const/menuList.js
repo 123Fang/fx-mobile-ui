@@ -38,6 +38,16 @@ export default [
         "title-cn": "Button 按钮",
         "title-en": "Button",
         "path": "/ics/button"
+      },
+      {
+        "title-cn": "Icon 图标",
+        "title-en": "Icon",
+        "path": "/ics/icon"
+      },
+      {
+        "title-cn": "Space 间距",
+        "title-en": "Space",
+        "path": "/ics/space"
       }
     ]
   },
@@ -84,7 +94,17 @@ export default [
         "title-cn": "Field 输入框",
         "title-en": "Field",
         "path": "/ics/field"
-      }
+      },
+      {
+        "title-cn": "Radio 单选框",
+        "title-en": "Radio",
+        "path": "/ics/radio"
+      },
+      // {
+      //   "title-cn": "RadioGroup 单选框组",
+      //   "title-en": "RadioGroup",
+      //   "path": "/ics/radioGroup"
+      // }
     ]
   },
   {
@@ -95,7 +115,13 @@ export default [
   {
     "title-cn": "展示组件",
     "title-en": "display components",
-    "list": []
+    "list": [
+      {
+        "title-cn": "Swipe 轮播",
+        "title-en": "Swipe",
+        "path": "/ics/swipe"
+      }
+    ]
   },
   {
     "title-cn": "导航组件",

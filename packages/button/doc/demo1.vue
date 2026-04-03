@@ -62,4 +62,8 @@ import { ref } from 'vue'
   flex-wrap: wrap;
   gap: 16px;
 }
+.notice-swipe {
+  height: 40px;
+  line-height: 40px;
+}
 </style>

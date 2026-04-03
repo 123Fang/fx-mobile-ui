@@ -86,6 +86,36 @@ export default [
        name: 'Button 按钮',
        meta: { iframe: true },
        component: () => import('/packages/button/doc/doc.md')
+     },{
+       path: 'swipe',
+       name: 'Swipe 轮播',
+       meta: { iframe: true },
+       component: () => import('/packages/swipe/doc/doc.md')
+     },{
+       path: 'swipeItem',
+       name: 'SwipeItem 轮播项',
+       meta: { iframe: true },
+       component: () => import('/packages/swipeItem/doc/doc.md')
+     },{
+       path: 'icon',
+       name: 'Icon 图标',
+       meta: { iframe: true },
+       component: () => import('/packages/icon/doc/doc.md')
+     },{
+       path: 'space',
+       name: 'Space 间距',
+       meta: { iframe: true },
+       component: () => import('/packages/space/doc/doc.md')
+     },{
+       path: 'radio',
+       name: 'Radio 单选框',
+       meta: { iframe: true },
+       component: () => import('/packages/radio/doc/doc.md')
+     },{
+       path: 'radioGroup',
+       name: 'RadioGroup 单选框组',
+       meta: { iframe: true },
+       component: () => import('/packages/radioGroup/doc/doc.md')
      }
     ]
   },
@@ -137,5 +167,29 @@ export default [
     path: '/iframe/ics/button',
     name: 'iframe-Button 按钮',
     component: () => import('/packages/button/doc/iframe.md')
+  },{
+    path: '/iframe/ics/swipe',
+    name: 'iframe-Swipe 轮播',
+    component: () => import('/packages/swipe/doc/iframe.md')
+  },{
+    path: '/iframe/ics/swipeItem',
+    name: 'iframe-SwipeItem 轮播项',
+    component: () => import('/packages/swipeItem/doc/iframe.md')
+  },{
+    path: '/iframe/ics/icon',
+    name: 'iframe-Icon 图标',
+    component: () => import('/packages/icon/doc/iframe.md')
+  },{
+    path: '/iframe/ics/space',
+    name: 'iframe-Space 间距',
+    component: () => import('/packages/space/doc/iframe.md')
+  },{
+    path: '/iframe/ics/radio',
+    name: 'iframe-Radio 单选框',
+    component: () => import('/packages/radio/doc/iframe.md')
+  },{
+    path: '/iframe/ics/radioGroup',
+    name: 'iframe-RadioGroup 单选框组',
+    component: () => import('/packages/radioGroup/doc/iframe.md')
   }
 ]
