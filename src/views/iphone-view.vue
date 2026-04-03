@@ -10,7 +10,7 @@ import { ref, reactive, onMounted } from 'vue'
 
 const route = useRoute()
 // const srciframe = ref('http://localhost:5173/#/iframe/input')
-const srciframe = ref(window.location.href.split('#')[0]  + '#/404')
+const srciframe = ref(window.location.href.split('#')[0] + '#/404')
 const myIframe = ref(null)
 
 const isInIframe = computed(() => {
@@ -31,6 +31,10 @@ onMounted(() => {
         background-color: #f0f0f0;
         margin: 0!important;
         padding:0!important;
+      }
+      body::-webkit-scrollbar {
+        width: 0px; /* Chrome/Safari/Edge */
+        background: transparent;
       }
     `
     iframeDoc.head.appendChild(style)

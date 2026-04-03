@@ -119,9 +119,9 @@ const demoContext = `<!-- html -->
 
 <!-- js -->
 <script setup>
-import { reactive,ref } from "vue";
+import { ref } from "vue";
 
-// init
+
 </script>
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'demo1.vue'), demoContext);

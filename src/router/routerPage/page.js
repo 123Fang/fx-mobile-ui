@@ -76,6 +76,16 @@ export default [
        name: 'NumberKeyboard 数字键盘',
        meta: { iframe: true },
        component: () => import('/packages/numberKeyboard/doc/doc.md')
+     },{
+       path: 'field',
+       name: 'Field 输入框',
+       meta: { iframe: true },
+       component: () => import('/packages/field/doc/doc.md')
+     },{
+       path: 'button',
+       name: 'Button 按钮',
+       meta: { iframe: true },
+       component: () => import('/packages/button/doc/doc.md')
      }
     ]
   },
@@ -119,5 +129,13 @@ export default [
     path: '/iframe/ics/numberKeyboard',
     name: 'iframe-NumberKeyboard 数字键盘',
     component: () => import('/packages/numberKeyboard/doc/iframe.md')
+  },{
+    path: '/iframe/ics/field',
+    name: 'iframe-Field 输入框',
+    component: () => import('/packages/field/doc/iframe.md')
+  },{
+    path: '/iframe/ics/button',
+    name: 'iframe-Button 按钮',
+    component: () => import('/packages/button/doc/iframe.md')
   }
 ]

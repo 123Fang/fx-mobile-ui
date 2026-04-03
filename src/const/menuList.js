@@ -33,6 +33,11 @@ export default [
         "title-cn": "CellGroup 单元格组",
         "title-en": "CellGroup",
         "path": "/ics/cellGroup"
+      },
+      {
+        "title-cn": "Button 按钮",
+        "title-en": "Button",
+        "path": "/ics/button"
       }
     ]
   },
@@ -74,6 +79,11 @@ export default [
         "title-cn": "NumberKeyboard 数字键盘",
         "title-en": "NumberKeyboard",
         "path": "/ics/numberKeyboard"
+      },
+      {
+        "title-cn": "Field 输入框",
+        "title-en": "Field",
+        "path": "/ics/field"
       }
     ]
   },
