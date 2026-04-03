@@ -17,10 +17,12 @@ declare module 'vue' {
     VanCalendar: typeof import('vant/es')['Calendar']
     VanCascader: typeof import('vant/es')['Cascader']
     VanCell: typeof import('vant/es')['Cell']
+    VanCellGroup: typeof import('vant/es')['CellGroup']
     VanCheckbox: typeof import('vant/es')['Checkbox']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanDatePicker: typeof import('vant/es')['DatePicker']
     VanPickerGroup: typeof import('vant/es')['PickerGroup']
+    VanPopup: typeof import('vant/es')['Popup']
     VanTimePicker: typeof import('vant/es')['TimePicker']
   }
 }
