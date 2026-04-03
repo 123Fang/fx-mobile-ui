@@ -116,6 +116,11 @@ export default [
        name: 'RadioGroup 单选框组',
        meta: { iframe: true },
        component: () => import('/packages/radioGroup/doc/doc.md')
+     },{
+       path: 'picker',
+       name: 'Picker 选择器',
+       meta: { iframe: true },
+       component: () => import('/packages/picker/doc/doc.md')
      }
     ]
   },
@@ -191,5 +196,9 @@ export default [
     path: '/iframe/ics/radioGroup',
     name: 'iframe-RadioGroup 单选框组',
     component: () => import('/packages/radioGroup/doc/iframe.md')
+  },{
+    path: '/iframe/ics/picker',
+    name: 'iframe-Picker 选择器',
+    component: () => import('/packages/picker/doc/iframe.md')
   }
 ]

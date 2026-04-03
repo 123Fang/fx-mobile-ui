@@ -1,20 +1,21 @@
 {
   "button": "packages/button/index.js",
+  "cascader": "packages/cascader/index.js",
   "cellGroup": "packages/cellGroup/index.js",
   "calendar": "packages/calendar/index.js",
-  "cascader": "packages/cascader/index.js",
-  "checkbox": "packages/checkbox/index.js",
+  "datePicker": "packages/datePicker/index.js",
   "cell": "packages/cell/index.js",
   "icon": "packages/icon/index.js",
   "field": "packages/field/index.js",
-  "datePicker": "packages/datePicker/index.js",
+  "checkbox": "packages/checkbox/index.js",
   "numberKeyboard": "packages/numberKeyboard/index.js",
+  "picker": "packages/picker/index.js",
   "pickerGroup": "packages/pickerGroup/index.js",
-  "radio": "packages/radio/index.js",
   "popup": "packages/popup/index.js",
-  "swipe": "packages/swipe/index.js",
-  "timePicker": "packages/timePicker/index.js",
+  "space": "packages/space/index.js",
   "radioGroup": "packages/radioGroup/index.js",
+  "swipe": "packages/swipe/index.js",
   "swipeItem": "packages/swipeItem/index.js",
-  "space": "packages/space/index.js"
+  "radio": "packages/radio/index.js",
+  "timePicker": "packages/timePicker/index.js"
 }

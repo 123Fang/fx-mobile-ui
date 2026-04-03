@@ -100,11 +100,11 @@ export default [
         "title-en": "Radio",
         "path": "/ics/radio"
       },
-      // {
-      //   "title-cn": "RadioGroup 单选框组",
-      //   "title-en": "RadioGroup",
-      //   "path": "/ics/radioGroup"
-      // }
+      {
+        "title-cn": "Picker 选择器",
+        "title-en": "Picker",
+        "path": "/ics/picker"
+      }
     ]
   },
   {
