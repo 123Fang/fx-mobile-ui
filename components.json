@@ -1,0 +1,20 @@
+{
+  "button": "packages/button/index.js",
+  "cellGroup": "packages/cellGroup/index.js",
+  "calendar": "packages/calendar/index.js",
+  "cascader": "packages/cascader/index.js",
+  "checkbox": "packages/checkbox/index.js",
+  "cell": "packages/cell/index.js",
+  "icon": "packages/icon/index.js",
+  "field": "packages/field/index.js",
+  "datePicker": "packages/datePicker/index.js",
+  "numberKeyboard": "packages/numberKeyboard/index.js",
+  "pickerGroup": "packages/pickerGroup/index.js",
+  "radio": "packages/radio/index.js",
+  "popup": "packages/popup/index.js",
+  "swipe": "packages/swipe/index.js",
+  "timePicker": "packages/timePicker/index.js",
+  "radioGroup": "packages/radioGroup/index.js",
+  "swipeItem": "packages/swipeItem/index.js",
+  "space": "packages/space/index.js"
+}
