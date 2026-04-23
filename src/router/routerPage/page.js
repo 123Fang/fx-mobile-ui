@@ -121,6 +121,16 @@ export default [
        name: 'Picker 选择器',
        meta: { iframe: true },
        component: () => import('/packages/picker/doc/doc.md')
+     },{
+       path: 'grid',
+       name: 'Grid 宫格',
+       meta: { iframe: true },
+       component: () => import('/packages/grid/doc/doc.md')
+     },{
+       path: 'gridItem',
+       name: 'GridItem 宫格',
+       meta: { iframe: true },
+       component: () => import('/packages/gridItem/doc/doc.md')
      }
     ]
   },
@@ -200,5 +210,13 @@ export default [
     path: '/iframe/ics/picker',
     name: 'iframe-Picker 选择器',
     component: () => import('/packages/picker/doc/iframe.md')
+  },{
+    path: '/iframe/ics/grid',
+    name: 'iframe-Grid 宫格',
+    component: () => import('/packages/grid/doc/iframe.md')
+  },{
+    path: '/iframe/ics/gridItem',
+    name: 'iframe-GridItem 宫格',
+    component: () => import('/packages/gridItem/doc/iframe.md')
   }
 ]

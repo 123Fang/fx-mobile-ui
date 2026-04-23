@@ -126,7 +126,18 @@ export default [
   {
     "title-cn": "导航组件",
     "title-en": "navigation components",
-    "list": []
+    "list": [
+      {
+        "title-cn": "Grid 宫格",
+        "title-en": "Grid",
+        "path": "/ics/grid"
+      },
+      {
+        "title-cn": "GridItem 宫格",
+        "title-en": "GridItem",
+        "path": "/ics/gridItem"
+      }
+    ]
   },
   {
     "title-cn": "业务组件",

@@ -177,7 +177,6 @@ import preview from '@/components/preview.vue'
 </script>
 
 # ${NAME.slice(0, 1).toUpperCase() + NAME.slice(1)} 组件
-## 代码演示
 <div class="componetnsBox">基本使用</div>
 <preview compName="${NAME}" demoName="demo1"/>
 <br/>

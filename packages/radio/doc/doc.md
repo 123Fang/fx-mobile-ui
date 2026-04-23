@@ -6,7 +6,7 @@ import preview from '@/components/preview.vue'
 </script>
 
 # Radio 组件
-## 代码演示
+## 
 <div class="componetnsBox">基本使用</div>
 <preview compName="radio" demoName="demo1"/>
 <br/>

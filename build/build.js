@@ -13,7 +13,7 @@ import replace from '@rollup/plugin-replace';
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 export default defineConfig({
-  base: '/dist/',
+  base: './',
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],

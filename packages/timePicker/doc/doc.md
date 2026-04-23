@@ -6,7 +6,7 @@ import preview from '@/components/preview.vue'
 </script>
 
 # TimePicker 组件
-## 代码演示
+## 
 <div class="componetnsBox">基本使用</div>
 <preview compName="timePicker" demoName="demo1"/>
 <br/>

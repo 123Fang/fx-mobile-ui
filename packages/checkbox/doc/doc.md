@@ -6,7 +6,7 @@ import preview from '@/components/preview.vue'
 </script>
 
 # checkbox 组件
-## 代码演示
+## 
 <br/>
 <div class="componetnsBox">基本使用</div>
 <preview compName="checkbox" demoName="demo1"/>

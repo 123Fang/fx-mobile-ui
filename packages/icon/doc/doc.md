@@ -6,7 +6,7 @@ import preview from '@/components/preview.vue'
 </script>
 
 # Icon 组件
-## 代码演示
+## 
 <div class="componetnsBox">基本使用</div>
 <preview compName="icon" demoName="demo1"/>
 <br/>

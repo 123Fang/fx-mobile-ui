@@ -5,7 +5,7 @@ import preview from '@/components/preview.vue'
 </script>
 
 
-## 代码演示
+## 
 <div class="componetnsBox">基本使用</div>
 <preview compName="pickerGroup" demoName="demo1"/>
 <br/>
