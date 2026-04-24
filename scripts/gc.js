@@ -60,7 +60,7 @@ fs.mkdirSync(DIRNAME, { recursive: true });
 
 const vueComponentContent = `
 <template>
-  <van-${camelToKebab(NORMALIZED_NAME)} v-bind="$attrs">
+  <van-${camelToKebab(NORMALIZED_NAME)} v-bind="$attrs"  ref="innerRef">
 
     <!-- 透传所有插槽 -->
     <template v-for="(_, name) in $slots" :key="name" #[name]="slotProps">
@@ -78,6 +78,11 @@ defineOptions({
 })
 const emit = defineEmits([])
 const props = defineProps({})
+
+const innerRef = ref(null)
+defineExpose({
+  innerRef, /** 暴露 element plus 组件 ref **/
+})
 
 // init here
 </script>
@@ -112,19 +117,16 @@ fs.mkdirSync(DIRNAM_DOC, { recursive: true }); // 创建doc目录
 
 
 
-const demoContext = `<!-- html -->
-<template>
-  <icsm-${camelToKebab(NORMALIZED_NAME)}></icsm-${camelToKebab(NORMALIZED_NAME)}>
-</template>
+const demoContext = `
+import { ref } from 'vue';
+import { cdnURL, useTranslate } from '@/docs/site';
 
-<!-- js -->
-<script setup>
-import { ref } from "vue";
+// copy demo
 
 
-</script>
+
 `
-fs.writeFileSync(path.join(DIRNAM_DOC, 'demo1.vue'), demoContext);
+fs.writeFileSync(path.join(DIRNAM_DOC, 'demo.vue'), demoContext);
 
 const attrTableContext = `
 <template>
@@ -171,15 +173,11 @@ fs.writeFileSync(path.join(DIRNAM_DOC, 'Attributes.vue'), attrTableContext);
 
 const docContext = `
 <script setup>
-import demo1 from './demo1.vue'
 import Attributes from './Attributes.vue'
-import preview from '@/components/preview.vue'
 </script>
 
-# ${NAME.slice(0, 1).toUpperCase() + NAME.slice(1)} 组件
-<div class="componetnsBox">基本使用</div>
-<preview compName="${NAME}" demoName="demo1"/>
-<br/>
+
+
 
 ## Attributes 参数
 <Attributes/>
@@ -193,13 +191,9 @@ fs.writeFileSync(path.join(DIRNAM_DOC, 'doc.md'), docContext);
 
 const iframeDocContext = `
 <script setup>
-import demo1 from './demo1.vue'
-import demoContainer from '@/components/demo-container.vue'
+import demo from './demo.vue'
 </script>
-
-<demoContainer title='基本使用'>
- <demo1/>
-</demoContainer>
+<demo/>
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'iframe.md'), iframeDocContext);
 

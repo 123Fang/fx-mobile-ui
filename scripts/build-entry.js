@@ -53,6 +53,10 @@ import pkg from '../package.json'
 import '../locale/index'
 
 
+// 导出 vant toast 组件内部 function call 和 辅助函数
+export * from "vant/es/toast/index.mjs";
+
+
 const components = [
   {{install}}
 ];

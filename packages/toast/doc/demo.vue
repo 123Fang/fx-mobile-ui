@@ -7,7 +7,11 @@ import {
   showFailToast,
   showSuccessToast,
   showLoadingToast,
+  // 修改默认配置
+  setToastDefaultOptions, 
+  resetToastDefaultOptions
 } from 'ctf-ics-mobile-ui';
+
 
 const t = useTranslate({
   'zh-CN': {
@@ -53,6 +57,28 @@ const t = useTranslate({
     updateMessage: 'Update Message',
     positionBottom: 'Bottom',
     customPosition: 'Custom Position',
+  },
+  'zh-TW': {
+    fail: '失敗提示',
+    text: '提示內容',
+    text2: '成功文案',
+    text3: '失敗文案',
+    text4: (second: number) => `倒計時 ${second} 秒`,
+    title1: '文字提示',
+    title2: '加載提示',
+    title3: '成功/失敗提示',
+    success: '成功提示',
+    breakAll: '換行時截斷單詞',
+    breakWord: '換行時不截斷單詞',
+    wordBreak: '文字換行方式',
+    customIcon: '自定義圖標',
+    customImage: '自定義圖片',
+    loadingType: '自定義加載圖標',
+    positionTop: '頂部展示',
+    useComponent: '使用 Toast 組件',
+    updateMessage: '動態更新提示',
+    positionBottom: '底部展示',
+    customPosition: '自定義位置',
   },
 });
 
@@ -182,5 +208,15 @@ const image = cdnURL('cat.jpeg');
         />
       </template>
     </icsm-toast>
+  </demo-block>
+
+
+
+  <demo-block card title="修改默认配置">
+    <icsm-cell is-link title="setToastDefaultOptions({ duration: 9000 });" @click="setToastDefaultOptions({ duration: 9000 });" />
+    <icsm-cell is-link title="setToastDefaultOptions('loading', { forbidClick: true });" @click="setToastDefaultOptions('loading', { forbidClick: false });" />
+    <icsm-cell is-link title="resetToastDefaultOptions();" @click="resetToastDefaultOptions();" />
+    <icsm-cell is-link title="resetToastDefaultOptions('loading');" @click="resetToastDefaultOptions('loading');" />
+   
   </demo-block>
 </template>

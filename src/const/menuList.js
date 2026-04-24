@@ -53,6 +53,11 @@ export default [
         "title-cn": "Toast 轻提示",
         "title-en": "Toast",
         "path": "/ics/toast"
+      },
+      {
+        "title-cn": "Image 图片",
+        "title-en": "Image",
+        "path": "/ics/image"
       }
     ]
   },

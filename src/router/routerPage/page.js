@@ -141,6 +141,11 @@ export default [
        name: 'Toast 轻提示',
        meta: { iframe: true },
        component: () => import('/packages/toast/doc/doc.md')
+     },{
+       path: 'image',
+       name: 'Image 图片',
+       meta: { iframe: true },
+       component: () => import('/packages/image/doc/doc.md')
      }
     ]
   },
@@ -236,5 +241,9 @@ export default [
     path: '/iframe/ics/toast',
     name: 'iframe-Toast 轻提示',
     component: () => import('/packages/toast/doc/iframe.md')
+  },{
+    path: '/iframe/ics/image',
+    name: 'iframe-Image 图片',
+    component: () => import('/packages/image/doc/iframe.md')
   }
 ]
