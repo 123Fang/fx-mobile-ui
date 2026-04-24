@@ -7,10 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    DemoBlock: typeof import('./src/components/demo-block.vue')['default']
     DemoContainer: typeof import('./src/components/demo-container.vue')['default']
     ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
+    ElTag: typeof import('element-plus/es')['ElTag']
     HeaderBlock: typeof import('./src/components/header-block.vue')['default']
     Preview: typeof import('./src/components/preview.vue')['default']
+    PreviewString: typeof import('./src/components/preview-string.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Table: typeof import('./src/components/table.vue')['default']
@@ -26,6 +29,7 @@ declare module 'vue' {
     VanGrid: typeof import('vant/es')['Grid']
     VanGridItem: typeof import('vant/es')['GridItem']
     VanIcon: typeof import('vant/es')['Icon']
+    VanImage: typeof import('vant/es')['Image']
     VanNumberKeyboard: typeof import('vant/es')['NumberKeyboard']
     VanPicker: typeof import('vant/es')['Picker']
     VanPickerGroup: typeof import('vant/es')['PickerGroup']
@@ -35,6 +39,8 @@ declare module 'vue' {
     VanSpace: typeof import('vant/es')['Space']
     VanSwipe: typeof import('vant/es')['Swipe']
     VanSwipeItem: typeof import('vant/es')['SwipeItem']
+    VanTag: typeof import('vant/es')['Tag']
     VanTimePicker: typeof import('vant/es')['TimePicker']
+    VanToast: typeof import('vant/es')['Toast']
   }
 }

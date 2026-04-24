@@ -88,6 +88,7 @@ export default defineConfig({
       "@": path.resolve(dirname, "src"),
       'ctf-ics-mobile-ui': path.resolve(dirname, "packages/index.js"),
       "@style": path.resolve(dirname, "style"),
+      "@locale": path.resolve(dirname, "locale"),
     },
   },
   css: {

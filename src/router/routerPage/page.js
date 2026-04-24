@@ -131,6 +131,16 @@ export default [
        name: 'GridItem 宫格',
        meta: { iframe: true },
        component: () => import('/packages/gridItem/doc/doc.md')
+     },{
+       path: 'tag',
+       name: 'Tag 标签',
+       meta: { iframe: true },
+       component: () => import('/packages/tag/doc/doc.md')
+     },{
+       path: 'toast',
+       name: 'Toast 轻提示',
+       meta: { iframe: true },
+       component: () => import('/packages/toast/doc/doc.md')
      }
     ]
   },
@@ -218,5 +228,13 @@ export default [
     path: '/iframe/ics/gridItem',
     name: 'iframe-GridItem 宫格',
     component: () => import('/packages/gridItem/doc/iframe.md')
+  },{
+    path: '/iframe/ics/tag',
+    name: 'iframe-Tag 标签',
+    component: () => import('/packages/tag/doc/iframe.md')
+  },{
+    path: '/iframe/ics/toast',
+    name: 'iframe-Toast 轻提示',
+    component: () => import('/packages/toast/doc/iframe.md')
   }
 ]

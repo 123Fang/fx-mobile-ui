@@ -31,4 +31,6 @@ function initLang() {
 
 const locale = initLang()
 
+export const vantLocale = Locale
+
 export default locale

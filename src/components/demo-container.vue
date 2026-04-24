@@ -16,9 +16,12 @@ const props = defineProps({
 <style lang="scss">
 .iframe-demo-container {
   padding: 10px;
+  border-radius: 8px ;
   .title {
     margin-bottom: 6px;
     color: #969799;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 </style>

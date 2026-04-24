@@ -48,6 +48,11 @@ export default [
         "title-cn": "Space 间距",
         "title-en": "Space",
         "path": "/ics/space"
+      },
+      {
+        "title-cn": "Toast 轻提示",
+        "title-en": "Toast",
+        "path": "/ics/toast"
       }
     ]
   },
@@ -120,6 +125,11 @@ export default [
         "title-cn": "Swipe 轮播",
         "title-en": "Swipe",
         "path": "/ics/swipe"
+      },
+      {
+        "title-cn": "Tag 标签",
+        "title-en": "Tag",
+        "path": "/ics/tag"
       }
     ]
   },

@@ -2,6 +2,11 @@
   <div class="header-block-box">
     <div class="logoBox">
       <a href="javascript:;" @click="toHome">CTF-ICS-MOBILE-UI</a>
+      <template v-if="isInIframe">
+        <icsm-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">ctf-ics-mobile-ui@{{icsVersion}}</icsm-tag>
+        <icsm-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">vant@{{vantVersion}}</icsm-tag>
+        <icsm-tag color="rgba(36, 149, 86, .9)">vue@{{vueVersion}}</icsm-tag>
+      </template>
     </div>
 
     <div class="toolsBox" v-if="isInIframe">
@@ -33,6 +38,11 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { reactive, ref, onMounted, computed } from 'vue'
+import  { version as  vantVersion} from 'vant'
+import  { version as  vueVersion} from 'vue'
+import  icsUIPKG  from '../../package.json'
+const icsVersion = icsUIPKG.version
+
 const color = ref('#249556')
 const predefineColors = ref([
   '#A10D1F', // franchised

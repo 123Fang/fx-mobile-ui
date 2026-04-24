@@ -17,10 +17,8 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-
 const showTop = ref(false)
 const showBottom = ref(false)
 const showLeft = ref(false)
 const showRight = ref(false)
-
 </script>

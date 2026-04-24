@@ -1,17 +1,18 @@
-<!-- html -->
 <template>
-  <icsm-cell title="展示弹出层" is-link @click="showPopup" />
-  <icsm-popup v-model:show="show" :style="{ padding: '64px' }">内容</icsm-popup>
+  <icsm-cell title="关闭图标" is-link @click="showCloseIcon = true" />
+  <icsm-cell title="自定义图标" is-link @click="showCustomCloseIcon = true" />
+  <icsm-cell title="图标位置" is-link @click="showCustomIconPosition = true" />
+
+  <icsm-popup v-model:show="showCloseIcon" closeable position="bottom" :style="{ height: '30%' }" />
+  <icsm-popup v-model:show="showCustomCloseIcon" closeable close-icon="close" position="bottom"
+    :style="{ height: '30%' }" />
+  <icsm-popup v-model:show="showCustomIconPosition" closeable close-icon-position="top-left" position="bottom"
+    :style="{ height: '30%' }" />
+
 </template>
-
-<!-- js -->
 <script setup>
-import { ref } from 'vue'
-
-const show = ref(false)
-const showPopup = () => {
-  show.value = true
-}
-
-// init
+import { ref } from 'vue';
+const showCloseIcon = ref(false);
+const showCustomCloseIcon = ref(false);
+const showCustomIconPosition = ref(false);
 </script>

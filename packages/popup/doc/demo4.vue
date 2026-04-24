@@ -1,17 +1,13 @@
-<!-- html -->
 <template>
-  <icsm-cell title="展示弹出层" is-link @click="showPopup" />
-  <icsm-popup v-model:show="show" :style="{ padding: '64px' }">内容</icsm-popup>
+  <icsm-cell title="圆角弹窗（居中）" is-link @click="showRoundCornerCenter = true" />
+  <icsm-popup v-model:show="showRoundCornerCenter" round :style="{ padding: '64px' }" />
+
+  <icsm-cell title="圆角弹窗（底部）" is-link @click="showRoundCornerBottom = true" />
+  <icsm-popup v-model:show="showRoundCornerBottom" round position="bottom" :style="{ height: '30%' }" />
 </template>
 
-<!-- js -->
 <script setup>
 import { ref } from 'vue'
-
-const show = ref(false)
-const showPopup = () => {
-  show.value = true
-}
-
-// init
+const showRoundCornerBottom = ref(false);
+const showRoundCornerCenter = ref(false);
 </script>

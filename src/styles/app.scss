@@ -24,9 +24,17 @@ h6 {
   font-weight: 500;
 }
 
+h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #606266;
+  font-weight: 600;
+
+}
+
 h1,h2 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-top:  30px;
+  margin-bottom: 30px;
   color: #606266;
   font-weight: 600;
 }
@@ -109,6 +117,68 @@ pre > code {
 pre > code > span {
   font-size: 14px;
 }
+.markdown-body {
+  margin-bottom: 20px;
+  table {
+    width: 100%;
+    margin-top: 12px;
+    color: var(--van-doc-text-color-3);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fafafa;
+    padding-left: 20px ;
+
+    th {
+      padding: 8px 10px;
+      font-weight: 600;
+      text-align: left;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    td {
+      padding: 8px;
+      border-top: 1px solid var(--van-doc-border-color);
+
+      &:first-child {
+        padding-left: 0;
+
+        // version tag
+        code {
+          margin: 0;
+          padding: 2px 6px;
+          color: var(--van-doc-blue);
+          font-weight: 600;
+          font-size: 11px;
+          background-color: rgba(25, 137, 250, 0.15);
+          border-radius: 20px;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    em {
+      display: inline-block;
+      color: var(--van-doc-green);
+      font-size: 14px;
+      font-family: var(--van-doc-code-font-family);
+      font-style: normal;
+      max-width: 300px;
+      -webkit-font-smoothing: auto;
+    }
+  }
+}
+
+
 
 
 

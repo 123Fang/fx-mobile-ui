@@ -1,17 +1,40 @@
-<!-- html -->
 <template>
-  <icsm-cell title="展示弹出层" is-link @click="showPopup" />
-  <icsm-popup v-model:show="show" :style="{ padding: '64px' }">内容</icsm-popup>
+    <icsm-cell
+      title="监听点击事件"
+      is-link
+      @click="showClickEvents = true"
+    />
+    <icsm-popup
+      v-model:show="showClickEvents"
+      position="bottom"
+      :style="{ height: '30%' }"
+      closeable
+      @click-overlay="showToast('click-overlay')"
+      @click-close-icon="showToast('click-close-icon')"
+    />
+
+    <icsm-cell
+      title="监听显示事件"
+      is-link
+      @click="showDisplayEvents = true"
+    />
+    <icsm-popup
+      v-model:show="showDisplayEvents"
+      position="bottom"
+      :style="{ height: '30%' }"
+      @open="showToast('open')"
+      @opened="showToast('opened')"
+      @close="showToast('close')"
+      @closed="showToast('closed')"
+    />
 </template>
 
-<!-- js -->
 <script setup>
 import { ref } from 'vue'
+import { showToast } from 'vant';
 
-const show = ref(false)
-const showPopup = () => {
-  show.value = true
-}
 
+const showClickEvents = ref(false);
+const showDisplayEvents = ref(false);
 // init
 </script>
