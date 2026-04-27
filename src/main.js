@@ -29,6 +29,7 @@ if( window.self !== window.top) {
 
 
 const app = createApp(App);
+window.app = app
 // 模拟基座传入的 props
 const props = JSON.parse(localStorage.getItem('props')) || {}
 app.use(icsUI, props);

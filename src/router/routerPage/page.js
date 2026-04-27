@@ -146,6 +146,41 @@ export default [
        name: 'Image 图片',
        meta: { iframe: true },
        component: () => import('/packages/image/doc/doc.md')
+     },{
+       path: 'loading',
+       name: 'Loading 加载',
+       meta: { iframe: true },
+       component: () => import('/packages/loading/doc/doc.md')
+     },{
+       path: 'row',
+       name: 'Row 布局',
+       meta: { iframe: true },
+       component: () => import('/packages/row/doc/doc.md')
+     },{
+       path: 'col',
+       name: 'Col 布局',
+       meta: { iframe: true },
+       component: () => import('/packages/col/doc/doc.md')
+     },{
+       path: 'tabs',
+       name: 'Tabs 标签页',
+       meta: { iframe: true },
+       component: () => import('/packages/tabs/doc/doc.md')
+     },{
+       path: 'tab',
+       name: 'Tab 标签页',
+       meta: { iframe: true },
+       component: () => import('/packages/tab/doc/doc.md')
+     },{
+       path: 'notify',
+       name: 'Notify 消息提示',
+       meta: { iframe: true },
+       component: () => import('/packages/notify/doc/doc.md')
+     },{
+       path: 'lazyload',
+       name: 'Lazyload 懒加载',
+       meta: { iframe: true },
+       component: () => import('/packages/lazyload/doc/doc.md')
      }
     ]
   },
@@ -245,5 +280,33 @@ export default [
     path: '/iframe/ics/image',
     name: 'iframe-Image 图片',
     component: () => import('/packages/image/doc/iframe.md')
+  },{
+    path: '/iframe/ics/loading',
+    name: 'iframe-Loading 加载',
+    component: () => import('/packages/loading/doc/iframe.md')
+  },{
+    path: '/iframe/ics/row',
+    name: 'iframe-Row 布局',
+    component: () => import('/packages/row/doc/iframe.md')
+  },{
+    path: '/iframe/ics/col',
+    name: 'iframe-Col 布局',
+    component: () => import('/packages/col/doc/iframe.md')
+  },{
+    path: '/iframe/ics/tabs',
+    name: 'iframe-Tabs 标签页',
+    component: () => import('/packages/tabs/doc/iframe.md')
+  },{
+    path: '/iframe/ics/tab',
+    name: 'iframe-Tab 标签页',
+    component: () => import('/packages/tab/doc/iframe.md')
+  },{
+    path: '/iframe/ics/notify',
+    name: 'iframe-Notify 消息提示',
+    component: () => import('/packages/notify/doc/iframe.md')
+  },{
+    path: '/iframe/ics/lazyload',
+    name: 'iframe-Lazyload 懒加载',
+    component: () => import('/packages/lazyload/doc/iframe.md')
   }
 ]

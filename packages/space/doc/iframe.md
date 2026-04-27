@@ -1,9 +1,10 @@
 
 <script setup>
-import demo1 from './demo1.vue'
-import demoContainer from '@/components/demo-container.vue'
+import demo from './demo.vue'
 </script>
 
-<demoContainer title='基本使用'>
- <demo1/>
-</demoContainer>
+<div class="demo-space">
+ <demo/>
+</div>
+
+

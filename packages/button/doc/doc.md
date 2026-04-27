@@ -258,3 +258,6 @@ import type {
 | --icsm-button-disabled-opacity     | _var(--icsm-disabled-opacity)_ | -    |
 | --icsm-button-icon-size            | _1.2em_                       | -    |
 | --icsm-button-loading-icon-size    | _20px_                        | -    |
+
+
+<br/><br/><br/>

@@ -58,6 +58,11 @@ export default [
         "title-cn": "Image 图片",
         "title-en": "Image",
         "path": "/ics/image"
+      },
+      {
+        "title-cn": "Layout 布局",
+        "title-en": "Col",
+        "path": "/ics/col"
       }
     ]
   },
@@ -120,7 +125,18 @@ export default [
   {
     "title-cn": "反馈组件",
     "title-en": "feedback components",
-    "list": []
+    "list": [
+      {
+        "title-cn": "Loading 加载",
+        "title-en": "Loading",
+        "path": "/ics/loading"
+      },
+      {
+        "title-cn": "Notify 消息提示",
+        "title-en": "Notify",
+        "path": "/ics/notify"
+      }
+    ]
   },
   {
     "title-cn": "展示组件",
@@ -135,6 +151,11 @@ export default [
         "title-cn": "Tag 标签",
         "title-en": "Tag",
         "path": "/ics/tag"
+      },
+      {
+        "title-cn": "Lazyload 懒加载",
+        "title-en": "Lazyload",
+        "path": "/ics/lazyload"
       }
     ]
   },
@@ -151,6 +172,16 @@ export default [
         "title-cn": "GridItem 宫格",
         "title-en": "GridItem",
         "path": "/ics/gridItem"
+      },
+      {
+        "title-cn": "Tabs 标签页",
+        "title-en": "Tabs",
+        "path": "/ics/tabs"
+      },
+      {
+        "title-cn": "Tab 标签页",
+        "title-en": "Tab",
+        "path": "/ics/tab"
       }
     ]
   },
