@@ -10,7 +10,7 @@ Layout 提供了 `icsm-row` 和 `icsm-col` 两个组件来进行行列布局。
 
 ```js
 import { createApp } from 'vue';
-import { Col, Row } from 'vant';
+import { Col, Row } from 'ctf-ics-mobile-ui';
 
 const app = createApp();
 app.use(Col);

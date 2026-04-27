@@ -1,3 +1,3 @@
 import { Lazyload  } from 'vant';
-Lazyload.name = 'icsLazyload'
+Lazyload.name = 'icsmLazyload'
 export default Lazyload

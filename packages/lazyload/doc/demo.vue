@@ -1,10 +1,4 @@
-<script lang="ts">
-import Lazyload from 'ctf-ics-mobile-ui';
 
-if (window.app) {
-  window.app.use(Lazyload, { lazyComponent: true });
-}
-</script>
 
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -45,6 +39,7 @@ const componentImageList = [cdnURL('apple-8.jpeg'), cdnURL('apple-7.jpeg')];
   </demo-block>
 
   <demo-block :title="t('title3')">
+    <!--- v-lazy指令 和  lazy-component组件 已全局注册-->
     <lazy-component>
       <img v-for="img in componentImageList" :key="img" v-lazy="img" />
     </lazy-component>

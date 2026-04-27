@@ -1,5 +1,5 @@
 
-import icsmLazyload from './index.vue'
+import icsmLazyload from './lazyload.js'
 
 // icsmLazyload.install = app => {
 //   app.component(icsmLazyload.name, icsmLazyload)

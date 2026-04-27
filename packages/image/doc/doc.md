@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Image as IcsmImage } from 'vant';
+import { Image as IcsmImage } from ‘ctf-ics-mobile-ui’;
 
 const app = createApp();
 app.use(IcsmImage);
@@ -85,7 +85,7 @@ app.use(IcsmImage);
 
 ```js
 import { createApp } from 'vue';
-import { Lazyload } from 'vant';
+import { Lazyload } from ‘ctf-ics-mobile-ui’;
 
 const app = createApp();
 app.use(Lazyload);
@@ -170,7 +170,7 @@ app.use(Lazyload);
 组件导出以下类型定义：
 
 ```ts
-import type { ImageFit, ImagePosition, ImageProps } from 'vant';
+import type { ImageFit, ImagePosition, ImageProps } from ‘ctf-ics-mobile-ui’;
 ```
 
 ## 主题定制
@@ -215,7 +215,7 @@ import type { ImageFit, ImagePosition, ImageProps } from 'vant';
 </template>
 
 <script>
-import { Image } from 'vant';
+import { Image } from ‘ctf-ics-mobile-ui’;
 
 export default {
   components: {
@@ -226,3 +226,6 @@ export default {
 ```
 
 这是因为 \<image> 标签是原生的 SVG 标签，Vue 不允许将原生标签名注册为组件名，使用 \<icsm-image> 即可规避这个问题。
+
+
+<br/><br/><br/>

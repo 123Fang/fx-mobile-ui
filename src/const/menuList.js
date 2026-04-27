@@ -156,6 +156,16 @@ export default [
         "title-cn": "Lazyload 懒加载",
         "title-en": "Lazyload",
         "path": "/ics/lazyload"
+      },
+      {
+        "title-cn": "List 列表",
+        "title-en": "List",
+        "path": "/ics/list"
+      },
+      {
+        "title-cn": "Progress 进度条",
+        "title-en": "Progress",
+        "path": "/ics/progress"
       }
     ]
   },

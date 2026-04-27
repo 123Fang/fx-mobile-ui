@@ -181,6 +181,16 @@ export default [
        name: 'Lazyload 懒加载',
        meta: { iframe: true },
        component: () => import('/packages/lazyload/doc/doc.md')
+     },{
+       path: 'list',
+       name: 'List 列表',
+       meta: { iframe: true },
+       component: () => import('/packages/list/doc/doc.md')
+     },{
+       path: 'progress',
+       name: 'Progress 进度条',
+       meta: { iframe: true },
+       component: () => import('/packages/progress/doc/doc.md')
      }
     ]
   },
@@ -308,5 +318,13 @@ export default [
     path: '/iframe/ics/lazyload',
     name: 'iframe-Lazyload 懒加载',
     component: () => import('/packages/lazyload/doc/iframe.md')
+  },{
+    path: '/iframe/ics/list',
+    name: 'iframe-List 列表',
+    component: () => import('/packages/list/doc/iframe.md')
+  },{
+    path: '/iframe/ics/progress',
+    name: 'iframe-Progress 进度条',
+    component: () => import('/packages/progress/doc/iframe.md')
   }
 ]

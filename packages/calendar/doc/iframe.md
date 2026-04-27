@@ -4,6 +4,4 @@ import demoContainer from '@/components/demo-container.vue'
 </script>
 
 
-<demo-container title='基本使用'>
  <demo1/>
-</demo-container>

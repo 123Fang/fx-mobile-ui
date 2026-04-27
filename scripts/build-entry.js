@@ -128,6 +128,14 @@ function buildEntry() {
         name: componentName,
       })
     );
+
+    
+    let alias_componentName = `${componentName} as ${name.slice(0, 1).toUpperCase() + name.slice(1)}`;
+    exportsTemplate.push(
+      render(EXPORTS_TEMPLATE, {
+        name: alias_componentName,
+      })
+    );
   });
 
   let endOfLine = os.EOL;
