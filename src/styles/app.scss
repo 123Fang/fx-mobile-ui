@@ -118,11 +118,32 @@ pre > code > span {
   font-size: 14px;
 }
 .markdown-body {
+  ul{
+    padding-left: 32px;
+    // margin-left: 24px;
+  }
+  ul li {
+    padding: 8px 0px;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+    list-style: circle;
+    code {
+      color: var(--icsm-doc-code-color);
+      font-family: var(--icsm-doc-code-font-family);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background-color: var(--icsm-doc-code-background);
+      border-radius: var(--icsm-doc-border-radius);
+      padding: 2px 4px;
+    }
+  }
   margin-bottom: 20px;
+  /** vant md 表格 **/
   table {
     width: 100%;
     margin-top: 12px;
-    color: var(--van-doc-text-color-3);
+    color: var(--icsm-doc-text-color-3);
     font-size: 14px;
     line-height: 1.5;
     background-color: #fafafa;
@@ -144,7 +165,7 @@ pre > code > span {
 
     td {
       padding: 8px;
-      border-top: 1px solid var(--van-doc-border-color);
+      border-top: 1px solid var(--icsm-doc-border-color);
 
       &:first-child {
         padding-left: 0;
@@ -153,7 +174,7 @@ pre > code > span {
         code {
           margin: 0;
           padding: 2px 6px;
-          color: var(--van-doc-blue);
+          color: var(--icsm-doc-blue);
           font-weight: 600;
           font-size: 11px;
           background-color: rgba(25, 137, 250, 0.15);
@@ -168,15 +189,139 @@ pre > code > span {
 
     em {
       display: inline-block;
-      color: var(--van-doc-green);
+      color: var(--icsm-doc-green);
       font-size: 14px;
-      font-family: var(--van-doc-code-font-family);
+      font-family: var(--icsm-doc-code-font-family);
       font-style: normal;
       max-width: 300px;
       -webkit-font-smoothing: auto;
     }
   }
+   /** vant md 表格 **/
 }
+
+
+/** vant 文档样式变量 **/
+
+:root,
+:host {
+  // colors
+  --icsm-doc-black: #000;
+  --icsm-doc-white: #fff;
+  --icsm-doc-gray-1: #f7f8fa;
+  --icsm-doc-gray-2: #f2f3f5;
+  --icsm-doc-gray-3: #ebedf0;
+  --icsm-doc-gray-4: #dcdee0;
+  --icsm-doc-gray-5: #c8c9cc;
+  --icsm-doc-gray-6: #969799;
+  --icsm-doc-gray-7: #646566;
+  --icsm-doc-gray-8: #323233;
+  --icsm-doc-blue: #1989fa;
+  --icsm-doc-green: #07c160;
+  --icsm-doc-purple: #8e69d3;
+
+  // sizes
+  --icsm-doc-padding: 32px;
+  --icsm-doc-row-max-width: 1680px;
+  --icsm-doc-nav-width: 220px;
+  --icsm-doc-border-radius: 20px;
+  --icsm-doc-simulator-width: 360px;
+  --icsm-doc-simulator-height: 620px;
+  --icsm-doc-header-top-height: 64px;
+
+
+  // fonts
+  --icsm-doc-code-font-family: 'Menlo', 'Source Code Pro', 'Monaco',
+    'Inconsolata', monospace;
+
+
+em {
+  letter-spacing: 1px;
+}
+
+
+  /** 文档默认模式的变量 start **/ 
+  // text
+  --icsm-doc-text-color-1: var(--icsm-doc-black);
+  --icsm-doc-text-color-2: var(--icsm-doc-gray-8);
+  --icsm-doc-text-color-3: #34495e;
+  --icsm-doc-text-color-4: var(--icsm-doc-gray-6);
+  --icsm-doc-link-color: var(--icsm-doc-blue);
+
+  // background
+  --icsm-doc-background: #eff2f5;
+  --icsm-doc-background-2: var(--icsm-doc-white);
+  --icsm-doc-background-3: var(--icsm-doc-white);
+  --icsm-doc-header-background: #011f3c;
+  --icsm-doc-border-color: var(--icsm-doc-gray-2);
+
+  // code
+  --icsm-doc-code-color: #58727e;
+  --icsm-doc-code-comment-color: var(--icsm-doc-gray-6);
+  --icsm-doc-code-background: var(--icsm-doc-gray-1);
+
+  // blockquote
+  --icsm-doc-blockquote-color: #2f85da;
+  --icsm-doc-blockquote-background: #ecf9ff;
+}
+ /** 文档默认模式的变量 end **/ 
+
+
+
+
+// 默认模式的变量,已copy到外层（icsm文档暂时用不到）
+.icsm-doc-theme-light {
+  // text
+  --icsm-doc-text-color-1: var(--icsm-doc-black);
+  --icsm-doc-text-color-2: var(--icsm-doc-gray-8);
+  --icsm-doc-text-color-3: #34495e;
+  --icsm-doc-text-color-4: var(--icsm-doc-gray-6);
+  --icsm-doc-link-color: var(--icsm-doc-blue);
+
+  // background
+  --icsm-doc-background: #eff2f5;
+  --icsm-doc-background-2: var(--icsm-doc-white);
+  --icsm-doc-background-3: var(--icsm-doc-white);
+  --icsm-doc-header-background: #011f3c;
+  --icsm-doc-border-color: var(--icsm-doc-gray-2);
+
+  // code
+  --icsm-doc-code-color: #58727e;
+  --icsm-doc-code-comment-color: var(--icsm-doc-gray-6);
+  --icsm-doc-code-background: var(--icsm-doc-gray-1);
+
+  // blockquote
+  --icsm-doc-blockquote-color: #2f85da;
+  --icsm-doc-blockquote-background: #ecf9ff;
+}
+
+// 暗黑模式的变量（icsm文档暂时用不到）
+.icsm-doc-theme-dark {
+  // text
+  --icsm-doc-text-color-1: var(--icsm-doc-white);
+  --icsm-doc-text-color-2: rgba(255, 255, 255, 0.9);
+  --icsm-doc-text-color-3: rgba(255, 255, 255, 0.75);
+  --icsm-doc-text-color-4: rgba(255, 255, 255, 0.6);
+  --icsm-doc-link-color: #1bb5fe;
+
+  // background
+  --icsm-doc-background: #202124;
+  --icsm-doc-background-2: rgba(255, 255, 255, 0.06);
+  --icsm-doc-background-3: rgba(255, 255, 255, 0.1);
+  --icsm-doc-header-background: rgba(1, 31, 60, 0.3);
+  --icsm-doc-border-color: #3a3a3c;
+
+  // code
+  --icsm-doc-code-color: rgba(200, 200, 200, 0.85);
+  --icsm-doc-code-comment-color: var(--icsm-doc-gray-7);
+  --icsm-doc-code-background: rgba(0, 0, 0, 0.24);
+
+  // blockquote
+  --icsm-doc-blockquote-color: #bae6fd;
+  --icsm-doc-blockquote-background: rgba(7, 89, 133, 0.25);
+}
+
+/** vant 文档样式变量 **/
 
 
 

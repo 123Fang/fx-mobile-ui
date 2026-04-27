@@ -218,9 +218,137 @@ export default {
 };
 ```
 
+## API
 
-## Attributes 参数
-<Attributes/>
+### 方法
+
+Vant 中导出了以下 Toast 相关的辅助函数：
+
+| 方法名 | 说明 | 参数 | 返回值 |
+| --- | --- | --- | --- |
+| showToast | 展示文字提示 | `ToastOptions \| string` | Toast 实例 |
+| showLoadingToast | 展示加载提示 | `ToastOptions \| string` | Toast 实例 |
+| showSuccessToast | 展示成功提示 | `ToastOptions \| string` | Toast 实例 |
+| showFailToast | 展示失败提示 | `ToastOptions \| string` | Toast 实例 |
+| closeToast | 关闭当前展示的提示 | `closeAll: boolean` | `void` |
+| allowMultipleToast | 允许同时存在多个 Toast | - | `void` |
+| setToastDefaultOptions | 修改默认配置，影响所有的 `showToast` 调用。传入 type 可以修改指定类型 Toast 的默认配置 | `type \| ToastOptions` | `void` |
+| resetToastDefaultOptions | 重置默认配置，影响所有的 `showToast` 调用。传入 type 可以重置指定类型 Toast 的默认配置 | `type` | `void` |
+
+### ToastOptions 数据结构
+
+调用 `showToast` 等方法时，支持传入以下选项：
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| type | 提示类型，可选值为 `loading` `success` `fail` `html` | _ToastType_ | `text` |
+| position | 位置，可选值为 `top` `bottom` | _ToastPosition_ | `middle` |
+| message | 文本内容，支持通过`\n`换行 | _string_ | `''` |
+| wordBreak | 文本内容的换行方式，可选值为 `normal` `break-all` `break-word` | _ToastWordBreak_ | `'break-all'` |
+| icon | 自定义图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](#/zh-CN/icon#props) | _string_ | - |
+| iconSize | 图标大小，如 `20px` `2em`，默认单位为 `px` | _number \| string_ | `36px` |
+| iconPrefix | 图标类名前缀，等同于 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props) | _string_ | `van-icon` |
+| overlay | 是否显示背景遮罩层 | _boolean_ | `false` |
+| forbidClick | 是否禁止背景点击 | _boolean_ | `false` |
+| closeOnClick | 是否在点击后关闭 | _boolean_ | `false` |
+| closeOnClickOverlay | 是否在点击遮罩层后关闭 | _boolean_ | `false` |
+| loadingType | [加载图标类型](#/zh-CN/loading), 可选值为 `spinner` | _string_ | `circular` |
+| duration | 展示时长(ms)，值为 0 时，toast 不会消失 | _number_ | `2000` |
+| className | 自定义类名 | _string \| Array \| object_ | - |
+| overlayClass | 自定义遮罩层类名 | _string \| Array \| object_ | - |
+| overlayStyle | 自定义遮罩层样式 | _object_ | - |
+| transition | 动画类名，等价于 [transition](https://cn.vuejs.org/api/built-in-components.html#transition) 的`name`属性 | _string_ | `van-fade` |
+| teleport | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_ | `body` |
+| z-index | 将组件的 z-index 层级设置为一个固定值 | _number \| string_ | `2000+` |
+| onClose | 关闭时的回调函数 | _Function_ | - |
+| onOpened | 完全展示后的回调函数 | _Function_ | - |
+
+### Props
+
+通过组件调用 `Toast` 时，支持以下 Props：
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| type | 提示类型，可选值为 `loading` `success` `fail` `html` | _ToastType_ | `text` |
+| position | 位置，可选值为 `top` `bottom` | _ToastPosition_ | `middle` |
+| message | 文本内容，支持通过`\n`换行 | _string_ | `''` |
+| word-break | 文本内容的换行方式，可选值为 `normal` `break-all` `break-word` | _ToastWordBreak_ | `'break-all'` |
+| icon | 自定义图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](#/zh-CN/icon#props) | _string_ | - |
+| icon-size | 图标大小，如 `20px` `2em`，默认单位为 `px` | _number \| string_ | `36px` |
+| icon-prefix | 图标类名前缀，等同于 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props) | _string_ | `van-icon` |
+| overlay | 是否显示背景遮罩层 | _boolean_ | `false` |
+| forbid-click | 是否禁止背景点击 | _boolean_ | `false` |
+| close-on-click | 是否在点击后关闭 | _boolean_ | `false` |
+| close-on-click-overlay | 是否在点击遮罩层后关闭 | _boolean_ | `false` |
+| loading-type | [加载图标类型](#/zh-CN/loading), 可选值为 `spinner` | _string_ | `circular` |
+| duration | 展示时长(ms)，值为 0 时，toast 不会消失 | _number_ | `2000` |
+| class-name | 自定义类名 | _string \| Array \| object_ | - |
+| overlay-class | 自定义遮罩层类名 | _string \| Array \| object_ | - |
+| overlay-style | 自定义遮罩层样式 | _object_ | - |
+| transition | 动画类名，等价于 [transition](https://cn.vuejs.org/api/built-in-components.html#transition) 的`name`属性 | _string_ | `van-fade` |
+| teleport | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_ | `body` |
+| z-index | 将组件的 z-index 层级设置为一个固定值 | _number \| string_ | `2000+` |
+
+### Events
+
+通过组件调用 `Toast` 时，支持以下事件：
+
+| 事件名 | 说明                 | 回调参数 |
+| ------ | -------------------- | -------- |
+| close  | 关闭时的回调函数     | -        |
+| opened | 完全展示后的回调函数 | -        |
+
+### Slots
+
+使用 `Toast` 组件时，支持以下插槽：
+
+| 名称    | 说明           |
+| ------- | -------------- |
+| message | 自定义文本内容 |
+
+### 类型定义
+
+组件导出以下类型定义：
+
+```ts
+import type {
+  ToastType,
+  ToastProps,
+  ToastOptions,
+  ToastPosition,
+  ToastWordBreak,
+  ToastWrapperInstance,
+} from 'vant';
+```
+
+## 主题定制
+
+### 样式变量
+
+组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](#/zh-CN/config-provider)。
+
+| 名称 | 默认值 | 描述 |
+| --- | --- | --- |
+| --van-toast-max-width | _70%_ | - |
+| --van-toast-font-size | _var(--van-font-size-md)_ | - |
+| --van-toast-text-color | _var(--van-white)_ | - |
+| --van-toast-loading-icon-color | _var(--van-white)_ | - |
+| --van-toast-line-height | _var(--van-line-height-md)_ | - |
+| --van-toast-radius | _var(--van-radius-lg)_ | - |
+| --van-toast-background | _fade(var(--van-black), 70%)_ | - |
+| --van-toast-icon-size | _36px_ | - |
+| --van-toast-text-min-width | _96px_ | - |
+| --van-toast-text-padding | _var(--van-padding-xs) var(--van-padding-sm)_ | - |
+| --van-toast-default-padding | _var(--van-padding-md)_ | - |
+| --van-toast-default-width | _88px_ | - |
+| --van-toast-default-min-height | _88px_ | - |
+| --van-toast-position-top-distance | _20%_ | - |
+| --van-toast-position-bottom-distance | _20%_ | - |
+
+
 <br/>
+<br/>
+<br/>
+
 
 

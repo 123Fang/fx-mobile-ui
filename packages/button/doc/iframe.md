@@ -3,4 +3,7 @@
 import demo from './demo.vue'
 </script>
 
- <demo/>
+<div class="demo-button">
+<demo/>
+</div>
+ 

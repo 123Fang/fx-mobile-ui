@@ -1,7 +1,14 @@
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 // import Markdown from "vite-plugin-md";
-import Markdown from "vite-plugin-vue-markdown";
+/**
+ * vite-plugin-vue-markdown 的问题：
+ * 文档md文件中：  -- 被渲染成  – ，破坏 CSS 变量名.
+ * 这是因为 Markdown 渲染器开启了 typographer 功能（智能排版），将 -- 替换为 –
+ * 用 unplugin-vue-markdown/vite 代替,可用配置关闭 typographer（智能排版）
+ * **/
+// import Markdown from "vite-plugin-vue-markdown";
+import Markdown from 'unplugin-vue-markdown/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 // import { defineConfig } from 'vitest/config'
 import { fileURLToPath } from 'url';
@@ -25,7 +32,11 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    Markdown(),
+    Markdown({
+      markdownOptions: {
+        typographer: false, // 关闭智能转换
+      }
+    }),
     vueJsx(), // 针对测试用例中jsx的编译
     AutoImport({
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],

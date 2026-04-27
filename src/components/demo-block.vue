@@ -1,9 +1,9 @@
 <template>
-    <div class="van-doc-demo-block">
-        <h2 v-if="title" class="van-doc-demo-block__title" :id="slugifyTitle">
+    <div class="icsm-doc-demo-block">
+        <h2 v-if="title" class="icsm-doc-demo-block__title" :id="slugifyTitle">
             {{ title }}
         </h2>
-        <div v-if="card" class="van-doc-demo-block__card">
+        <div v-if="card" class="icsm-doc-demo-block__card">
             <slot />
         </div>
         <slot v-else />
@@ -55,11 +55,11 @@ export default {
 </script>
 
 <style lang="scss">
-.van-doc-demo-block {
+.icsm-doc-demo-block {
     &__title {
         margin: 0;
         padding: 32px 16px 16px;
-        color: var(--van-doc-text-color-4);
+        color: var(--icsm-doc-text-color-4);
         font-weight: normal;
         font-size: 14px;
         line-height: 16px;
@@ -76,7 +76,7 @@ export default {
     }
 
     &:first-of-type {
-        .van-doc-demo-block__title {
+        .icsm-doc-demo-block__title {
             padding-top: 20px;
         }
     }

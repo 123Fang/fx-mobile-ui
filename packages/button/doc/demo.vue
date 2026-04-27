@@ -164,7 +164,7 @@ const t = useTranslate({
 </template>
 
 <style lang="scss">
-.demo-button-row {
+.demo-button {
   .icsm-button {
     &--large {
       margin-bottom: var(--icsm-padding-md);
