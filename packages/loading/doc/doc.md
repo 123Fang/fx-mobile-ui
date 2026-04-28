@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Loading } from 'vant';
+import { Loading } from 'ctf-ics-mobile-ui';
 
 const app = createApp();
 app.use(Loading);

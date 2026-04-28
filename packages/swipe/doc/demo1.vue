@@ -1,25 +1,148 @@
-<!-- html -->
+<script setup lang="ts">
+// import VanSwipe from '..';
+// import VanSwipeItem from '../../swipe-item';
+// import { cdnURL, useTranslate } from '../../../docs/site';
+import { cdnURL, useTranslate } from '@/docs/site';
+import { showToast } from 'ctf-ics-mobile-ui';
+
+const t = useTranslate({
+  'zh-CN': {
+    title2: '懒加载',
+    title3: '监听 change 事件',
+    title4: '纵向滚动',
+    title5: '自定义滑块大小',
+    title6: '自定义指示器',
+    message: '当前 Swipe 索引：',
+  },
+  'en-US': {
+    title2: 'Lazy Render',
+    title3: 'Change Event',
+    title4: 'Vertical Scrolling',
+    title5: 'Set SwipeItem Size',
+    title6: 'Custom indicator',
+    message: 'Current Swipe index:',
+  },
+});
+
+const images = [
+  cdnURL('apple-1.jpeg'),
+  cdnURL('apple-2.jpeg'),
+  cdnURL('apple-3.jpeg'),
+  cdnURL('apple-4.jpeg'),
+];
+
+const onChange = (index: number) => showToast(t('message') + index);
+</script>
+
 <template>
-  <icsm-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-  <icsm-swipe-item>1</icsm-swipe-item>
-  <icsm-swipe-item>2</icsm-swipe-item>
-  <icsm-swipe-item>3</icsm-swipe-item>
-  <icsm-swipe-item>4</icsm-swipe-item>
-</icsm-swipe>
+  <demo-block :title="t('basicUsage')">
+    <icsm-swipe :autoplay="3000" indicator-color="white">
+      <icsm-swipe-item>1</icsm-swipe-item>
+      <icsm-swipe-item>2</icsm-swipe-item>
+      <icsm-swipe-item>3</icsm-swipe-item>
+      <icsm-swipe-item>4</icsm-swipe-item>
+    </icsm-swipe>
+  </demo-block>
+
+  <demo-block :title="t('title2')">
+    <icsm-swipe :autoplay="3000" lazy-render>
+      <icsm-swipe-item v-for="image in images" :key="image">
+        <img :src="image" />
+      </icsm-swipe-item>
+    </icsm-swipe>
+  </demo-block>
+
+  <demo-block :title="t('title3')">
+    <icsm-swipe indicator-color="white" @change="onChange">
+      <icsm-swipe-item>1</icsm-swipe-item>
+      <icsm-swipe-item>2</icsm-swipe-item>
+      <icsm-swipe-item>3</icsm-swipe-item>
+      <icsm-swipe-item>4</icsm-swipe-item>
+    </icsm-swipe>
+  </demo-block>
+
+  <demo-block :title="t('title4')">
+    <icsm-swipe
+      vertical
+      :autoplay="3000"
+      indicator-color="white"
+      style="height: 200px"
+      class="demo-swipe--vertical"
+    >
+      <icsm-swipe-item>1</icsm-swipe-item>
+      <icsm-swipe-item>2</icsm-swipe-item>
+      <icsm-swipe-item>3</icsm-swipe-item>
+      <icsm-swipe-item>4</icsm-swipe-item>
+    </icsm-swipe>
+  </demo-block>
+
+  <demo-block :title="t('title5')">
+    <icsm-swipe :width="300" :loop="false" indicator-color="white">
+      <icsm-swipe-item>1</icsm-swipe-item>
+      <icsm-swipe-item>2</icsm-swipe-item>
+      <icsm-swipe-item>3</icsm-swipe-item>
+      <icsm-swipe-item>4</icsm-swipe-item>
+    </icsm-swipe>
+  </demo-block>
+
+  <demo-block :title="t('title6')">
+    <icsm-swipe>
+      <icsm-swipe-item>1</icsm-swipe-item>
+      <icsm-swipe-item>2</icsm-swipe-item>
+      <icsm-swipe-item>3</icsm-swipe-item>
+      <icsm-swipe-item>4</icsm-swipe-item>
+      <template #indicator="{ active, total }">
+        <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
+      </template>
+    </icsm-swipe>
+  </demo-block>
 </template>
 
-<!-- js -->
-<script setup>
-import { ref } from "vue";
+<style lang="scss">
+.demo-swipe {
+  padding-bottom: 30px;
 
+  .icsm-swipe {
+    &-item {
+      color: var(--icsm-white);
+      font-size: 20px;
+      line-height: 150px;
+      text-align: center;
 
-</script>
-<style>
-  .my-swipe .icsm-swipe-item {
-    color: #fff;
-    font-size: 20px;
-    line-height: 150px;
-    text-align: center;
-    background-color: #39a9ed;
+      &:nth-child(even) {
+        background-color: #39a9ed;
+      }
+
+      &:nth-child(odd) {
+        background-color: #66c6f2;
+      }
+    }
+
+    img {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 240px;
+      padding: 30px 60px;
+      background-color: var(--icsm-white);
+      pointer-events: none;
+    }
   }
+
+  &--vertical {
+    .icsm-swipe-item {
+      line-height: 200px;
+    }
+  }
+
+  .custom-indicator {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    padding: 2px 5px;
+    color: var(--icsm-white);
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
 </style>

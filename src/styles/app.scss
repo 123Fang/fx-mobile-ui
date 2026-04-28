@@ -9,6 +9,13 @@ body {
   padding: 0;
   height: 100vh;
 }
+:not(.in-iframe-container) {
+
+
+
+
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -144,7 +151,15 @@ pre > code {
 pre > code > span {
   font-size: 14px;
 }
-.markdown-body {
+iframe {
+  border: 0;
+}
+/** iframe 中的样式 **/
+.in-iframe-container .markdown-body {
+  padding-bottom: 30px;
+}
+/** 非iframe 中的样式 **/
+.not-iframe-container .markdown-body {
   ul{
     padding-left: 32px;
     // margin-left: 24px;

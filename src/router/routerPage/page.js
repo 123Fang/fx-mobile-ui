@@ -196,6 +196,71 @@ export default [
        name: 'Form 表单',
        meta: { iframe: true },
        component: () => import('/packages/form/doc/doc.md')
+     },{
+       path: 'empty',
+       name: 'Empty 空状态',
+       meta: { iframe: true },
+       component: () => import('/packages/empty/doc/doc.md')
+     },{
+       path: 'passwordInput',
+       name: 'PasswordInput 密码输入框',
+       meta: { iframe: true },
+       component: () => import('/packages/passwordInput/doc/doc.md')
+     },{
+       path: 'rate',
+       name: 'Rate 评分',
+       meta: { iframe: true },
+       component: () => import('/packages/rate/doc/doc.md')
+     },{
+       path: 'search',
+       name: 'Search 搜索',
+       meta: { iframe: true },
+       component: () => import('/packages/search/doc/doc.md')
+     },{
+       path: 'slider',
+       name: 'Slider 滑块',
+       meta: { iframe: true },
+       component: () => import('/packages/slider/doc/doc.md')
+     },{
+       path: 'signature',
+       name: 'Signature 签名',
+       meta: { iframe: true },
+       component: () => import('/packages/signature/doc/doc.md')
+     },{
+       path: 'stepper',
+       name: 'Stepper 步进器',
+       meta: { iframe: true },
+       component: () => import('/packages/stepper/doc/doc.md')
+     },{
+       path: 'switch',
+       name: 'Switch 开关',
+       meta: { iframe: true },
+       component: () => import('/packages/switch/doc/doc.md')
+     },{
+       path: 'dialog',
+       name: 'Dialog 弹出框',
+       meta: { iframe: true },
+       component: () => import('/packages/dialog/doc/doc.md')
+     },{
+       path: 'pullRefresh',
+       name: 'PullRefresh 下拉刷新',
+       meta: { iframe: true },
+       component: () => import('/packages/pullRefresh/doc/doc.md')
+     },{
+       path: 'uploader',
+       name: 'Uploader 文件上传',
+       meta: { iframe: true },
+       component: () => import('/packages/uploader/doc/doc.md')
+     },{
+       path: 'area',
+       name: 'Area 省市区选择',
+       meta: { iframe: true },
+       component: () => import('/packages/area/doc/doc.md')
+     },{
+       path: 'checkboxGroup',
+       name: 'CheckboxGroup 复选框组',
+       meta: { iframe: true },
+       component: () => import('/packages/checkboxGroup/doc/doc.md')
      }
     ]
   },
@@ -335,5 +400,57 @@ export default [
     path: '/iframe/ics/form',
     name: 'iframe-Form 表单',
     component: () => import('/packages/form/doc/iframe.md')
+  },{
+    path: '/iframe/ics/empty',
+    name: 'iframe-Empty 空状态',
+    component: () => import('/packages/empty/doc/iframe.md')
+  },{
+    path: '/iframe/ics/passwordInput',
+    name: 'iframe-PasswordInput 密码输入框',
+    component: () => import('/packages/passwordInput/doc/iframe.md')
+  },{
+    path: '/iframe/ics/rate',
+    name: 'iframe-Rate 评分',
+    component: () => import('/packages/rate/doc/iframe.md')
+  },{
+    path: '/iframe/ics/search',
+    name: 'iframe-Search 搜索',
+    component: () => import('/packages/search/doc/iframe.md')
+  },{
+    path: '/iframe/ics/slider',
+    name: 'iframe-Slider 滑块',
+    component: () => import('/packages/slider/doc/iframe.md')
+  },{
+    path: '/iframe/ics/signature',
+    name: 'iframe-Signature 签名',
+    component: () => import('/packages/signature/doc/iframe.md')
+  },{
+    path: '/iframe/ics/stepper',
+    name: 'iframe-Stepper 步进器',
+    component: () => import('/packages/stepper/doc/iframe.md')
+  },{
+    path: '/iframe/ics/switch',
+    name: 'iframe-Switch 开关',
+    component: () => import('/packages/switch/doc/iframe.md')
+  },{
+    path: '/iframe/ics/dialog',
+    name: 'iframe-Dialog 弹出框',
+    component: () => import('/packages/dialog/doc/iframe.md')
+  },{
+    path: '/iframe/ics/pullRefresh',
+    name: 'iframe-PullRefresh 下拉刷新',
+    component: () => import('/packages/pullRefresh/doc/iframe.md')
+  },{
+    path: '/iframe/ics/uploader',
+    name: 'iframe-Uploader 文件上传',
+    component: () => import('/packages/uploader/doc/iframe.md')
+  },{
+    path: '/iframe/ics/area',
+    name: 'iframe-Area 省市区选择',
+    component: () => import('/packages/area/doc/iframe.md')
+  },{
+    path: '/iframe/ics/checkboxGroup',
+    name: 'iframe-CheckboxGroup 复选框组',
+    component: () => import('/packages/checkboxGroup/doc/iframe.md')
   }
 ]

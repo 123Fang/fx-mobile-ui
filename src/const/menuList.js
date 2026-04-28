@@ -119,6 +119,51 @@ export default [
         "title-cn": "Form 表单",
         "title-en": "Form",
         "path": "/ics/form"
+      },
+      {
+        "title-cn": "PasswordInput 密码输入框",
+        "title-en": "PasswordInput",
+        "path": "/ics/passwordInput"
+      },
+      {
+        "title-cn": "Rate 评分",
+        "title-en": "Rate",
+        "path": "/ics/rate"
+      },
+      {
+        "title-cn": "Search 搜索",
+        "title-en": "Search",
+        "path": "/ics/search"
+      },
+      {
+        "title-cn": "Slider 滑块",
+        "title-en": "Slider",
+        "path": "/ics/slider"
+      },
+      {
+        "title-cn": "Signature 签名",
+        "title-en": "Signature",
+        "path": "/ics/signature"
+      },
+      {
+        "title-cn": "Stepper 步进器",
+        "title-en": "Stepper",
+        "path": "/ics/stepper"
+      },
+      {
+        "title-cn": "Switch 开关",
+        "title-en": "Switch",
+        "path": "/ics/switch"
+      },
+      {
+        "title-cn": "Uploader 文件上传",
+        "title-en": "Uploader",
+        "path": "/ics/uploader"
+      },
+      {
+        "title-cn": "CheckboxGroup 复选框组",
+        "title-en": "CheckboxGroup",
+        "path": "/ics/checkboxGroup"
       }
     ]
   },
@@ -135,6 +180,16 @@ export default [
         "title-cn": "Notify 消息提示",
         "title-en": "Notify",
         "path": "/ics/notify"
+      },
+      {
+        "title-cn": "Dialog 弹出框",
+        "title-en": "Dialog",
+        "path": "/ics/dialog"
+      },
+      {
+        "title-cn": "PullRefresh 下拉刷新",
+        "title-en": "PullRefresh",
+        "path": "/ics/pullRefresh"
       }
     ]
   },
@@ -166,6 +221,11 @@ export default [
         "title-cn": "Progress 进度条",
         "title-en": "Progress",
         "path": "/ics/progress"
+      },
+      {
+        "title-cn": "Empty 空状态",
+        "title-en": "Empty",
+        "path": "/ics/empty"
       }
     ]
   },
@@ -179,16 +239,6 @@ export default [
         "path": "/ics/grid"
       },
       {
-        "title-cn": "GridItem 宫格",
-        "title-en": "GridItem",
-        "path": "/ics/gridItem"
-      },
-      {
-        "title-cn": "Tabs 标签页",
-        "title-en": "Tabs",
-        "path": "/ics/tabs"
-      },
-      {
         "title-cn": "Tab 标签页",
         "title-en": "Tab",
         "path": "/ics/tab"
@@ -198,7 +248,13 @@ export default [
   {
     "title-cn": "业务组件",
     "title-en": "business components",
-    "list": []
+    "list": [
+      {
+        "title-cn": "Area 省市区选择",
+        "title-en": "Area",
+        "path": "/ics/area"
+      }
+    ]
   },
   {
     "title-cn": "其他",

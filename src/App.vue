@@ -1,7 +1,9 @@
 <template>
   <headerBlockVue @changeTheme="changeTheme"/>
-  <van-config-provider :theme="theme">    
-    <router-view></router-view>
+  <van-config-provider :theme="theme">  
+    <div :class="isInIframe ? 'in-iframe-container': 'not-iframe-container'">
+      <router-view></router-view>
+    </div>  
   </van-config-provider>
 </template>
 <script setup>

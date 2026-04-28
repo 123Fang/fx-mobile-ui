@@ -193,7 +193,10 @@ const iframeDocContext = `
 <script setup>
 import demo from './demo.vue'
 </script>
-<demo/>
+<div class="demo-${camelToKebab(NORMALIZED_NAME)}">
+  <demo/>
+</div>
+
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'iframe.md'), iframeDocContext);
 
