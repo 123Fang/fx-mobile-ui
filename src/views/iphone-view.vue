@@ -36,6 +36,10 @@ onMounted(() => {
         width: 0px; /* Chrome/Safari/Edge */
         background: transparent;
       }
+      h1,h2,h3,h4,h5,h6 {
+        font-size: inherit;
+        margin: 0
+      }
     `
     iframeDoc.head.appendChild(style)
 

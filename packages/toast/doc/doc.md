@@ -318,7 +318,7 @@ import type {
   ToastPosition,
   ToastWordBreak,
   ToastWrapperInstance,
-} from 'vant';
+} from 'ctf-ics-mobile-ui';
 ```
 
 ## 主题定制

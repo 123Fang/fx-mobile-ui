@@ -8,6 +8,4 @@ import demoContainer from '@/components/demo-container.vue'
 
 
 
-<demoContainer title='基本使用'>
  <demo1/>
-</demoContainer>

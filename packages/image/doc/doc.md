@@ -10,10 +10,11 @@
 
 ```js
 import { createApp } from 'vue';
-import { Image as IcsmImage } from ‘ctf-ics-mobile-ui’;
+import { Image } from ‘ctf-ics-mobile-ui’;
+
 
 const app = createApp();
-app.use(IcsmImage);
+app.use(Image);
 ```
 
 ## 代码演示
@@ -228,4 +229,4 @@ export default {
 这是因为 \<image> 标签是原生的 SVG 标签，Vue 不允许将原生标签名注册为组件名，使用 \<icsm-image> 即可规避这个问题。
 
 
-<br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>

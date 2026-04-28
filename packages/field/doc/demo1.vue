@@ -1,23 +1,29 @@
-<!-- html -->
-<template>
-  <icsm-cell-group inset>
-    
-    <icsm-field v-model="value" label="文本" placeholder="请输入用户名" />
-
-    <icsm-field v-model="sms" center clearable label="短信验证码" placeholder="请输入短信验证码">
-      <template #button>
-        <icsm-button size="small" type="primary">发送验证码</icsm-button>
-      </template>
-    </icsm-field>
-
-  </icsm-cell-group>
-</template>
-
-<!-- js -->
-<script setup>
-import { ref } from 'vue'
-
-const value = ref('')
-
-// init
+<script setup lang="ts">
+import BasicUsage from './BasicUsage.vue';
+import CustomType from './CustomType.vue';
+import Disabled from './Disabled.vue';
+import ShowIcon from './ShowIcon.vue';
+import Required from './Required.vue';
+import ErrorInfo from './ErrorInfo.vue';
+import InsertButton from './InsertButton.vue';
+import FormatValue from './FormatValue.vue';
+import Autosize from './Autosize.vue';
+import ShowWordLimit from './ShowWordLimit.vue';
+import InputAlign from './InputAlign.vue';
+import LabelAlign from './LabelAlign.vue';
 </script>
+
+<template>
+  <basic-usage />
+  <custom-type />
+  <disabled />
+  <show-icon />
+  <required />
+  <error-info />
+  <insert-button />
+  <format-value />
+  <autosize />
+  <show-word-limit />
+  <input-align />
+  <label-align />
+</template>

@@ -30,11 +30,6 @@ export default [
         "path": "/ics/cell"
       },
       {
-        "title-cn": "CellGroup 单元格组",
-        "title-en": "CellGroup",
-        "path": "/ics/cellGroup"
-      },
-      {
         "title-cn": "Button 按钮",
         "title-en": "Button",
         "path": "/ics/button"
@@ -119,6 +114,11 @@ export default [
         "title-cn": "Picker 选择器",
         "title-en": "Picker",
         "path": "/ics/picker"
+      },
+      {
+        "title-cn": "Form 表单",
+        "title-en": "Form",
+        "path": "/ics/form"
       }
     ]
   },

@@ -191,6 +191,11 @@ export default [
        name: 'Progress 进度条',
        meta: { iframe: true },
        component: () => import('/packages/progress/doc/doc.md')
+     },{
+       path: 'form',
+       name: 'Form 表单',
+       meta: { iframe: true },
+       component: () => import('/packages/form/doc/doc.md')
      }
     ]
   },
@@ -326,5 +331,9 @@ export default [
     path: '/iframe/ics/progress',
     name: 'iframe-Progress 进度条',
     component: () => import('/packages/progress/doc/iframe.md')
+  },{
+    path: '/iframe/ics/form',
+    name: 'iframe-Form 表单',
+    component: () => import('/packages/form/doc/iframe.md')
   }
 ]

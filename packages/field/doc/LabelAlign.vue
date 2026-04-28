@@ -1,0 +1,59 @@
+<script setup lang="ts">
+
+import { ref } from 'vue';
+// import { useTranslate } from '../../../docs/site';
+import { cdnURL, useTranslate } from '@/docs/site';
+
+
+const t = useTranslate({
+  'zh-CN': {
+    label: '文本',
+    top: '顶部对齐',
+    center: '居中对齐',
+    left: '左对齐',
+    right: '右对齐',
+    labelAlign: '输入框文本位置',
+  },
+  'en-US': {
+    label: 'Label',
+    top: 'Align Top',
+    center: 'Align Center',
+    left: 'Align Left',
+    right: 'Align Right',
+    labelAlign: 'Label Align',
+  },
+});
+
+const value = ref('');
+</script>
+
+<template>
+  <demo-block :title="t('labelAlign')">
+    <icsm-cell-group inset>
+      <icsm-field
+        v-model="value"
+        :label="t('label')"
+        :placeholder="t('top')"
+        label-align="top"
+      />
+      <icsm-field
+        v-model="value"
+        :label="t('label')"
+        :placeholder="t('left')"
+        label-align="left"
+      />
+      <icsm-field
+        v-model="value"
+        :label="t('label')"
+        :placeholder="t('center')"
+        label-align="center"
+      />
+      <icsm-field
+        v-model="value"
+        :label="t('label')"
+        :placeholder="t('right')"
+        label-align="right"
+      />
+    </icsm-cell-group>
+  </demo-block>
+</template>

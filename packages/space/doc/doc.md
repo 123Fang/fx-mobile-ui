@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Space } from 'vant';
+import { Space } from 'ctf-ics-mobile-ui';
 
 const app = createApp();
 app.use(Space);
@@ -138,3 +138,5 @@ export default {
 ```ts
 import type { SpaceProps, SpaceSize, SpaceAlign } from 'ctf-ics-mobile-ui';
 ```
+
+<br/><br/><br/><br/><br/><br/>
