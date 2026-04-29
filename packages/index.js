@@ -58,6 +58,11 @@ export * from "vant/es/toast/index.mjs";
 export * from "vant/es/notify/index.mjs";
 export * from "vant/es/dialog/index.mjs";
 
+// export * from "@vant/use";
+// export * from "@vant/area-data";
+
+
+
 
 const components = [
   icsmArea,

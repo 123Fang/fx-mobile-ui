@@ -1,0 +1,1 @@
+export * from 'vant/es/index.d.ts'

@@ -31,6 +31,53 @@ if (fs.existsSync(outputFile)) {
 // 确保目标目录存在
 fs.mkdirSync(sourceDir, { recursive: true });
 
+/**
+ * 让 ctf-ics-mobile-ui 的 npm 包透传如下内容：
+ * 
+ *   1 @vant/use
+ *   2 @vant/area-data
+ *   3 vant 组件库的所有ts类型 
+ * 
+ *  （这三块只做传递，不打包）
+ * **/
+const destDirPath = path.join(sourceDir, 'dist');
+
+const rootVantUsePath= path.join(__dirname, '../template/@vant/use/index.js');
+const npmVantUsePath = path.join(destDirPath, '@vant/use/index.js');
+const dir_npmVantUse = path.dirname(npmVantUsePath);
+fs.mkdirSync(dir_npmVantUse, { recursive: true });
+
+if (fs.existsSync(rootVantUsePath)) {
+  fs.copyFileSync(rootVantUsePath, npmVantUsePath);
+   console.log(`✅ @vant/use 已生成`);
+} else {
+  console.warn(`⚠️ 警告: 根目录下的 @vant/use 不存在`);
+}
+
+const rootVantAreaDataPath= path.join(__dirname, '../template/@vant/area-data/index.js');
+const npmVantAreaDataPath = path.join(destDirPath, '@vant/area-data/index.js');
+const dir_npmVantAreaDataPath = path.dirname(npmVantAreaDataPath);
+fs.mkdirSync(dir_npmVantAreaDataPath, { recursive: true });
+if (fs.existsSync(rootVantAreaDataPath)) {
+  fs.copyFileSync(rootVantAreaDataPath, npmVantAreaDataPath);
+   console.log(`✅ @vant/area-data 已生成`);
+} else {
+  console.warn(`⚠️ 警告: 根目录下的 @vant/area-data 不存在`);
+}
+
+const rootVantTypePath= path.join(__dirname, '../template/vant-type/index.ts');
+const npmVantTypePath = path.join(destDirPath, 'vant-type/global.d.ts');
+const dir_npmVantTypePath = path.dirname(npmVantTypePath);
+fs.mkdirSync(dir_npmVantTypePath, { recursive: true });
+if (fs.existsSync(rootVantTypePath)) {
+  fs.copyFileSync(rootVantTypePath, npmVantTypePath);
+   console.log(`✅ vant 类型声明文件已生成`);
+} else {
+  console.warn(`⚠️ 警告: 根目录下的 vant-type 不存在`);
+}
+
+
+
 // 生成 package.json 内容
 const packageJson = {
   name: "ctf-ics-mobile-ui",
@@ -38,12 +85,19 @@ const packageJson = {
   description: "1组件及样式前缀统一为ics作为样式隔离;2自动适配基座主题色;3内置按需引入element-plus@2.6.3",
   type: "module",
   module: "./dist/ctf-ics-mobile-ui.js",
+  "types": "./dist/vant-type/global.d.ts",
   exports: {
     ".": {
       "import": "./dist/ctf-ics-mobile-ui.js",
       "require": "./dist/ctf-ics-mobile-ui.umd.js"
     },
-    "./*": "./*"
+    "./*": "./*",
+    "./use": {
+      "import": "./dist/@vant/use/index.js",
+    },
+    "./area-data": {
+      "import": "./dist/@vant/area-data/index.js",
+    },
   },
   engines: {
     "node": ">=18.0.0"

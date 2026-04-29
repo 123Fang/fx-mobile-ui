@@ -1,0 +1,9 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      // ...其他配置
+    },
+    "vueCompilerOptions": {
+      // "strictTemplates": true // 模板严格检查
+    }
+  }

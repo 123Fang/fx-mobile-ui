@@ -1,6 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
+import type {
+  ButtonType,
+  ButtonSize,
+  ButtonProps,
+  ButtonNativeType,
+  ButtonIconPosition,
+} from 'ctf-ics-mobile-ui';
+
+import  {
+  useClickAway 
+} from 'ctf-ics-mobile-ui/use';
+
+import { useCascaderAreaData } from 'ctf-ics-mobile-ui/area-data';
+
+console.log('useClickAway',useClickAway)
+console.log('useCascaderAreaData',useCascaderAreaData)
+
+
 
 const t = useTranslate({
   'zh-CN': {
