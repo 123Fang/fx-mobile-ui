@@ -103,18 +103,18 @@ const fullPath = ref(currentRoute.value.fullPath)
 const tabIndex = ref(fullPath.value == '/fx' ? 1 : sessionStorage.getItem('tabIndex') || 0)
 const state = reactive({
   tools: [
-    {
-      name: '首页',
-      path: '/'
-    },
+    // {
+    //   name: '首页',
+    //   path: '/'
+    // },
     // {
     //   name: '组件',
     //   path: '/ics'
     // },
-    {
-      name: '更新日志',
-      path: '/ics/updatelog'
-    },
+    // {
+    //   name: '更新日志',
+    //   path: '/ics/updatelog'
+    // },
     {
       name: 'theme',
       imgDark: 'https://b.yzcdn.cn/vant/dark-theme.svg',
