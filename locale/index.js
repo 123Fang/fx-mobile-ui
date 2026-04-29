@@ -29,6 +29,21 @@ function initLang() {
     }
 }
 
+export const switchLocaleLang = (key='zh-CN') => {
+    
+    const message = {
+        'zh-CN': zhCN,
+        'zh-TW': zhTW,
+        'en-US': enUS
+    }
+    setTimeout(()=>{
+        Locale.use(key, message[key])
+    })
+    
+}
+window.switchLocaleLang = switchLocaleLang
+
+
 const locale = initLang()
 
 export const vantLocale = Locale

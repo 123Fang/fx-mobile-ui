@@ -15,7 +15,7 @@
           v-if="item.name !== 'theme' && item.name !== 'themeColor'"
           href="javascript:;"
           :class="{ active: tabIndex == index }"
-          @click="pageView(item, index)"
+          @click.prevent="pageView(item, index)"
           >{{ item.name }}</a
         >
         <a v-else-if="item.name === 'themeColor'" :class="{ active: tabIndex == index }">
@@ -40,6 +40,7 @@ import { useRouter } from 'vue-router'
 import { reactive, ref, onMounted, computed } from 'vue'
 import  { version as  vantVersion} from 'vant'
 import  { version as  vueVersion} from 'vue'
+import { switchLocaleLang } from '../../locale'
 import  icsUIPKG  from '../../package.json'
 const icsVersion = icsUIPKG.version
 
@@ -71,9 +72,9 @@ const initLang = () => {
   if (lang === 'zh-CN') {
     return '多语言-简体中文'
   }
-  if (lang === 'zh-TW') {
-    return '多语言-繁体中文'
-  }
+  // if (lang === 'zh-TW') {
+  //   return '多语言-繁体中文'
+  // }
   if (lang === 'en-US') {
     return '多语言-英文'
   }
@@ -153,63 +154,40 @@ const pageView = (item, index) => {
     return
   }
 
-  // if (item.path === 'device') {
-  //   let platform = sessionStorage.getItem('franchised-platform')
 
-  //   if (item.name === '当前设备-PC') {
-  //     sessionStorage.setItem('ics', 'ics')
-  //     platform = 'PC'
-  //     localStorage.setItem('props', JSON.stringify({ pedestalName: 'ics2plus-parent-web' }))
+  // if (item.path === 'lang') {
+  //   if (item.name === '多语言-简体中文') {
+  //     item.name = '多语言-繁体中文'
+  //     localStorage.setItem('lang', 'zh-TW')
+  //     window.myIframe?.contentWindow?.switchLocaleLang('zh-TW')
+  //     return
   //   }
-  //   if (item.name === '当前设备-PC(ics)') {
-  //     sessionStorage.setItem('ics', 'oneics')
-
-  //     platform = 'PC'
-  //     localStorage.setItem(
-  //       'props',
-  //       JSON.stringify({ pedestalName: 'oneics-parent', theme: '#0061bc' })
-  //     )
+  //   if (item.name === '多语言-繁体中文') {
+  //     item.name = '多语言-英文'
+  //     localStorage.setItem('lang', 'en-US')
+  //     window.myIframe?.contentWindow?.switchLocaleLang('en-US')
+  //     return
   //   }
-  //   if (item.name === '当前设备-PC(oneics)') {
-  //     sessionStorage.removeItem('ics')
-  //     platform = 'ipad'
-  //     localStorage.setItem('props', JSON.stringify({ pedestalName: 'franchised-parent-web' }))
+  //   if (item.name === '多语言-英文') {
+  //     item.name = '多语言-简体中文'
+  //     localStorage.setItem('lang', 'zh-CN')
+  //     window.myIframe?.contentWindow?.switchLocaleLang('zh-CN')
+  //     return
   //   }
-  //   if (item.name === '当前设备-ipad') {
-  //     platform = 'PC'
-  //     localStorage.setItem('props', JSON.stringify({ pedestalName: 'franchised-parent-web' }))
-  //   }
-  //   sessionStorage.setItem('franchised-platform', platform)
-  //   setTimeout(() => {
-  //     location.reload()
-  //   })
-  //   return
   // }
 
   if (item.path === 'lang') {
     if (item.name === '多语言-简体中文') {
-      item.name = '多语言-繁体中文'
-      localStorage.setItem('lang', 'zh-TW')
-      setTimeout(() => {
-        location.reload()
-      })
 
-      return
-    }
-    if (item.name === '多语言-繁体中文') {
       item.name = '多语言-英文'
       localStorage.setItem('lang', 'en-US')
-      setTimeout(() => {
-        location.reload()
-      })
+      window.myIframe?.contentWindow?.switchLocaleLang('en-US')
       return
     }
     if (item.name === '多语言-英文') {
       item.name = '多语言-简体中文'
       localStorage.setItem('lang', 'zh-CN')
-      setTimeout(() => {
-        location.reload()
-      })
+      window.myIframe?.contentWindow?.switchLocaleLang('zh-CN')
       return
     }
   }

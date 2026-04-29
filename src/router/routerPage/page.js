@@ -291,6 +291,41 @@ export default [
        name: 'ConfigProvider 全局配置',
        meta: { iframe: true },
        component: () => import('/packages/configProvider/doc/doc.md')
+     },{
+       path: 'floatingBubble',
+       name: 'FloatingBubble 浮动气泡',
+       meta: { iframe: true },
+       component: () => import('/packages/floatingBubble/doc/doc.md')
+     },{
+       path: 'overlay',
+       name: 'Overlay 遮罩层',
+       meta: { iframe: true },
+       component: () => import('/packages/overlay/doc/doc.md')
+     },{
+       path: 'shareSheet',
+       name: 'ShareSheet 分享面板',
+       meta: { iframe: true },
+       component: () => import('/packages/shareSheet/doc/doc.md')
+     },{
+       path: 'swipeCell',
+       name: 'SwipeCell 滑动单元格',
+       meta: { iframe: true },
+       component: () => import('/packages/swipeCell/doc/doc.md')
+     },{
+       path: 'card',
+       name: 'Card 卡片',
+       meta: { iframe: true },
+       component: () => import('/packages/card/doc/doc.md')
+     },{
+       path: 'badge',
+       name: 'Badge 徽标',
+       meta: { iframe: true },
+       component: () => import('/packages/badge/doc/doc.md')
+     },{
+       path: 'circle',
+       name: 'Circle 环形进度条',
+       meta: { iframe: true },
+       component: () => import('/packages/circle/doc/doc.md')
      }
     ]
   },
@@ -506,5 +541,33 @@ export default [
     path: '/iframe/ics/configProvider',
     name: 'iframe-ConfigProvider 全局配置',
     component: () => import('/packages/configProvider/doc/iframe.md')
+  },{
+    path: '/iframe/ics/floatingBubble',
+    name: 'iframe-FloatingBubble 浮动气泡',
+    component: () => import('/packages/floatingBubble/doc/iframe.md')
+  },{
+    path: '/iframe/ics/overlay',
+    name: 'iframe-Overlay 遮罩层',
+    component: () => import('/packages/overlay/doc/iframe.md')
+  },{
+    path: '/iframe/ics/shareSheet',
+    name: 'iframe-ShareSheet 分享面板',
+    component: () => import('/packages/shareSheet/doc/iframe.md')
+  },{
+    path: '/iframe/ics/swipeCell',
+    name: 'iframe-SwipeCell 滑动单元格',
+    component: () => import('/packages/swipeCell/doc/iframe.md')
+  },{
+    path: '/iframe/ics/card',
+    name: 'iframe-Card 卡片',
+    component: () => import('/packages/card/doc/iframe.md')
+  },{
+    path: '/iframe/ics/badge',
+    name: 'iframe-Badge 徽标',
+    component: () => import('/packages/badge/doc/iframe.md')
+  },{
+    path: '/iframe/ics/circle',
+    name: 'iframe-Circle 环形进度条',
+    component: () => import('/packages/circle/doc/iframe.md')
   }
 ]

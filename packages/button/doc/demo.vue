@@ -69,6 +69,9 @@ const t = useTranslate({
     lottery: 'Lottery',
   },
 });
+
+// window.switchLocaleLang = switchLocaleLang
+
 </script>
 
 <template>

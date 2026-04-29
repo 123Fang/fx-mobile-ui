@@ -215,6 +215,26 @@ export default [
         "title-cn": "FloatingPanel 浮动面板",
         "title-en": "FloatingPanel",
         "path": "/ics/floatingPanel"
+      },
+      {
+        "title-cn": "FloatingBubble 浮动气泡",
+        "title-en": "FloatingBubble",
+        "path": "/ics/floatingBubble"
+      },
+      {
+        "title-cn": "Overlay 遮罩层",
+        "title-en": "Overlay",
+        "path": "/ics/overlay"
+      },
+      {
+        "title-cn": "ShareSheet 分享面板",
+        "title-en": "ShareSheet",
+        "path": "/ics/shareSheet"
+      },
+      {
+        "title-cn": "SwipeCell 滑动单元格",
+        "title-en": "SwipeCell",
+        "path": "/ics/swipeCell"
       }
     ]
   },
@@ -251,6 +271,16 @@ export default [
         "title-cn": "Empty 空状态",
         "title-en": "Empty",
         "path": "/ics/empty"
+      },
+      {
+        "title-cn": "Badge 徽标",
+        "title-en": "Badge",
+        "path": "/ics/badge"
+      },
+      {
+        "title-cn": "Circle 环形进度条",
+        "title-en": "Circle",
+        "path": "/ics/circle"
       }
     ]
   },
@@ -278,6 +308,11 @@ export default [
         "title-cn": "Area 省市区选择",
         "title-en": "Area",
         "path": "/ics/area"
+      },
+      {
+        "title-cn": "Card 卡片",
+        "title-en": "Card",
+        "path": "/ics/card"
       }
     ]
   },

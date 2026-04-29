@@ -8,6 +8,7 @@
 import { useRoute } from 'vue-router'
 import { ref, reactive, onMounted } from 'vue'
 
+
 const route = useRoute()
 // const srciframe = ref('http://localhost:5173/#/iframe/input')
 const srciframe = ref(window.location.href.split('#')[0] + '#/404')
