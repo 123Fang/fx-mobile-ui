@@ -1,14 +1,14 @@
 <template>
-  <headerBlockVue @changeTheme="changeTheme"/>
-  <van-config-provider :theme="theme">  
-    <div :class="isInIframe ? 'in-iframe-container': 'not-iframe-container'">
+  <headerBlockVue @changeTheme="changeTheme" />
+  <icsm-config-provider :theme="theme">
+    <div :class="isInIframe ? 'in-iframe-container' : 'not-iframe-container'">
       <router-view></router-view>
-    </div>  
-  </van-config-provider>
+    </div>
+  </icsm-config-provider>
 </template>
 <script setup>
-import { watch,ref, computed } from "vue";
-import { useRoute,useRouter } from 'vue-router'
+import { watch, ref, computed } from "vue";
+import { useRoute, useRouter } from 'vue-router'
 import headerBlockVue from "./components/header-block.vue";
 
 
@@ -20,15 +20,16 @@ const theme = ref('light')
 
 
 
-watch(theme, (value)=>{
-   if( window.myIframe?.contentWindow?.iframetheme){
-     window.myIframe.contentWindow.iframetheme.value = value
-   }
- 
+watch(theme, (value) => {
+  if (window.myIframe?.contentWindow?.iframetheme) {
+    window.myIframe.contentWindow.iframetheme.value = value
+  }
+  // iframe 内 主题切换
+  switchIframeTheme(value)
 })
 
 
-const  isInIframe = computed(()=> {
+const isInIframe = computed(() => {
   try {
     return (window.self !== window.top)
   } catch (e) {
@@ -39,21 +40,39 @@ if (isInIframe.value) { // 在内部的 iframe 中渲染
   window.iframeRoute = router
   window.iframetheme = theme
 }
-watch(()=>route.path, ()=>{
-   if (route.meta.iframe) {
+watch(() => route.path, () => {
+  if (route.meta.iframe) {
     window.myIframe?.contentWindow?.iframeRoute?.push(`/iframe${route.path}`)
   } else {
     window.myIframe?.contentWindow?.iframeRoute?.push(`/iframe/404`)
   }
 })
 
-const changeTheme = (themeType)=>{
+const changeTheme = (themeType) => {
   theme.value = themeType || 'light'
+}
+
+// iframe 内 主题切换
+const switchIframeTheme = (value) => {
+  if (value === 'dark') {
+    const iframeDoc = window.myIframe?.contentWindow?.document
+    if (iframeDoc) {
+      const elements = iframeDoc.querySelector('body');
+      elements.classList.add('iframe-body--dark');
+    }
+  } else {
+    const iframeDoc = window.myIframe?.contentWindow?.document
+    if (iframeDoc) {
+      const elements = iframeDoc.querySelector('body');
+      elements.classList.remove('iframe-body--dark');
+    }
+  }
 }
 
 </script>
 <style lang="scss">
 @import './styles/style.scss';
+
 #app {
   overflow: hidden;
 }

@@ -172,16 +172,11 @@ fs.writeFileSync(path.join(DIRNAM_DOC, 'Attributes.vue'), attrTableContext);
 
 
 const docContext = `
-<script setup>
-import Attributes from './Attributes.vue'
-</script>
 
 
 
 
-## Attributes 参数
-<Attributes/>
-<br/>
+<br/><br/><br/><br/><br/><br/>
 `
 fs.writeFileSync(path.join(DIRNAM_DOC, 'doc.md'), docContext);
 

@@ -261,6 +261,36 @@ export default [
        name: 'CheckboxGroup 复选框组',
        meta: { iframe: true },
        component: () => import('/packages/checkboxGroup/doc/doc.md')
+     },{
+       path: 'actionSheet',
+       name: 'ActionSheet 动作面板',
+       meta: { iframe: true },
+       component: () => import('/packages/actionSheet/doc/doc.md')
+     },{
+       path: 'barrage',
+       name: 'Barrage 弹幕',
+       meta: { iframe: true },
+       component: () => import('/packages/barrage/doc/doc.md')
+     },{
+       path: 'dropdownMenu',
+       name: 'DropdownMenu 下拉菜单',
+       meta: { iframe: true },
+       component: () => import('/packages/dropdownMenu/doc/doc.md')
+     },{
+       path: 'dropdownItem',
+       name: 'DropdownItem 下拉菜单dropdownItem',
+       meta: { iframe: true },
+       component: () => import('/packages/dropdownItem/doc/doc.md')
+     },{
+       path: 'floatingPanel',
+       name: 'FloatingPanel 浮动面板',
+       meta: { iframe: true },
+       component: () => import('/packages/floatingPanel/doc/doc.md')
+     },{
+       path: 'configProvider',
+       name: 'ConfigProvider 全局配置',
+       meta: { iframe: true },
+       component: () => import('/packages/configProvider/doc/doc.md')
      }
     ]
   },
@@ -452,5 +482,29 @@ export default [
     path: '/iframe/ics/checkboxGroup',
     name: 'iframe-CheckboxGroup 复选框组',
     component: () => import('/packages/checkboxGroup/doc/iframe.md')
+  },{
+    path: '/iframe/ics/actionSheet',
+    name: 'iframe-ActionSheet 动作面板',
+    component: () => import('/packages/actionSheet/doc/iframe.md')
+  },{
+    path: '/iframe/ics/barrage',
+    name: 'iframe-Barrage 弹幕',
+    component: () => import('/packages/barrage/doc/iframe.md')
+  },{
+    path: '/iframe/ics/dropdownMenu',
+    name: 'iframe-DropdownMenu 下拉菜单',
+    component: () => import('/packages/dropdownMenu/doc/iframe.md')
+  },{
+    path: '/iframe/ics/dropdownItem',
+    name: 'iframe-DropdownItem 下拉菜单dropdownItem',
+    component: () => import('/packages/dropdownItem/doc/iframe.md')
+  },{
+    path: '/iframe/ics/floatingPanel',
+    name: 'iframe-FloatingPanel 浮动面板',
+    component: () => import('/packages/floatingPanel/doc/iframe.md')
+  },{
+    path: '/iframe/ics/configProvider',
+    name: 'iframe-ConfigProvider 全局配置',
+    component: () => import('/packages/configProvider/doc/iframe.md')
   }
 ]

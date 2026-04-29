@@ -115,11 +115,11 @@ const state = reactive({
       name: '更新日志',
       path: '/ics/updatelog'
     },
-    // {
-    //   name: 'theme',
-    //   imgDark: 'https://b.yzcdn.cn/vant/dark-theme.svg',
-    //   imgLight: 'https://b.yzcdn.cn/vant/light-theme.svg'
-    // },
+    {
+      name: 'theme',
+      imgDark: 'https://b.yzcdn.cn/vant/dark-theme.svg',
+      imgLight: 'https://b.yzcdn.cn/vant/light-theme.svg'
+    },
     {
       name: 'themeColor'
     },

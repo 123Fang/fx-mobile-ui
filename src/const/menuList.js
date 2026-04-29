@@ -58,6 +58,11 @@ export default [
         "title-cn": "Layout 布局",
         "title-en": "Col",
         "path": "/ics/col"
+      },
+      {
+        "title-cn": "ConfigProvider 全局配置",
+        "title-en": "ConfigProvider",
+        "path": "/ics/configProvider"
       }
     ]
   },
@@ -190,6 +195,26 @@ export default [
         "title-cn": "PullRefresh 下拉刷新",
         "title-en": "PullRefresh",
         "path": "/ics/pullRefresh"
+      },
+      {
+        "title-cn": "ActionSheet 动作面板",
+        "title-en": "ActionSheet",
+        "path": "/ics/actionSheet"
+      },
+      {
+        "title-cn": "Barrage 弹幕",
+        "title-en": "Barrage",
+        "path": "/ics/barrage"
+      },
+      {
+        "title-cn": "DropdownMenu 下拉菜单",
+        "title-en": "DropdownMenu",
+        "path": "/ics/dropdownMenu"
+      },
+      {
+        "title-cn": "FloatingPanel 浮动面板",
+        "title-en": "FloatingPanel",
+        "path": "/ics/floatingPanel"
       }
     ]
   },

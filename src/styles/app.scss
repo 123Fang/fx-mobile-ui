@@ -369,4 +369,23 @@ em {
 
 
 
+/** iframe 暗黑样式  **/
+.iframe-body--dark {
+  background-color: #1c1c1e!important;
+  .header-block-box{
+    background-color: #1c1c1e!important;
+    box-shadow: none!important;
+    a {
+      color: rgba(255,255,255,1)!important;
+    }
+  }
+  .in-iframe-container {
+    background-color: black!important;
+    [class^="icsm-doc-demo-block"] {
+      background-color: black!important;
+    }
+  }
+}
+/** iframe 暗黑样式  **/
+
 
