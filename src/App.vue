@@ -58,13 +58,14 @@ const switchIframeTheme = (value) => {
     const iframeDoc = window.myIframe?.contentWindow?.document
     if (iframeDoc) {
       const elements = iframeDoc.querySelector('body');
-      elements.classList.add('iframe-body--dark');
+      elements.classList.add('iframe-body--dark', 'icsm-doc-theme-dark');
+      // icsm-doc-theme-dark
     }
   } else {
     const iframeDoc = window.myIframe?.contentWindow?.document
     if (iframeDoc) {
       const elements = iframeDoc.querySelector('body');
-      elements.classList.remove('iframe-body--dark');
+      elements.classList.remove('iframe-body--dark', 'icsm-doc-theme-dark');
     }
   }
 }

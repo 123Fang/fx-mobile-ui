@@ -33,7 +33,7 @@ onMounted(() => {
         padding:0!important;
         background-color: var(--icsm-doc-gray-1);;
       }
-      body::-webkit-scrollbar {
+      *::-webkit-scrollbar {
         width: 0px; /* Chrome/Safari/Edge */
         background: transparent;
       }

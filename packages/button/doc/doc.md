@@ -213,7 +213,7 @@ import type {
   ButtonProps,
   ButtonNativeType,
   ButtonIconPosition,
-} from 'vant';
+} from 'ctf-ics-mobile-ui';
 ```
 
 ## 主题定制

@@ -164,11 +164,6 @@ export default [
         "title-cn": "Uploader 文件上传",
         "title-en": "Uploader",
         "path": "/ics/uploader"
-      },
-      {
-        "title-cn": "CheckboxGroup 复选框组",
-        "title-en": "CheckboxGroup",
-        "path": "/ics/checkboxGroup"
       }
     ]
   },
@@ -288,11 +283,6 @@ export default [
         "path": "/ics/collapse"
       },
       {
-        "title-cn": "CollapseItem 折叠面板collapseItem",
-        "title-en": "CollapseItem",
-        "path": "/ics/collapseItem"
-      },
-      {
         "title-cn": "CountDown 倒计时",
         "title-en": "CountDown",
         "path": "/ics/countDown"
@@ -306,6 +296,51 @@ export default [
         "title-cn": "Highlight 高亮文本",
         "title-en": "Highlight",
         "path": "/ics/highlight"
+      },
+      {
+        "title-cn": "ImagePreview 图片预览",
+        "title-en": "ImagePreview",
+        "path": "/ics/imagePreview"
+      },
+      {
+        "title-cn": "NoticeBar 通知栏",
+        "title-en": "NoticeBar",
+        "path": "/ics/noticeBar"
+      },
+      {
+        "title-cn": "Popover 气泡弹出框",
+        "title-en": "Popover",
+        "path": "/ics/popover"
+      },
+      {
+        "title-cn": "RollingText 翻滚文本",
+        "title-en": "RollingText",
+        "path": "/ics/rollingText"
+      },
+      {
+        "title-cn": "Skeleton 骨架屏",
+        "title-en": "Skeleton",
+        "path": "/ics/skeleton"
+      },
+      {
+        "title-cn": "Steps 步骤条",
+        "title-en": "Steps",
+        "path": "/ics/steps"
+      },
+      {
+        "title-cn": "Sticky 粘性布局",
+        "title-en": "Sticky",
+        "path": "/ics/sticky"
+      },
+      {
+        "title-cn": "TextEllipsis 文本省略",
+        "title-en": "TextEllipsis",
+        "path": "/ics/textEllipsis"
+      },
+      {
+        "title-cn": "Watermark 水印",
+        "title-en": "Watermark",
+        "path": "/ics/watermark"
       }
     ]
   },
@@ -322,7 +357,47 @@ export default [
         "title-cn": "Tab 标签页",
         "title-en": "Tab",
         "path": "/ics/tab"
-      }
+      },
+      {
+        "title-cn": "ActionBar 动作栏",
+        "title-en": "ActionBar",
+        "path": "/ics/actionBar"
+      },
+      {
+        "title-cn": "BackTop 回到顶部",
+        "title-en": "BackTop",
+        "path": "/ics/backTop"
+      },
+      {
+        "title-cn": "IndexBar 索引栏",
+        "title-en": "IndexBar",
+        "path": "/ics/indexBar"
+      },
+      // {
+      //   "title-cn": "IndexAnchor indexAnchor索引栏",
+      //   "title-en": "IndexAnchor",
+      //   "path": "/ics/indexAnchor"
+      // },
+      {
+        "title-cn": "NavBar 导航栏",
+        "title-en": "NavBar",
+        "path": "/ics/navBar"
+      },
+      {
+        "title-cn": "Pagination 分页",
+        "title-en": "Pagination",
+        "path": "/ics/pagination"
+      },
+      {
+        "title-cn": "Sidebar 侧边导航",
+        "title-en": "Sidebar",
+        "path": "/ics/sidebar"
+      },
+      // {
+      //   "title-cn": "SidebarItem sidebarItem侧边导航",
+      //   "title-en": "SidebarItem",
+      //   "path": "/ics/sidebarItem"
+      // }
     ]
   },
   {

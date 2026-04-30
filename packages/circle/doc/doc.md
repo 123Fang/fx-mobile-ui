@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Circle } from 'vant';
+import { Circle } from 'ctf-ics-mobile-ui';
 
 const app = createApp();
 app.use(Circle);
@@ -199,7 +199,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { CircleProps, CircleStartPosition } from 'vant';
+import type { CircleProps, CircleStartPosition } from 'ctf-ics-mobile-ui';
 ```
 
 ## 主题定制

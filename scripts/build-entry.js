@@ -56,6 +56,8 @@ import '../locale/index'
 export * from "vant/es/toast/index.mjs";
 export * from "vant/es/notify/index.mjs";
 export * from "vant/es/dialog/index.mjs";
+export * from "vant/es/image-preview/index.mjs";
+
 
 
 const components = [

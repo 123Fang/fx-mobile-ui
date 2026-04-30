@@ -50,7 +50,7 @@ app.use(PickerGroup);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'vant';
+import { showToast } from 'ctf-ics-mobile-ui';
 
 export default {
   setup() {
@@ -102,7 +102,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'vant';
+import { showToast } from 'ctf-ics-mobile-ui';
 
 export default {
   setup() {

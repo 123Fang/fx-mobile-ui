@@ -1,0 +1,31 @@
+
+<template>
+  <van-action-bar-button v-bind="$attrs"  ref="innerRef">
+
+    <!-- 透传所有插槽 -->
+    <template v-for="(_, name) in $slots" :key="name" #[name]="slotProps">
+      <slot :name="name" v-bind="slotProps" :key="name" />
+    </template>
+
+  </van-action-bar-button>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+defineOptions({
+  name: 'icsm-action-bar-button',
+})
+const emit = defineEmits([])
+const props = defineProps({})
+
+const innerRef = ref(null)
+defineExpose({
+  innerRef, /** 暴露 element plus 组件 ref **/
+})
+
+// init here
+</script>
+<style lang="scss" scoped>
+.icsm-action-bar-button-container {}
+</style>

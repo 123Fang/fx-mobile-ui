@@ -346,6 +346,126 @@ export default [
        name: 'Highlight 高亮文本',
        meta: { iframe: true },
        component: () => import('/packages/highlight/doc/doc.md')
+     },{
+       path: 'imagePreview',
+       name: 'ImagePreview 图片预览',
+       meta: { iframe: true },
+       component: () => import('/packages/imagePreview/doc/doc.md')
+     },{
+       path: 'noticeBar',
+       name: 'NoticeBar 通知栏',
+       meta: { iframe: true },
+       component: () => import('/packages/noticeBar/doc/doc.md')
+     },{
+       path: 'popover',
+       name: 'Popover 气泡弹出框',
+       meta: { iframe: true },
+       component: () => import('/packages/popover/doc/doc.md')
+     },{
+       path: 'rollingText',
+       name: 'RollingText 翻滚文本',
+       meta: { iframe: true },
+       component: () => import('/packages/rollingText/doc/doc.md')
+     },{
+       path: 'skeleton',
+       name: 'Skeleton 骨架屏',
+       meta: { iframe: true },
+       component: () => import('/packages/skeleton/doc/doc.md')
+     },{
+       path: 'skeletonTitle',
+       name: 'SkeletonTitle 骨架屏',
+       meta: { iframe: true },
+       component: () => import('/packages/skeletonTitle/doc/doc.md')
+     },{
+       path: 'skeletonImage',
+       name: 'SkeletonImage 骨架屏',
+       meta: { iframe: true },
+       component: () => import('/packages/skeletonImage/doc/doc.md')
+     },{
+       path: 'skeletonAvatar',
+       name: 'SkeletonAvatar 骨架屏',
+       meta: { iframe: true },
+       component: () => import('/packages/skeletonAvatar/doc/doc.md')
+     },{
+       path: 'skeletonParagraph',
+       name: 'SkeletonParagraph 骨架屏',
+       meta: { iframe: true },
+       component: () => import('/packages/skeletonParagraph/doc/doc.md')
+     },{
+       path: 'step',
+       name: 'Step 步骤条',
+       meta: { iframe: true },
+       component: () => import('/packages/step/doc/doc.md')
+     },{
+       path: 'steps',
+       name: 'Steps 步骤条',
+       meta: { iframe: true },
+       component: () => import('/packages/steps/doc/doc.md')
+     },{
+       path: 'sticky',
+       name: 'Sticky 粘性布局',
+       meta: { iframe: true },
+       component: () => import('/packages/sticky/doc/doc.md')
+     },{
+       path: 'textEllipsis',
+       name: 'TextEllipsis 文本省略',
+       meta: { iframe: true },
+       component: () => import('/packages/textEllipsis/doc/doc.md')
+     },{
+       path: 'watermark',
+       name: 'Watermark 水印',
+       meta: { iframe: true },
+       component: () => import('/packages/watermark/doc/doc.md')
+     },{
+       path: 'actionBar',
+       name: 'ActionBar 动作栏',
+       meta: { iframe: true },
+       component: () => import('/packages/actionBar/doc/doc.md')
+     },{
+       path: 'actionBarIcon',
+       name: 'ActionBarIcon actionBarIcon动作栏',
+       meta: { iframe: true },
+       component: () => import('/packages/actionBarIcon/doc/doc.md')
+     },{
+       path: 'actionBarButton',
+       name: 'ActionBarButton actionBarButton动作栏',
+       meta: { iframe: true },
+       component: () => import('/packages/actionBarButton/doc/doc.md')
+     },{
+       path: 'backTop',
+       name: 'BackTop 回到顶部',
+       meta: { iframe: true },
+       component: () => import('/packages/backTop/doc/doc.md')
+     },{
+       path: 'indexBar',
+       name: 'IndexBar 索引栏',
+       meta: { iframe: true },
+       component: () => import('/packages/indexBar/doc/doc.md')
+     },{
+       path: 'indexAnchor',
+       name: 'IndexAnchor indexAnchor索引栏',
+       meta: { iframe: true },
+       component: () => import('/packages/indexAnchor/doc/doc.md')
+     },{
+       path: 'navBar',
+       name: 'NavBar 导航栏',
+       meta: { iframe: true },
+       component: () => import('/packages/navBar/doc/doc.md')
+     },{
+       path: 'pagination',
+       name: 'Pagination 分页',
+       meta: { iframe: true },
+       component: () => import('/packages/pagination/doc/doc.md')
+     },{
+       path: 'sidebar',
+       name: 'Sidebar 侧边导航',
+       meta: { iframe: true },
+       component: () => import('/packages/sidebar/doc/doc.md')
+     },{
+       path: 'sidebarItem',
+       name: 'SidebarItem sidebarItem侧边导航',
+       meta: { iframe: true },
+       component: () => import('/packages/sidebarItem/doc/doc.md')
      }
     ]
   },
@@ -605,5 +725,101 @@ export default [
     path: '/iframe/ics/highlight',
     name: 'iframe-Highlight 高亮文本',
     component: () => import('/packages/highlight/doc/iframe.md')
+  },{
+    path: '/iframe/ics/imagePreview',
+    name: 'iframe-ImagePreview 图片预览',
+    component: () => import('/packages/imagePreview/doc/iframe.md')
+  },{
+    path: '/iframe/ics/noticeBar',
+    name: 'iframe-NoticeBar 通知栏',
+    component: () => import('/packages/noticeBar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/popover',
+    name: 'iframe-Popover 气泡弹出框',
+    component: () => import('/packages/popover/doc/iframe.md')
+  },{
+    path: '/iframe/ics/rollingText',
+    name: 'iframe-RollingText 翻滚文本',
+    component: () => import('/packages/rollingText/doc/iframe.md')
+  },{
+    path: '/iframe/ics/skeleton',
+    name: 'iframe-Skeleton 骨架屏',
+    component: () => import('/packages/skeleton/doc/iframe.md')
+  },{
+    path: '/iframe/ics/skeletonTitle',
+    name: 'iframe-SkeletonTitle 骨架屏',
+    component: () => import('/packages/skeletonTitle/doc/iframe.md')
+  },{
+    path: '/iframe/ics/skeletonImage',
+    name: 'iframe-SkeletonImage 骨架屏',
+    component: () => import('/packages/skeletonImage/doc/iframe.md')
+  },{
+    path: '/iframe/ics/skeletonAvatar',
+    name: 'iframe-SkeletonAvatar 骨架屏',
+    component: () => import('/packages/skeletonAvatar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/skeletonParagraph',
+    name: 'iframe-SkeletonParagraph 骨架屏',
+    component: () => import('/packages/skeletonParagraph/doc/iframe.md')
+  },{
+    path: '/iframe/ics/step',
+    name: 'iframe-Step 步骤条',
+    component: () => import('/packages/step/doc/iframe.md')
+  },{
+    path: '/iframe/ics/steps',
+    name: 'iframe-Steps 步骤条',
+    component: () => import('/packages/steps/doc/iframe.md')
+  },{
+    path: '/iframe/ics/sticky',
+    name: 'iframe-Sticky 粘性布局',
+    component: () => import('/packages/sticky/doc/iframe.md')
+  },{
+    path: '/iframe/ics/textEllipsis',
+    name: 'iframe-TextEllipsis 文本省略',
+    component: () => import('/packages/textEllipsis/doc/iframe.md')
+  },{
+    path: '/iframe/ics/watermark',
+    name: 'iframe-Watermark 水印',
+    component: () => import('/packages/watermark/doc/iframe.md')
+  },{
+    path: '/iframe/ics/actionBar',
+    name: 'iframe-ActionBar 动作栏',
+    component: () => import('/packages/actionBar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/actionBarIcon',
+    name: 'iframe-ActionBarIcon actionBarIcon动作栏',
+    component: () => import('/packages/actionBarIcon/doc/iframe.md')
+  },{
+    path: '/iframe/ics/actionBarButton',
+    name: 'iframe-ActionBarButton actionBarButton动作栏',
+    component: () => import('/packages/actionBarButton/doc/iframe.md')
+  },{
+    path: '/iframe/ics/backTop',
+    name: 'iframe-BackTop 回到顶部',
+    component: () => import('/packages/backTop/doc/iframe.md')
+  },{
+    path: '/iframe/ics/indexBar',
+    name: 'iframe-IndexBar 索引栏',
+    component: () => import('/packages/indexBar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/indexAnchor',
+    name: 'iframe-IndexAnchor indexAnchor索引栏',
+    component: () => import('/packages/indexAnchor/doc/iframe.md')
+  },{
+    path: '/iframe/ics/navBar',
+    name: 'iframe-NavBar 导航栏',
+    component: () => import('/packages/navBar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/pagination',
+    name: 'iframe-Pagination 分页',
+    component: () => import('/packages/pagination/doc/iframe.md')
+  },{
+    path: '/iframe/ics/sidebar',
+    name: 'iframe-Sidebar 侧边导航',
+    component: () => import('/packages/sidebar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/sidebarItem',
+    name: 'iframe-SidebarItem sidebarItem侧边导航',
+    component: () => import('/packages/sidebarItem/doc/iframe.md')
   }
 ]

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ConfigProvider } from 'vant';
+import { ConfigProvider } from 'ctf-ics-mobile-ui';
 
 const app = createApp();
 app.use(ConfigProvider);
@@ -176,7 +176,7 @@ export default {
 在 TypeScript 中定义 themeVars 时，建议使用 Vant 提供的 `ConfigProviderThemeVars` 类型，可以提供完善的类型提示：
 
 ```ts
-import type { ConfigProviderThemeVars } from 'vant';
+import type { ConfigProviderThemeVars } from 'ctf-ics-mobile-ui';
 
 const themeVars: ConfigProviderThemeVars = {
   sliderBarHeight: '4px',
@@ -385,7 +385,7 @@ import type {
   ConfigProviderTheme,
   ConfigProviderThemeVars,
   ConfigProviderThemeVarsScope,
-} from 'vant';
+} from 'ctf-ics-mobile-ui';
 ```
 
 
