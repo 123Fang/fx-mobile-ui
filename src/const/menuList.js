@@ -281,6 +281,31 @@ export default [
         "title-cn": "Circle 环形进度条",
         "title-en": "Circle",
         "path": "/ics/circle"
+      },
+      {
+        "title-cn": "Collapse 折叠面板",
+        "title-en": "Collapse",
+        "path": "/ics/collapse"
+      },
+      {
+        "title-cn": "CollapseItem 折叠面板collapseItem",
+        "title-en": "CollapseItem",
+        "path": "/ics/collapseItem"
+      },
+      {
+        "title-cn": "CountDown 倒计时",
+        "title-en": "CountDown",
+        "path": "/ics/countDown"
+      },
+      {
+        "title-cn": "Divider 分割线",
+        "title-en": "Divider",
+        "path": "/ics/divider"
+      },
+      {
+        "title-cn": "Highlight 高亮文本",
+        "title-en": "Highlight",
+        "path": "/ics/highlight"
       }
     ]
   },

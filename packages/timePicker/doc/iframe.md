@@ -2,5 +2,6 @@
 <script setup>
 import demo1 from './demo1.vue'
 </script>
-<div class="demo-timePicker"></div>
+<div class="demo-timePicker">
  <demo1/>
+</div>

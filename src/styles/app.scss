@@ -157,6 +157,10 @@ iframe {
 /** iframe 中的样式 **/
 .in-iframe-container .markdown-body {
   padding-bottom: 30px;
+  > [class^="demo-"] {
+    min-height: calc(100vh - 64px);
+  }
+ 
 }
 /** 非iframe 中的样式 **/
 .not-iframe-container .markdown-body {
@@ -381,6 +385,12 @@ em {
   }
   .in-iframe-container {
     background-color: black!important;
+    .markdown-body {
+      padding-bottom: 30px;
+      > [class^="demo-"] {
+        background-color: black!important;
+      }
+    }
     [class^="icsm-doc-demo-block"] {
       background-color: black!important;
     }

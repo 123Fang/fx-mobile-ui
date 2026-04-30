@@ -326,6 +326,26 @@ export default [
        name: 'Circle 环形进度条',
        meta: { iframe: true },
        component: () => import('/packages/circle/doc/doc.md')
+     },{
+       path: 'collapse',
+       name: 'Collapse 折叠面板',
+       meta: { iframe: true },
+       component: () => import('/packages/collapse/doc/doc.md')
+     },{
+       path: 'countDown',
+       name: 'CountDown 倒计时',
+       meta: { iframe: true },
+       component: () => import('/packages/countDown/doc/doc.md')
+     },{
+       path: 'divider',
+       name: 'Divider 分割线',
+       meta: { iframe: true },
+       component: () => import('/packages/divider/doc/doc.md')
+     },{
+       path: 'highlight',
+       name: 'Highlight 高亮文本',
+       meta: { iframe: true },
+       component: () => import('/packages/highlight/doc/doc.md')
      }
     ]
   },
@@ -569,5 +589,21 @@ export default [
     path: '/iframe/ics/circle',
     name: 'iframe-Circle 环形进度条',
     component: () => import('/packages/circle/doc/iframe.md')
+  },{
+    path: '/iframe/ics/collapse',
+    name: 'iframe-Collapse 折叠面板',
+    component: () => import('/packages/collapse/doc/iframe.md')
+  },{
+    path: '/iframe/ics/countDown',
+    name: 'iframe-CountDown 倒计时',
+    component: () => import('/packages/countDown/doc/iframe.md')
+  },{
+    path: '/iframe/ics/divider',
+    name: 'iframe-Divider 分割线',
+    component: () => import('/packages/divider/doc/iframe.md')
+  },{
+    path: '/iframe/ics/highlight',
+    name: 'iframe-Highlight 高亮文本',
+    component: () => import('/packages/highlight/doc/iframe.md')
   }
 ]
