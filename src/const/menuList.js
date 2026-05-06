@@ -465,8 +465,65 @@ export default [
     ]
   },
   {
-    "title-cn": "其他",
-    "title-en": "other",
-    "list": []
+    "title-cn": "组合式 API",
+    "title-en": "compsition Api",
+    "list": [
+      {
+        "title-cn": "useClickAway",
+        "title-en": "useClickAway",
+        "path": "/ics/use-click-away"
+      },
+      {
+        "title-cn": "useCountDown",
+        "title-en": "useCountDown",
+        "path": "/ics/useCountDown"
+      },
+      {
+        "title-cn": "useCustomFieldValue",
+        "title-en": "useCustomFieldValue",
+        "path": "/ics/useCustomFieldValue"
+      },
+      {
+        "title-cn": "useEventListener",
+        "title-en": "useEventListener",
+        "path": "/ics/useEventListener"
+      },
+      {
+        "title-cn": "usePageVisibility",
+        "title-en": "usePageVisibility",
+        "path": "/ics/usePageVisibility"
+      },
+      {
+        "title-cn": "useRect",
+        "title-en": "useRect",
+        "path": "/ics/useRect"
+      },
+      {
+        "title-cn": "useRelation",
+        "title-en": "useRelation",
+        "path": "/ics/useRelation"
+      },
+      {
+        "title-cn": "useScrollParent",
+        "title-en": "useScrollParent",
+        "path": "/ics/useScrollParent"
+      },
+      {
+        "title-cn": "useToggle",
+        "title-en": "useToggle",
+        "path": "/ics/useToggle"
+      },
+      {
+        "title-cn": "useWindowSize",
+        "title-en": "useWindowSize",
+        "path": "/ics/useWindowSize"
+      },
+      {
+        "title-cn": "useRaf",
+        "title-en": "useRaf",
+        "path": "/ics/useRaf"
+      }
+
+    ]
   }
 ]

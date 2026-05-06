@@ -25,7 +25,11 @@ const isInIframe = computed(() => {
 })
 const isShow = computed(() => {
     const muneList = ['/ics/updatelog', '/ics/install', '/ics/advanced-usage']
-    return !muneList.includes(route.path)
+    const vantUseDocMuneList = ['/ics/use-click-away', '/ics/useCountDown', '/ics/useCustomFieldValue',  "/ics/useEventListener",
+      "/ics/usePageVisibility", "/ics/useRect",  "/ics/useRelation", "/ics/useScrollParent",
+      "/ics/useToggle", "/ics/useWindowSize", "/ics/useRaf"
+    ]
+    return !muneList.includes(route.path) &&  !vantUseDocMuneList.includes(route.path)
 })
 
 onMounted(() => {

@@ -526,7 +526,66 @@ export default [
        name: 'SubmitBar 提交订单栏',
        meta: { iframe: true },
        component: () => import('/packages/submitBar/doc/doc.md')
-     }
+     },
+      /***********************************
+      *  @vant/use doc 文档
+      * *********************************/
+     {
+       path: 'use-click-away',
+       name: 'use-click-away',
+       component: () => import('@/docs/vantUseDoc/markdown/use-click-away.md')
+     },
+     {
+      path: 'useCountDown',
+      name: 'useCountDown',
+      component: () => import('@/docs/vantUseDoc/markdown/use-count-down.zh-CN.md')
+    },
+    {
+      path: 'useCustomFieldValue',
+      name: 'useCustomFieldValue',
+      component: () => import('@/docs/vantUseDoc/markdown/use-custom-field-value.zh-CN.md')
+    },
+   
+    {
+      path: 'useEventListener',
+      name: 'useEventListener',
+      component: () => import('@/docs/vantUseDoc/markdown/use-event-listener.zh-CN.md')
+    },
+    {
+      path: 'usePageVisibility',
+      name: 'usePageVisibility',
+      component: () => import('@/docs/vantUseDoc/markdown/use-page-visibility.zh-CN.md')
+    },
+    {
+      path: 'useRect',
+      name: 'useRect',
+      component: () => import('@/docs/vantUseDoc/markdown/use-rect.zh-CN.md')
+    },
+    {
+      path: 'useRelation',
+      name: 'useRelation',
+      component: () => import('@/docs/vantUseDoc/markdown/use-relation.zh-CN.md')
+    },
+    {
+      path: 'useScrollParent',
+      name: 'useScrollParent',
+      component: () => import('@/docs/vantUseDoc/markdown/use-scroll-parent.zh-CN.md')
+    },
+    {
+      path: 'useToggle',
+      name: 'useToggle',
+      component: () => import('@/docs/vantUseDoc/markdown/use-toggle.zh-CN.md')
+    },
+    {
+      path: 'useWindowSize',
+      name: 'useWindowSize',
+      component: () => import('@/docs/vantUseDoc/markdown/use-window-size.zh-CN.md')
+    },
+    {
+      path: 'useRaf',
+      name: 'useRaf',
+      component: () => import('@/docs/vantUseDoc/markdown/use-raf.zh-CN.md')
+    },
     ]
   },
   {
@@ -925,5 +984,9 @@ export default [
     path: '/iframe/ics/submitBar',
     name: 'iframe-SubmitBar 提交订单栏',
     component: () => import('/packages/submitBar/doc/iframe.md')
-  }
+  },
+  /**
+   * @vant/use doc 文档
+   * **/
+  // src\docs\vantUseDoc
 ]
