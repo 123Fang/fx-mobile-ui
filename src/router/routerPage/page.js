@@ -6,11 +6,17 @@ export default [
     // component: () => import('@/views/index.vue')
     redirect : '/ics/install'
   },
+
   {
     path: '/ics',
     name: '组件页面',
     component: () => import('@/views/home.vue'),
     children: [
+      {
+        path: 'advanced-usage',
+        name: '进阶用法',
+        component: () => import('@/md/advanced-usage.md')
+      },
       {
         path: '',
         name: '贡献指南',

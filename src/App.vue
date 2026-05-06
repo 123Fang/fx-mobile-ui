@@ -40,6 +40,8 @@ if (isInIframe.value) { // 在内部的 iframe 中渲染
   window.iframeRoute = router
   window.iframetheme = theme
 }
+
+
 watch(() => route.path, () => {
   if (route.meta.iframe) {
     window.myIframe?.contentWindow?.iframeRoute?.push(`/iframe${route.path}`)

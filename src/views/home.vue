@@ -1,5 +1,5 @@
 <template>
-  <div class="fx-ui-doc">
+  <div class="ctf-ics-mobile-ui-doc">
     <aside>
       <div class="list-box">
         <div
@@ -13,7 +13,7 @@
           <li
             v-for="(v, i) in item.list"
             :key="i"
-            :class="{ active: menuIndex == index + '-' + i }"
+            :class="{ active: v.path === route.path }"
             @click="
               switchMenu({
                 parentTitle: item['title'],
@@ -40,12 +40,13 @@
 
 <script setup>
 import { reactive, ref, watchEffect } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import MenuList from "@/const/menuList.js";
 import { useMainStore } from "@/store/index";
 import iphoneView from './iphone-view.vue'
 const $store = useMainStore();
 const router = useRouter();
+const route = useRoute()
 const menuIndex = ref(sessionStorage.getItem("mIndex") || "0-0");
 let menuData = [];
 const state = reactive({
@@ -79,10 +80,11 @@ watchEffect(() => {
   });
 });
 const { MenuLangList } = state;
+console.log('MenuLangList', MenuLangList)
 </script>
 
 <style lang="scss" scoped>
-.fx-ui-doc {
+.ctf-ics-mobile-ui-doc {
   display: flex;
   height: calc(100vh - 64px - 2vh);
   margin-top: 2vh;
