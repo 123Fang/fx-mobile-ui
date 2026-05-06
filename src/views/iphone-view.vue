@@ -1,12 +1,14 @@
 <template>
   <div class="iphone-view-content">
-    <iframe ref="myIframe" :src="srciframe" width="100%" height="100%"></iframe>
+    <iframe v-show="isShow" ref="myIframe" :src="srciframe" width="100%" height="100%"></iframe>
   </div>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted,computed } from 'vue'
+
+
 
 
 const route = useRoute()
@@ -20,6 +22,10 @@ const isInIframe = computed(() => {
   } catch (e) {
     return false
   }
+})
+const isShow = computed(() => {
+    const muneList = ['/ics/updatelog', '/ics/install', '/ics/advanced-usage']
+    return !muneList.includes(route.path)
 })
 
 onMounted(() => {

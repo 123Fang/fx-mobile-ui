@@ -30,7 +30,7 @@ fs.writeFileSync(path.join(__dirname,'../src/const/menuList.js'), menuListTempla
 
 // 生成文档路由文件
 const children = routerPages[1].children.filter((item) => {
-  return ['贡献指南','更新日志','安装使用'].indexOf(item.name) === -1
+  return ['贡献指南','更新日志','安装使用', '进阶用法'].indexOf(item.name) === -1
 })
 const componentRoute = {
   path: name_En,
@@ -96,6 +96,11 @@ export default [
         path: 'install',
         name: '安装使用',
         component: () => import('@/md/install.md')
+      },
+       {
+        path: 'advanced-usage',
+        name: '进阶用法',
+        component: () => import('@/md/advanced-usage.md')
       },
       {{routesPage}}
     ]

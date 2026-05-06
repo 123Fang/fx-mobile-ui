@@ -12,6 +12,11 @@ export default [
         "title-cn": "安装使用",
         "title-en": "Install and use",
         "path": "/ics/install"
+      },
+      {
+        "title-cn": "进阶用法",
+        "title-en": "advanced usage",
+        "path": "/ics/advanced-usage"
       }
     ]
   },
@@ -20,9 +25,9 @@ export default [
     "title-en": "base components",
     "list": [
       {
-        "title-cn": "Popup 弹出层",
-        "title-en": "Popup",
-        "path": "/ics/popup"
+        "title-cn": "Button 按钮",
+        "title-en": "Button",
+        "path": "/ics/button"
       },
       {
         "title-cn": "Cell 单元格",
@@ -30,24 +35,14 @@ export default [
         "path": "/ics/cell"
       },
       {
-        "title-cn": "Button 按钮",
-        "title-en": "Button",
-        "path": "/ics/button"
+        "title-cn": "ConfigProvider 全局配置",
+        "title-en": "ConfigProvider",
+        "path": "/ics/configProvider"
       },
       {
         "title-cn": "Icon 图标",
         "title-en": "Icon",
         "path": "/ics/icon"
-      },
-      {
-        "title-cn": "Space 间距",
-        "title-en": "Space",
-        "path": "/ics/space"
-      },
-      {
-        "title-cn": "Toast 轻提示",
-        "title-en": "Toast",
-        "path": "/ics/toast"
       },
       {
         "title-cn": "Image 图片",
@@ -60,10 +55,23 @@ export default [
         "path": "/ics/col"
       },
       {
-        "title-cn": "ConfigProvider 全局配置",
-        "title-en": "ConfigProvider",
-        "path": "/ics/configProvider"
-      }
+        "title-cn": "Popup 弹出层",
+        "title-en": "Popup",
+        "path": "/ics/popup"
+      },
+      {
+        "title-cn": "Space 间距",
+        "title-en": "Space",
+        "path": "/ics/space"
+      },
+      {
+        "title-cn": "Toast 轻提示",
+        "title-en": "Toast",
+        "path": "/ics/toast"
+      },
+      
+     
+     
     ]
   },
   {
@@ -76,9 +84,9 @@ export default [
         "path": "/ics/calendar"
       },
       {
-        "title-cn": "PickerGroup 选择器组",
-        "title-en": "pickerGroup",
-        "path": "/ics/pickerGroup"
+        "title-cn": "Cascader 级联选择",
+        "title-en": "Cascader",
+        "path": "/ics/cascader"
       },
       {
         "title-cn": "Checkbox 复选框",
@@ -91,34 +99,9 @@ export default [
         "path": "/ics/datePicker"
       },
       {
-        "title-cn": "TimePicker 时间选择",
-        "title-en": "TimePicker",
-        "path": "/ics/timePicker"
-      },
-      {
-        "title-cn": "Cascader 级联选择",
-        "title-en": "Cascader",
-        "path": "/ics/cascader"
-      },
-      {
-        "title-cn": "NumberKeyboard 数字键盘",
-        "title-en": "NumberKeyboard",
-        "path": "/ics/numberKeyboard"
-      },
-      {
         "title-cn": "Field 输入框",
         "title-en": "Field",
         "path": "/ics/field"
-      },
-      {
-        "title-cn": "Radio 单选框",
-        "title-en": "Radio",
-        "path": "/ics/radio"
-      },
-      {
-        "title-cn": "Picker 选择器",
-        "title-en": "Picker",
-        "path": "/ics/picker"
       },
       {
         "title-cn": "Form 表单",
@@ -126,9 +109,29 @@ export default [
         "path": "/ics/form"
       },
       {
+        "title-cn": "NumberKeyboard 数字键盘",
+        "title-en": "NumberKeyboard",
+        "path": "/ics/numberKeyboard"
+      },
+      {
         "title-cn": "PasswordInput 密码输入框",
         "title-en": "PasswordInput",
         "path": "/ics/passwordInput"
+      },
+      {
+        "title-cn": "Picker 选择器",
+        "title-en": "Picker",
+        "path": "/ics/picker"
+      },
+      {
+        "title-cn": "PickerGroup 选择器组",
+        "title-en": "pickerGroup",
+        "path": "/ics/pickerGroup"
+      },
+      {
+        "title-cn": "Radio 单选框",
+        "title-en": "Radio",
+        "path": "/ics/radio"
       },
       {
         "title-cn": "Rate 评分",
@@ -161,6 +164,11 @@ export default [
         "path": "/ics/switch"
       },
       {
+        "title-cn": "TimePicker 时间选择",
+        "title-en": "TimePicker",
+        "path": "/ics/timePicker"
+      },     
+      {
         "title-cn": "Uploader 文件上传",
         "title-en": "Uploader",
         "path": "/ics/uploader"
@@ -172,26 +180,6 @@ export default [
     "title-en": "feedback components",
     "list": [
       {
-        "title-cn": "Loading 加载",
-        "title-en": "Loading",
-        "path": "/ics/loading"
-      },
-      {
-        "title-cn": "Notify 消息提示",
-        "title-en": "Notify",
-        "path": "/ics/notify"
-      },
-      {
-        "title-cn": "Dialog 弹出框",
-        "title-en": "Dialog",
-        "path": "/ics/dialog"
-      },
-      {
-        "title-cn": "PullRefresh 下拉刷新",
-        "title-en": "PullRefresh",
-        "path": "/ics/pullRefresh"
-      },
-      {
         "title-cn": "ActionSheet 动作面板",
         "title-en": "ActionSheet",
         "path": "/ics/actionSheet"
@@ -200,6 +188,11 @@ export default [
         "title-cn": "Barrage 弹幕",
         "title-en": "Barrage",
         "path": "/ics/barrage"
+      },
+      {
+        "title-cn": "Dialog 弹出框",
+        "title-en": "Dialog",
+        "path": "/ics/dialog"
       },
       {
         "title-cn": "DropdownMenu 下拉菜单",
@@ -217,9 +210,24 @@ export default [
         "path": "/ics/floatingBubble"
       },
       {
+        "title-cn": "Loading 加载",
+        "title-en": "Loading",
+        "path": "/ics/loading"
+      },
+      {
+        "title-cn": "Notify 消息提示",
+        "title-en": "Notify",
+        "path": "/ics/notify"
+      },
+      {
         "title-cn": "Overlay 遮罩层",
         "title-en": "Overlay",
         "path": "/ics/overlay"
+      },
+      {
+        "title-cn": "PullRefresh 下拉刷新",
+        "title-en": "PullRefresh",
+        "path": "/ics/pullRefresh"
       },
       {
         "title-cn": "ShareSheet 分享面板",
@@ -237,36 +245,6 @@ export default [
     "title-cn": "展示组件",
     "title-en": "display components",
     "list": [
-      {
-        "title-cn": "Swipe 轮播",
-        "title-en": "Swipe",
-        "path": "/ics/swipe"
-      },
-      {
-        "title-cn": "Tag 标签",
-        "title-en": "Tag",
-        "path": "/ics/tag"
-      },
-      {
-        "title-cn": "Lazyload 懒加载",
-        "title-en": "Lazyload",
-        "path": "/ics/lazyload"
-      },
-      {
-        "title-cn": "List 列表",
-        "title-en": "List",
-        "path": "/ics/list"
-      },
-      {
-        "title-cn": "Progress 进度条",
-        "title-en": "Progress",
-        "path": "/ics/progress"
-      },
-      {
-        "title-cn": "Empty 空状态",
-        "title-en": "Empty",
-        "path": "/ics/empty"
-      },
       {
         "title-cn": "Badge 徽标",
         "title-en": "Badge",
@@ -293,6 +271,11 @@ export default [
         "path": "/ics/divider"
       },
       {
+        "title-cn": "Empty 空状态",
+        "title-en": "Empty",
+        "path": "/ics/empty"
+      },
+      {
         "title-cn": "Highlight 高亮文本",
         "title-en": "Highlight",
         "path": "/ics/highlight"
@@ -303,6 +286,16 @@ export default [
         "path": "/ics/imagePreview"
       },
       {
+        "title-cn": "Lazyload 懒加载",
+        "title-en": "Lazyload",
+        "path": "/ics/lazyload"
+      },
+      {
+        "title-cn": "List 列表",
+        "title-en": "List",
+        "path": "/ics/list"
+      },
+      {
         "title-cn": "NoticeBar 通知栏",
         "title-en": "NoticeBar",
         "path": "/ics/noticeBar"
@@ -311,6 +304,11 @@ export default [
         "title-cn": "Popover 气泡弹出框",
         "title-en": "Popover",
         "path": "/ics/popover"
+      },
+      {
+        "title-cn": "Progress 进度条",
+        "title-en": "Progress",
+        "path": "/ics/progress"
       },
       {
         "title-cn": "RollingText 翻滚文本",
@@ -333,6 +331,16 @@ export default [
         "path": "/ics/sticky"
       },
       {
+        "title-cn": "Swipe 轮播",
+        "title-en": "Swipe",
+        "path": "/ics/swipe"
+      },
+      {
+        "title-cn": "Tag 标签",
+        "title-en": "Tag",
+        "path": "/ics/tag"
+      },
+      {
         "title-cn": "TextEllipsis 文本省略",
         "title-en": "TextEllipsis",
         "path": "/ics/textEllipsis"
@@ -349,16 +357,6 @@ export default [
     "title-en": "navigation components",
     "list": [
       {
-        "title-cn": "Grid 宫格",
-        "title-en": "Grid",
-        "path": "/ics/grid"
-      },
-      {
-        "title-cn": "Tab 标签页",
-        "title-en": "Tab",
-        "path": "/ics/tab"
-      },
-      {
         "title-cn": "ActionBar 动作栏",
         "title-en": "ActionBar",
         "path": "/ics/actionBar"
@@ -369,15 +367,15 @@ export default [
         "path": "/ics/backTop"
       },
       {
+        "title-cn": "Grid 宫格",
+        "title-en": "Grid",
+        "path": "/ics/grid"
+      },
+      {
         "title-cn": "IndexBar 索引栏",
         "title-en": "IndexBar",
         "path": "/ics/indexBar"
       },
-      // {
-      //   "title-cn": "IndexAnchor indexAnchor索引栏",
-      //   "title-en": "IndexAnchor",
-      //   "path": "/ics/indexAnchor"
-      // },
       {
         "title-cn": "NavBar 导航栏",
         "title-en": "NavBar",
@@ -393,17 +391,37 @@ export default [
         "title-en": "Sidebar",
         "path": "/ics/sidebar"
       },
-      // {
-      //   "title-cn": "SidebarItem sidebarItem侧边导航",
-      //   "title-en": "SidebarItem",
-      //   "path": "/ics/sidebarItem"
-      // }
+      {
+        "title-cn": "Tab 标签页",
+        "title-en": "Tab",
+        "path": "/ics/tab"
+      },
+      {
+        "title-cn": "Tabbar 标签栏",
+        "title-en": "Tabbar",
+        "path": "/ics/tabbar"
+      },
+      {
+        "title-cn": "TreeSelect 分类选择",
+        "title-en": "TreeSelect",
+        "path": "/ics/treeSelect"
+      }
     ]
   },
   {
     "title-cn": "业务组件",
     "title-en": "business components",
     "list": [
+      {
+        "title-cn": "AddressEdit 地址编辑",
+        "title-en": "AddressEdit",
+        "path": "/ics/addressEdit"
+      },
+      {
+        "title-cn": "AddressList 地址列表",
+        "title-en": "AddressList",
+        "path": "/ics/addressList"
+      },
       {
         "title-cn": "Area 省市区选择",
         "title-en": "Area",
@@ -413,6 +431,36 @@ export default [
         "title-cn": "Card 卡片",
         "title-en": "Card",
         "path": "/ics/card"
+      },
+      {
+        "title-cn": "ContactCard 联系人卡片",
+        "title-en": "ContactCard",
+        "path": "/ics/contactCard"
+      },
+      {
+        "title-cn": "ContactEdit 联系人编辑",
+        "title-en": "ContactEdit",
+        "path": "/ics/contactEdit"
+      },
+      {
+        "title-cn": "ContactList 联系人列表",
+        "title-en": "ContactList",
+        "path": "/ics/contactList"
+      },
+      {
+        "title-cn": "Coupon 优惠券",
+        "title-en": "Coupon",
+        "path": "/ics/couponList"
+      },
+      // {
+      //   "title-cn": "CouponCell couponCell优惠券选择器",
+      //   "title-en": "CouponCell",
+      //   "path": "/ics/couponCell"
+      // },
+      {
+        "title-cn": "SubmitBar 提交订单栏",
+        "title-en": "SubmitBar",
+        "path": "/ics/submitBar"
       }
     ]
   },

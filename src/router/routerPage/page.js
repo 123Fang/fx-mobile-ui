@@ -6,17 +6,11 @@ export default [
     // component: () => import('@/views/index.vue')
     redirect : '/ics/install'
   },
-
   {
     path: '/ics',
     name: '组件页面',
     component: () => import('@/views/home.vue'),
     children: [
-      {
-        path: 'advanced-usage',
-        name: '进阶用法',
-        component: () => import('@/md/advanced-usage.md')
-      },
       {
         path: '',
         name: '贡献指南',
@@ -31,6 +25,11 @@ export default [
         path: 'install',
         name: '安装使用',
         component: () => import('@/md/install.md')
+      },
+       {
+        path: 'advanced-usage',
+        name: '进阶用法',
+        component: () => import('@/md/advanced-usage.md')
       },
       {
        path: 'calendar',
@@ -472,6 +471,61 @@ export default [
        name: 'SidebarItem sidebarItem侧边导航',
        meta: { iframe: true },
        component: () => import('/packages/sidebarItem/doc/doc.md')
+     },{
+       path: 'tabbar',
+       name: 'Tabbar 标签栏',
+       meta: { iframe: true },
+       component: () => import('/packages/tabbar/doc/doc.md')
+     },{
+       path: 'tabbarItem',
+       name: 'TabbarItem tabbarItem标签栏',
+       meta: { iframe: true },
+       component: () => import('/packages/tabbarItem/doc/doc.md')
+     },{
+       path: 'treeSelect',
+       name: 'TreeSelect 分类选择',
+       meta: { iframe: true },
+       component: () => import('/packages/treeSelect/doc/doc.md')
+     },{
+       path: 'addressEdit',
+       name: 'AddressEdit 地址编辑',
+       meta: { iframe: true },
+       component: () => import('/packages/addressEdit/doc/doc.md')
+     },{
+       path: 'addressList',
+       name: 'AddressList 地址列表',
+       meta: { iframe: true },
+       component: () => import('/packages/addressList/doc/doc.md')
+     },{
+       path: 'contactCard',
+       name: 'ContactCard 联系人卡片',
+       meta: { iframe: true },
+       component: () => import('/packages/contactCard/doc/doc.md')
+     },{
+       path: 'contactEdit',
+       name: 'ContactEdit 联系人编辑',
+       meta: { iframe: true },
+       component: () => import('/packages/contactEdit/doc/doc.md')
+     },{
+       path: 'contactList',
+       name: 'ContactList 联系人列表',
+       meta: { iframe: true },
+       component: () => import('/packages/contactList/doc/doc.md')
+     },{
+       path: 'couponList',
+       name: 'CouponList 优惠券选择器',
+       meta: { iframe: true },
+       component: () => import('/packages/couponList/doc/doc.md')
+     },{
+       path: 'couponCell',
+       name: 'CouponCell couponCell优惠券选择器',
+       meta: { iframe: true },
+       component: () => import('/packages/couponCell/doc/doc.md')
+     },{
+       path: 'submitBar',
+       name: 'SubmitBar 提交订单栏',
+       meta: { iframe: true },
+       component: () => import('/packages/submitBar/doc/doc.md')
      }
     ]
   },
@@ -827,5 +881,49 @@ export default [
     path: '/iframe/ics/sidebarItem',
     name: 'iframe-SidebarItem sidebarItem侧边导航',
     component: () => import('/packages/sidebarItem/doc/iframe.md')
+  },{
+    path: '/iframe/ics/tabbar',
+    name: 'iframe-Tabbar 标签栏',
+    component: () => import('/packages/tabbar/doc/iframe.md')
+  },{
+    path: '/iframe/ics/tabbarItem',
+    name: 'iframe-TabbarItem tabbarItem标签栏',
+    component: () => import('/packages/tabbarItem/doc/iframe.md')
+  },{
+    path: '/iframe/ics/treeSelect',
+    name: 'iframe-TreeSelect 分类选择',
+    component: () => import('/packages/treeSelect/doc/iframe.md')
+  },{
+    path: '/iframe/ics/addressEdit',
+    name: 'iframe-AddressEdit 地址编辑',
+    component: () => import('/packages/addressEdit/doc/iframe.md')
+  },{
+    path: '/iframe/ics/addressList',
+    name: 'iframe-AddressList 地址列表',
+    component: () => import('/packages/addressList/doc/iframe.md')
+  },{
+    path: '/iframe/ics/contactCard',
+    name: 'iframe-ContactCard 联系人卡片',
+    component: () => import('/packages/contactCard/doc/iframe.md')
+  },{
+    path: '/iframe/ics/contactEdit',
+    name: 'iframe-ContactEdit 联系人编辑',
+    component: () => import('/packages/contactEdit/doc/iframe.md')
+  },{
+    path: '/iframe/ics/contactList',
+    name: 'iframe-ContactList 联系人列表',
+    component: () => import('/packages/contactList/doc/iframe.md')
+  },{
+    path: '/iframe/ics/couponList',
+    name: 'iframe-CouponList 优惠券选择器',
+    component: () => import('/packages/couponList/doc/iframe.md')
+  },{
+    path: '/iframe/ics/couponCell',
+    name: 'iframe-CouponCell couponCell优惠券选择器',
+    component: () => import('/packages/couponCell/doc/iframe.md')
+  },{
+    path: '/iframe/ics/submitBar',
+    name: 'iframe-SubmitBar 提交订单栏',
+    component: () => import('/packages/submitBar/doc/iframe.md')
   }
 ]
