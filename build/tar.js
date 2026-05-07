@@ -7,12 +7,12 @@ import * as tar from 'tar';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// 读取命令行参数（版本号）
-const version = process.argv[2];
-if (!version) {
-  console.error('请提供版本号，例如：npm run build 2.1.8');
-  process.exit(1);
-}
+
+
+const packagePath = path.join(__dirname,'../package.json');
+const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf-8'));
+const version = pkg.version // 发布的npm版本号，取根目录下 package.json 的版本号
+
 
 const sourceDir = path.join(__dirname, '../ctf-ics-mobile-ui-dist');
 const outputFile = path.join(__dirname, '../ctf-ics-mobile-ui-dist.tgz');

@@ -2,6 +2,14 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { createPinia } from "pinia";
 import icsUI from "../packages/index";
+
+/** 
+ * 测试 npm包 ：
+ * **/
+// import icsUI from "ctf-ics-mobile-ui";
+// import 'ctf-ics-mobile-ui/dist/style.css'
+
+
 import hljs from "highlight.js";
 
 // 文档code示例样式 ------  主题色
