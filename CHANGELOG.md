@@ -6,6 +6,7 @@
 - 4 支持用 import { xxx } from 'ctf-ics-mobile-ui/area-data' 透传vant子包 @vant/area-data
 - 5 文档暗黑模式优化。测试 ctf-ics-mobile-ui 对接  vant 的暗黑模式
 - 6 文档demo多语言切换（简/英）优化
+- 7 npm包构建优化： npm run build [版本号] 改为 npm run build （npm包构建的版本号自动取用 package.json 文件的版本号）
 
 
 
