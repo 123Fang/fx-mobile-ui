@@ -19,7 +19,7 @@ export default [
       {
         path: 'updatelog',
         name: '更新日志',
-        component: () => import('@/md/updatelog.md')
+        component: () => import('../../../CHANGELOG.md')
       },
       {
         path: 'install',

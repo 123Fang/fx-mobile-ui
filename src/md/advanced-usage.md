@@ -1,3 +1,34 @@
+# 
+```js
+
+vant官方子npm包 '@vant/use  @vant/area-data' 引入：
+
+import { xxx } from 'ctf-ics-mobile-ui/use' 
+等价于
+import { xxx } from '@vant/use' 
+
+
+import { xxx } from 'ctf-ics-mobile-ui/area-data' 
+等价于
+import { xxx } from '@vant/area-data'
+
+```
+
+```js
+
+获取 vant 组件实例统一加上 .innerRef：
+
+<icsm-button ref="buttonRef">
+
+const buttonRef = ref(null)
+
+buttonRef.value?.innerRef // van-button 组件实例
+
+
+
+```
+
+
 # 进阶用法
 
 ### 介绍
