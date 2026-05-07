@@ -109,7 +109,6 @@ declare module 'vue' {
     VanTag: typeof import('vant/es')['Tag']
     VanTextEllipsis: typeof import('vant/es')['TextEllipsis']
     VanTimePicker: typeof import('vant/es')['TimePicker']
-    VanToast: typeof import('vant/es')['Toast']
     VanTreeSelect: typeof import('vant/es')['TreeSelect']
     VanUploader: typeof import('vant/es')['Uploader']
     VanWatermark: typeof import('vant/es')['Watermark']

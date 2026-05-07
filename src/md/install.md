@@ -11,8 +11,7 @@ npm run dev
 npm run build:doc
 
 // 打包组件
-npm run build 版本号
-eg： npm run build 2.1.8
+eg： npm run build 
 
 // 单元测试
 npm run test

@@ -1,8 +1,5 @@
-
-import { ref } from 'vue';
-import { cdnURL, useTranslate } from '@/docs/site';
-
-// copy demo
-
-
-
+<template>
+<div></div>
+</template>
+<script setup>
+</script>

@@ -94,7 +94,7 @@ const copyCode = () => {
   }
 };
 onMounted(() => {
-  getSourceCode();
+  // getSourceCode();
 });
 </script>
 

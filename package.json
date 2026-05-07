@@ -1,7 +1,7 @@
 {
   "name": "ctf-ics-mobile-ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "./dist/ctf-ics-mobile-ui.umd.js",
   "module": "./dist/ctf-ics-mobile-ui.js",

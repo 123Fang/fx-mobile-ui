@@ -1,9 +1,7 @@
 <script setup lang="ts">
 
 import { ref } from 'vue';
-// import { useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
-
 import { showToast } from 'ctf-ics-mobile-ui';
 
 const t = useTranslate({
@@ -46,7 +44,6 @@ const keyboard = ref('default');
 
 const onInput = (value: string) => showToast(`${t('input')}: ${value}`);
 const onDelete = () => showToast(t('delete'));
-const isTest = process.env.NODE_ENV === 'test';
 </script>
 
 <template>
@@ -137,14 +134,7 @@ const isTest = process.env.NODE_ENV === 'test';
     @delete="onDelete"
   />
 
-  <icsm-number-keyboard
-    v-if="!isTest"
-    :show="keyboard === 'randomKeyOrder'"
-    random-key-order
-    @blur="keyboard = ''"
-    @input="onInput"
-    @delete="onDelete"
-  />
+
 
   <icsm-number-keyboard
     v-model="value"

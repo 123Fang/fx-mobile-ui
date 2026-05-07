@@ -52,7 +52,7 @@
   "loading": "packages/loading/index.js",
   "navBar": "packages/navBar/index.js",
   "noticeBar": "packages/noticeBar/index.js",
-  "numberKeyboard": "packages/numberKeyboard/index.js",
+  // "numberKeyboard": "packages/numberKeyboard/index.js",
   "picker": "packages/picker/index.js",
   "overlay": "packages/overlay/index.js",
   "pagination": "packages/pagination/index.js",
