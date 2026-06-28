@@ -40,16 +40,16 @@ const onFailed = (errorInfo: {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-form @submit="onSubmit" @failed="onFailed">
-      <icsm-cell-group inset>
-        <icsm-field
+    <fx-form @submit="onSubmit" @failed="onFailed">
+      <fx-cell-group inset>
+        <fx-field
           v-model="username"
           name="username"
           :label="t('username')"
           :rules="[{ required: true, message: t('requireUsername') }]"
           :placeholder="t('username')"
         />
-        <icsm-field
+        <fx-field
           v-model="password"
           type="password"
           name="password"
@@ -57,13 +57,13 @@ const onFailed = (errorInfo: {
           :rules="[{ required: true, message: t('requirePassword') }]"
           :placeholder="t('password')"
         />
-      </icsm-cell-group>
+     </fx-cell-group>
 
       <div style="margin: 16px 16px 0">
-        <icsm-button round block type="primary" native-type="submit">
+        <fx-button round block type="primary" native-type="submit">
           {{ t('submit') }}
-        </icsm-button>
+       </fx-button>
       </div>
-    </icsm-form>
+   </fx-form>
   </demo-block>
 </template>

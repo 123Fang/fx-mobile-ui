@@ -62,7 +62,7 @@ const formatter = (type: string, option: PickerOption) => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-date-picker
+    <fx-date-picker
       v-model="basicDate"
       :title="t('chooseDate')"
       :min-date="minDate"
@@ -71,7 +71,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('columnsType')">
-    <icsm-date-picker
+    <fx-date-picker
       v-model="yearMonthDate"
       :title="t('chooseYearMonth')"
       :min-date="minDate"
@@ -81,7 +81,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('optionsFormatter')">
-    <icsm-date-picker
+    <fx-date-picker
       v-model="formatterDate"
       :title="t('chooseYearMonth')"
       :min-date="minDate"
@@ -92,7 +92,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('optionsFilter')">
-    <icsm-date-picker
+    <fx-date-picker
       v-model="filterDate"
       :title="t('optionFilter')"
       :filter="filter"

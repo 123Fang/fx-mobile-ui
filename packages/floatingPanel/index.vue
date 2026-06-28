@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-floating-panel',
+  name: 'fx-floating-panel',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-floating-panel-container {}
+.fx-floating-panel-container {}
 </style>

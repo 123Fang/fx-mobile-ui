@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-space',
+  name: 'fx-space',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -22,5 +22,5 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-space-container {}
+.fx-space-container {}
 </style>

@@ -4,7 +4,7 @@ import { ref } from 'vue';
 // import { useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -48,19 +48,19 @@ const onFinish = () => showToast(t('finished'));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-count-down :time="time" />
+    <fx-count-down :time="time" />
   </demo-block>
 
   <demo-block :title="t('customFormat')">
-    <icsm-count-down :time="time" :format="t('formatWithDay')" />
+    <fx-count-down :time="time" :format="t('formatWithDay')" />
   </demo-block>
 
   <demo-block :title="t('millisecond')">
-    <icsm-count-down millisecond :time="time" format="HH:mm:ss:SS" />
+    <fx-count-down millisecond :time="time" format="HH:mm:ss:SS" />
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-count-down :time="time">
+    <fx-count-down :time="time">
       <template #default="currentTime">
         <span class="block">{{ currentTime.hours }}</span>
         <span class="colon">:</span>
@@ -68,11 +68,11 @@ const onFinish = () => showToast(t('finished'));
         <span class="colon">:</span>
         <span class="block">{{ currentTime.seconds }}</span>
       </template>
-    </icsm-count-down>
+   </fx-count-down>
   </demo-block>
 
   <demo-block :title="t('manualControl')">
-    <icsm-count-down
+    <fx-count-down
       ref="countDown"
       millisecond
       :time="3000"
@@ -80,26 +80,26 @@ const onFinish = () => showToast(t('finished'));
       format="ss:SSS"
       @finish="onFinish"
     />
-    <icsm-grid clickable :column-num="3">
-      <icsm-grid-item icon="play-circle-o" :text="t('start')" @click="start" />
-      <icsm-grid-item icon="pause-circle-o" :text="t('pause')" @click="pause" />
-      <icsm-grid-item icon="replay" :text="t('reset')" @click="reset" />
-    </icsm-grid>
+    <fx-grid clickable :column-num="3">
+      <fx-grid-item icon="play-circle-o" :text="t('start')" @click="start" />
+      <fx-grid-item icon="pause-circle-o" :text="t('pause')" @click="pause" />
+      <fx-grid-item icon="replay" :text="t('reset')" @click="reset" />
+   </fx-grid>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-count-down {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-count-down {
-    margin-left: var(--icsm-padding-md);
+  .fx-count-down {
+    margin-left: var(--fx-padding-md);
   }
 
   .colon {
     display: inline-block;
     margin: 0 4px;
-    color: var(--icsm-primary-color);
+    color: var(--fx-primary-color);
   }
 
   .block {
@@ -108,11 +108,11 @@ const onFinish = () => showToast(t('finished'));
     color: #fff;
     font-size: 12px;
     text-align: center;
-    background-color: var(--icsm-primary-color);
+    background-color: var(--fx-primary-color);
     border-radius: 4px;
   }
 
-  .icsm-grid {
+  .fx-grid {
     margin-top: 10px;
   }
 }

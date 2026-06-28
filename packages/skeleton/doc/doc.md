@@ -16,7 +16,7 @@ import {
   SkeletonImage,
   SkeletonAvatar,
   SkeletonParagraph,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Skeleton);
@@ -33,7 +33,7 @@ app.use(SkeletonParagraph);
 通过 `title` 属性显示标题占位图，通过 `row` 属性配置占位段落行数。
 
 ```html
-<icsm-skeleton title :row="3" />
+<fx-skeleton title :row="3" />
 ```
 
 ### 显示头像
@@ -41,7 +41,7 @@ app.use(SkeletonParagraph);
 通过 `avatar` 属性显示头像占位图。
 
 ```html
-<icsm-skeleton title avatar :row="3" />
+<fx-skeleton title avatar :row="3" />
 ```
 
 ### 展示子组件
@@ -49,9 +49,9 @@ app.use(SkeletonParagraph);
 将 `loading` 属性设置成 `false` 表示内容加载完成，此时会隐藏占位图，并显示 `Skeleton` 的子组件。
 
 ```html
-<icsm-skeleton title avatar :row="3" :loading="loading">
+<fx-skeleton title avatar :row="3" :loading="loading">
   <div>实际内容</div>
-</icsm-skeleton>
+</fx-skeleton>
 ```
 
 ```js
@@ -77,19 +77,19 @@ export default {
 通过 `template` 插槽完成自定义内容的展示。
 
 ```html
-<icsm-skeleton>
+<fx-skeleton>
   <template #template>
     <div :style="{ display: 'flex', width: '100%' }">
-      <icsm-skeleton-image />
+      <fx-skeleton-image />
       <div :style="{ flex: 1, marginLeft: '16px' }">
-        <icsm-skeleton-paragraph row-width="60%" />
-        <icsm-skeleton-paragraph />
-        <icsm-skeleton-paragraph />
-        <icsm-skeleton-paragraph />
+        <fx-skeleton-paragraph row-width="60%" />
+        <fx-skeleton-paragraph />
+        <fx-skeleton-paragraph />
+        <fx-skeleton-paragraph />
       </div>
     </div>
   </template>
-</icsm-skeleton>
+</fx-skeleton>
 ```
 
 ## API
@@ -156,7 +156,7 @@ import type {
   SkeletonImageShape,
   SkeletonAvatarShape,
   SkeletonParagraphProps,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -167,15 +167,15 @@ import type {
 
 | 名称                                | 默认值                    | 描述 |
 | ----------------------------------- | ------------------------- | ---- |
-| --icsm-skeleton-paragraph-height     | _16px_                    | -    |
-| --icsm-skeleton-paragraph-background | _var(--icsm-active-color)_ | -    |
-| --icsm-skeleton-paragraph-margin-top | _var(--icsm-padding-sm)_   | -    |
-| --icsm-skeleton-title-width          | _40%_                     | -    |
-| --icsm-skeleton-avatar-size          | _32px_                    | -    |
-| --icsm-skeleton-avatar-background    | _var(--icsm-active-color)_ | -    |
-| --icsm-skeleton-duration             | _1.2s_                    | -    |
-| --icsm-skeleton-image-size           | _96px_                    |
-| --icsm-skeleton-image-radius         | _24px_                    | -    |
+| --fx-skeleton-paragraph-height     | _16px_                    | -    |
+| --fx-skeleton-paragraph-background | _var(--fx-active-color)_ | -    |
+| --fx-skeleton-paragraph-margin-top | _var(--fx-padding-sm)_   | -    |
+| --fx-skeleton-title-width          | _40%_                     | -    |
+| --fx-skeleton-avatar-size          | _32px_                    | -    |
+| --fx-skeleton-avatar-background    | _var(--fx-active-color)_ | -    |
+| --fx-skeleton-duration             | _1.2s_                    | -    |
+| --fx-skeleton-image-size           | _96px_                    |
+| --fx-skeleton-image-radius         | _24px_                    | -    |
 
 
 

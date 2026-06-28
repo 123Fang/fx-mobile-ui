@@ -2,7 +2,7 @@
 
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import {Button} from 'ctf-ics-mobile-ui'
+import {Button} from 'fx-mobile-ui'
 
 
 
@@ -139,31 +139,31 @@ const reset = () => {
         :auto-start="false"
         :height="54"
       />
-      <icsm-grid clickable :column-num="2" style="margin-top: 10px">
-        <icsm-grid-item icon="play-circle-o" :text="t('start')" @click="start" />
-        <icsm-grid-item icon="replay" :text="t('reset')" @click="reset" />
-      </icsm-grid>
+      <fx-grid clickable :column-num="2" style="margin-top: 10px">
+        <fx-grid-item icon="play-circle-o" :text="t('start')" @click="start" />
+        <fx-grid-item icon="replay" :text="t('reset')" @click="reset" />
+     </fx-grid>
     </div>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-rolling-text {
-  .icsm-button {
-    margin-left: var(--icsm-padding-md);
+  .fx-button {
+    margin-left: var(--fx-padding-md);
   }
 
-  .icsm-rolling-text {
-    margin-left: var(--icsm-padding-md);
+  .fx-rolling-text {
+    margin-left: var(--fx-padding-md);
   }
 
   .my-rolling-text {
-    --icsm-rolling-text-background: #1989fa;
-    --icsm-rolling-text-color: white;
-    --icsm-rolling-text-font-size: 24px;
-    --icsm-rolling-text-gap: 6px;
-    --icsm-rolling-text-item-border-radius: 5px;
-    --icsm-rolling-text-item-width: 40px;
+    --fx-rolling-text-background: #1989fa;
+    --fx-rolling-text-color: white;
+    --fx-rolling-text-font-size: 24px;
+    --fx-rolling-text-gap: 6px;
+    --fx-rolling-text-item-border-radius: 5px;
+    --fx-rolling-text-item-width: 40px;
   }
 }
 </style>

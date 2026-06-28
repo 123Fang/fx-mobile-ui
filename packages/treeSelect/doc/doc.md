@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TreeSelect } from 'ctf-ics-mobile-ui';
+import { TreeSelect } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(TreeSelect);
@@ -23,7 +23,7 @@ app.use(TreeSelect);
 `item` 为分类显示所需的数据，数据格式见下方示例。`main-active-index` 表示左侧高亮选项的索引，`active-id` 表示右侧高亮选项的 id。
 
 ```html
-<icsm-tree-select
+<fx-tree-select
   v-model:active-id="activeId"
   v-model:main-active-index="activeIndex"
   :items="items"
@@ -71,7 +71,7 @@ export default {
 `active-id` 为数组格式时，可以选中多个右侧选项。
 
 ```html
-<icsm-tree-select
+<fx-tree-select
   v-model:active-id="activeIds"
   v-model:main-active-index="activeIndex"
   :items="items"
@@ -119,22 +119,22 @@ export default {
 通过 `content` 插槽可以自定义右侧区域的内容。
 
 ```html
-<icsm-tree-select
+<fx-tree-select
   v-model:main-active-index="activeIndex"
   height="55vw"
   :items="items"
 >
   <template #content>
-    <icsm-image
+    <fx-image
       v-if="activeIndex === 0"
       src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg"
     />
-    <icsm-image
+    <fx-image
       v-if="activeIndex === 1"
       src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-2.jpeg"
     />
   </template>
-</icsm-tree-select>
+</fx-tree-select>
 ```
 
 ```js
@@ -156,7 +156,7 @@ export default {
 设置 `dot` 属性后，会在图标右上角展示一个小红点；设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<icsm-tree-select
+<fx-tree-select
   v-model:main-active-index="activeIndex"
   height="55vw"
   :items="items"
@@ -262,7 +262,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TreeSelectItem, TreeSelectChild, TreeSelectProps } from 'ctf-ics-mobile-ui';
+import type { TreeSelectItem, TreeSelectChild, TreeSelectProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -273,14 +273,14 @@ import type { TreeSelectItem, TreeSelectChild, TreeSelectProps } from 'ctf-ics-m
 
 | 名称                                  | 默认值                       | 描述 |
 | ------------------------------------- | ---------------------------- | ---- |
-| --icsm-tree-select-font-size           | _var(--icsm-font-size-md)_    | -    |
-| --icsm-tree-select-nav-background      | _var(--icsm-background)_      | -    |
-| --icsm-tree-select-content-background  | _var(--icsm-background-2)_    | -    |
-| --icsm-tree-select-nav-item-padding    | _14px var(--icsm-padding-sm)_ | -    |
-| --icsm-tree-select-item-height         | _48px_                       | -    |
-| --icsm-tree-select-item-active-color   | _var(--icsm-primary-color)_   | -    |
-| --icsm-tree-select-item-disabled-color | _var(--icsm-gray-5)_          | -    |
-| --icsm-tree-select-item-selected-size  | _16px_                       | -    |
+| --fx-tree-select-font-size           | _var(--fx-font-size-md)_    | -    |
+| --fx-tree-select-nav-background      | _var(--fx-background)_      | -    |
+| --fx-tree-select-content-background  | _var(--fx-background-2)_    | -    |
+| --fx-tree-select-nav-item-padding    | _14px var(--fx-padding-sm)_ | -    |
+| --fx-tree-select-item-height         | _48px_                       | -    |
+| --fx-tree-select-item-active-color   | _var(--fx-primary-color)_   | -    |
+| --fx-tree-select-item-disabled-color | _var(--fx-gray-5)_          | -    |
+| --fx-tree-select-item-selected-size  | _16px_                       | -    |
 
 
 

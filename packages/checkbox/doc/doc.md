@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Checkbox, CheckboxGroup } from 'ctf-ics-mobile-ui';
+import { Checkbox, CheckboxGroup } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Checkbox);
@@ -24,7 +24,7 @@ app.use(CheckboxGroup);
 通过 `v-model` 绑定复选框的勾选状态。
 
 ```html
-<icsm-checkbox v-model="checked">复选框</icsm-checkbox>
+<fx-checkbox v-model="checked">复选框</fx-checkbox>
 ```
 
 ```js
@@ -43,7 +43,7 @@ export default {
 通过设置 `disabled` 属性可以禁用复选框。
 
 ```html
-<icsm-checkbox v-model="checked" disabled>复选框</icsm-checkbox>
+<fx-checkbox v-model="checked" disabled>复选框</fx-checkbox>
 ```
 
 ### 自定义形状
@@ -51,10 +51,10 @@ export default {
 将 `shape` 属性设置为 `square`，复选框的形状会变成方形。
 
 ```html
-<icsm-checkbox-group v-model="checked" shape="square">
-  <icsm-checkbox name="a">复选框 a</icsm-checkbox>
-  <icsm-checkbox name="b">复选框 b</icsm-checkbox>
-</icsm-checkbox-group>
+<fx-checkbox-group v-model="checked" shape="square">
+  <fx-checkbox name="a">复选框 a</fx-checkbox>
+  <fx-checkbox name="b">复选框 b</fx-checkbox>
+</fx-checkbox-group>
 ```
 
 ```js
@@ -73,7 +73,7 @@ export default {
 通过 `checked-color` 属性设置选中状态的图标颜色。
 
 ```html
-<icsm-checkbox v-model="checked" checked-color="#ee0a24">复选框</icsm-checkbox>
+<fx-checkbox v-model="checked" checked-color="#ee0a24">复选框</fx-checkbox>
 ```
 
 ### 自定义大小
@@ -81,7 +81,7 @@ export default {
 通过 `icon-size` 属性可以自定义图标的大小。
 
 ```html
-<icsm-checkbox v-model="checked" icon-size="24px">复选框</icsm-checkbox>
+<fx-checkbox v-model="checked" icon-size="24px">复选框</fx-checkbox>
 ```
 
 ### 自定义图标
@@ -89,12 +89,12 @@ export default {
 通过 `icon` 插槽自定义图标，可以通过 `slotProps` 判断是否为选中状态.
 
 ```html
-<icsm-checkbox v-model="checked">
+<fx-checkbox v-model="checked">
   自定义图标
   <template #icon="props">
     <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
   </template>
-</icsm-checkbox>
+</fx-checkbox>
 
 <style>
   .img-icon {
@@ -125,7 +125,7 @@ export default {
 将 `label-position` 属性设置为 `'left'`，可以将文本位置调整到复选框左侧。
 
 ```html
-<icsm-checkbox v-model="checked" label-position="left">复选框</icsm-checkbox>
+<fx-checkbox v-model="checked" label-position="left">复选框</fx-checkbox>
 ```
 
 ### 禁用文本点击
@@ -133,7 +133,7 @@ export default {
 设置 `label-disabled` 属性后，点击图标以外的内容不会触发复选框切换。
 
 ```html
-<icsm-checkbox v-model="checked" label-disabled>复选框</icsm-checkbox>
+<fx-checkbox v-model="checked" label-disabled>复选框</fx-checkbox>
 ```
 
 ### 复选框组
@@ -141,10 +141,10 @@ export default {
 复选框可以与复选框组一起使用，复选框组通过 `v-model` 数组绑定复选框的勾选状态。
 
 ```html
-<icsm-checkbox-group v-model="checked">
-  <icsm-checkbox name="a">复选框 a</icsm-checkbox>
-  <icsm-checkbox name="b">复选框 b</icsm-checkbox>
-</icsm-checkbox-group>
+<fx-checkbox-group v-model="checked">
+  <fx-checkbox name="a">复选框 a</fx-checkbox>
+  <fx-checkbox name="b">复选框 b</fx-checkbox>
+</fx-checkbox-group>
 ```
 
 ```js
@@ -163,10 +163,10 @@ export default {
 将 `direction` 属性设置为 `horizontal` 后，复选框组会变成水平排列。
 
 ```html
-<icsm-checkbox-group v-model="checked" direction="horizontal">
-  <icsm-checkbox name="a">复选框 a</icsm-checkbox>
-  <icsm-checkbox name="b">复选框 b</icsm-checkbox>
-</icsm-checkbox-group>
+<fx-checkbox-group v-model="checked" direction="horizontal">
+  <fx-checkbox name="a">复选框 a</fx-checkbox>
+  <fx-checkbox name="b">复选框 b</fx-checkbox>
+</fx-checkbox-group>
 ```
 
 ```js
@@ -185,11 +185,11 @@ export default {
 通过 `max` 属性可以限制复选框组的最大可选数。
 
 ```html
-<icsm-checkbox-group v-model="checked" :max="2">
-  <icsm-checkbox name="a">复选框 a</icsm-checkbox>
-  <icsm-checkbox name="b">复选框 b</icsm-checkbox>
-  <icsm-checkbox name="c">复选框 c</icsm-checkbox>
-</icsm-checkbox-group>
+<fx-checkbox-group v-model="checked" :max="2">
+  <fx-checkbox name="a">复选框 a</fx-checkbox>
+  <fx-checkbox name="b">复选框 b</fx-checkbox>
+  <fx-checkbox name="c">复选框 c</fx-checkbox>
+</fx-checkbox-group>
 ```
 
 ### 全选与反选
@@ -197,14 +197,14 @@ export default {
 通过 `CheckboxGroup` 实例上的 `toggleAll` 方法可以实现全选与反选。
 
 ```html
-<icsm-checkbox-group v-model="checked" ref="checkboxGroup">
-  <icsm-checkbox name="a">复选框 a</icsm-checkbox>
-  <icsm-checkbox name="b">复选框 b</icsm-checkbox>
-  <icsm-checkbox name="c">复选框 c</icsm-checkbox>
-</icsm-checkbox-group>
+<fx-checkbox-group v-model="checked" ref="checkboxGroup">
+  <fx-checkbox name="a">复选框 a</fx-checkbox>
+  <fx-checkbox name="b">复选框 b</fx-checkbox>
+  <fx-checkbox name="c">复选框 c</fx-checkbox>
+</fx-checkbox-group>
 
-<icsm-button type="primary" @click="checkAll">全选</icsm-button>
-<icsm-button type="primary" @click="toggleAll">反选</icsm-button>
+<fx-button type="primary" @click="checkAll">全选</fx-button>
+<fx-button type="primary" @click="toggleAll">反选</fx-button>
 ```
 
 ```js
@@ -236,9 +236,9 @@ export default {
 搭配单元格组件使用时，需要再引入 `Cell` 和 `CellGroup` 组件，并通过 `Checkbox` 实例上的 toggle 方法触发切换。
 
 ```html
-<icsm-checkbox-group v-model="checked">
-  <icsm-cell-group inset>
-    <icsm-cell
+<fx-checkbox-group v-model="checked">
+  <fx-cell-group inset>
+    <fx-cell
       v-for="(item, index) in list"
       clickable
       :key="item"
@@ -246,15 +246,15 @@ export default {
       @click="toggle(index)"
     >
       <template #right-icon>
-        <icsm-checkbox
+        <fx-checkbox
           :name="item"
           :ref="el => checkboxRefs[index] = el"
           @click.stop
         />
       </template>
-    </icsm-cell>
-  </icsm-cell-group>
-</icsm-checkbox-group>
+   </fx-cell>
+ </fx-cell-group>
+</fx-checkbox-group>
 ```
 
 ```js
@@ -287,19 +287,19 @@ export default {
 通过 `indeterminate` 设置复选框是否为不确定状态。
 
 ```html
-<icsm-checkbox
+<fx-checkbox
   v-model="isCheckAll"
   :indeterminate="isIndeterminate"
   @change="checkAllChange"
 >
   全选
-</icsm-checkbox>
+</fx-checkbox>
 
-<icsm-checkbox-group v-model="checkedResult" @change="checkedResultChange">
-  <icsm-checkbox v-for="item in list" :key="item" :name="item">
+<fx-checkbox-group v-model="checkedResult" @change="checkedResultChange">
+  <fx-checkbox v-for="item in list" :key="item" :name="item">
     复选框 {{ item }}
-  </icsm-checkbox>
-</icsm-checkbox-group>
+ </fx-checkbox>
+</fx-checkbox-group>
 ```
 
 ```js
@@ -397,7 +397,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import type { CheckboxGroupInstance } from 'ctf-ics-mobile-ui';
+import type { CheckboxGroupInstance } from 'fx-mobile-ui';
 
 const checkboxGroupRef = ref<CheckboxGroupInstance>();
 
@@ -441,14 +441,14 @@ import type {
   CheckboxGroupInstance,
   CheckboxGroupDirection,
   CheckboxGroupToggleAllOptions,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `CheckboxInstance` 和 `CheckboxGroupInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CheckboxInstance, CheckboxGroupInstance } from 'ctf-ics-mobile-ui';
+import type { CheckboxInstance, CheckboxGroupInstance } from 'fx-mobile-ui';
 
 const checkboxRef = ref<CheckboxInstance>();
 const checkboxGroupRef = ref<CheckboxGroupInstance>();
@@ -465,15 +465,15 @@ checkboxGroupRef.value?.toggleAll();
 
 | 名称                                | 默认值                     | 描述 |
 | ----------------------------------- | -------------------------- | ---- |
-| --icsm-checkbox-size                 | _20px_                     | -    |
-| --icsm-checkbox-border-color         | _var(--icsm-gray-5)_        | -    |
-| --icsm-checkbox-duration             | _var(--icsm-duration-fast)_ | -    |
-| --icsm-checkbox-label-margin         | _var(--icsm-padding-xs)_    | -    |
-| --icsm-checkbox-label-color          | _var(--icsm-text-color)_    | -    |
-| --icsm-checkbox-checked-icon-color   | _var(--icsm-primary-color)_ | -    |
-| --icsm-checkbox-disabled-icon-color  | _var(--icsm-gray-5)_        | -    |
-| --icsm-checkbox-disabled-label-color | _var(--icsm-text-color-3)_  | -    |
-| --icsm-checkbox-disabled-background  | _var(--icsm-border-color)_  | -    |
+| --fx-checkbox-size                 | _20px_                     | -    |
+| --fx-checkbox-border-color         | _var(--fx-gray-5)_        | -    |
+| --fx-checkbox-duration             | _var(--fx-duration-fast)_ | -    |
+| --fx-checkbox-label-margin         | _var(--fx-padding-xs)_    | -    |
+| --fx-checkbox-label-color          | _var(--fx-text-color)_    | -    |
+| --fx-checkbox-checked-icon-color   | _var(--fx-primary-color)_ | -    |
+| --fx-checkbox-disabled-icon-color  | _var(--fx-gray-5)_        | -    |
+| --fx-checkbox-disabled-label-color | _var(--fx-text-color-3)_  | -    |
+| --fx-checkbox-disabled-background  | _var(--fx-border-color)_  | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

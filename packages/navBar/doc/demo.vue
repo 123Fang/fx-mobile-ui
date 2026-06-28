@@ -2,7 +2,7 @@
 
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -25,11 +25,11 @@ const onClickRight = () => showToast(t('button'));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-nav-bar :title="t('title')" />
+    <fx-nav-bar :title="t('title')" />
   </demo-block>
 
   <demo-block :title="t('showBack')">
-    <icsm-nav-bar
+    <fx-nav-bar
       :title="t('title')"
       :left-text="t('back')"
       left-arrow
@@ -38,7 +38,7 @@ const onClickRight = () => showToast(t('button'));
   </demo-block>
 
   <demo-block :title="t('rightButton')">
-    <icsm-nav-bar
+    <fx-nav-bar
       :title="t('title')"
       :left-text="t('back')"
       :right-text="t('button')"
@@ -49,15 +49,15 @@ const onClickRight = () => showToast(t('button'));
   </demo-block>
 
   <demo-block :title="t('useSlot')">
-    <icsm-nav-bar :title="t('title')" :left-text="t('back')" left-arrow>
+    <fx-nav-bar :title="t('title')" :left-text="t('back')" left-arrow>
       <template #right>
-        <icsm-icon name="search" size="18" />
+        <fx-icon name="search" size="18" />
       </template>
-    </icsm-nav-bar>
+   </fx-nav-bar>
   </demo-block>
 
   <demo-block :title="t('disableButton')">
-    <icsm-nav-bar
+    <fx-nav-bar
       :title="t('title')"
       :left-text="t('back')"
       :right-text="t('button')"

@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-overlay',
+  name: 'fx-overlay',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-overlay-container {}
+.fx-overlay-container {}
 </style>

@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 // import { cdnURL, useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -55,25 +55,25 @@ onMounted(preloadImage);
 </script>
 
 <template>
-  <icsm-tabs>
-    <icsm-tab :title="t('basicUsage')">
-      <icsm-pull-refresh v-model="loading" @refresh="onRefresh(true)">
+  <fx-tabs>
+    <fx-tab :title="t('basicUsage')">
+      <fx-pull-refresh v-model="loading" @refresh="onRefresh(true)">
         <p>{{ tips }}</p>
-      </icsm-pull-refresh>
-    </icsm-tab>
+     </fx-pull-refresh>
+   </fx-tab>
 
-    <icsm-tab :title="t('successTip')">
-      <icsm-pull-refresh
+    <fx-tab :title="t('successTip')">
+      <fx-pull-refresh
         v-model="loading"
         :success-text="t('success')"
         @refresh="onRefresh(false)"
       >
         <p>{{ tips }}</p>
-      </icsm-pull-refresh>
-    </icsm-tab>
+     </fx-pull-refresh>
+   </fx-tab>
 
-    <icsm-tab :title="t('customTips')">
-      <icsm-pull-refresh
+    <fx-tab :title="t('customTips')">
+      <fx-pull-refresh
         v-model="loading"
         head-height="80"
         @refresh="onRefresh(true)"
@@ -92,16 +92,16 @@ onMounted(preloadImage);
           <img :src="cdnURL('doge-fire.jpeg')" class="doge" />
         </template>
         <p>{{ tips }}</p>
-      </icsm-pull-refresh>
-    </icsm-tab>
-  </icsm-tabs>
+     </fx-pull-refresh>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 <style lang="scss">
 .demo-pull-refresh {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-pull-refresh {
+  .fx-pull-refresh {
     height: calc(100vh - 50px);
   }
 
@@ -114,7 +114,7 @@ onMounted(preloadImage);
 
   p {
     margin: 0;
-    padding: var(--icsm-padding-md) 0 0 var(--icsm-padding-md);
+    padding: var(--fx-padding-md) 0 0 var(--fx-padding-md);
   }
 }
 </style>

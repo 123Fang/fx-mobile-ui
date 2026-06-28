@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { showNotify, Notify as IcsmNotify, type NotifyType } from 'ctf-ics-mobile-ui';
+import { showNotify, Notify as IcsmNotify, type NotifyType } from 'fx-mobile-ui';
 import { cdnURL, useTranslate } from '@/docs/site';
 
 const t = useTranslate({
@@ -77,24 +77,24 @@ const showComponentCall = () => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('basicUsage')" @click="showBasicNotify" />
+    <fx-cell is-link :title="t('basicUsage')" @click="showBasicNotify" />
   </demo-block>
 
   <demo-block card :title="t('notifyType')">
-    <icsm-cell is-link :title="t('primary')" @click="showType('primary')" />
-    <icsm-cell is-link :title="t('success')" @click="showType('success')" />
-    <icsm-cell is-link :title="t('danger')" @click="showType('danger')" />
-    <icsm-cell is-link :title="t('warning')" @click="showType('warning')" />
+    <fx-cell is-link :title="t('primary')" @click="showType('primary')" />
+    <fx-cell is-link :title="t('success')" @click="showType('success')" />
+    <fx-cell is-link :title="t('danger')" @click="showType('danger')" />
+    <fx-cell is-link :title="t('warning')" @click="showType('warning')" />
   </demo-block>
 
   <demo-block card :title="t('customNotify')">
-    <icsm-cell is-link :title="t('customColor')" @click="showCustomColor" />
-    <icsm-cell
+    <fx-cell is-link :title="t('customColor')" @click="showCustomColor" />
+    <fx-cell
       is-link
       :title="t('customPosition')"
       @click="showCustomPosition"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customDuration')"
       @click="showCustomDuration"
@@ -102,12 +102,12 @@ const showComponentCall = () => {
   </demo-block>
 
   <demo-block card :title="t('useComponent')">
-    <icsm-cell is-link :title="t('useComponent')" @click="showComponentCall" />
+    <fx-cell is-link :title="t('useComponent')" @click="showComponentCall" />
 
-    <icsm-notify v-model:show="show" type="success">
-      <icsm-icon name="bell" style="margin-right: 4px" />
+    <fx-notify v-model:show="show" type="success">
+      <fx-icon name="bell" style="margin-right: 4px" />
       <span>{{ t('content') }}</span>
-    </icsm-notify>
+   </fx-notify>
   </demo-block>
 </template>
 

@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-collapse-item',
+  name: 'fx-collapse-item',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-collapse-item-container {}
+.fx-collapse-item-container {}
 </style>

@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-action-bar-icon',
+  name: 'fx-action-bar-icon',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-action-bar-icon-container {}
+.fx-action-bar-icon-container {}
 </style>

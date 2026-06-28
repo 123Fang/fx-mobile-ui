@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import { areaList } from '@vant/area-data';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -50,7 +50,7 @@ const onChangeDetail = (val: string) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-address-edit
+    <fx-address-edit
       :area-list="areaList"
       show-delete
       show-set-default
@@ -66,7 +66,7 @@ const onChangeDetail = (val: string) => {
 
 <style lang="scss">
 .demo-address-edit {
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-bottom: 0;
   }
 }

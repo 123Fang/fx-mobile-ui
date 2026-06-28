@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ActionBar, ActionBarIcon, ActionBarButton } from 'ctf-ics-mobile-ui';
+import { ActionBar, ActionBarIcon, ActionBarButton } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ActionBar);
@@ -23,16 +23,16 @@ app.use(ActionBarButton);
 ### 基础用法
 
 ```html
-<icsm-action-bar>
-  <icsm-action-bar-icon icon="chat-o" text="客服" @click="onClickIcon" />
-  <icsm-action-bar-icon icon="cart-o" text="购物车" @click="onClickIcon" />
-  <icsm-action-bar-icon icon="shop-o" text="店铺" @click="onClickIcon" />
-  <icsm-action-bar-button type="danger" text="立即购买" @click="onClickButton" />
-</icsm-action-bar>
+<fx-action-bar>
+  <fx-action-bar-icon icon="chat-o" text="客服" @click="onClickIcon" />
+  <fx-action-bar-icon icon="cart-o" text="购物车" @click="onClickIcon" />
+  <fx-action-bar-icon icon="shop-o" text="店铺" @click="onClickIcon" />
+  <fx-action-bar-button type="danger" text="立即购买" @click="onClickButton" />
+</fx-action-bar>
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -51,13 +51,13 @@ export default {
 在 ActionBarIcon 组件上设置 `dot` 属性后，会在图标右上角展示一个小红点；设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<icsm-action-bar>
-  <icsm-action-bar-icon icon="chat-o" text="客服" dot />
-  <icsm-action-bar-icon icon="cart-o" text="购物车" badge="5" />
-  <icsm-action-bar-icon icon="shop-o" text="店铺" badge="12" />
-  <icsm-action-bar-button type="warning" text="加入购物车" />
-  <icsm-action-bar-button type="danger" text="立即购买" />
-</icsm-action-bar>
+<fx-action-bar>
+  <fx-action-bar-icon icon="chat-o" text="客服" dot />
+  <fx-action-bar-icon icon="cart-o" text="购物车" badge="5" />
+  <fx-action-bar-icon icon="shop-o" text="店铺" badge="12" />
+  <fx-action-bar-button type="warning" text="加入购物车" />
+  <fx-action-bar-button type="danger" text="立即购买" />
+</fx-action-bar>
 ```
 
 ### 自定义图标颜色
@@ -65,13 +65,13 @@ export default {
 通过 ActionBarIcon 的 `color` 属性可以自定义图标的颜色。
 
 ```html
-<icsm-action-bar>
-  <icsm-action-bar-icon icon="chat-o" text="客服" color="#ee0a24" />
-  <icsm-action-bar-icon icon="cart-o" text="购物车" />
-  <icsm-action-bar-icon icon="star" text="已收藏" color="#ff5000" />
-  <icsm-action-bar-button type="warning" text="加入购物车" />
-  <icsm-action-bar-button type="danger" text="立即购买" />
-</icsm-action-bar>
+<fx-action-bar>
+  <fx-action-bar-icon icon="chat-o" text="客服" color="#ee0a24" />
+  <fx-action-bar-icon icon="cart-o" text="购物车" />
+  <fx-action-bar-icon icon="star" text="已收藏" color="#ff5000" />
+  <fx-action-bar-button type="warning" text="加入购物车" />
+  <fx-action-bar-button type="danger" text="立即购买" />
+</fx-action-bar>
 ```
 
 ### 自定义按钮颜色
@@ -79,12 +79,12 @@ export default {
 通过 ActionBarButton 的 `color` 属性可以自定义按钮的颜色，支持传入 `linear-gradient` 渐变色。
 
 ```html
-<icsm-action-bar>
-  <icsm-action-bar-icon icon="chat-o" text="客服" />
-  <icsm-action-bar-icon icon="shop-o" text="店铺" />
-  <icsm-action-bar-button color="#be99ff" type="warning" text="加入购物车" />
-  <icsm-action-bar-button color="#7232dd" type="danger" text="立即购买" />
-</icsm-action-bar>
+<fx-action-bar>
+  <fx-action-bar-icon icon="chat-o" text="客服" />
+  <fx-action-bar-icon icon="shop-o" text="店铺" />
+  <fx-action-bar-button color="#be99ff" type="warning" text="加入购物车" />
+  <fx-action-bar-button color="#7232dd" type="danger" text="立即购买" />
+</fx-action-bar>
 ```
 
 ## API
@@ -149,7 +149,7 @@ import type {
   ActionBarProps,
   ActionBarIconProps,
   ActionBarButtonProps,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -160,19 +160,19 @@ import type {
 
 | 名称                                  | 默认值                       | 描述 |
 | ------------------------------------- | ---------------------------- | ---- |
-| --icsm-action-bar-background           | _var(--icsm-background-2)_    | -    |
-| --icsm-action-bar-height               | _50px_                       | -    |
-| --icsm-action-bar-icon-width           | _48px_                       | -    |
-| --icsm-action-bar-icon-height          | _100%_                       | -    |
-| --icsm-action-bar-icon-color           | _var(--icsm-text-color)_      | -    |
-| --icsm-action-bar-icon-size            | _18px_                       | -    |
-| --icsm-action-bar-icon-font-size       | _var(--icsm-font-size-xs)_    | -    |
-| --icsm-action-bar-icon-active-color    | _var(--icsm-active-color)_    | -    |
-| --icsm-action-bar-icon-text-color      | _var(--icsm-text-color)_      | -    |
-| --icsm-action-bar-icon-background      | _var(--icsm-background-2)_    | -    |
-| --icsm-action-bar-button-height        | _40px_                       | -    |
-| --icsm-action-bar-button-warning-color | _var(--icsm-gradient-orange)_ | -    |
-| --icsm-action-bar-button-danger-color  | _var(--icsm-gradient-red)_    | -    |
+| --fx-action-bar-background           | _var(--fx-background-2)_    | -    |
+| --fx-action-bar-height               | _50px_                       | -    |
+| --fx-action-bar-icon-width           | _48px_                       | -    |
+| --fx-action-bar-icon-height          | _100%_                       | -    |
+| --fx-action-bar-icon-color           | _var(--fx-text-color)_      | -    |
+| --fx-action-bar-icon-size            | _18px_                       | -    |
+| --fx-action-bar-icon-font-size       | _var(--fx-font-size-xs)_    | -    |
+| --fx-action-bar-icon-active-color    | _var(--fx-active-color)_    | -    |
+| --fx-action-bar-icon-text-color      | _var(--fx-text-color)_      | -    |
+| --fx-action-bar-icon-background      | _var(--fx-background-2)_    | -    |
+| --fx-action-bar-button-height        | _40px_                       | -    |
+| --fx-action-bar-button-warning-color | _var(--fx-gradient-orange)_ | -    |
+| --fx-action-bar-button-danger-color  | _var(--fx-gradient-red)_    | -    |
 
 
 

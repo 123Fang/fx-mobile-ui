@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-slider',
+  name: 'fx-slider',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-slider-container {}
+.fx-slider-container {}
 </style>

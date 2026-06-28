@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-text-ellipsis',
+  name: 'fx-text-ellipsis',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-text-ellipsis-container {}
+.fx-text-ellipsis-container {}
 </style>

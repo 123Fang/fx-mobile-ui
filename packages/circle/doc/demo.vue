@@ -55,7 +55,7 @@ const reduce = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate1"
       :rate="rate"
       :speed="100"
@@ -64,7 +64,7 @@ const reduce = () => {
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate3"
       :rate="rate"
       :speed="100"
@@ -72,7 +72,7 @@ const reduce = () => {
       :text="t('customWidth')"
     />
 
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate3"
       color="#ee0a24"
       :rate="rate"
@@ -81,7 +81,7 @@ const reduce = () => {
       :text="t('customColor')"
     />
 
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate2"
       :rate="rate"
       :speed="100"
@@ -89,7 +89,7 @@ const reduce = () => {
       :text="t('gradient')"
     />
 
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate4"
       color="#07c160"
       :rate="rate"
@@ -99,7 +99,7 @@ const reduce = () => {
       style="margin-top: 15px"
     />
 
-    <icsm-circle
+    <fx-circle
       v-model:current-rate="currentRate4"
       color="#7232dd"
       :rate="rate"
@@ -112,8 +112,8 @@ const reduce = () => {
   </demo-block>
 
   <div style="margin-top: 15px">
-    <icsm-button :text="t('add')" type="primary" size="small" @click="add" />
-    <icsm-button
+    <fx-button :text="t('add')" type="primary" size="small" @click="add" />
+    <fx-button
       :text="t('decrease')"
       type="danger"
       size="small"
@@ -122,19 +122,19 @@ const reduce = () => {
   </div>
 
   <demo-block :title="t('startPosition')">
-    <icsm-circle
+    <fx-circle
       :current-rate="75"
       :rate="rate"
       :text="t('left')"
       start-position="left"
     />
-    <icsm-circle
+    <fx-circle
       :current-rate="75"
       :rate="rate"
       :text="t('right')"
       start-position="right"
     />
-    <icsm-circle
+    <fx-circle
       :current-rate="75"
       :rate="rate"
       :text="t('bottom')"
@@ -145,15 +145,15 @@ const reduce = () => {
 
 <style lang="scss">
 .demo-circle {
-  .icsm-circle {
-    margin-left: var(--icsm-padding-md);
+  .fx-circle {
+    margin-left: var(--fx-padding-md);
   }
 
-  .icsm-button {
-    margin: var(--icsm-padding-md) 0 0 10px;
+  .fx-button {
+    margin: var(--fx-padding-md) 0 0 10px;
 
     &:first-of-type {
-      margin-left: var(--icsm-padding-md);
+      margin-left: var(--fx-padding-md);
     }
   }
 }

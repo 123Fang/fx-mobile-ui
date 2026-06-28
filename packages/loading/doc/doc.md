@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Loading } from 'ctf-ics-mobile-ui';
+import { Loading } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Loading);
@@ -23,9 +23,9 @@ app.use(Loading);
 通过 `type` 属性可以设置加载图标的类型，默认为 `circular`，可选值为 `spinner`。
 
 ```html
-<icsm-loading />
+<fx-loading />
 
-<icsm-loading type="spinner" />
+<fx-loading type="spinner" />
 ```
 
 ### 自定义颜色
@@ -33,9 +33,9 @@ app.use(Loading);
 通过 `color` 属性设置加载图标的颜色。
 
 ```html
-<icsm-loading color="#1989fa" />
+<fx-loading color="#1989fa" />
 
-<icsm-loading type="spinner" color="#1989fa" />
+<fx-loading type="spinner" color="#1989fa" />
 ```
 
 ### 自定义大小
@@ -43,9 +43,9 @@ app.use(Loading);
 通过 `size` 属性设置加载图标的大小，默认单位为 `px`。
 
 ```html
-<icsm-loading size="24" />
+<fx-loading size="24" />
 
-<icsm-loading type="spinner" size="24px" />
+<fx-loading type="spinner" size="24px" />
 ```
 
 ### 加载文案
@@ -53,7 +53,7 @@ app.use(Loading);
 可以使用默认插槽在图标的右侧插入加载文案。
 
 ```html
-<icsm-loading size="24px">加载中...</icsm-loading>
+<fx-loading size="24px">加载中...</fx-loading>
 ```
 
 ### 垂直排列
@@ -61,7 +61,7 @@ app.use(Loading);
 设置 `vertical` 属性后，图标和文案会垂直排列。
 
 ```html
-<icsm-loading size="24px" vertical>加载中...</icsm-loading>
+<fx-loading size="24px" vertical>加载中...</fx-loading>
 ```
 
 ### 自定义文案颜色
@@ -70,10 +70,10 @@ app.use(Loading);
 
 ```html
 <!-- 可修改文案和加载图标的颜色 -->
-<icsm-loading color="#0094ff" />
+<fx-loading color="#0094ff" />
 
 <!-- 只修改文案颜色 -->
-<icsm-loading text-color="#0094ff" />
+<fx-loading text-color="#0094ff" />
 ```
 
 ### 自定义图标
@@ -81,12 +81,12 @@ app.use(Loading);
 通过 `icon` 插槽可以自定义加载图标。
 
 ```html
-<icsm-loading vertical>
+<fx-loading vertical>
   <template #icon>
-    <icsm-icon name="star-o" size="30" />
+    <fx-icon name="star-o" size="30" />
   </template>
   加载中...
-</icsm-loading>
+</fx-loading>
 ```
 
 ## API
@@ -114,7 +114,7 @@ app.use(Loading);
 组件导出以下类型定义：
 
 ```ts
-import type { LoadingType, LoadingProps } from 'ctf-ics-mobile-ui';
+import type { LoadingType, LoadingProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -125,11 +125,11 @@ import type { LoadingType, LoadingProps } from 'ctf-ics-mobile-ui';
 
 | 名称                           | 默认值                    | 描述 |
 | ------------------------------ | ------------------------- | ---- |
-| --icsm-loading-text-color       | _var(--icsm-text-color-2)_ | -    |
-| --icsm-loading-text-font-size   | _var(--icsm-font-size-md)_ | -    |
-| --icsm-loading-spinner-color    | _var(--icsm-gray-5)_       | -    |
-| --icsm-loading-spinner-size     | _30px_                    | -    |
-| --icsm-loading-spinner-duration | _0.8s_                    | -    |
+| --fx-loading-text-color       | _var(--fx-text-color-2)_ | -    |
+| --fx-loading-text-font-size   | _var(--fx-font-size-md)_ | -    |
+| --fx-loading-spinner-color    | _var(--fx-gray-5)_       | -    |
+| --fx-loading-spinner-size     | _30px_                    | -    |
+| --fx-loading-spinner-duration | _0.8s_                    | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-number-keyboard',
+  name: 'fx-number-keyboard',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -22,5 +22,5 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-number-keyboard-container {}
+.fx-number-keyboard-container {}
 </style>

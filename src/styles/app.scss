@@ -1,6 +1,6 @@
 body {
   // color: #303133;
-  color: var(--icsm-doc-text-color-2);
+  color: var(--fx-doc-text-color-2);
   font-size: 16px;
   line-height: 1.4;
   font-variant: tabular-nums;
@@ -147,12 +147,12 @@ iframe {
     transition: background-color 0.2s;
     list-style: circle;
     code {
-      color: var(--icsm-doc-code-color);
-      font-family: var(--icsm-doc-code-font-family);
+      color: var(--fx-doc-code-color);
+      font-family: var(--fx-doc-code-font-family);
       white-space: pre-wrap;
       word-wrap: break-word;
-      background-color: var(--icsm-doc-code-background);
-      border-radius: var(--icsm-doc-border-radius);
+      background-color: var(--fx-doc-code-background);
+      border-radius: var(--fx-doc-border-radius);
       padding: 2px 4px;
     }
   }
@@ -161,7 +161,7 @@ iframe {
   table {
     width: 100%;
     margin-top: 12px;
-    color: var(--icsm-doc-text-color-3);
+    color: var(--fx-doc-text-color-3);
     font-size: 14px;
     line-height: 1.5;
     background-color: #fafafa;
@@ -183,7 +183,7 @@ iframe {
 
     td {
       padding: 8px;
-      border-top: 1px solid var(--icsm-doc-border-color);
+      border-top: 1px solid var(--fx-doc-border-color);
 
       &:first-child {
         padding-left: 0;
@@ -192,7 +192,7 @@ iframe {
         code {
           margin: 0;
           padding: 2px 6px;
-          color: var(--icsm-doc-blue);
+          color: var(--fx-doc-blue);
           font-weight: 600;
           font-size: 11px;
           background-color: rgba(25, 137, 250, 0.15);
@@ -207,9 +207,9 @@ iframe {
 
     em {
       display: inline-block;
-      color: var(--icsm-doc-green);
+      color: var(--fx-doc-green);
       font-size: 14px;
-      font-family: var(--icsm-doc-code-font-family);
+      font-family: var(--fx-doc-code-font-family);
       font-style: normal;
       max-width: 300px;
       -webkit-font-smoothing: auto;
@@ -224,32 +224,32 @@ iframe {
 :root,
 :host {
   // colors
-  --icsm-doc-black: #000;
-  --icsm-doc-white: #fff;
-  --icsm-doc-gray-1: #f7f8fa;
-  --icsm-doc-gray-2: #f2f3f5;
-  --icsm-doc-gray-3: #ebedf0;
-  --icsm-doc-gray-4: #dcdee0;
-  --icsm-doc-gray-5: #c8c9cc;
-  --icsm-doc-gray-6: #969799;
-  --icsm-doc-gray-7: #646566;
-  --icsm-doc-gray-8: #323233;
-  --icsm-doc-blue: #1989fa;
-  --icsm-doc-green: #07c160;
-  --icsm-doc-purple: #8e69d3;
+  --fx-doc-black: #000;
+  --fx-doc-white: #fff;
+  --fx-doc-gray-1: #f7f8fa;
+  --fx-doc-gray-2: #f2f3f5;
+  --fx-doc-gray-3: #ebedf0;
+  --fx-doc-gray-4: #dcdee0;
+  --fx-doc-gray-5: #c8c9cc;
+  --fx-doc-gray-6: #969799;
+  --fx-doc-gray-7: #646566;
+  --fx-doc-gray-8: #323233;
+  --fx-doc-blue: #1989fa;
+  --fx-doc-green: #07c160;
+  --fx-doc-purple: #8e69d3;
 
   // sizes
-  --icsm-doc-padding: 32px;
-  --icsm-doc-row-max-width: 1680px;
-  --icsm-doc-nav-width: 220px;
-  --icsm-doc-border-radius: 20px;
-  --icsm-doc-simulator-width: 360px;
-  --icsm-doc-simulator-height: 620px;
-  --icsm-doc-header-top-height: 64px;
+  --fx-doc-padding: 32px;
+  --fx-doc-row-max-width: 1680px;
+  --fx-doc-nav-width: 220px;
+  --fx-doc-border-radius: 20px;
+  --fx-doc-simulator-width: 360px;
+  --fx-doc-simulator-height: 620px;
+  --fx-doc-header-top-height: 64px;
 
 
   // fonts
-  --icsm-doc-code-font-family: 'Menlo', 'Source Code Pro', 'Monaco',
+  --fx-doc-code-font-family: 'Menlo', 'Source Code Pro', 'Monaco',
     'Inconsolata', monospace;
 
 
@@ -260,27 +260,27 @@ em {
 
   /** 文档默认模式的变量 start **/ 
   // text
-  --icsm-doc-text-color-1: var(--icsm-doc-black);
-  --icsm-doc-text-color-2: var(--icsm-doc-gray-8);
-  --icsm-doc-text-color-3: #34495e;
-  --icsm-doc-text-color-4: var(--icsm-doc-gray-6);
-  --icsm-doc-link-color: var(--icsm-doc-blue);
+  --fx-doc-text-color-1: var(--fx-doc-black);
+  --fx-doc-text-color-2: var(--fx-doc-gray-8);
+  --fx-doc-text-color-3: #34495e;
+  --fx-doc-text-color-4: var(--fx-doc-gray-6);
+  --fx-doc-link-color: var(--fx-doc-blue);
 
   // background
-  --icsm-doc-background: #eff2f5;
-  --icsm-doc-background-2: var(--icsm-doc-white);
-  --icsm-doc-background-3: var(--icsm-doc-white);
-  --icsm-doc-header-background: #011f3c;
-  --icsm-doc-border-color: var(--icsm-doc-gray-2);
+  --fx-doc-background: #eff2f5;
+  --fx-doc-background-2: var(--fx-doc-white);
+  --fx-doc-background-3: var(--fx-doc-white);
+  --fx-doc-header-background: #011f3c;
+  --fx-doc-border-color: var(--fx-doc-gray-2);
 
   // code
-  --icsm-doc-code-color: #58727e;
-  --icsm-doc-code-comment-color: var(--icsm-doc-gray-6);
-  --icsm-doc-code-background: var(--icsm-doc-gray-1);
+  --fx-doc-code-color: #58727e;
+  --fx-doc-code-comment-color: var(--fx-doc-gray-6);
+  --fx-doc-code-background: var(--fx-doc-gray-1);
 
   // blockquote
-  --icsm-doc-blockquote-color: #2f85da;
-  --icsm-doc-blockquote-background: #ecf9ff;
+  --fx-doc-blockquote-color: #2f85da;
+  --fx-doc-blockquote-background: #ecf9ff;
 }
  /** 文档默认模式的变量 end **/ 
 
@@ -288,55 +288,55 @@ em {
 
 
 // 默认模式的变量,已copy到外层
-.icsm-doc-theme-light {
+.fx-doc-theme-light {
   // text
-  --icsm-doc-text-color-1: var(--icsm-doc-black);
-  --icsm-doc-text-color-2: var(--icsm-doc-gray-8);
-  --icsm-doc-text-color-3: #34495e;
-  --icsm-doc-text-color-4: var(--icsm-doc-gray-6);
-  --icsm-doc-link-color: var(--icsm-doc-blue);
+  --fx-doc-text-color-1: var(--fx-doc-black);
+  --fx-doc-text-color-2: var(--fx-doc-gray-8);
+  --fx-doc-text-color-3: #34495e;
+  --fx-doc-text-color-4: var(--fx-doc-gray-6);
+  --fx-doc-link-color: var(--fx-doc-blue);
 
   // background
-  --icsm-doc-background: #eff2f5;
-  --icsm-doc-background-2: var(--icsm-doc-white);
-  --icsm-doc-background-3: var(--icsm-doc-white);
-  --icsm-doc-header-background: #011f3c;
-  --icsm-doc-border-color: var(--icsm-doc-gray-2);
+  --fx-doc-background: #eff2f5;
+  --fx-doc-background-2: var(--fx-doc-white);
+  --fx-doc-background-3: var(--fx-doc-white);
+  --fx-doc-header-background: #011f3c;
+  --fx-doc-border-color: var(--fx-doc-gray-2);
 
   // code
-  --icsm-doc-code-color: #58727e;
-  --icsm-doc-code-comment-color: var(--icsm-doc-gray-6);
-  --icsm-doc-code-background: var(--icsm-doc-gray-1);
+  --fx-doc-code-color: #58727e;
+  --fx-doc-code-comment-color: var(--fx-doc-gray-6);
+  --fx-doc-code-background: var(--fx-doc-gray-1);
 
   // blockquote
-  --icsm-doc-blockquote-color: #2f85da;
-  --icsm-doc-blockquote-background: #ecf9ff;
+  --fx-doc-blockquote-color: #2f85da;
+  --fx-doc-blockquote-background: #ecf9ff;
 }
 
 // 暗黑模式的变量
-.icsm-doc-theme-dark {
+.fx-doc-theme-dark {
   // text
-  --icsm-doc-text-color-1: var(--icsm-doc-white);
-  --icsm-doc-text-color-2: rgba(255, 255, 255, 0.9);
-  --icsm-doc-text-color-3: rgba(255, 255, 255, 0.75);
-  --icsm-doc-text-color-4: rgba(255, 255, 255, 0.6);
-  --icsm-doc-link-color: #1bb5fe;
+  --fx-doc-text-color-1: var(--fx-doc-white);
+  --fx-doc-text-color-2: rgba(255, 255, 255, 0.9);
+  --fx-doc-text-color-3: rgba(255, 255, 255, 0.75);
+  --fx-doc-text-color-4: rgba(255, 255, 255, 0.6);
+  --fx-doc-link-color: #1bb5fe;
 
   // background
-  --icsm-doc-background: #202124;
-  --icsm-doc-background-2: rgba(255, 255, 255, 0.06);
-  --icsm-doc-background-3: rgba(255, 255, 255, 0.1);
-  --icsm-doc-header-background: rgba(1, 31, 60, 0.3);
-  --icsm-doc-border-color: #3a3a3c;
+  --fx-doc-background: #202124;
+  --fx-doc-background-2: rgba(255, 255, 255, 0.06);
+  --fx-doc-background-3: rgba(255, 255, 255, 0.1);
+  --fx-doc-header-background: rgba(1, 31, 60, 0.3);
+  --fx-doc-border-color: #3a3a3c;
 
   // code
-  --icsm-doc-code-color: rgba(200, 200, 200, 0.85);
-  --icsm-doc-code-comment-color: var(--icsm-doc-gray-7);
-  --icsm-doc-code-background: rgba(0, 0, 0, 0.24);
+  --fx-doc-code-color: rgba(200, 200, 200, 0.85);
+  --fx-doc-code-comment-color: var(--fx-doc-gray-7);
+  --fx-doc-code-background: rgba(0, 0, 0, 0.24);
 
   // blockquote
-  --icsm-doc-blockquote-color: #bae6fd;
-  --icsm-doc-blockquote-background: rgba(7, 89, 133, 0.25);
+  --fx-doc-blockquote-color: #bae6fd;
+  --fx-doc-blockquote-background: rgba(7, 89, 133, 0.25);
 }
 
 /** vant 文档样式变量 **/
@@ -362,7 +362,7 @@ em {
         padding-bottom: 30px;
       }
     }
-    [class^="icsm-doc-demo-block"] {
+    [class^="fx-doc-demo-block"] {
       background-color: black!important;
     }
   }

@@ -55,62 +55,62 @@ onActivated(removeUselessStyle);
 <template>
   <div :style="{ minHeight: '100vh' }">
     <demo-block :title="t('darkMode')">
-      <icsm-cell :title="t('switchDarkMode')" />
+      <fx-cell :title="t('switchDarkMode')" />
     </demo-block>
 
     <demo-block :title="t('defaultTheme')">
-      <icsm-form>
-        <icsm-field name="rate" :label="t('rate')">
+      <fx-form>
+        <fx-field name="rate" :label="t('rate')">
           <template #input>
-            <icsm-rate v-model="rate" />
+            <fx-rate v-model="rate" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="slider" :label="t('slider')">
+        <fx-field name="slider" :label="t('slider')">
           <template #input>
-            <icsm-slider v-model="slider" />
+            <fx-slider v-model="slider" />
           </template>
-        </icsm-field>
+       </fx-field>
 
         <div style="margin: 16px">
-          <icsm-button round block type="primary" native-type="submit">
+          <fx-button round block type="primary" native-type="submit">
             {{ t('submit') }}
-          </icsm-button>
+         </fx-button>
         </div>
-      </icsm-form>
+     </fx-form>
     </demo-block>
 
     <demo-block :title="t('customTheme')">
-      <icsm-config-provider :theme-vars="themeVars">
-        <icsm-form>
-          <icsm-field name="rate" :label="t('rate')">
+      <fx-config-provider :theme-vars="themeVars">
+        <fx-form>
+          <fx-field name="rate" :label="t('rate')">
             <template #input>
-              <icsm-rate v-model="rate" />
+              <fx-rate v-model="rate" />
             </template>
-          </icsm-field>
+         </fx-field>
 
-          <icsm-field name="slider" :label="t('slider')">
+          <fx-field name="slider" :label="t('slider')">
             <template #input>
-              <icsm-slider v-model="slider" />
+              <fx-slider v-model="slider" />
             </template>
-          </icsm-field>
+         </fx-field>
 
           <div style="margin: 16px">
-            <icsm-button round block type="primary" native-type="submit">
+            <fx-button round block type="primary" native-type="submit">
               {{ t('submit') }}
-            </icsm-button>
+           </fx-button>
           </div>
-        </icsm-form>
-      </icsm-config-provider>
+       </fx-form>
+     </fx-config-provider>
     </demo-block>
   </div>
 </template>
 
 <style lang="scss">
 .demo-collapse {
-  .icsm-icon-question-o {
+  .fx-icon-question-o {
     margin-left: 5px;
-    color: var(--icsm-blue);
+    color: var(--fx-blue);
     font-size: 15px;
     vertical-align: -3px;
   }

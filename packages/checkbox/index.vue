@@ -12,7 +12,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-checkbox'
+  name: 'fx-checkbox'
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -20,6 +20,6 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-checkbox-container {
+.fx-checkbox-container {
 }
 </style>

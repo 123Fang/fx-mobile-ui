@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -107,8 +107,8 @@ const onSelect = (option: ShareSheetOption) => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('showSheet')" @click="showBasic = true" />
-    <icsm-share-sheet
+    <fx-cell is-link :title="t('showSheet')" @click="showBasic = true" />
+    <fx-share-sheet
       v-model:show="showBasic"
       :title="t('title')"
       :options="options"
@@ -117,8 +117,8 @@ const onSelect = (option: ShareSheetOption) => {
   </demo-block>
 
   <demo-block card :title="t('multiLine')">
-    <icsm-cell is-link :title="t('showSheet')" @click="showMultiLine = true" />
-    <icsm-share-sheet
+    <fx-cell is-link :title="t('showSheet')" @click="showMultiLine = true" />
+    <fx-share-sheet
       v-model:show="showMultiLine"
       :title="t('title')"
       :options="multiLineOptions"
@@ -127,8 +127,8 @@ const onSelect = (option: ShareSheetOption) => {
   </demo-block>
 
   <demo-block card :title="t('customIcon')">
-    <icsm-cell is-link :title="t('showSheet')" @click="showCustomIcon = true" />
-    <icsm-share-sheet
+    <fx-cell is-link :title="t('showSheet')" @click="showCustomIcon = true" />
+    <fx-share-sheet
       v-model:show="showCustomIcon"
       :options="customIconOptions"
       @select="onSelect"
@@ -136,8 +136,8 @@ const onSelect = (option: ShareSheetOption) => {
   </demo-block>
 
   <demo-block card :title="t('withDesc')">
-    <icsm-cell is-link :title="t('showSheet')" @click="showWithDesc = true" />
-    <icsm-share-sheet
+    <fx-cell is-link :title="t('showSheet')" @click="showWithDesc = true" />
+    <fx-share-sheet
       v-model:show="showWithDesc"
       :title="t('title')"
       :options="optionsWithDesc"

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { AddressEdit } from 'ctf-ics-mobile-ui';
+import { AddressEdit } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(AddressEdit);
@@ -21,7 +21,7 @@ app.use(AddressEdit);
 ### 基础用法
 
 ```html
-<icsm-address-edit
+<fx-address-edit
   :area-list="areaList"
   show-delete
   show-set-default
@@ -36,7 +36,7 @@ app.use(AddressEdit);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -134,14 +134,14 @@ import type {
   AddressEditProps,
   AddressEditInstance,
   AddressEditSearchItem,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `AddressEditInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { AddressEditInstance } from 'ctf-ics-mobile-ui';
+import type { AddressEditInstance } from 'fx-mobile-ui';
 
 const addressEditRef = ref<AddressEditInstance>();
 
@@ -182,10 +182,10 @@ addressEditRef.value?.setAddressDetail('');
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-address-edit-padding | _var(--icsm-padding-sm)_ | - |
-| --icsm-address-edit-buttons-padding | _var(--icsm-padding-xl) var(--icsm-padding-base)_ | - |
-| --icsm-address-edit-button-margin-bottom | _var(--icsm-padding-sm)_ | - |
-| --icsm-address-edit-button-font-size | _var(--icsm-font-size-lg)_ | - |
+| --fx-address-edit-padding | _var(--fx-padding-sm)_ | - |
+| --fx-address-edit-buttons-padding | _var(--fx-padding-xl) var(--fx-padding-base)_ | - |
+| --fx-address-edit-button-margin-bottom | _var(--fx-padding-sm)_ | - |
+| --fx-address-edit-button-font-size | _var(--fx-font-size-lg)_ | - |
 
 
 

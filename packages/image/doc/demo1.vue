@@ -33,24 +33,24 @@ const positions2 = ['top', 'center', 'bottom'] as const;
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-row>
-      <icsm-image width="100" height="100" :src="image" />
-    </icsm-row>
+    <fx-row>
+      <fx-image width="100" height="100" :src="image" />
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('fitMode')">
-    <icsm-row gutter="20">
-      <icsm-col v-for="fit in fits" span="8" :key="fit">
-        <icsm-image :fit="fit" width="100%" height="27vw" :src="image" />
+    <fx-row gutter="20">
+      <fx-col v-for="fit in fits" span="8" :key="fit">
+        <fx-image :fit="fit" width="100%" height="27vw" :src="image" />
         <div class="text">{{ fit }}</div>
-      </icsm-col>
-    </icsm-row>
+     </fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('position')">
-    <icsm-row gutter="20">
-      <icsm-col v-for="pos in positions1" span="8" :key="pos">
-        <icsm-image
+    <fx-row gutter="20">
+      <fx-col v-for="pos in positions1" span="8" :key="pos">
+        <fx-image
           :position="pos"
           width="100%"
           height="27vw"
@@ -59,9 +59,9 @@ const positions2 = ['top', 'center', 'bottom'] as const;
         />
         <div class="text">cover</div>
         <div class="text">{{ pos }}</div>
-      </icsm-col>
-      <icsm-col v-for="pos in positions2" span="8" :key="pos">
-        <icsm-image
+     </fx-col>
+      <fx-col v-for="pos in positions2" span="8" :key="pos">
+        <fx-image
           :position="pos"
           width="100%"
           height="27vw"
@@ -70,70 +70,70 @@ const positions2 = ['top', 'center', 'bottom'] as const;
         />
         <div class="text">contain</div>
         <div class="text">{{ pos }}</div>
-      </icsm-col>
-    </icsm-row>
+     </fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('round')">
-    <icsm-row gutter="20">
-      <icsm-col v-for="fit in fits" span="8" :key="fit">
-        <icsm-image round :fit="fit" width="100%" height="27vw" :src="image" />
+    <fx-row gutter="20">
+      <fx-col v-for="fit in fits" span="8" :key="fit">
+        <fx-image round :fit="fit" width="100%" height="27vw" :src="image" />
         <div class="text">{{ fit }}</div>
-      </icsm-col>
-    </icsm-row>
+     </fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('loading')">
-    <icsm-row gutter="20">
-      <icsm-col span="8">
-        <icsm-image width="100%" height="27vw" />
+    <fx-row gutter="20">
+      <fx-col span="8">
+        <fx-image width="100%" height="27vw" />
         <div class="text">{{ t('defaultTip') }}</div>
-      </icsm-col>
+     </fx-col>
 
-      <icsm-col span="8">
-        <icsm-image width="100%" height="27vw">
+      <fx-col span="8">
+        <fx-image width="100%" height="27vw">
           <template #loading>
-            <icsm-loading type="spinner" size="20" />
+            <fx-loading type="spinner" size="20" />
           </template>
-        </icsm-image>
+       </fx-image>
         <div class="text">{{ t('customTip') }}</div>
-      </icsm-col>
-    </icsm-row>
+     </fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('error')">
-    <icsm-row gutter="20">
-      <icsm-col span="8">
-        <icsm-image width="100%" height="27vw" src="http://x" />
+    <fx-row gutter="20">
+      <fx-col span="8">
+        <fx-image width="100%" height="27vw" src="http://x" />
         <div class="text">{{ t('defaultTip') }}</div>
-      </icsm-col>
+     </fx-col>
 
-      <icsm-col span="8">
-        <icsm-image width="100%" height="27vw" src="http://x">
+      <fx-col span="8">
+        <fx-image width="100%" height="27vw" src="http://x">
           <template #error>{{ t('loadFail') }}</template>
-        </icsm-image>
+       </fx-image>
         <div class="text">{{ t('customTip') }}</div>
-      </icsm-col>
-    </icsm-row>
+     </fx-col>
+   </fx-row>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-image {
   overflow-x: hidden;
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-row {
-    padding: 0 var(--icsm-padding-md);
+  .fx-row {
+    padding: 0 var(--fx-padding-md);
   }
 
-  .icsm-col {
+  .fx-col {
     margin-bottom: 20px;
   }
 
   .text {
     margin-top: 5px;
-    color: var(--icsm-gray-7);
+    color: var(--fx-gray-7);
     font-size: 14px;
     text-align: center;
   }

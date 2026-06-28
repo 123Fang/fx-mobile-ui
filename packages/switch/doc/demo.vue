@@ -4,7 +4,7 @@ import { ref } from 'vue';
 // import { useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showConfirmDialog } from 'ctf-ics-mobile-ui';
+import { showConfirmDialog } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -47,23 +47,23 @@ const onUpdateValue = (checked: boolean) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-switch v-model="checked" />
+    <fx-switch v-model="checked" />
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-switch v-model="checked" disabled />
+    <fx-switch v-model="checked" disabled />
   </demo-block>
 
   <demo-block :title="t('loadingStatus')">
-    <icsm-switch v-model="checked" loading />
+    <fx-switch v-model="checked" loading />
   </demo-block>
 
   <demo-block :title="t('customSize')">
-    <icsm-switch v-model="checked2" size="22px" />
+    <fx-switch v-model="checked2" size="22px" />
   </demo-block>
 
   <demo-block :title="t('customColor')">
-    <icsm-switch
+    <fx-switch
       v-model="checked3"
       active-color="#ee0a24"
       inactive-color="#dcdee0"
@@ -71,32 +71,32 @@ const onUpdateValue = (checked: boolean) => {
   </demo-block>
 
   <demo-block :title="t('customNode')">
-    <icsm-switch v-model="checked3">
+    <fx-switch v-model="checked3">
       <template #node>
         <div class="icon-wrapper">
-          <icsm-icon :name="checked3 ? 'success' : 'cross'" />
+          <fx-icon :name="checked3 ? 'success' : 'cross'" />
         </div>
       </template>
-    </icsm-switch>
+   </fx-switch>
   </demo-block>
 
   <demo-block :title="t('asyncControl')">
-    <icsm-switch :model-value="checked4" @update:model-value="onUpdateValue" />
+    <fx-switch :model-value="checked4" @update:model-value="onUpdateValue" />
   </demo-block>
 
   <demo-block :title="t('withCell')">
-    <icsm-cell center :title="t('title')">
+    <fx-cell center :title="t('title')">
       <template #right-icon>
-        <icsm-switch v-model="checked5" />
+        <fx-switch v-model="checked5" />
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-switch {
-  .icsm-switch {
-    margin-left: var(--icsm-padding-md);
+  .fx-switch {
+    margin-left: var(--fx-padding-md);
   }
 
   .icon-wrapper {
@@ -105,16 +105,16 @@ const onUpdateValue = (checked: boolean) => {
     justify-content: center;
     font-size: 18px;
 
-    .icsm-icon {
+    .fx-icon {
       line-height: 32px;
     }
 
-    .icsm-icon-success {
-      color: var(--icsm-blue);
+    .fx-icon-success {
+      color: var(--fx-blue);
     }
 
-    .icsm-icon-cross {
-      color: var(--icsm-gray-5);
+    .fx-icon-cross {
+      color: var(--fx-gray-5);
     }
   }
 }

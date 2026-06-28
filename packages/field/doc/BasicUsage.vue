@@ -20,12 +20,12 @@ const value = ref('');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="value"
         :label="t('label')"
         :placeholder="t('placeholder')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

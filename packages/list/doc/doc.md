@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { List } from 'ctf-ics-mobile-ui';
+import { List } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(List);
@@ -23,14 +23,14 @@ app.use(List);
 List 组件通过 `loading` 和 `finished` 两个变量控制加载状态，当组件滚动到底部时，会触发 `load` 事件并将 `loading` 设置成 `true`。此时可以发起异步操作并更新数据，数据更新完毕后，将 `loading` 设置成 `false` 即可。若数据已全部加载完毕，则直接将 `finished` 设置成 `true` 即可。
 
 ```html
-<icsm-list
+<fx-list
   v-model:loading="loading"
   :finished="finished"
   finished-text="没有更多了"
   @load="onLoad"
 >
-  <icsm-cell v-for="item in list" :key="item" :title="item" />
-</icsm-list>
+  <fx-cell v-for="item in list" :key="item" :title="item" />
+</fx-list>
 ```
 
 ```js
@@ -75,14 +75,14 @@ export default {
 若列表数据加载失败，将 `error` 设置成 `true` 即可显示错误提示，用户点击错误提示后会重新触发 load 事件。
 
 ```html
-<icsm-list
+<fx-list
   v-model:loading="loading"
   v-model:error="error"
   error-text="请求失败，点击重新加载"
   @load="onLoad"
 >
-  <icsm-cell v-for="item in list" :key="item" :title="item" />
-</icsm-list>
+  <fx-cell v-for="item in list" :key="item" :title="item" />
+</fx-list>
 ```
 
 ```js
@@ -115,16 +115,16 @@ export default {
 List 组件可以与 [PullRefresh](#/zh-CN/pull-refresh) 组件结合使用，实现下拉刷新的效果。
 
 ```html
-<icsm-pull-refresh v-model="refreshing" @refresh="onRefresh">
-  <icsm-list
+<fx-pull-refresh v-model="refreshing" @refresh="onRefresh">
+  <fx-list
     v-model:loading="loading"
     :finished="finished"
     finished-text="没有更多了"
     @load="onLoad"
   >
-    <icsm-cell v-for="item in list" :key="item" :title="item" />
-  </icsm-list>
-</icsm-pull-refresh>
+    <fx-cell v-for="item in list" :key="item" :title="item" />
+ </fx-list>
+</fx-pull-refresh>
 ```
 
 ```js
@@ -214,14 +214,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ListProps, ListInstance, ListDirection } from 'ctf-ics-mobile-ui';
+import type { ListProps, ListInstance, ListDirection } from 'fx-mobile-ui';
 ```
 
 `ListInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { ListInstance } from 'ctf-ics-mobile-ui';
+import type { ListInstance } from 'fx-mobile-ui';
 
 const listRef = ref<ListInstance>();
 
@@ -245,10 +245,10 @@ listRef.value?.check();
 
 | 名称                         | 默认值                    | 描述 |
 | ---------------------------- | ------------------------- | ---- |
-| --icsm-list-text-color        | _var(--icsm-text-color-2)_ | -    |
-| --icsm-list-text-font-size    | _var(--icsm-font-size-md)_ | -    |
-| --icsm-list-text-line-height  | _50px_                    | -    |
-| --icsm-list-loading-icon-size | _16px_                    | -    |
+| --fx-list-text-color        | _var(--fx-text-color-2)_ | -    |
+| --fx-list-text-font-size    | _var(--fx-font-size-md)_ | -    |
+| --fx-list-text-line-height  | _50px_                    | -    |
+| --fx-list-loading-icon-size | _16px_                    | -    |
 
 ## 常见问题
 
@@ -281,13 +281,13 @@ List 初始化后会触发一次 load 事件，用于加载第一屏的数据，
 若 List 的内容使用了 float 布局，可以在容器上添加 `icsm-clearfix` 类名来清除浮动，使得 List 能正确判断元素位置。
 
 ```html
-<icsm-list>
+<fx-list>
   <div class="icsm-clearfix">
     <div class="float-item" />
     <div class="float-item" />
     <div class="float-item" />
   </div>
-</icsm-list>
+</fx-list>
 ```
 
 ### 在 html、body 上设置 overflow 后一直触发加载？

@@ -21,8 +21,8 @@ const value = ref('');
 
 <template>
   <demo-block :title="t('showWordLimit')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="value"
         autosize
         show-word-limit
@@ -32,6 +32,6 @@ const value = ref('');
         :label="t('message')"
         :placeholder="t('placeholder')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

@@ -1,6 +1,6 @@
 <!-- html -->
 <template>
-  <icsm-swipe-item>1</icsm-swipe-item>
+  <fx-swipe-item>1</fx-swipe-item>
 </template>
 
 <!-- js -->

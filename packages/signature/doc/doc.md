@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Signature } from 'ctf-ics-mobile-ui';
+import { Signature } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Signature);
@@ -26,13 +26,13 @@ app.use(Signature);
 - `canvas`：Canvas 元素。
 
 ```html
-<icsm-signature @submit="onSubmit" @clear="onClear" />
-<icsm-image v-if="image" :src="image" />
+<fx-signature @submit="onSubmit" @clear="onClear" />
+<fx-image v-if="image" :src="image" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -56,7 +56,7 @@ export default {
 通过 `pen-color` 来自定义笔触颜色。
 
 ```html
-<icsm-signature pen-color="#ff0000" @submit="onSubmit" @clear="onClear" />
+<fx-signature pen-color="#ff0000" @submit="onSubmit" @clear="onClear" />
 ```
 
 ### 自定义线宽
@@ -64,7 +64,7 @@ export default {
 通过 `line-width` 来自定义线条宽度。
 
 ```html
-<icsm-signature :line-width="6" @submit="onSubmit" @clear="onClear" />
+<fx-signature :line-width="6" @submit="onSubmit" @clear="onClear" />
 ```
 
 ### 自定义背景颜色
@@ -72,7 +72,7 @@ export default {
 通过 `background-color` 来自定义背景颜色。
 
 ```html
-<icsm-signature background-color="#eee" @submit="onSubmit" @clear="onClear" />
+<fx-signature background-color="#eee" @submit="onSubmit" @clear="onClear" />
 ```
 
 ## API
@@ -120,14 +120,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SignatureProps, SignatureInstance } from 'ctf-ics-mobile-ui';
+import type { SignatureProps, SignatureInstance } from 'fx-mobile-ui';
 ```
 
 `SignatureInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { SignatureInstance } from 'ctf-ics-mobile-ui';
+import type { SignatureInstance } from 'fx-mobile-ui';
 
 const signatureRef = ref<SignatureInstance>();
 
@@ -142,10 +142,10 @@ signatureRef.value?.resize();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-signature-padding | _var(--icsm-padding-xs)_ | - |
-| --icsm-signature-content-height | _200px_ | 画布高度 |
-| --icsm-signature-content-background | _var(--icsm-background-2)_ | 画布背景色 |
-| --icsm-signature-content-border | _1px dotted #dadada_ | 画布边框样式 |
+| --fx-signature-padding | _var(--fx-padding-xs)_ | - |
+| --fx-signature-content-height | _200px_ | 画布高度 |
+| --fx-signature-content-background | _var(--fx-background-2)_ | 画布背景色 |
+| --fx-signature-content-border | _1px dotted #dadada_ | 画布边框样式 |
 
 
 <br/><br/><br/><br/><br/><br/>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 import Shrink from './Shrink.vue';
 
 import { cdnURL, useTranslate } from '@/docs/site';
@@ -69,107 +69,107 @@ const beforeChange = (name: number) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-tabs v-model:active="active1">
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+    <fx-tabs v-model:active="active1">
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('matchByName')">
-    <icsm-tabs v-model:active="activeName">
-      <icsm-tab name="a" :title="t('tab') + 1">{{ t('content') }} 1</icsm-tab>
-      <icsm-tab name="b" :title="t('tab') + 2">{{ t('content') }} 2</icsm-tab>
-      <icsm-tab name="c" :title="t('tab') + 3">{{ t('content') }} 3</icsm-tab>
-    </icsm-tabs>
+    <fx-tabs v-model:active="activeName">
+      <fx-tab name="a" :title="t('tab') + 1">{{ t('content') }} 1</fx-tab>
+      <fx-tab name="b" :title="t('tab') + 2">{{ t('content') }} 2</fx-tab>
+      <fx-tab name="c" :title="t('tab') + 3">{{ t('content') }} 3</fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-tabs v-model:active="active2">
-      <icsm-tab v-for="index in 8" :title="t('tab') + index" :key="index">
+    <fx-tabs v-model:active="active2">
+      <fx-tab v-for="index in 8" :title="t('tab') + index" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-tabs v-model:active="active3">
-      <icsm-tab
+    <fx-tabs v-model:active="active3">
+      <fx-tab
         v-for="index in 3"
         :title="t('tab') + index"
         :disabled="index === 2"
         :key="index"
       >
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title4')">
-    <icsm-tabs v-model:active="active4" type="card">
-      <icsm-tab v-for="index in 3" :title="t('tab') + index" :key="index">
+    <fx-tabs v-model:active="active4" type="card">
+      <fx-tab v-for="index in 3" :title="t('tab') + index" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title5')">
-    <icsm-tabs v-model:active="active5" @click-tab="onClickTab">
-      <icsm-tab v-for="index in 2" :title="t('tab') + index" :key="index">
+    <fx-tabs v-model:active="active5" @click-tab="onClickTab">
+      <fx-tab v-for="index in 2" :title="t('tab') + index" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title6')">
-    <icsm-tabs v-model:active="active6" sticky>
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+    <fx-tabs v-model:active="active6" sticky>
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <shrink />
 
   <demo-block :title="t('title7')">
-    <icsm-tabs v-model:active="active7">
-      <icsm-tab v-for="index in 2" :key="index">
-        <template #title><icsm-icon name="more-o" />{{ t('tab') }}</template>
+    <fx-tabs v-model:active="active7">
+      <fx-tab v-for="index in 2" :key="index">
+        <template #title><fx-icon name="more-o" />{{ t('tab') }}</template>
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title8')">
-    <icsm-tabs v-model:active="active8" animated>
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+    <fx-tabs v-model:active="active8" animated>
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title9')">
-    <icsm-tabs v-model:active="active9" swipeable>
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+    <fx-tabs v-model:active="active9" swipeable>
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('title10')">
-    <icsm-tabs v-model:active="active10" scrollspy sticky>
-      <icsm-tab :title="t('tab') + index" v-for="index in 8" :key="index">
+    <fx-tabs v-model:active="active10" scrollspy sticky>
+      <fx-tab :title="t('tab') + index" v-for="index in 8" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('beforeChange')">
-    <icsm-tabs v-model:active="active11" :before-change="beforeChange">
-      <icsm-tab :title="t('tab') + index" v-for="index in 4" :key="index">
+    <fx-tabs v-model:active="active11" :before-change="beforeChange">
+      <fx-tab :title="t('tab') + index" v-for="index in 4" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 </template>
 
@@ -177,17 +177,17 @@ const beforeChange = (name: number) => {
 .demo-tab {
   margin-bottom: 80vh;
 
-  .icsm-tab .icsm-icon {
+  .fx-tab .fx-icon {
     margin-right: 5px;
     vertical-align: -2px;
   }
 
-  .icsm-tab__panel {
+  .fx-tab__panel {
     padding: 24px 20px;
-    background: var(--icsm-background-2);
+    background: var(--fx-background-2);
   }
 
-  .icsm-tabs--card .icsm-tab__panel {
+  .fx-tabs--card .fx-tab__panel {
     background: transparent;
   }
 }

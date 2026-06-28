@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import {showToast} from 'ctf-ics-mobile-ui'
+import {showToast} from 'fx-mobile-ui'
 import { cdnURL, useTranslate } from '@/docs/site';
 
 const t = useTranslate({

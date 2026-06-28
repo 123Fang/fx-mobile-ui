@@ -198,21 +198,21 @@ const switchMode = ref<CalendarSwitchMode>('none');
   <SwitchModeField v-model="switchMode" />
 
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('selectSingle')"
       :value="formatFullDate(state.date.selectSingle)"
       @click="show('single', 'selectSingle')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('selectMultiple')"
       :value="formatMultiple(state.date.selectMultiple)"
       @click="show('multiple', 'selectMultiple')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('selectRange')"
       :value="formatRange(state.date.selectRange)"
@@ -221,14 +221,14 @@ const switchMode = ref<CalendarSwitchMode>('none');
   </demo-block>
 
   <demo-block card :title="t('quickSelect')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('selectSingle')"
       :value="formatFullDate(state.date.quickSelect1)"
       @click="show('single', 'quickSelect1')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('selectRange')"
       :value="formatRange(state.date.quickSelect2)"
@@ -237,49 +237,49 @@ const switchMode = ref<CalendarSwitchMode>('none');
   </demo-block>
 
   <demo-block card :title="t('customCalendar')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customColor')"
       :value="formatRange(state.date.customColor)"
       @click="show('range', 'customColor')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customRange')"
       :value="formatFullDate(state.date.customRange)"
       @click="show('single', 'customRange')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customConfirm')"
       :value="formatRange(state.date.customConfirm)"
       @click="show('range', 'customConfirm')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customDayText')"
       :value="formatRange(state.date.customDayText)"
       @click="show('range', 'customDayText')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('customPosition')"
       :value="formatFullDate(state.date.customPosition)"
       @click="show('single', 'customPosition')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('maxRange')"
       :value="formatRange(state.date.maxRange)"
       @click="show('range', 'maxRange')"
     />
 
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('firstDayOfWeek')"
       @click="show('single', 'firstDayOfWeek')"
@@ -288,7 +288,7 @@ const switchMode = ref<CalendarSwitchMode>('none');
 
   <TiledDisplay :switch-mode="switchMode" />
 
-  <icsm-calendar
+  <fx-calendar
     v-model:show="state.showCalendar"
     :type="state.type"
     :color="state.color"

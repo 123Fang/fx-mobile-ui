@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -39,12 +39,12 @@ const onClickButton = () => showToast(value6.value);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-search v-model="value1" :placeholder="t('placeholder')" />
+    <fx-search v-model="value1" :placeholder="t('placeholder')" />
   </demo-block>
 
   <demo-block :title="t('listenToEvents')">
     <form action="/">
-      <icsm-search
+      <fx-search
         v-model="value5"
         :placeholder="t('placeholder')"
         show-action
@@ -55,7 +55,7 @@ const onClickButton = () => showToast(value6.value);
   </demo-block>
 
   <demo-block :title="t('inputAlign')">
-    <icsm-search
+    <fx-search
       v-model="value4"
       :placeholder="t('placeholder')"
       input-align="center"
@@ -63,11 +63,11 @@ const onClickButton = () => showToast(value6.value);
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-search v-model="value3" :placeholder="t('placeholder')" disabled />
+    <fx-search v-model="value3" :placeholder="t('placeholder')" disabled />
   </demo-block>
 
   <demo-block :title="t('background')">
-    <icsm-search
+    <fx-search
       v-model="value2"
       :placeholder="t('placeholder')"
       shape="round"
@@ -76,7 +76,7 @@ const onClickButton = () => showToast(value6.value);
   </demo-block>
 
   <demo-block :title="t('customButton')">
-    <icsm-search
+    <fx-search
       v-model="value6"
       show-action
       :label="t('label')"
@@ -86,6 +86,6 @@ const onClickButton = () => showToast(value6.value);
       <template #action>
         <div @click="onClickButton">{{ t('search') }}</div>
       </template>
-    </icsm-search>
+   </fx-search>
   </demo-block>
 </template>

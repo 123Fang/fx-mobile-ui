@@ -35,21 +35,21 @@ const reduce = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-progress :percentage="50" />
+    <fx-progress :percentage="50" />
   </demo-block>
 
   <demo-block :title="t('strokeWidth')">
-    <icsm-progress :percentage="50" stroke-width="8" />
+    <fx-progress :percentage="50" stroke-width="8" />
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-progress inactive :percentage="50" />
+    <fx-progress inactive :percentage="50" />
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-progress color="#f2826a" :percentage="25" :pivot-text="t('orange')" />
-    <icsm-progress color="#ee0a24" :percentage="50" :pivot-text="t('red')" />
-    <icsm-progress
+    <fx-progress color="#f2826a" :percentage="25" :pivot-text="t('orange')" />
+    <fx-progress color="#ee0a24" :percentage="50" :pivot-text="t('red')" />
+    <fx-progress
       :percentage="75"
       :pivot-text="t('purple')"
       pivot-color="#7232dd"
@@ -58,21 +58,21 @@ const reduce = () => {
   </demo-block>
 
   <demo-block :title="t('title4')">
-    <icsm-progress :percentage="percentage">
+    <fx-progress :percentage="percentage">
       <template #pivot="{ percentage: value }">
         <span style="display: inline-flex; align-items: center">
-          <icsm-icon name="fire" />
+          <fx-icon name="fire" />
           <span style="margin-left: 2px">{{ value }}%</span>
         </span>
       </template>
-    </icsm-progress>
+   </fx-progress>
   </demo-block>
 
   <demo-block :title="t('transition')">
-    <icsm-progress :percentage="percentage" />
+    <fx-progress :percentage="percentage" />
     <div style="margin-top: 15px">
-      <icsm-button :text="t('add')" type="primary" size="small" @click="add" />
-      <icsm-button
+      <fx-button :text="t('add')" type="primary" size="small" @click="add" />
+      <fx-button
         :text="t('decrease')"
         type="danger"
         size="small"
@@ -84,7 +84,7 @@ const reduce = () => {
 
 <style lang="scss">
 .demo-progress {
-  .icsm-progress {
+  .fx-progress {
     margin: 20px 16px;
 
     &:first-of-type {
@@ -92,11 +92,11 @@ const reduce = () => {
     }
   }
 
-  .icsm-button {
-    margin: var(--icsm-padding-md) 0 0 10px;
+  .fx-button {
+    margin: var(--fx-padding-md) 0 0 10px;
 
     &:first-of-type {
-      margin-left: var(--icsm-padding-md);
+      margin-left: var(--fx-padding-md);
     }
   }
 }

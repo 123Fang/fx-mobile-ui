@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { IndexBar, IndexAnchor } from 'ctf-ics-mobile-ui';
+import { IndexBar, IndexAnchor } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(IndexBar);
@@ -24,19 +24,19 @@ app.use(IndexAnchor);
 点击索引栏时，会自动跳转到对应的 `IndexAnchor` 锚点位置。
 
 ```html
-<icsm-index-bar>
-  <icsm-index-anchor index="A" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
+<fx-index-bar>
+  <fx-index-anchor index="A" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
 
-  <icsm-index-anchor index="B" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
+  <fx-index-anchor index="B" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
 
   ...
-</icsm-index-bar>
+</fx-index-bar>
 ```
 
 ### 自定义索引列表
@@ -44,19 +44,19 @@ app.use(IndexAnchor);
 可以通过 `index-list` 属性自定义展示的索引字符列表。
 
 ```html
-<icsm-index-bar :index-list="indexList">
-  <icsm-index-anchor index="1">标题1</icsm-index-anchor>
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
+<fx-index-bar :index-list="indexList">
+  <fx-index-anchor index="1">标题1</fx-index-anchor>
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
 
-  <icsm-index-anchor index="2">标题2</icsm-index-anchor>
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
-  <icsm-cell title="文本" />
+  <fx-index-anchor index="2">标题2</fx-index-anchor>
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
+  <fx-cell title="文本" />
 
   ...
-</icsm-index-bar>
+</fx-index-bar>
 ```
 
 ```js
@@ -108,14 +108,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { IndexBarProps, IndexAnchorProps, IndexBarInstance } from 'ctf-ics-mobile-ui';
+import type { IndexBarProps, IndexAnchorProps, IndexBarInstance } from 'fx-mobile-ui';
 ```
 
 `IndexBarInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { IndexBarInstance } from 'ctf-ics-mobile-ui';
+import type { IndexBarInstance } from 'fx-mobile-ui';
 
 const indexBarRef = ref<IndexBarInstance>();
 
@@ -136,19 +136,19 @@ indexBarRef.value?.scrollTo('B');
 
 | 名称                                 | 默认值                      | 描述 |
 | ------------------------------------ | --------------------------- | ---- |
-| --icsm-index-bar-sidebar-z-index      | _2_                         | -    |
-| --icsm-index-bar-index-font-size      | _var(--icsm-font-size-xs)_   | -    |
-| --icsm-index-bar-index-line-height    | _var(--icsm-line-height-xs)_ | -    |
-| --icsm-index-bar-index-active-color   | _var(--icsm-primary-color)_  | -    |
-| --icsm-index-anchor-z-index           | _1_                         | -    |
-| --icsm-index-anchor-padding           | _0 var(--icsm-padding-md)_   | -    |
-| --icsm-index-anchor-text-color        | _var(--icsm-text-color)_     | -    |
-| --icsm-index-anchor-font-weight       | _var(--icsm-font-bold)_      | -    |
-| --icsm-index-anchor-font-size         | _var(--icsm-font-size-md)_   | -    |
-| --icsm-index-anchor-line-height       | _32px_                      | -    |
-| --icsm-index-anchor-background        | _transparent_               | -    |
-| --icsm-index-anchor-sticky-text-color | _var(--icsm-primary-color)_  | -    |
-| --icsm-index-anchor-sticky-background | _var(--icsm-background-2)_   | -    |
+| --fx-index-bar-sidebar-z-index      | _2_                         | -    |
+| --fx-index-bar-index-font-size      | _var(--fx-font-size-xs)_   | -    |
+| --fx-index-bar-index-line-height    | _var(--fx-line-height-xs)_ | -    |
+| --fx-index-bar-index-active-color   | _var(--fx-primary-color)_  | -    |
+| --fx-index-anchor-z-index           | _1_                         | -    |
+| --fx-index-anchor-padding           | _0 var(--fx-padding-md)_   | -    |
+| --fx-index-anchor-text-color        | _var(--fx-text-color)_     | -    |
+| --fx-index-anchor-font-weight       | _var(--fx-font-bold)_      | -    |
+| --fx-index-anchor-font-size         | _var(--fx-font-size-md)_   | -    |
+| --fx-index-anchor-line-height       | _32px_                      | -    |
+| --fx-index-anchor-background        | _transparent_               | -    |
+| --fx-index-anchor-sticky-text-color | _var(--fx-primary-color)_  | -    |
+| --fx-index-anchor-sticky-background | _var(--fx-background-2)_   | -    |
 
 
 

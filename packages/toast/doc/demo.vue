@@ -10,7 +10,7 @@ import {
   // 修改默认配置
   setToastDefaultOptions, 
   resetToastDefaultOptions
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 
 
 const t = useTranslate({
@@ -150,24 +150,24 @@ const image = cdnURL('cat.jpeg');
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('title1')" @click="showToast(t('text'))" />
-    <icsm-cell
+    <fx-cell is-link :title="t('title1')" @click="showToast(t('text'))" />
+    <fx-cell
       is-link
       :title="t('title2')"
       @click="showLoadingToastWithType()"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('success')"
       @click="showSuccessToast(t('text2'))"
     />
-    <icsm-cell is-link :title="t('fail')" @click="showFailToast(t('text3'))" />
+    <fx-cell is-link :title="t('fail')" @click="showFailToast(t('text3'))" />
   </demo-block>
 
   <demo-block card :title="t('customIcon')">
-    <icsm-cell is-link :title="t('customIcon')" @click="showIconToast" />
-    <icsm-cell is-link :title="t('customImage')" @click="showImageToast" />
-    <icsm-cell
+    <fx-cell is-link :title="t('customIcon')" @click="showIconToast" />
+    <fx-cell is-link :title="t('customImage')" @click="showImageToast" />
+    <fx-cell
       is-link
       :title="t('loadingType')"
       @click="showLoadingToastWithType('spinner')"
@@ -175,17 +175,17 @@ const image = cdnURL('cat.jpeg');
   </demo-block>
 
   <demo-block card :title="t('customPosition')">
-    <icsm-cell is-link :title="t('positionTop')" @click="showTopToast" />
-    <icsm-cell is-link :title="t('positionBottom')" @click="showBottomToast" />
+    <fx-cell is-link :title="t('positionTop')" @click="showTopToast" />
+    <fx-cell is-link :title="t('positionBottom')" @click="showBottomToast" />
   </demo-block>
 
   <demo-block card :title="t('wordBreak')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('breakAll')"
       @click="showWordBreakToast('break-all')"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('breakWord')"
       @click="showWordBreakToast('break-word')"
@@ -193,30 +193,30 @@ const image = cdnURL('cat.jpeg');
   </demo-block>
 
   <demo-block card :title="t('updateMessage')">
-    <icsm-cell is-link :title="t('updateMessage')" @click="showCustomToast" />
+    <fx-cell is-link :title="t('updateMessage')" @click="showCustomToast" />
   </demo-block>
 
   <demo-block card :title="t('useComponent')">
-    <icsm-cell is-link :title="t('useComponent')" @click="show = true" />
-    <icsm-toast v-model:show="show" style="padding: 0">
+    <fx-cell is-link :title="t('useComponent')" @click="show = true" />
+    <fx-toast v-model:show="show" style="padding: 0">
       <template #message>
-        <icsm-image
+        <fx-image
           :src="image"
           width="200"
           height="140"
           style="display: block"
         />
       </template>
-    </icsm-toast>
+   </fx-toast>
   </demo-block>
 
 
 
   <demo-block card title="修改默认配置">
-    <icsm-cell is-link title="setToastDefaultOptions({ duration: 9000 });" @click="setToastDefaultOptions({ duration: 9000 });" />
-    <icsm-cell is-link title="setToastDefaultOptions('loading', { forbidClick: true });" @click="setToastDefaultOptions('loading', { forbidClick: false });" />
-    <icsm-cell is-link title="resetToastDefaultOptions();" @click="resetToastDefaultOptions();" />
-    <icsm-cell is-link title="resetToastDefaultOptions('loading');" @click="resetToastDefaultOptions('loading');" />
+    <fx-cell is-link title="setToastDefaultOptions({ duration: 9000 });" @click="setToastDefaultOptions({ duration: 9000 });" />
+    <fx-cell is-link title="setToastDefaultOptions('loading', { forbidClick: true });" @click="setToastDefaultOptions('loading', { forbidClick: false });" />
+    <fx-cell is-link title="resetToastDefaultOptions();" @click="resetToastDefaultOptions();" />
+    <fx-cell is-link title="resetToastDefaultOptions('loading');" @click="resetToastDefaultOptions('loading');" />
    
   </demo-block>
 </template>

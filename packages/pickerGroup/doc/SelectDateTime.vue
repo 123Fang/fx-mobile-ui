@@ -6,7 +6,7 @@ import { ref } from 'vue';
 // import VanDatePicker from '../../date-picker';
 // import { showToast } from '../../toast';
 
-import {showToast} from 'ctf-ics-mobile-ui'
+import {showToast} from 'fx-mobile-ui'
 import { cdnURL, useTranslate } from '@/docs/site';
 
 const t = useTranslate({

@@ -91,11 +91,11 @@ showNotify({
 如果需要在 Notify 内嵌入组件或其他自定义内容，可以直接使用 Notify 组件，并使用默认插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
 
 ```html
-<icsm-button type="primary" text="组件调用" @click="showNotify" />
-<icsm-notify v-model:show="show" type="success">
-  <icsm-icon name="bell" style="margin-right: 4px;" />
+<fx-button type="primary" text="组件调用" @click="showNotify" />
+<fx-notify v-model:show="show" type="success">
+  <fx-icon name="bell" style="margin-right: 4px;" />
   <span>通知内容</span>
-</icsm-notify>
+</fx-notify>
 ```
 
 ```js
@@ -209,14 +209,14 @@ import type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-notify-text-color | _var(--icsm-white)_ | - |
-| --icsm-notify-padding | _var(--icsm-padding-xs) var(--icsm-padding-md)_ | - |
-| --icsm-notify-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-notify-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-notify-primary-background | _var(--icsm-primary-color)_ | - |
-| --icsm-notify-success-background | _var(--icsm-success-color)_ | - |
-| --icsm-notify-danger-background | _var(--icsm-danger-color)_ | - |
-| --icsm-notify-warning-background | _var(--icsm-warning-color)_ | - |
+| --fx-notify-text-color | _var(--fx-white)_ | - |
+| --fx-notify-padding | _var(--fx-padding-xs) var(--fx-padding-md)_ | - |
+| --fx-notify-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-notify-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-notify-primary-background | _var(--fx-primary-color)_ | - |
+| --fx-notify-success-background | _var(--fx-success-color)_ | - |
+| --fx-notify-danger-background | _var(--fx-danger-color)_ | - |
+| --fx-notify-warning-background | _var(--fx-warning-color)_ | - |
 
 
 

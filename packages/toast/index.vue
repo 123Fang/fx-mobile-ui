@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-toast',
+  name: 'fx-toast',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -22,5 +22,5 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-toast-container {}
+.fx-toast-container {}
 </style>

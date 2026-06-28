@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ShareSheet } from 'ctf-ics-mobile-ui';
+import { ShareSheet } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ShareSheet);
@@ -23,8 +23,8 @@ app.use(ShareSheet);
 分享面板通过 `options` 属性来定义分享选项，数组的每一项是一个对象，对象格式见文档下方表格。
 
 ```html
-<icsm-cell title="显示分享面板" @click="showShare = true" />
-<icsm-share-sheet
+<fx-cell title="显示分享面板" @click="showShare = true" />
+<fx-share-sheet
   v-model:show="showShare"
   title="立即分享给好友"
   :options="options"
@@ -34,7 +34,7 @@ app.use(ShareSheet);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -66,7 +66,7 @@ export default {
 当分享选项的数量较多时，可以将 `options` 定义为数组嵌套的格式，每个子数组会作为一行选项展示。
 
 ```html
-<icsm-share-sheet
+<fx-share-sheet
   v-model:show="showShare"
   title="立即分享给好友"
   :options="options"
@@ -107,7 +107,7 @@ export default {
 除了使用内置的几种图标外，可以直接在 `icon` 中传入图片 URL 来使用自定义的图标。
 
 ```html
-<icsm-share-sheet v-model:show="showShare" :options="options" />
+<fx-share-sheet v-model:show="showShare" :options="options" />
 ```
 
 ```js
@@ -144,7 +144,7 @@ export default {
 通过 `description` 属性可以设置标题下方的描述文字, 在 `options` 内设置 `description` 属性可以添加分享选项描述。
 
 ```html
-<icsm-share-sheet
+<fx-share-sheet
   v-model:show="showShare"
   :options="options"
   title="立即分享给好友"
@@ -239,7 +239,7 @@ import type {
   ShareSheetProps,
   ShareSheetOption,
   ShareSheetOptions,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -250,21 +250,21 @@ import type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-share-sheet-header-padding | _var(--icsm-padding-sm) var(--icsm-padding-md) var(--icsm-padding-base)_ | - |
-| --icsm-share-sheet-title-color | _var(--icsm-text-color)_ | - |
-| --icsm-share-sheet-title-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-share-sheet-title-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-share-sheet-description-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-share-sheet-description-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-share-sheet-description-line-height | _16px_ | - |
-| --icsm-share-sheet-icon-size | _48px_ | - |
-| --icsm-share-sheet-option-name-color | _var(--icsm-gray-7)_ | - |
-| --icsm-share-sheet-option-name-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-share-sheet-option-description-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-share-sheet-option-description-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-share-sheet-cancel-button-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-share-sheet-cancel-button-height | _48px_ | - |
-| --icsm-share-sheet-cancel-button-background | _var(--icsm-background-2)_ | - |
+| --fx-share-sheet-header-padding | _var(--fx-padding-sm) var(--fx-padding-md) var(--fx-padding-base)_ | - |
+| --fx-share-sheet-title-color | _var(--fx-text-color)_ | - |
+| --fx-share-sheet-title-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-share-sheet-title-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-share-sheet-description-color | _var(--fx-text-color-2)_ | - |
+| --fx-share-sheet-description-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-share-sheet-description-line-height | _16px_ | - |
+| --fx-share-sheet-icon-size | _48px_ | - |
+| --fx-share-sheet-option-name-color | _var(--fx-gray-7)_ | - |
+| --fx-share-sheet-option-name-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-share-sheet-option-description-color | _var(--fx-text-color-3)_ | - |
+| --fx-share-sheet-option-description-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-share-sheet-cancel-button-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-share-sheet-cancel-button-height | _48px_ | - |
+| --fx-share-sheet-cancel-button-background | _var(--fx-background-2)_ | - |
 
 ## 常见问题
 

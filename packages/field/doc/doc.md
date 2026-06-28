@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Field, CellGroup } from 'ctf-ics-mobile-ui';
+import { Field, CellGroup } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Field);
@@ -25,9 +25,9 @@ app.use(CellGroup);
 
 ```html
 <!-- 可以使用 CellGroup 作为容器 -->
-<icsm-cell-group inset>
-  <icsm-field v-model="value" label="文本" placeholder="请输入用户名" />
-</icsm-cell-group>
+<fx-cell-group inset>
+  <fx-field v-model="value" label="文本" placeholder="请输入用户名" />
+</fx-cell-group>
 ```
 
 ```js
@@ -46,18 +46,18 @@ export default {
 根据 `type` 属性定义不同类型的输入框，默认值为 `text`。
 
 ```html
-<icsm-cell-group inset>
+<fx-cell-group inset>
   <!-- 输入任意文本 -->
-  <icsm-field v-model="text" label="文本" />
+  <fx-field v-model="text" label="文本" />
   <!-- 输入手机号，调起手机号键盘 -->
-  <icsm-field v-model="tel" type="tel" label="手机号" />
+  <fx-field v-model="tel" type="tel" label="手机号" />
   <!-- 允许输入正整数，调起纯数字键盘 -->
-  <icsm-field v-model="digit" type="digit" label="整数" />
+  <fx-field v-model="digit" type="digit" label="整数" />
   <!-- 允许输入数字，调起带符号的纯数字键盘 -->
-  <icsm-field v-model="number" type="number" label="数字" />
+  <fx-field v-model="number" type="number" label="数字" />
   <!-- 输入密码 -->
-  <icsm-field v-model="password" type="password" label="密码" />
-</icsm-cell-group>
+  <fx-field v-model="password" type="password" label="密码" />
+</fx-cell-group>
 ```
 
 ```js
@@ -81,10 +81,10 @@ export default {
 通过 `readonly` 将输入框设置为只读状态，通过 `disabled` 将输入框设置为禁用状态。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field label="文本" model-value="输入框只读" readonly />
-  <icsm-field label="文本" model-value="输入框已禁用" disabled />
-</icsm-cell-group>
+<fx-cell-group inset>
+  <fx-field label="文本" model-value="输入框只读" readonly />
+  <fx-field label="文本" model-value="输入框已禁用" disabled />
+</fx-cell-group>
 ```
 
 ### 显示图标
@@ -92,22 +92,22 @@ export default {
 通过 `left-icon` 和 `right-icon` 配置输入框两侧的图标，通过设置 `clearable` 在输入过程中展示清除图标。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="value1"
     label="文本"
     left-icon="smile-o"
     right-icon="warning-o"
     placeholder="显示图标"
   />
-  <icsm-field
+  <fx-field
     v-model="value2"
     clearable
     label="文本"
     left-icon="music-o"
     placeholder="显示清除图标"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ```js
@@ -130,20 +130,20 @@ export default {
 设置 `required` 属性来展示必填星号。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="username"
     required
     label="用户名"
     placeholder="请输入用户名"
   />
-  <icsm-field
+  <fx-field
     v-model="phone"
     required
     label="手机号"
     placeholder="请输入手机号"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 请注意 `required` 属性只用于控制样式展示，在进行表单校验时，需要使用 `rule.required` 选项来控制校验逻辑。
@@ -153,20 +153,20 @@ export default {
 你可以在 Form 组件上设置 `required="auto"`，此时 Form 里的所有 Field 会自动根据 `rule.required` 来判断是否需要展示星号。
 
 ```html
-<icsm-form required="auto">
-  <icsm-field
+<fx-form required="auto">
+  <fx-field
     v-model="username"
     :rules="[{ required: true }]"
     label="用户名"
     placeholder="请输入用户名"
   />
-  <icsm-field
+  <fx-field
     v-model="phone"
     :rules="[{ required: false }]"
     label="手机号"
     placeholder="请输入手机号"
   />
-</icsm-form>
+</fx-form>
 ```
 
 ### 错误提示
@@ -174,20 +174,20 @@ export default {
 设置 `required` 属性表示这是一个必填项，可以配合 `error` 或 `error-message` 属性显示对应的错误提示。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="username"
     error
     label="用户名"
     placeholder="请输入用户名"
   />
-  <icsm-field
+  <fx-field
     v-model="phone"
     label="手机号"
     placeholder="请输入手机号"
     error-message="手机号格式错误"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ### 插入按钮
@@ -195,8 +195,8 @@ export default {
 通过 button 插槽可以在输入框尾部插入按钮。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="sms"
     center
     clearable
@@ -204,10 +204,10 @@ export default {
     placeholder="请输入短信验证码"
   >
     <template #button>
-      <icsm-button size="small" type="primary">发送验证码</icsm-button>
+      <fx-button size="small" type="primary">发送验证码</fx-button>
     </template>
-  </icsm-field>
-</icsm-cell-group>
+ </fx-field>
+</fx-cell-group>
 ```
 
 ### 格式化输入内容
@@ -215,21 +215,21 @@ export default {
 通过 `formatter` 属性可以对输入的内容进行格式化，通过 `format-trigger` 属性可以指定执行格式化的时机，默认在输入时进行格式化。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="value1"
     label="文本"
     :formatter="formatter"
     placeholder="在输入时执行格式化"
   />
-  <icsm-field
+  <fx-field
     v-model="value2"
     label="文本"
     :formatter="formatter"
     format-trigger="onBlur"
     placeholder="在失焦时执行格式化"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ```js
@@ -256,8 +256,8 @@ export default {
 对于 textarea，可以通过 `autosize` 属性设置高度自适应。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="message"
     rows="1"
     autosize
@@ -265,7 +265,7 @@ export default {
     type="textarea"
     placeholder="请输入留言"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ### 显示字数统计
@@ -273,8 +273,8 @@ export default {
 设置 `maxlength` 和 `show-word-limit` 属性后会在底部显示字数统计。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="message"
     rows="2"
     autosize
@@ -284,7 +284,7 @@ export default {
     placeholder="请输入留言"
     show-word-limit
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ### 输入框内容对齐
@@ -292,14 +292,14 @@ export default {
 通过 `input-align` 属性可以设置输入框内容的对齐方式，可选值为 `center`、`right`。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="value"
     label="文本"
     placeholder="输入框内容右对齐"
     input-align="right"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ### 输入框文本位置
@@ -307,32 +307,32 @@ export default {
 通过 `label-align` 属性可以设置输入框文本的位置，可选值为 `center`、`right`、`top`。
 
 ```html
-<icsm-cell-group inset>
-  <icsm-field
+<fx-cell-group inset>
+  <fx-field
     v-model="value"
     label="文本"
     placeholder="顶部对齐"
     label-align="top"
   />
-  <icsm-field
+  <fx-field
     v-model="value2"
     label="文本"
     placeholder="左对齐"
     label-align="left"
   />
-  <icsm-field
+  <fx-field
     v-model="value3"
     label="文本"
     placeholder="居中对齐"
     label-align="center"
   />
-  <icsm-field
+  <fx-field
     v-model="value4"
     label="文本"
     placeholder="右对齐"
     label-align="right"
   />
-</icsm-cell-group>
+</fx-cell-group>
 ```
 
 ## API
@@ -431,14 +431,14 @@ import type {
   FieldAutosizeConfig,
   FieldValidateTrigger,
   FieldValidationStatus,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `FieldInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { FieldInstance } from 'ctf-ics-mobile-ui';
+import type { FieldInstance } from 'fx-mobile-ui';
 
 const fieldRef = ref<FieldInstance>();
 
@@ -465,25 +465,25 @@ fieldRef.value?.focus();
 
 | 名称                                  | 默认值                    | 描述 |
 | ------------------------------------- | ------------------------- | ---- |
-| --icsm-field-label-width               | _6.2em_                   | -    |
-| --icsm-field-label-color               | _var(--icsm-text-color)_   | -    |
-| --icsm-field-label-margin-right        | _var(--icsm-padding-sm)_   | -    |
-| --icsm-field-input-text-color          | _var(--icsm-text-color)_   | -    |
-| --icsm-field-input-error-text-color    | _var(--icsm-danger-color)_ | -    |
-| --icsm-field-input-disabled-text-color | _var(--icsm-text-color-3)_ | -    |
-| --icsm-field-placeholder-text-color    | _var(--icsm-text-color-3)_ | -    |
-| --icsm-field-icon-size                 | _18px_                    | -    |
-| --icsm-field-clear-icon-size           | _18px_                    | -    |
-| --icsm-field-clear-icon-color          | _var(--icsm-gray-5)_       | -    |
-| --icsm-field-right-icon-color          | _var(--icsm-gray-6)_       | -    |
-| --icsm-field-error-message-color       | _var(--icsm-danger-color)_ | -    |
-| --icsm-field-error-message-font-size   | _12px_                    | -    |
-| --icsm-field-text-area-min-height      | _60px_                    | -    |
-| --icsm-field-word-limit-color          | _var(--icsm-gray-7)_       | -    |
-| --icsm-field-word-limit-font-size      | _var(--icsm-font-size-sm)_ | -    |
-| --icsm-field-word-limit-line-height    | _16px_                    | -    |
-| --icsm-field-disabled-text-color       | _var(--icsm-text-color-3)_ | -    |
-| --icsm-field-required-mark-color       | _var(--icsm-red)_          | -    |
+| --fx-field-label-width               | _6.2em_                   | -    |
+| --fx-field-label-color               | _var(--fx-text-color)_   | -    |
+| --fx-field-label-margin-right        | _var(--fx-padding-sm)_   | -    |
+| --fx-field-input-text-color          | _var(--fx-text-color)_   | -    |
+| --fx-field-input-error-text-color    | _var(--fx-danger-color)_ | -    |
+| --fx-field-input-disabled-text-color | _var(--fx-text-color-3)_ | -    |
+| --fx-field-placeholder-text-color    | _var(--fx-text-color-3)_ | -    |
+| --fx-field-icon-size                 | _18px_                    | -    |
+| --fx-field-clear-icon-size           | _18px_                    | -    |
+| --fx-field-clear-icon-color          | _var(--fx-gray-5)_       | -    |
+| --fx-field-right-icon-color          | _var(--fx-gray-6)_       | -    |
+| --fx-field-error-message-color       | _var(--fx-danger-color)_ | -    |
+| --fx-field-error-message-font-size   | _12px_                    | -    |
+| --fx-field-text-area-min-height      | _60px_                    | -    |
+| --fx-field-word-limit-color          | _var(--fx-gray-7)_       | -    |
+| --fx-field-word-limit-font-size      | _var(--fx-font-size-sm)_ | -    |
+| --fx-field-word-limit-line-height    | _16px_                    | -    |
+| --fx-field-disabled-text-color       | _var(--fx-text-color-3)_ | -    |
+| --fx-field-required-mark-color       | _var(--fx-red)_          | -    |
 
 ## 常见问题
 
@@ -498,7 +498,7 @@ Field 组件内部会将传入的 v-model 格式化为 string 类型，便于组
 如果你希望在 v-model 上绑定 number 类型，可以使用 Vue 提供的 [.number 修饰符](https://vuejs.org/guide/essentials/forms.html#lazy)。
 
 ```html
-<icsm-field v-model.number="value" type="tel" />
+<fx-field v-model.number="value" type="tel" />
 ```
 
 ### 在桌面端点击清除按钮无效？

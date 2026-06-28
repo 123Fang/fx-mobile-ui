@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ContactCard } from 'ctf-ics-mobile-ui';
+import { ContactCard } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ContactCard);
@@ -21,11 +21,11 @@ app.use(ContactCard);
 ### 添加联系人
 
 ```html
-<icsm-contact-card type="add" @click="onAdd" />
+<fx-contact-card type="add" @click="onAdd" />
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -40,12 +40,12 @@ export default {
 ### 编辑联系人
 
 ```html
-<icsm-contact-card type="edit" :tel="tel" :name="name" @click="onEdit" />
+<fx-contact-card type="edit" :tel="tel" :name="name" @click="onEdit" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -64,7 +64,7 @@ export default {
 ### 不可编辑
 
 ```html
-<icsm-contact-card type="edit" name="张三" tel="13000000000" :editable="false" />
+<fx-contact-card type="edit" name="张三" tel="13000000000" :editable="false" />
 ```
 
 ## API
@@ -90,7 +90,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ContactCardType, ContactCardProps } from 'ctf-ics-mobile-ui';
+import type { ContactCardType, ContactCardProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -101,10 +101,10 @@ import type { ContactCardType, ContactCardProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                 | 默认值                      | 描述 |
 | ------------------------------------ | --------------------------- | ---- |
-| --icsm-contact-card-padding           | _var(--icsm-padding-md)_     | -    |
-| --icsm-contact-card-add-icon-size     | _40px_                      | -    |
-| --icsm-contact-card-add-icon-color    | _var(--icsm-primary-color)_  | -    |
-| --icsm-contact-card-title-line-height | _var(--icsm-line-height-md)_ | -    |
+| --fx-contact-card-padding           | _var(--fx-padding-md)_     | -    |
+| --fx-contact-card-add-icon-size     | _40px_                      | -    |
+| --fx-contact-card-add-icon-color    | _var(--fx-primary-color)_  | -    |
+| --fx-contact-card-title-line-height | _var(--fx-line-height-md)_ | -    |
 
 
 

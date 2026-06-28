@@ -25,64 +25,64 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-divider />
+    <fx-divider />
   </demo-block>
 
   <demo-block :title="t('withText')">
-    <icsm-divider>
+    <fx-divider>
       {{ t('text') }}
-    </icsm-divider>
+   </fx-divider>
   </demo-block>
 
   <demo-block :title="t('contentPosition')">
-    <icsm-divider content-position="left">
+    <fx-divider content-position="left">
       {{ t('text') }}
-    </icsm-divider>
+   </fx-divider>
 
-    <icsm-divider content-position="right">
+    <fx-divider content-position="right">
       {{ t('text') }}
-    </icsm-divider>
+   </fx-divider>
   </demo-block>
 
   <demo-block :title="t('dashed')">
-    <icsm-divider dashed :hairline="false">
+    <fx-divider dashed :hairline="false">
       {{ t('text') }}
-    </icsm-divider>
+   </fx-divider>
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-divider
+    <fx-divider
       :style="{ borderColor: '#1989fa', color: '#1989fa', padding: '0 16px' }"
     >
       {{ t('text') }}
-    </icsm-divider>
+   </fx-divider>
   </demo-block>
 
   <demo-block :title="t('vertical')">
     <div class="content">
-      <icsm-divider vertical />
+      <fx-divider vertical />
       {{ t('text') }}
-      <icsm-divider vertical dashed />
+      <fx-divider vertical dashed />
       {{ t('text') }}
-      <icsm-divider vertical :hairline="false" />
+      <fx-divider vertical :hairline="false" />
       {{ t('text') }}
-      <icsm-divider vertical :style="{ borderColor: '#1989fa' }" />
+      <fx-divider vertical :style="{ borderColor: '#1989fa' }" />
     </div>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-divider {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-doc-demo-block__title {
-    padding-top: var(--icsm-padding-md);
+  .fx-doc-demo-block__title {
+    padding-top: var(--fx-padding-md);
   }
 
   .content {
-    padding: 0 var(--icsm-padding-md);
-    color: var(--icsm-text-color-2);
-    font-size: var(--icsm-font-size-md);
+    padding: 0 var(--fx-padding-md);
+    color: var(--fx-text-color-2);
+    font-size: var(--fx-font-size-md);
   }
 }
 </style>

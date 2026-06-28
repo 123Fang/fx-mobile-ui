@@ -7,7 +7,7 @@ import { cdnURL, useTranslate } from '@/docs/site';
 // import VanTimePicker from '../../time-picker';
 // import VanDatePicker from '../../date-picker';
 // import { showToast } from '../../toast';
-import {showToast} from 'ctf-ics-mobile-ui'
+import {showToast} from 'fx-mobile-ui'
 
 
 const t = useTranslate({

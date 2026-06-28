@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Stepper } from 'ctf-ics-mobile-ui';
+import { Stepper } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Stepper);
@@ -23,7 +23,7 @@ app.use(Stepper);
 通过 `v-model` 绑定输入值，可以通过 `change` 事件监听到输入值的变化。
 
 ```html
-<icsm-stepper v-model="value" />
+<fx-stepper v-model="value" />
 ```
 
 ```js
@@ -42,7 +42,7 @@ export default {
 通过 `step` 属性设置每次点击增加或减少按钮时变化的值，默认为 `1`。
 
 ```html
-<icsm-stepper v-model="value" step="2" />
+<fx-stepper v-model="value" step="2" />
 ```
 
 ### 限制输入范围
@@ -50,7 +50,7 @@ export default {
 通过 `min` 和 `max` 属性限制输入值的范围，默认超出范围后会自动校正最大值或最小值，通过 `auto-fixed` 可以关闭自动校正。
 
 ```html
-<icsm-stepper v-model="value" min="5" max="8" />
+<fx-stepper v-model="value" min="5" max="8" />
 ```
 
 ### 限制输入整数
@@ -58,7 +58,7 @@ export default {
 设置 `integer` 属性后，输入框将限制只能输入整数。
 
 ```html
-<icsm-stepper v-model="value" integer />
+<fx-stepper v-model="value" integer />
 ```
 
 ### 禁用状态
@@ -66,7 +66,7 @@ export default {
 通过设置 `disabled` 属性来禁用步进器，禁用状态下无法点击按钮或修改输入框。
 
 ```html
-<icsm-stepper v-model="value" disabled />
+<fx-stepper v-model="value" disabled />
 ```
 
 ### 禁用输入框
@@ -74,7 +74,7 @@ export default {
 通过设置 `disable-input` 属性来禁用输入框，此时按钮仍然可以点击。
 
 ```html
-<icsm-stepper v-model="value" disable-input />
+<fx-stepper v-model="value" disable-input />
 ```
 
 ### 固定小数位数
@@ -82,7 +82,7 @@ export default {
 通过设置 `decimal-length` 属性可以保留固定的小数位数。
 
 ```html
-<icsm-stepper v-model="value" step="0.2" :decimal-length="1" />
+<fx-stepper v-model="value" step="0.2" :decimal-length="1" />
 ```
 
 ### 自定义大小
@@ -90,7 +90,7 @@ export default {
 通过 `input-width` 属性设置输入框宽度，通过 `button-size` 属性设置按钮大小和输入框高度。
 
 ```html
-<icsm-stepper v-model="value" input-width="40px" button-size="32px" />
+<fx-stepper v-model="value" input-width="40px" button-size="32px" />
 ```
 
 ### 异步变更
@@ -98,12 +98,12 @@ export default {
 通过 `before-change` 属性可以在输入值变化前进行校验和拦截。
 
 ```html
-<icsm-stepper v-model="value" :before-change="beforeChange" />
+<fx-stepper v-model="value" :before-change="beforeChange" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -134,7 +134,7 @@ export default {
 将 `theme` 设置为 `round` 来展示圆角风格的步进器。
 
 ```html
-<icsm-stepper v-model="value" theme="round" button-size="22" disable-input />
+<fx-stepper v-model="value" theme="round" button-size="22" disable-input />
 ```
 
 ## API
@@ -183,7 +183,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { StepperTheme, StepperProps } from 'ctf-ics-mobile-ui';
+import type { StepperTheme, StepperProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -194,19 +194,19 @@ import type { StepperTheme, StepperProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                     | 默认值                     | 描述 |
 | ---------------------------------------- | -------------------------- | ---- |
-| --icsm-stepper-background                 | _var(--icsm-active-color)_  | -    |
-| --icsm-stepper-button-icon-color          | _var(--icsm-text-color)_    | -    |
-| --icsm-stepper-button-disabled-color      | _var(--icsm-background)_    | -    |
-| --icsm-stepper-button-disabled-icon-color | _var(--icsm-gray-5)_        | -    |
-| --icsm-stepper-button-round-theme-color   | _var(--icsm-primary-color)_ | -    |
-| --icsm-stepper-input-width                | _32px_                     | -    |
-| --icsm-stepper-input-height               | _28px_                     | -    |
-| --icsm-stepper-input-font-size            | _var(--icsm-font-size-md)_  | -    |
-| --icsm-stepper-input-line-height          | _normal_                   | -    |
-| --icsm-stepper-input-text-color           | _var(--icsm-text-color)_    | -    |
-| --icsm-stepper-input-disabled-text-color  | _var(--icsm-text-color-3)_  | -    |
-| --icsm-stepper-input-disabled-background  | _var(--icsm-active-color)_  | -    |
-| --icsm-stepper-radius                     | _var(--icsm-radius-md)_     | -    |
+| --fx-stepper-background                 | _var(--fx-active-color)_  | -    |
+| --fx-stepper-button-icon-color          | _var(--fx-text-color)_    | -    |
+| --fx-stepper-button-disabled-color      | _var(--fx-background)_    | -    |
+| --fx-stepper-button-disabled-icon-color | _var(--fx-gray-5)_        | -    |
+| --fx-stepper-button-round-theme-color   | _var(--fx-primary-color)_ | -    |
+| --fx-stepper-input-width                | _32px_                     | -    |
+| --fx-stepper-input-height               | _28px_                     | -    |
+| --fx-stepper-input-font-size            | _var(--fx-font-size-md)_  | -    |
+| --fx-stepper-input-line-height          | _normal_                   | -    |
+| --fx-stepper-input-text-color           | _var(--fx-text-color)_    | -    |
+| --fx-stepper-input-disabled-text-color  | _var(--fx-text-color-3)_  | -    |
+| --fx-stepper-input-disabled-background  | _var(--fx-active-color)_  | -    |
+| --fx-stepper-radius                     | _var(--fx-radius-md)_     | -    |
 
 ## 常见问题
 
@@ -217,7 +217,7 @@ import type { StepperTheme, StepperProps } from 'ctf-ics-mobile-ui';
 如果希望 value 保持 number 类型，可以在 v-model 上添加 `number` 修饰符：
 
 ```html
-<icsm-stepper v-model.number="value" />
+<fx-stepper v-model.number="value" />
 ```
 
 <br/><br/><br/><br/><br/><br/>

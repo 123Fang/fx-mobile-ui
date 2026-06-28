@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -105,40 +105,40 @@ const onExchange = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-coupon-cell
+    <fx-coupon-cell
       :coupons="coupons"
       :chosen-coupon="chosenCoupon"
       @click="showList = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showList"
       round
       position="bottom"
       style="height: 90%; padding-top: 4px"
     >
-      <icsm-coupon-list
+      <fx-coupon-list
         :coupons="coupons"
         :chosen-coupon="chosenCoupon"
         :disabled-coupons="disabledCoupons"
         @change="onChange"
         @exchange="onExchange"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block :title="t('checkboxUsage')">
-    <icsm-coupon-cell
+    <fx-coupon-cell
       :coupons="coupons"
       :chosen-coupon="chosenCouponArrayResult"
       @click="showListArray = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showListArray"
       round
       position="bottom"
       style="height: 90%; padding-top: 4px"
     >
-      <icsm-coupon-list
+      <fx-coupon-list
         :coupons="coupons"
         :chosen-coupon="chosenCouponArray"
         :disabled-coupons="disabledCoupons"
@@ -147,7 +147,7 @@ const onExchange = () => {
         @exchange="onExchange"
       >
         <template #list-button>
-          <icsm-button
+          <fx-button
             round
             block
             type="primary"
@@ -156,8 +156,8 @@ const onExchange = () => {
             @click="onSubmit"
           />
         </template>
-      </icsm-coupon-list>
-    </icsm-popup>
+     </fx-coupon-list>
+   </fx-popup>
   </demo-block>
 </template>
 

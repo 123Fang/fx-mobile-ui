@@ -77,44 +77,44 @@ const t = useTranslate({
 <template>
   <demo-block :title="t('type')">
     <div class="demo-button-row">
-      <icsm-button type="primary">{{ t('primary') }}</icsm-button>
-      <icsm-button type="success">{{ t('success') }}</icsm-button>
-      <icsm-button type="default">{{ t('default') }}</icsm-button>
+      <fx-button type="primary">{{ t('primary') }}</fx-button>
+      <fx-button type="success">{{ t('success') }}</fx-button>
+      <fx-button type="default">{{ t('default') }}</fx-button>
     </div>
-    <icsm-button type="danger">{{ t('danger') }}</icsm-button>
-    <icsm-button type="warning">{{ t('warning') }}</icsm-button>
+    <fx-button type="danger">{{ t('danger') }}</fx-button>
+    <fx-button type="warning">{{ t('warning') }}</fx-button>
   </demo-block>
 
   <demo-block :title="t('plain')">
-    <icsm-button plain type="primary" :text="t('plain')" />
-    <icsm-button plain type="success" :text="t('plain')" />
+    <fx-button plain type="primary" :text="t('plain')" />
+    <fx-button plain type="success" :text="t('plain')" />
   </demo-block>
 
   <demo-block :title="t('hairline')">
-    <icsm-button plain hairline type="primary" :text="t('hairlineButton')" />
-    <icsm-button plain hairline type="success" :text="t('hairlineButton')" />
+    <fx-button plain hairline type="primary" :text="t('hairlineButton')" />
+    <fx-button plain hairline type="success" :text="t('hairlineButton')" />
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-button disabled type="primary" :text="t('disabled')" />
-    <icsm-button disabled type="success" :text="t('disabled')" />
+    <fx-button disabled type="primary" :text="t('disabled')" />
+    <fx-button disabled type="success" :text="t('disabled')" />
   </demo-block>
 
   <demo-block :title="t('loadingStatus')">
-    <icsm-button loading type="primary" />
-    <icsm-button loading type="primary" loading-type="spinner" />
-    <icsm-button loading :loading-text="t('loadingText')" type="success" />
+    <fx-button loading type="primary" />
+    <fx-button loading type="primary" loading-type="spinner" />
+    <fx-button loading :loading-text="t('loadingText')" type="success" />
   </demo-block>
 
   <demo-block :title="t('shape')">
-    <icsm-button type="primary" square :text="t('square')" />
-    <icsm-button type="success" round :text="t('round')" />
+    <fx-button type="primary" square :text="t('square')" />
+    <fx-button type="success" round :text="t('round')" />
   </demo-block>
 
   <demo-block :title="t('icon')">
-    <icsm-button type="primary" icon="plus" />
-    <icsm-button type="primary" icon="plus" :text="t('button')" />
-    <icsm-button
+    <fx-button type="primary" icon="plus" />
+    <fx-button type="primary" icon="plus" :text="t('button')" />
+    <fx-button
       plain
       type="primary"
       :icon="cdnURL('user-active.png')"
@@ -123,73 +123,73 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('size')">
-    <icsm-button type="primary" size="large">{{ t('large') }}</icsm-button>
-    <icsm-button type="primary" size="normal">{{ t('normal') }}</icsm-button>
-    <icsm-button type="primary" size="small">{{ t('small') }}</icsm-button>
-    <icsm-button type="primary" size="mini">{{ t('mini') }}</icsm-button>
+    <fx-button type="primary" size="large">{{ t('large') }}</fx-button>
+    <fx-button type="primary" size="normal">{{ t('normal') }}</fx-button>
+    <fx-button type="primary" size="small">{{ t('small') }}</fx-button>
+    <fx-button type="primary" size="mini">{{ t('mini') }}</fx-button>
   </demo-block>
 
   <demo-block :title="t('blockElement')">
-    <icsm-button type="primary" block>{{ t('blockElement') }}</icsm-button>
+    <fx-button type="primary" block>{{ t('blockElement') }}</fx-button>
   </demo-block>
 
   <demo-block :title="t('router')">
-    <icsm-button
+    <fx-button
       :text="t('urlRoute')"
       type="primary"
       url="https://github.com/vant-ui/vant"
     />
-    <icsm-button :text="t('vueRoute')" type="primary" to="index" />
+    <fx-button :text="t('vueRoute')" type="primary" to="index" />
   </demo-block>
 
   <demo-block :title="t('customColor')">
-    <icsm-button color="#7232dd" :text="t('pure')" />
-    <icsm-button plain color="#7232dd" :text="t('pure')" />
-    <icsm-button
+    <fx-button color="#7232dd" :text="t('pure')" />
+    <fx-button plain color="#7232dd" :text="t('pure')" />
+    <fx-button
       color="linear-gradient(to right, #ff6034, #ee0a24)"
       :text="t('gradient')"
     />
   </demo-block>
 
   <demo-block :title="t('animatedButton')">
-    <icsm-button type="danger" round>
-      <icsm-swipe
+    <fx-button type="danger" round>
+      <fx-swipe
         vertical
         class="notice-swipe"
         :autoplay="2000"
         :touchable="false"
         :show-indicators="false"
       >
-        <icsm-swipe-item>{{ t('doTask') }}</icsm-swipe-item>
-        <icsm-swipe-item>{{ t('lottery') }}</icsm-swipe-item>
-      </icsm-swipe>
-    </icsm-button>
+        <fx-swipe-item>{{ t('doTask') }}</fx-swipe-item>
+        <fx-swipe-item>{{ t('lottery') }}</fx-swipe-item>
+     </fx-swipe>
+   </fx-button>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-button {
-  .icsm-button {
+  .fx-button {
     &--large {
-      margin-bottom: var(--icsm-padding-md);
+      margin-bottom: var(--fx-padding-md);
     }
 
     &--small,
     &--normal:not(:last-child) {
-      margin-right: var(--icsm-padding-md);
+      margin-right: var(--fx-padding-md);
     }
   }
 
-  .icsm-doc-demo-block {
-    padding: 0 var(--icsm-padding-md);
+  .fx-doc-demo-block {
+    padding: 0 var(--fx-padding-md);
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-left: 0;
   }
 
   &-row {
-    margin-bottom: var(--icsm-padding-sm);
+    margin-bottom: var(--fx-padding-sm);
   }
 
   .notice-swipe {

@@ -36,22 +36,22 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-cell-group>
-      <icsm-cell :title="t('cell')" :value="t('content')" />
-      <icsm-cell :title="t('cell')" :value="t('content')" :label="t('desc')" />
-    </icsm-cell-group>
+    <fx-cell-group>
+      <fx-cell :title="t('cell')" :value="t('content')" />
+      <fx-cell :title="t('cell')" :value="t('content')" :label="t('desc')" />
+   </fx-cell-group>
   </demo-block>
 
   <demo-block :title="t('insetGrouped')">
-    <icsm-cell-group inset>
-      <icsm-cell :title="t('cell')" :value="t('content')" />
-      <icsm-cell :title="t('cell')" :value="t('content')" :label="t('desc')" />
-    </icsm-cell-group>
+    <fx-cell-group inset>
+      <fx-cell :title="t('cell')" :value="t('content')" />
+      <fx-cell :title="t('cell')" :value="t('content')" :label="t('desc')" />
+   </fx-cell-group>
   </demo-block>
 
   <demo-block :title="t('largeSize')">
-    <icsm-cell :title="t('cell')" :value="t('content')" size="large" />
-    <icsm-cell
+    <fx-cell :title="t('cell')" :value="t('content')" size="large" />
+    <fx-cell
       :title="t('cell')"
       :value="t('content')"
       size="large"
@@ -60,13 +60,13 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('showIcon')">
-    <icsm-cell :title="t('cell')" :value="t('content')" icon="location-o" />
+    <fx-cell :title="t('cell')" :value="t('content')" icon="location-o" />
   </demo-block>
 
   <demo-block :title="t('showArrow')">
-    <icsm-cell :title="t('cell')" is-link />
-    <icsm-cell :title="t('cell')" is-link :value="t('content')" />
-    <icsm-cell
+    <fx-cell :title="t('cell')" is-link />
+    <fx-cell :title="t('cell')" is-link :value="t('content')" />
+    <fx-cell
       :title="t('cell')"
       is-link
       arrow-direction="down"
@@ -75,40 +75,40 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('router')">
-    <icsm-cell
+    <fx-cell
       :title="t('urlRoute')"
       is-link
       url="https://github.com/vant-ui/vant"
     />
-    <icsm-cell :title="t('vueRoute')" is-link to="index" />
+    <fx-cell :title="t('vueRoute')" is-link to="index" />
   </demo-block>
 
   <demo-block :title="t('groupTitle')">
-    <icsm-cell-group :title="`${t('group')} 1`">
-      <icsm-cell :title="t('cell')" :value="t('content')" />
-    </icsm-cell-group>
-    <icsm-cell-group :title="`${t('group')} 2`">
-      <icsm-cell :title="t('cell')" :value="t('content')" />
-    </icsm-cell-group>
+    <fx-cell-group :title="`${t('group')} 1`">
+      <fx-cell :title="t('cell')" :value="t('content')" />
+   </fx-cell-group>
+    <fx-cell-group :title="`${t('group')} 2`">
+      <fx-cell :title="t('cell')" :value="t('content')" />
+   </fx-cell-group>
   </demo-block>
 
   <demo-block :title="t('useSlots')">
-    <icsm-cell :value="t('content')" is-link>
+    <fx-cell :value="t('content')" is-link>
       <template #title>
         <span class="custom-title">{{ t('cell') }}</span>
-        <icsm-tag type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell icon="shop-o" :title="t('cell')">
+    <fx-cell icon="shop-o" :title="t('cell')">
       <template #right-icon>
-        <icsm-icon name="search" class="search-icon" />
+        <fx-icon name="search" class="search-icon" />
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 
   <demo-block :title="t('verticalCenter')">
-    <icsm-cell
+    <fx-cell
       center
       :title="t('cell')"
       :value="t('content')"

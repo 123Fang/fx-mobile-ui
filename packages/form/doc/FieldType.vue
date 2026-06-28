@@ -54,77 +54,77 @@ const onSubmit = (values: Record<string, string>) => {
 
 <template>
   <demo-block :title="t('fieldType')">
-    <icsm-form @submit="onSubmit">
-      <icsm-cell-group inset>
-        <icsm-field name="switch" :label="t('switch')">
+    <fx-form @submit="onSubmit">
+      <fx-cell-group inset>
+        <fx-field name="switch" :label="t('switch')">
           <template #input>
-            <icsm-switch v-model="switchChecked" />
+            <fx-switch v-model="switchChecked" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="checkbox" :label="t('checkbox')">
+        <fx-field name="checkbox" :label="t('checkbox')">
           <template #input>
-            <icsm-checkbox v-model="checkbox" shape="square" />
+            <fx-checkbox v-model="checkbox" shape="square" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="checkboxGroup" :label="t('checkboxGroup')">
+        <fx-field name="checkboxGroup" :label="t('checkboxGroup')">
           <template #input>
-            <icsm-checkbox-group v-model="checkboxGroup" direction="horizontal">
-              <icsm-checkbox name="1" shape="square">
+            <fx-checkbox-group v-model="checkboxGroup" direction="horizontal">
+              <fx-checkbox name="1" shape="square">
                 {{ t('checkbox') }} 1
-              </icsm-checkbox>
-              <icsm-checkbox name="2" shape="square">
+             </fx-checkbox>
+              <fx-checkbox name="2" shape="square">
                 {{ t('checkbox') }} 2
-              </icsm-checkbox>
-            </icsm-checkbox-group>
+             </fx-checkbox>
+           </fx-checkbox-group>
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="radio" :label="t('radio')">
+        <fx-field name="radio" :label="t('radio')">
           <template #input>
-            <icsm-radio-group v-model="radio" direction="horizontal">
-              <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-              <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-            </icsm-radio-group>
+            <fx-radio-group v-model="radio" direction="horizontal">
+              <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+              <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+           </fx-radio-group>
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="stepper" :label="t('stepper')">
+        <fx-field name="stepper" :label="t('stepper')">
           <template #input>
-            <icsm-stepper v-model="stepper" />
+            <fx-stepper v-model="stepper" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="rate" :label="t('rate')">
+        <fx-field name="rate" :label="t('rate')">
           <template #input>
-            <icsm-rate v-model="rate" />
+            <fx-rate v-model="rate" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="slider" :label="t('slider')">
+        <fx-field name="slider" :label="t('slider')">
           <template #input>
-            <icsm-slider v-model="slider" />
+            <fx-slider v-model="slider" />
           </template>
-        </icsm-field>
+       </fx-field>
 
-        <icsm-field name="uploader" :label="t('uploader')">
+        <fx-field name="uploader" :label="t('uploader')">
           <template #input>
-            <icsm-uploader v-model="uploader" max-count="2" />
+            <fx-uploader v-model="uploader" max-count="2" />
           </template>
-        </icsm-field>
+       </fx-field>
 
         <field-type-picker />
         <field-type-date-picker />
         <field-type-area />
         <field-type-calendar />
-      </icsm-cell-group>
+     </fx-cell-group>
 
       <div style="margin: 16px 16px 0">
-        <icsm-button round block type="primary" native-type="submit">
+        <fx-button round block type="primary" native-type="submit">
           {{ t('submit') }}
-        </icsm-button>
+       </fx-button>
       </div>
-    </icsm-form>
+   </fx-form>
   </demo-block>
 </template>

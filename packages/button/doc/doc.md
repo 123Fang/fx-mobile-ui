@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Button } from 'ctf-ics-mobile-ui';
+import { Button } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Button);
@@ -23,11 +23,11 @@ app.use(Button);
 按钮支持 `default`、`primary`、`success`、`warning`、`danger` 五种类型，默认为 `default`。
 
 ```html
-<icsm-button type="primary">主要按钮</icsm-button>
-<icsm-button type="success">成功按钮</icsm-button>
-<icsm-button type="default">默认按钮</icsm-button>
-<icsm-button type="danger">危险按钮</icsm-button>
-<icsm-button type="warning">警告按钮</icsm-button>
+<fx-button type="primary">主要按钮</fx-button>
+<fx-button type="success">成功按钮</fx-button>
+<fx-button type="default">默认按钮</fx-button>
+<fx-button type="danger">危险按钮</fx-button>
+<fx-button type="warning">警告按钮</fx-button>
 ```
 
 ### 朴素按钮
@@ -35,8 +35,8 @@ app.use(Button);
 通过 `plain` 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
 
 ```html
-<icsm-button plain type="primary">朴素按钮</icsm-button>
-<icsm-button plain type="success">朴素按钮</icsm-button>
+<fx-button plain type="primary">朴素按钮</fx-button>
+<fx-button plain type="success">朴素按钮</fx-button>
 ```
 
 ### 细边框
@@ -44,8 +44,8 @@ app.use(Button);
 设置 `hairline` 属性可以展示 0.5px 的细边框。
 
 ```html
-<icsm-button plain hairline type="primary">细边框按钮</icsm-button>
-<icsm-button plain hairline type="success">细边框按钮</icsm-button>
+<fx-button plain hairline type="primary">细边框按钮</fx-button>
+<fx-button plain hairline type="success">细边框按钮</fx-button>
 ```
 
 ### 禁用状态
@@ -53,8 +53,8 @@ app.use(Button);
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。
 
 ```html
-<icsm-button disabled type="primary">禁用状态</icsm-button>
-<icsm-button disabled type="success">禁用状态</icsm-button>
+<fx-button disabled type="primary">禁用状态</fx-button>
+<fx-button disabled type="success">禁用状态</fx-button>
 ```
 
 ### 加载状态
@@ -62,9 +62,9 @@ app.use(Button);
 通过 `loading` 属性设置按钮为加载状态，加载状态下默认会隐藏按钮文字，可以通过 `loading-text` 设置加载状态下的文字。
 
 ```html
-<icsm-button loading type="primary" />
-<icsm-button loading type="primary" loading-type="spinner" />
-<icsm-button loading type="success" loading-text="加载中..." />
+<fx-button loading type="primary" />
+<fx-button loading type="primary" loading-type="spinner" />
+<fx-button loading type="success" loading-text="加载中..." />
 ```
 
 ### 按钮形状
@@ -72,8 +72,8 @@ app.use(Button);
 通过 `square` 设置方形按钮，通过 `round` 设置圆形按钮。
 
 ```html
-<icsm-button square type="primary">方形按钮</icsm-button>
-<icsm-button round type="success">圆形按钮</icsm-button>
+<fx-button square type="primary">方形按钮</fx-button>
+<fx-button round type="success">圆形按钮</fx-button>
 ```
 
 ### 图标按钮
@@ -81,15 +81,15 @@ app.use(Button);
 通过 `icon` 属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL。
 
 ```html
-<icsm-button icon="plus" type="primary" />
-<icsm-button icon="plus" type="primary">按钮</icsm-button>
-<icsm-button
+<fx-button icon="plus" type="primary" />
+<fx-button icon="plus" type="primary">按钮</fx-button>
+<fx-button
   plain
   icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
   type="primary"
 >
   按钮
-</icsm-button>
+</fx-button>
 ```
 
 ### 按钮尺寸
@@ -97,10 +97,10 @@ app.use(Button);
 支持 `large`、`normal`、`small`、`mini` 四种尺寸，默认为 `normal`。
 
 ```html
-<icsm-button type="primary" size="large">大号按钮</icsm-button>
-<icsm-button type="primary" size="normal">普通按钮</icsm-button>
-<icsm-button type="primary" size="small">小型按钮</icsm-button>
-<icsm-button type="primary" size="mini">迷你按钮</icsm-button>
+<fx-button type="primary" size="large">大号按钮</fx-button>
+<fx-button type="primary" size="normal">普通按钮</fx-button>
+<fx-button type="primary" size="small">小型按钮</fx-button>
+<fx-button type="primary" size="mini">迷你按钮</fx-button>
 ```
 
 ### 块级元素
@@ -108,7 +108,7 @@ app.use(Button);
 按钮在默认情况下为行内块级元素，通过 `block` 属性可以将按钮的元素类型设置为块级元素。
 
 ```html
-<icsm-button type="primary" block>块级元素</icsm-button>
+<fx-button type="primary" block>块级元素</fx-button>
 ```
 
 ### 页面导航
@@ -116,8 +116,8 @@ app.use(Button);
 可以通过 `url` 属性进行 URL 跳转，或通过 `to` 属性进行路由跳转。
 
 ```html
-<icsm-button type="primary" url="https://github.com">URL 跳转</icsm-button>
-<icsm-button type="primary" to="index">路由跳转</icsm-button>
+<fx-button type="primary" url="https://github.com">URL 跳转</fx-button>
+<fx-button type="primary" to="index">路由跳转</fx-button>
 ```
 
 ### 自定义颜色
@@ -125,11 +125,11 @@ app.use(Button);
 通过 `color` 属性可以自定义按钮的颜色。
 
 ```html
-<icsm-button color="#7232dd">单色按钮</icsm-button>
-<icsm-button color="#7232dd" plain>单色按钮</icsm-button>
-<icsm-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+<fx-button color="#7232dd">单色按钮</fx-button>
+<fx-button color="#7232dd" plain>单色按钮</fx-button>
+<fx-button color="linear-gradient(to right, #ff6034, #ee0a24)">
   渐变色按钮
-</icsm-button>
+</fx-button>
 ```
 
 ### 动画按钮
@@ -137,18 +137,18 @@ app.use(Button);
 搭配 Button 和 [Swipe 组件](/#/zh-CN/swipe)，可以实现垂直滚动的动画按钮效果。
 
 ```html
-<icsm-button type="danger" round>
-  <icsm-swipe
+<fx-button type="danger" round>
+  <fx-swipe
     vertical
     class="notice-swipe"
     :autoplay="2000"
     :touchable="false"
     :show-indicators="false"
   >
-    <icsm-swipe-item>做任务</icsm-swipe-item>
-    <icsm-swipe-item>抽大奖</icsm-swipe-item>
-  </icsm-swipe>
-</icsm-button>
+    <fx-swipe-item>做任务</fx-swipe-item>
+    <fx-swipe-item>抽大奖</fx-swipe-item>
+ </fx-swipe>
+</fx-button>
 
 <style>
   .notice-swipe {
@@ -213,7 +213,7 @@ import type {
   ButtonProps,
   ButtonNativeType,
   ButtonIconPosition,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -224,40 +224,40 @@ import type {
 
 | 名称                              | 默认值                        | 描述 |
 | --------------------------------- | ----------------------------- | ---- |
-| --icsm-button-mini-height          | _24px_                        | -    |
-| --icsm-button-mini-padding         | _0 var(--icsm-padding-base)_   | -    |
-| --icsm-button-mini-font-size       | _var(--icsm-font-size-xs)_     | -    |
-| --icsm-button-small-height         | _32px_                        | -    |
-| --icsm-button-small-padding        | _0 var(--icsm-padding-xs)_     | -    |
-| --icsm-button-small-font-size      | _var(--icsm-font-size-sm)_     | -    |
-| --icsm-button-normal-font-size     | _var(--icsm-font-size-md)_     | -    |
-| --icsm-button-normal-padding       | _0 15px_                      | -    |
-| --icsm-button-large-height         | _50px_                        | -    |
-| --icsm-button-default-height       | _44px_                        | -    |
-| --icsm-button-default-line-height  | _1.2_                         | -    |
-| --icsm-button-default-font-size    | _var(--icsm-font-size-lg)_     | -    |
-| --icsm-button-default-color        | _var(--icsm-text-color)_       | -    |
-| --icsm-button-default-background   | _var(--icsm-background-2)_     | -    |
-| --icsm-button-default-border-color | _var(--icsm-gray-4)_           | -    |
-| --icsm-button-primary-color        | _var(--icsm-white)_            | -    |
-| --icsm-button-primary-background   | _var(--icsm-primary-color)_    | -    |
-| --icsm-button-primary-border-color | _var(--icsm-primary-color)_    | -    |
-| --icsm-button-success-color        | _var(--icsm-white)_            | -    |
-| --icsm-button-success-background   | _var(--icsm-success-color)_    | -    |
-| --icsm-button-success-border-color | _var(--icsm-success-color)_    | -    |
-| --icsm-button-danger-color         | _var(--icsm-white)_            | -    |
-| --icsm-button-danger-background    | _var(--icsm-danger-color)_     | -    |
-| --icsm-button-danger-border-color  | _var(--icsm-danger-color)_     | -    |
-| --icsm-button-warning-color        | _var(--icsm-white)_            | -    |
-| --icsm-button-warning-background   | _var(--icsm-orange)_           | -    |
-| --icsm-button-warning-border-color | _var(--icsm-orange)_           | -    |
-| --icsm-button-border-width         | _var(--icsm-border-width)_     | -    |
-| --icsm-button-radius               | _var(--icsm-radius-md)_        | -    |
-| --icsm-button-round-radius         | _var(--icsm-radius-max)_       | -    |
-| --icsm-button-plain-background     | _var(--icsm-white)_            | -    |
-| --icsm-button-disabled-opacity     | _var(--icsm-disabled-opacity)_ | -    |
-| --icsm-button-icon-size            | _1.2em_                       | -    |
-| --icsm-button-loading-icon-size    | _20px_                        | -    |
+| --fx-button-mini-height          | _24px_                        | -    |
+| --fx-button-mini-padding         | _0 var(--fx-padding-base)_   | -    |
+| --fx-button-mini-font-size       | _var(--fx-font-size-xs)_     | -    |
+| --fx-button-small-height         | _32px_                        | -    |
+| --fx-button-small-padding        | _0 var(--fx-padding-xs)_     | -    |
+| --fx-button-small-font-size      | _var(--fx-font-size-sm)_     | -    |
+| --fx-button-normal-font-size     | _var(--fx-font-size-md)_     | -    |
+| --fx-button-normal-padding       | _0 15px_                      | -    |
+| --fx-button-large-height         | _50px_                        | -    |
+| --fx-button-default-height       | _44px_                        | -    |
+| --fx-button-default-line-height  | _1.2_                         | -    |
+| --fx-button-default-font-size    | _var(--fx-font-size-lg)_     | -    |
+| --fx-button-default-color        | _var(--fx-text-color)_       | -    |
+| --fx-button-default-background   | _var(--fx-background-2)_     | -    |
+| --fx-button-default-border-color | _var(--fx-gray-4)_           | -    |
+| --fx-button-primary-color        | _var(--fx-white)_            | -    |
+| --fx-button-primary-background   | _var(--fx-primary-color)_    | -    |
+| --fx-button-primary-border-color | _var(--fx-primary-color)_    | -    |
+| --fx-button-success-color        | _var(--fx-white)_            | -    |
+| --fx-button-success-background   | _var(--fx-success-color)_    | -    |
+| --fx-button-success-border-color | _var(--fx-success-color)_    | -    |
+| --fx-button-danger-color         | _var(--fx-white)_            | -    |
+| --fx-button-danger-background    | _var(--fx-danger-color)_     | -    |
+| --fx-button-danger-border-color  | _var(--fx-danger-color)_     | -    |
+| --fx-button-warning-color        | _var(--fx-white)_            | -    |
+| --fx-button-warning-background   | _var(--fx-orange)_           | -    |
+| --fx-button-warning-border-color | _var(--fx-orange)_           | -    |
+| --fx-button-border-width         | _var(--fx-border-width)_     | -    |
+| --fx-button-radius               | _var(--fx-radius-md)_        | -    |
+| --fx-button-round-radius         | _var(--fx-radius-max)_       | -    |
+| --fx-button-plain-background     | _var(--fx-white)_            | -    |
+| --fx-button-disabled-opacity     | _var(--fx-disabled-opacity)_ | -    |
+| --fx-button-icon-size            | _1.2em_                       | -    |
+| --fx-button-loading-icon-size    | _20px_                        | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

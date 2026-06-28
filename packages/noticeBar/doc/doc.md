@@ -23,7 +23,7 @@ app.use(NoticeBar);
 通过 `text` 属性设置通知栏的内容，通过 `left-icon` 属性设置通知栏左侧的图标。
 
 ```html
-<icsm-notice-bar
+<fx-notice-bar
   left-icon="volume-o"
   text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
 />
@@ -35,10 +35,10 @@ app.use(NoticeBar);
 
 ```html
 <!-- 文字较短时，通过设置 scrollable 属性开启滚动播放 -->
-<icsm-notice-bar scrollable text="米袋虽空——樱花开哉！" />
+<fx-notice-bar scrollable text="米袋虽空——樱花开哉！" />
 
 <!-- 文字较长时，通过禁用 scrollable 属性关闭滚动播放 -->
-<icsm-notice-bar
+<fx-notice-bar
   :scrollable="false"
   text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
 />
@@ -49,7 +49,7 @@ app.use(NoticeBar);
 文字较长时，可以通过设置 `wrapable` 属性来开启多行展示。
 
 ```html
-<icsm-notice-bar
+<fx-notice-bar
   wrapable
   :scrollable="false"
   text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
@@ -62,10 +62,10 @@ app.use(NoticeBar);
 
 ```html
 <!-- closeable 模式，在右侧显示关闭按钮 -->
-<icsm-notice-bar mode="closeable">米袋虽空——樱花开哉！</icsm-notice-bar>
+<fx-notice-bar mode="closeable">米袋虽空——樱花开哉！</fx-notice-bar>
 
 <!-- link 模式，在右侧显示链接箭头 -->
-<icsm-notice-bar mode="link">米袋虽空——樱花开哉！</icsm-notice-bar>
+<fx-notice-bar mode="link">米袋虽空——樱花开哉！</fx-notice-bar>
 ```
 
 ### 自定义样式
@@ -73,9 +73,9 @@ app.use(NoticeBar);
 通过 `color` 属性设置文本颜色，通过 `background` 属性设置背景色。
 
 ```html
-<icsm-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o">
+<fx-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o">
   米袋虽空——樱花开哉！
-</icsm-notice-bar>
+</fx-notice-bar>
 ```
 
 ### 垂直滚动
@@ -83,19 +83,19 @@ app.use(NoticeBar);
 搭配 NoticeBar 和 Swipe 组件，可以实现垂直滚动的效果。
 
 ```html
-<icsm-notice-bar left-icon="volume-o" :scrollable="false">
-  <icsm-swipe
+<fx-notice-bar left-icon="volume-o" :scrollable="false">
+  <fx-swipe
     vertical
     class="notice-swipe"
     :autoplay="3000"
     :touchable="false"
     :show-indicators="false"
   >
-    <icsm-swipe-item>明月直入，无心可猜。</icsm-swipe-item>
-    <icsm-swipe-item>仙人抚我顶，结发受长生。</icsm-swipe-item>
-    <icsm-swipe-item>今人不见古时月，今月曾经照古人。</icsm-swipe-item>
-  </icsm-swipe>
-</icsm-notice-bar>
+    <fx-swipe-item>明月直入，无心可猜。</fx-swipe-item>
+    <fx-swipe-item>仙人抚我顶，结发受长生。</fx-swipe-item>
+    <fx-swipe-item>今人不见古时月，今月曾经照古人。</fx-swipe-item>
+ </fx-swipe>
+</fx-notice-bar>
 
 <style>
   .notice-swipe {
@@ -172,15 +172,15 @@ noticeBarRef.value?.reset();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-notice-bar-height | _40px_ | - |
-| --icsm-notice-bar-padding | _0 var(--icsm-padding-md)_ | - |
-| --icsm-notice-bar-wrapable-padding | _var(--icsm-padding-xs) var(--icsm-padding-md)_ | - |
-| --icsm-notice-bar-text-color | _var(--icsm-orange-dark)_ | - |
-| --icsm-notice-bar-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-notice-bar-line-height | _24px_ | - |
-| --icsm-notice-bar-background | _var(--icsm-orange-light)_ | - |
-| --icsm-notice-bar-icon-size | _16px_ | - |
-| --icsm-notice-bar-icon-min-width | _24px_ | - |
+| --fx-notice-bar-height | _40px_ | - |
+| --fx-notice-bar-padding | _0 var(--fx-padding-md)_ | - |
+| --fx-notice-bar-wrapable-padding | _var(--fx-padding-xs) var(--fx-padding-md)_ | - |
+| --fx-notice-bar-text-color | _var(--fx-orange-dark)_ | - |
+| --fx-notice-bar-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-notice-bar-line-height | _24px_ | - |
+| --fx-notice-bar-background | _var(--fx-orange-light)_ | - |
+| --fx-notice-bar-icon-size | _16px_ | - |
+| --fx-notice-bar-icon-min-width | _24px_ | - |
 
 
 

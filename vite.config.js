@@ -72,7 +72,8 @@ export default defineConfig({
       include: [/node_modules/],
       // delimiters: ['', ''],
       values: {
-        'van': 'icsm',
+        // 'van': 'icsm',
+         'van': 'fx',
       }
     })
   ],
@@ -97,7 +98,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(dirname, "src"),
-      'ctf-ics-mobile-ui': path.resolve(dirname, "packages/index.js"),
+      // 'ctf-ics-mobile-ui': path.resolve(dirname, "packages/index.js"),
+      'fx-mobile-ui': path.resolve(dirname, "packages/index.js"),
       "@style": path.resolve(dirname, "style"),
       "@locale": path.resolve(dirname, "locale"),
     },

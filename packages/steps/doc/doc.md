@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Step, Steps } from 'ctf-ics-mobile-ui';
+import { Step, Steps } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Step);
@@ -24,12 +24,12 @@ app.use(Steps);
 `active` 属性表示当前步骤的索引，从 0 起计。
 
 ```html
-<icsm-steps :active="active">
-  <icsm-step>买家下单</icsm-step>
-  <icsm-step>商家接单</icsm-step>
-  <icsm-step>买家提货</icsm-step>
-  <icsm-step>交易完成</icsm-step>
-</icsm-steps>
+<fx-steps :active="active">
+  <fx-step>买家下单</fx-step>
+  <fx-step>商家接单</fx-step>
+  <fx-step>买家提货</fx-step>
+  <fx-step>交易完成</fx-step>
+</fx-steps>
 ```
 
 ```js
@@ -48,12 +48,12 @@ export default {
 可以通过 `active-icon` 和 `active-color` 属性设置激活状态下的图标和颜色。
 
 ```html
-<icsm-steps :active="active" active-icon="success" active-color="#07c160">
-  <icsm-step>买家下单</icsm-step>
-  <icsm-step>商家接单</icsm-step>
-  <icsm-step>买家提货</icsm-step>
-  <icsm-step>交易完成</icsm-step>
-</icsm-steps>
+<fx-steps :active="active" active-icon="success" active-color="#07c160">
+  <fx-step>买家下单</fx-step>
+  <fx-step>商家接单</fx-step>
+  <fx-step>买家提货</fx-step>
+  <fx-step>交易完成</fx-step>
+</fx-steps>
 ```
 
 ### 竖向步骤条
@@ -61,20 +61,20 @@ export default {
 可以通过设置 `direction` 属性来改变步骤条的显示方向。
 
 ```html
-<icsm-steps direction="vertical" :active="0">
-  <icsm-step>
+<fx-steps direction="vertical" :active="0">
+  <fx-step>
     <h3>【城市】物流状态1</h3>
     <p>2016-07-12 12:40</p>
-  </icsm-step>
-  <icsm-step>
+ </fx-step>
+  <fx-step>
     <h3>【城市】物流状态2</h3>
     <p>2016-07-11 10:00</p>
-  </icsm-step>
-  <icsm-step>
+ </fx-step>
+  <fx-step>
     <h3>快件已发货</h3>
     <p>2016-07-10 09:30</p>
-  </icsm-step>
-</icsm-steps>
+ </fx-step>
+</fx-steps>
 ```
 
 ## API
@@ -112,7 +112,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { StepsProps, StepsDirection } from 'ctf-ics-mobile-ui';
+import type { StepsProps, StepsDirection } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -123,18 +123,18 @@ import type { StepsProps, StepsDirection } from 'ctf-ics-mobile-ui';
 
 | 名称                                  | 默认值                     | 描述 |
 | ------------------------------------- | -------------------------- | ---- |
-| --icsm-step-text-color                 | _var(--icsm-text-color-2)_  | -    |
-| --icsm-step-active-color               | _var(--icsm-primary-color)_ | -    |
-| --icsm-step-process-text-color         | _var(--icsm-text-color)_    | -    |
-| --icsm-step-font-size                  | _var(--icsm-font-size-md)_  | -    |
-| --icsm-step-line-color                 | _var(--icsm-border-color)_  | -    |
-| --icsm-step-finish-line-color          | _var(--icsm-primary-color)_ | -    |
-| --icsm-step-finish-text-color          | _var(--icsm-text-color)_    | -    |
-| --icsm-step-icon-size                  | _12px_                     | -    |
-| --icsm-step-circle-size                | _5px_                      | -    |
-| --icsm-step-circle-color               | _var(--icsm-gray-6)_        | -    |
-| --icsm-step-horizontal-title-font-size | _var(--icsm-font-size-sm)_  | -    |
-| --icsm-steps-background                | _var(--icsm-background-2)_  | -    |
+| --fx-step-text-color                 | _var(--fx-text-color-2)_  | -    |
+| --fx-step-active-color               | _var(--fx-primary-color)_ | -    |
+| --fx-step-process-text-color         | _var(--fx-text-color)_    | -    |
+| --fx-step-font-size                  | _var(--fx-font-size-md)_  | -    |
+| --fx-step-line-color                 | _var(--fx-border-color)_  | -    |
+| --fx-step-finish-line-color          | _var(--fx-primary-color)_ | -    |
+| --fx-step-finish-text-color          | _var(--fx-text-color)_    | -    |
+| --fx-step-icon-size                  | _12px_                     | -    |
+| --fx-step-circle-size                | _5px_                      | -    |
+| --fx-step-circle-color               | _var(--fx-gray-6)_        | -    |
+| --fx-step-horizontal-title-font-size | _var(--fx-font-size-sm)_  | -    |
+| --fx-steps-background                | _var(--fx-background-2)_  | -    |
 
 
 

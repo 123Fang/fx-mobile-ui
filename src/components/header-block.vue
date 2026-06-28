@@ -1,11 +1,11 @@
 <template>
   <div class="header-block-box">
     <div class="logoBox">
-      <a href="javascript:;" @click="toHome">CTF-ICS-MOBILE-UI</a>
+      <a href="javascript:;" @click="toHome">FX-MOBILE-UI</a>
       <template v-if="isInIframe">
-        <icsm-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">ctf-ics-mobile-ui@{{icsVersion}}</icsm-tag>
-        <icsm-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">vant@{{vantVersion}}</icsm-tag>
-        <icsm-tag color="rgba(36, 149, 86, .9)">vue@{{vueVersion}}</icsm-tag>
+        <!-- <fx-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">ctf-ics-mobile-ui@{{icsVersion}}</fx-tag>
+        <fx-tag color="rgba(36, 149, 86, .9)" style="margin-right: 10px;">vant@{{vantVersion}}</fx-tag> -->
+        <fx-tag color="rgba(36, 149, 86, .9)">vue@{{vueVersion}}</fx-tag>
       </template>
     </div>
 
@@ -53,7 +53,7 @@ const predefineColors = ref([
   
 ])
 const colorChange = (val) => {
-  const namespace = 'icsm'
+  const namespace = 'fx'
   const pre = `--${namespace}-primary-color`
   window.iphoneIframeWindow?.document?.documentElement?.style?.setProperty(pre, val)
 }

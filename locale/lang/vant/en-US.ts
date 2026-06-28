@@ -11,7 +11,7 @@ export default {
   nameEmpty: 'Please fill in the name',
   addContact: 'Add contact',
   telInvalid: 'Malformed phone number',
-  icsmCalendar: {
+  fxCalendar: {
     end: 'End',
     start: 'Start',
     title: 'Calendar',
@@ -19,44 +19,44 @@ export default {
     monthTitle: (year: number, month: number) => `${year}/${month}`,
     rangePrompt: (maxRange: number) => `Choose no more than ${maxRange} days`,
   },
-  icsmCascader: {
+  fxCascader: {
     select: 'Select',
   },
-  icsmPagination: {
+  fxPagination: {
     prev: 'Previous',
     next: 'Next',
   },
-  icsmPullRefresh: {
+  fxPullRefresh: {
     pulling: 'Pull to refresh...',
     loosing: 'Loose to refresh...',
   },
-  icsmSubmitBar: {
+  fxSubmitBar: {
     label: 'Total:',
   },
-  icsmCoupon: {
+  fxCoupon: {
     unlimited: 'Unlimited',
     discount: (discount: number) => `${discount * 10}% off`,
     condition: (condition: number) => `At least ${condition}`,
   },
-  icsmCouponCell: {
+  fxCouponCell: {
     title: 'Coupon',
     count: (count: number) => `You have ${count} coupons`,
   },
-  icsmCouponList: {
+  fxCouponList: {
     exchange: 'Exchange',
     close: 'Close',
     enable: 'Available',
     disabled: 'Unavailable',
     placeholder: 'Coupon code',
   },
-  icsmAddressEdit: {
+  fxAddressEdit: {
     area: 'Area',
     areaEmpty: 'Please select a receiving area',
     addressEmpty: 'Address can not be empty',
     addressDetail: 'Address',
     defaultAddress: 'Set as the default address',
   },
-  icsmAddressList: {
+  fxAddressList: {
     add: 'Add new address',
   },
 };

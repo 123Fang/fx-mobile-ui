@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -26,56 +26,56 @@ const onChange = (index: number) => showToast(`${t('title')} ${index + 1}`);
 </script>
 
 <template>
-  <icsm-grid :column-num="2" :border="false">
-    <icsm-grid-item>
+  <fx-grid :column-num="2" :border="false">
+    <fx-grid-item>
       <h3 class="demo-sidebar-title">{{ t('basicUsage') }}</h3>
-      <icsm-sidebar v-model="active1">
-        <icsm-sidebar-item :title="t('title')" />
-        <icsm-sidebar-item :title="t('title')" />
-        <icsm-sidebar-item :title="t('title')" />
-      </icsm-sidebar>
-    </icsm-grid-item>
+      <fx-sidebar v-model="active1">
+        <fx-sidebar-item :title="t('title')" />
+        <fx-sidebar-item :title="t('title')" />
+        <fx-sidebar-item :title="t('title')" />
+     </fx-sidebar>
+   </fx-grid-item>
 
-    <icsm-grid-item>
+    <fx-grid-item>
       <h3 class="demo-sidebar-title">{{ t('showBadge') }}</h3>
-      <icsm-sidebar v-model="active2">
-        <icsm-sidebar-item :title="t('title')" dot />
-        <icsm-sidebar-item :title="t('title')" badge="5" />
-        <icsm-sidebar-item :title="t('title')" />
-      </icsm-sidebar>
-    </icsm-grid-item>
+      <fx-sidebar v-model="active2">
+        <fx-sidebar-item :title="t('title')" dot />
+        <fx-sidebar-item :title="t('title')" badge="5" />
+        <fx-sidebar-item :title="t('title')" />
+     </fx-sidebar>
+   </fx-grid-item>
 
-    <icsm-grid-item>
+    <fx-grid-item>
       <h3 class="demo-sidebar-title">{{ t('disabled') }}</h3>
-      <icsm-sidebar v-model="active3">
-        <icsm-sidebar-item :title="t('title')" />
-        <icsm-sidebar-item :title="t('title')" disabled />
-        <icsm-sidebar-item :title="t('title')" />
-      </icsm-sidebar>
-    </icsm-grid-item>
+      <fx-sidebar v-model="active3">
+        <fx-sidebar-item :title="t('title')" />
+        <fx-sidebar-item :title="t('title')" disabled />
+        <fx-sidebar-item :title="t('title')" />
+     </fx-sidebar>
+   </fx-grid-item>
 
-    <icsm-grid-item>
+    <fx-grid-item>
       <h3 class="demo-sidebar-title">{{ t('changeEvent') }}</h3>
-      <icsm-sidebar v-model="active4" @change="onChange">
-        <icsm-sidebar-item :title="`${t('title')} 1`" />
-        <icsm-sidebar-item :title="`${t('title')} 2`" />
-        <icsm-sidebar-item :title="`${t('title')} 3`" />
-      </icsm-sidebar>
-    </icsm-grid-item>
-  </icsm-grid>
+      <fx-sidebar v-model="active4" @change="onChange">
+        <fx-sidebar-item :title="`${t('title')} 1`" />
+        <fx-sidebar-item :title="`${t('title')} 2`" />
+        <fx-sidebar-item :title="`${t('title')} 3`" />
+     </fx-sidebar>
+   </fx-grid-item>
+ </fx-grid>
 </template>
 
 <style lang="scss">
 .demo-sidebar {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-sidebar {
-    margin-left: var(--icsm-padding-md);
+  .fx-sidebar {
+    margin-left: var(--fx-padding-md);
   }
 
   &-title {
     margin-bottom: 16px;
-    color: var(--icsm-text-color-2);
+    color: var(--fx-text-color-2);
     font-weight: normal;
     font-size: 14px;
   }

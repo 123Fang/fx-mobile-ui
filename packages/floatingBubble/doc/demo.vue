@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -38,38 +38,38 @@ const offset = ref<FloatingBubbleOffset>({ x: 200, y: 400 });
 </script>
 
 <template>
-  <icsm-tabs v-model:active="activeName">
-    <icsm-tab :title="t('basicUsage')">
+  <fx-tabs v-model:active="activeName">
+    <fx-tab :title="t('basicUsage')">
       <p class="text">{{ t('basicUsageText') }}</p>
-      <icsm-floating-bubble
+      <fx-floating-bubble
         v-if="activeName === 0"
         icon="chat"
         @click="onClick"
       />
-    </icsm-tab>
-    <icsm-tab :title="t('freeMagnetic')">
+   </fx-tab>
+    <fx-tab :title="t('freeMagnetic')">
       <p class="text">{{ t('freeMagneticText') }}</p>
-      <icsm-floating-bubble
+      <fx-floating-bubble
         v-if="activeName === 1"
         icon="chat"
         axis="xy"
         magnetic="x"
         @offset-change="onOffsetChange"
       />
-    </icsm-tab>
-    <icsm-tab :title="t('vModel')">
+   </fx-tab>
+    <fx-tab :title="t('vModel')">
       <p class="text">
         {{ t('vModelText') }} x：{{ offset.x.toFixed(0) }} y:
         {{ offset.y.toFixed(0) }}
       </p>
-      <icsm-floating-bubble
+      <fx-floating-bubble
         v-if="activeName === 2"
         icon="chat"
         v-model:offset="offset"
         axis="xy"
       />
-    </icsm-tab>
-  </icsm-tabs>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 <style lang="scss">

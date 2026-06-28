@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Rate } from 'ctf-ics-mobile-ui';
+import { Rate } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Rate);
@@ -23,7 +23,7 @@ app.use(Rate);
 通过 `v-model` 来绑定当前评分值。
 
 ```html
-<icsm-rate v-model="value" />
+<fx-rate v-model="value" />
 ```
 
 ```js
@@ -42,7 +42,7 @@ export default {
 通过 `icon` 属性设置选中时的图标，`void-icon` 属性设置未选中时的图标。
 
 ```html
-<icsm-rate v-model="value" icon="like" void-icon="like-o" />
+<fx-rate v-model="value" icon="like" void-icon="like-o" />
 ```
 
 ### 自定义样式
@@ -50,7 +50,7 @@ export default {
 通过 `size` 属性设置图标大小，`color` 属性设置选中时的颜色，`void-color` 设置未选中时的颜色。
 
 ```html
-<icsm-rate
+<fx-rate
   v-model="value"
   :size="25"
   color="#ffd21e"
@@ -64,7 +64,7 @@ export default {
 设置 `allow-half` 属性后可以选中半星。
 
 ```html
-<icsm-rate v-model="value" allow-half />
+<fx-rate v-model="value" allow-half />
 ```
 
 ```js
@@ -83,7 +83,7 @@ export default {
 通过 `count` 属性设置评分总数。
 
 ```html
-<icsm-rate v-model="value" :count="6" />
+<fx-rate v-model="value" :count="6" />
 ```
 
 ### 可清空
@@ -91,7 +91,7 @@ export default {
 当 `clearable` 属性设置为 `true`，再次点击相同的值时，可以将值重置为 `0`。
 
 ```html
-<icsm-rate v-model="value" clearable />
+<fx-rate v-model="value" clearable />
 ```
 
 ### 禁用状态
@@ -99,7 +99,7 @@ export default {
 通过 `disabled` 属性来禁用评分。
 
 ```html
-<icsm-rate v-model="value" disabled />
+<fx-rate v-model="value" disabled />
 ```
 
 ### 只读状态
@@ -107,7 +107,7 @@ export default {
 通过 `readonly` 属性将评分设置为只读状态。
 
 ```html
-<icsm-rate v-model="value" readonly />
+<fx-rate v-model="value" readonly />
 ```
 
 ### 只读状态显示小数
@@ -115,7 +115,7 @@ export default {
 设置 `readonly` 和 `allow-half` 属性后，Rate 组件可以展示任意小数结果。
 
 ```html
-<icsm-rate v-model="value" readonly allow-half />
+<fx-rate v-model="value" readonly allow-half />
 ```
 
 ```js
@@ -134,12 +134,12 @@ export default {
 评分变化时，会触发 `change` 事件。
 
 ```html
-<icsm-rate v-model="value" @change="onChange" />
+<fx-rate v-model="value" @change="onChange" />
 ```
 
 ```javascript
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -186,7 +186,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { RateProps } from 'ctf-ics-mobile-ui';
+import type { RateProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -197,10 +197,10 @@ import type { RateProps } from 'ctf-ics-mobile-ui';
 
 | 名称                           | 默认值                    | 描述 |
 | ------------------------------ | ------------------------- | ---- |
-| --icsm-rate-icon-size           | _20px_                    | -    |
-| --icsm-rate-icon-gutter         | _var(--icsm-padding-base)_ | -    |
-| --icsm-rate-icon-void-color     | _var(--icsm-gray-5)_       | -    |
-| --icsm-rate-icon-full-color     | _var(--icsm-danger-color)_ | -    |
-| --icsm-rate-icon-disabled-color | _var(--icsm-gray-5)_       | -    |
+| --fx-rate-icon-size           | _20px_                    | -    |
+| --fx-rate-icon-gutter         | _var(--fx-padding-base)_ | -    |
+| --fx-rate-icon-void-color     | _var(--fx-gray-5)_       | -    |
+| --fx-rate-icon-full-color     | _var(--fx-danger-color)_ | -    |
+| --fx-rate-icon-disabled-color | _var(--fx-gray-5)_       | -    |
 
 <br/><br/><br/><br/><br/><br/>

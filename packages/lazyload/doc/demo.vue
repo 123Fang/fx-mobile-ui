@@ -48,24 +48,24 @@ const componentImageList = [cdnURL('apple-8.jpeg'), cdnURL('apple-7.jpeg')];
 
 <style lang="css">
 .demo-lazyload {
-  padding-right: var(--icsm-padding-md);
-  padding-left: var(--icsm-padding-md);
+  padding-right: var(--fx-padding-md);
+  padding-left: var(--fx-padding-md);
 
   img,
   div[lazy] {
     box-sizing: border-box;
     width: 100%;
     height: 250px;
-    margin-bottom: var(--icsm-padding-md);
-    padding: var(--icsm-padding-md);
+    margin-bottom: var(--fx-padding-md);
+    padding: var(--fx-padding-md);
     background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 12px;
   }
 
-  .icsm-doc-demo-block__title,
-  .icsm-doc-demo-section__title {
+  .fx-doc-demo-block__title,
+  .fx-doc-demo-section__title {
     padding-left: 0;
   }
 }

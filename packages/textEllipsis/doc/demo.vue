@@ -40,11 +40,11 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-text-ellipsis :content="t('text1')" />
+    <fx-text-ellipsis :content="t('text1')" />
   </demo-block>
 
   <demo-block :title="t('expandCollapse')">
-    <icsm-text-ellipsis
+    <fx-text-ellipsis
       :content="t('text2')"
       :expand-text="t('expandText')"
       :collapse-text="t('collapseText')"
@@ -52,7 +52,7 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('customRows')">
-    <icsm-text-ellipsis
+    <fx-text-ellipsis
       rows="3"
       :content="t('text3')"
       :expand-text="t('expandText')"
@@ -62,7 +62,7 @@ const t = useTranslate({
 
   <demo-block :title="t('collapsePosition')">
     <demo-block :title="t('collapseStart')">
-      <icsm-text-ellipsis
+      <fx-text-ellipsis
         rows="1"
         :content="t('text3')"
         :expand-text="t('expandText')"
@@ -72,7 +72,7 @@ const t = useTranslate({
     </demo-block>
 
     <demo-block :title="t('collapseMiddle')">
-      <icsm-text-ellipsis
+      <fx-text-ellipsis
         rows="2"
         :content="t('text3')"
         :expand-text="t('expandText')"
@@ -82,11 +82,11 @@ const t = useTranslate({
     </demo-block>
 
     <demo-block :title="t('customAction')">
-      <icsm-text-ellipsis :content="t('text1')">
+      <fx-text-ellipsis :content="t('text1')">
         <template #action="{ expanded }">
           {{ expanded ? t('collapseText') : t('expandText') }}
         </template>
-      </icsm-text-ellipsis>
+     </fx-text-ellipsis>
     </demo-block>
   </demo-block>
 </template>
@@ -94,9 +94,9 @@ const t = useTranslate({
 <style lang="scss">
 .demo-text-ellipsis {
   font-size: 15px;
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-text-ellipsis {
+  .fx-text-ellipsis {
     padding: 0 16px;
   }
 }

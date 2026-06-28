@@ -12,7 +12,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 defineOptions({
-  name: 'icsm-picker-group',
+  name: 'fx-picker-group',
 })
 
 </script>

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Popover } from 'ctf-ics-mobile-ui';
+import { Popover } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Popover);
@@ -23,16 +23,16 @@ app.use(Popover);
 当 Popover 弹出时，会基于 `reference` 插槽的内容进行定位。
 
 ```html
-<icsm-popover v-model:show="showPopover" :actions="actions" @select="onSelect">
+<fx-popover v-model:show="showPopover" :actions="actions" @select="onSelect">
   <template #reference>
-    <icsm-button type="primary">浅色风格</icsm-button>
+    <fx-button type="primary">浅色风格</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -60,11 +60,11 @@ export default {
 Popover 支持浅色和深色两种风格，默认为浅色风格，将 `theme` 属性设置为 `dark` 可切换为深色风格。
 
 ```html
-<icsm-popover v-model:show="showPopover" theme="dark" :actions="actions">
+<fx-popover v-model:show="showPopover" theme="dark" :actions="actions">
   <template #reference>
-    <icsm-button type="primary">深色风格</icsm-button>
+    <fx-button type="primary">深色风格</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
@@ -92,15 +92,15 @@ export default {
 将 `actions-direction` 属性设置为 `horizontal` 后，菜单选项会变成水平排列。
 
 ```html
-<icsm-popover
+<fx-popover
   v-model:show="showPopover"
   :actions="actions"
   actions-direction="horizontal"
 >
   <template #reference>
-    <icsm-button type="primary">水平排列</icsm-button>
+    <fx-button type="primary">水平排列</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
@@ -128,7 +128,7 @@ export default {
 通过 `placement` 属性来控制气泡的弹出位置。
 
 ```html
-<icsm-popover placement="top" />
+<fx-popover placement="top" />
 ```
 
 `placement` 支持以下值：
@@ -153,11 +153,11 @@ bottom-end    # 底部右侧位置
 在 `actions` 数组中，可以通过 `icon` 字段来定义选项的图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](#/zh-CN/icon#props)。
 
 ```html
-<icsm-popover v-model:show="showPopover" :actions="actions">
+<fx-popover v-model:show="showPopover" :actions="actions">
   <template #reference>
-    <icsm-button type="primary">展示图标</icsm-button>
+    <fx-button type="primary">展示图标</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
@@ -185,11 +185,11 @@ export default {
 在 `actions` 数组中，可以通过 `disabled` 字段来禁用某个选项。
 
 ```html
-<icsm-popover v-model:show="showPopover" :actions="actions">
+<fx-popover v-model:show="showPopover" :actions="actions">
   <template #reference>
-    <icsm-button type="primary">禁用选项</icsm-button>
+    <fx-button type="primary">禁用选项</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
@@ -217,26 +217,26 @@ export default {
 通过默认插槽，可以在 Popover 内部放置任意内容。
 
 ```html
-<icsm-popover v-model:show="showPopover">
-  <icsm-grid
+<fx-popover v-model:show="showPopover">
+  <fx-grid
     square
     clickable
     :border="false"
     column-num="3"
     style="width: 240px;"
   >
-    <icsm-grid-item
+    <fx-grid-item
       v-for="i in 6"
       :key="i"
       text="选项"
       icon="photo-o"
       @click="showPopover = false"
     />
-  </icsm-grid>
+ </fx-grid>
   <template #reference>
-    <icsm-button type="primary">自定义内容</icsm-button>
+    <fx-button type="primary">自定义内容</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
@@ -258,16 +258,16 @@ export default {
 - 当未绑定 `v-model:show` 时，Popover 为非受控组件，此时你可以通过 `show` 属性传入一个默认值，组件值的显示由组件自身控制。
 
 ```html
-<icsm-popover :actions="actions" placement="top-start" @select="onSelect">
+<fx-popover :actions="actions" placement="top-start" @select="onSelect">
   <template #reference>
-    <icsm-button type="primary">非受控模式</icsm-button>
+    <fx-button type="primary">非受控模式</fx-button>
   </template>
-</icsm-popover>
+</fx-popover>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -352,7 +352,7 @@ import type {
   PopoverActionsDirection,
   PopoverTrigger,
   PopoverPlacement,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -363,21 +363,21 @@ import type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-popover-arrow-size | _6px_ | - |
-| --icsm-popover-radius | _var(--icsm-radius-lg)_ | - |
-| --icsm-popover-action-width | _128px_ | - |
-| --icsm-popover-action-height | _44px_ | - |
-| --icsm-popover-action-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-popover-action-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-popover-action-icon-size | _20px_ | - |
-| --icsm-popover-horizontal-action-height | _34px_ | - |
-| --icsm-popover-horizontal-action-icon-size | _16px_ | - |
-| --icsm-popover-light-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-popover-light-background | _var(--icsm-background-2)_ | - |
-| --icsm-popover-light-action-disabled-text-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-popover-dark-text-color | _var(--icsm-white)_ | - |
-| --icsm-popover-dark-background | _#4a4a4a_ | - |
-| --icsm-popover-dark-action-disabled-text-color | _var(--icsm-text-color-2)_ | - |
+| --fx-popover-arrow-size | _6px_ | - |
+| --fx-popover-radius | _var(--fx-radius-lg)_ | - |
+| --fx-popover-action-width | _128px_ | - |
+| --fx-popover-action-height | _44px_ | - |
+| --fx-popover-action-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-popover-action-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-popover-action-icon-size | _20px_ | - |
+| --fx-popover-horizontal-action-height | _34px_ | - |
+| --fx-popover-horizontal-action-icon-size | _16px_ | - |
+| --fx-popover-light-text-color | _var(--fx-text-color)_ | - |
+| --fx-popover-light-background | _var(--fx-background-2)_ | - |
+| --fx-popover-light-action-disabled-text-color | _var(--fx-text-color-3)_ | - |
+| --fx-popover-dark-text-color | _var(--fx-white)_ | - |
+| --fx-popover-dark-background | _#4a4a4a_ | - |
+| --fx-popover-dark-action-disabled-text-color | _var(--fx-text-color-2)_ | - |
 
 ## 常见问题
 

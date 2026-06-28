@@ -57,42 +57,42 @@ watch(isPlay, () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-barrage v-model="list">
+    <fx-barrage v-model="list">
       <div class="video"></div>
-    </icsm-barrage>
-    <icsm-space style="margin-top: 10px">
-      <icsm-button @click="add" type="primary" size="small">
+   </fx-barrage>
+    <fx-space style="margin-top: 10px">
+      <fx-button @click="add" type="primary" size="small">
         {{ t('barrage') }}
-      </icsm-button>
-    </icsm-space>
+     </fx-button>
+   </fx-space>
   </demo-block>
 
   <demo-block :title="t('videoBarrage')">
-    <icsm-barrage v-model="videoList" ref="videoBarrage" :auto-play="false">
+    <fx-barrage v-model="videoList" ref="videoBarrage" :auto-play="false">
       <div class="video"></div>
-    </icsm-barrage>
-    <icsm-space style="margin-top: 10px">
-      <icsm-button
+   </fx-barrage>
+    <fx-space style="margin-top: 10px">
+      <fx-button
         @click="videoAdd"
         type="primary"
         size="small"
         :disabled="!isPlay"
       >
         {{ t('barrage') }}
-      </icsm-button>
-      <icsm-button @click="toggle()" size="small">
+     </fx-button>
+      <fx-button @click="toggle()" size="small">
         {{ isPlay ? t('pause') : t('play') }}
-      </icsm-button>
-    </icsm-space>
+     </fx-button>
+   </fx-space>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-barrage {
-  padding: var(--icsm-padding-sm);
-  background-color: var(--icsm-background-2);
+  padding: var(--fx-padding-sm);
+  background-color: var(--fx-background-2);
   .video {
-    background-color: var(--icsm-gray-2);
+    background-color: var(--fx-gray-2);
     width: 100%;
     height: 150px;
   }

@@ -28,38 +28,38 @@ const username = ref('');
 
 <template>
   <demo-block :title="t('required')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="username"
         required
         :label="t('username')"
         :placeholder="t('usernamePlaceholder')"
       />
-      <icsm-field
+      <fx-field
         v-model="phone"
         required
         :label="t('phone')"
         :placeholder="t('phonePlaceholder')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 
   <demo-block :title="t('autoRequired')">
-    <icsm-cell-group inset>
-      <icsm-form required="auto">
-        <icsm-field
+    <fx-cell-group inset>
+      <fx-form required="auto">
+        <fx-field
           v-model="username"
           :rules="[{ required: true }]"
           :label="t('username')"
           :placeholder="t('usernamePlaceholder')"
         />
-        <icsm-field
+        <fx-field
           v-model="phone"
           :rules="[{ required: false }]"
           :label="t('phone')"
           :placeholder="t('phonePlaceholder')"
         />
-      </icsm-form>
-    </icsm-cell-group>
+     </fx-form>
+   </fx-cell-group>
   </demo-block>
 </template>

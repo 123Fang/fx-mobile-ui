@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Dialog } from 'ctf-ics-mobile-ui';
+import { Dialog } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Dialog);
@@ -23,7 +23,7 @@ app.use(Dialog);
 比如使用 `showDialog` 函数，调用后会直接在页面中渲染对应的弹出框。
 
 ```js
-import { showDialog } from 'ctf-ics-mobile-ui';
+import { showDialog } from 'fx-mobile-ui';
 
 showDialog({ message: '提示' });
 ```
@@ -35,7 +35,7 @@ showDialog({ message: '提示' });
 用于提示一些消息，默认只包含一个确认按钮。
 
 ```js
-import { showDialog } from 'ctf-ics-mobile-ui';
+import { showDialog } from 'fx-mobile-ui';
 
 showDialog({
   title: '标题',
@@ -56,7 +56,7 @@ showDialog({
 用于确认消息，默认包含确认和取消按钮。
 
 ```js
-import { showConfirmDialog } from 'ctf-ics-mobile-ui';
+import { showConfirmDialog } from 'fx-mobile-ui';
 
 showConfirmDialog({
   title: '标题',
@@ -76,7 +76,7 @@ showConfirmDialog({
 将 theme 选项设置为 `round-button` 可以展示圆角按钮风格的弹窗。
 
 ```js
-import { showDialog } from 'ctf-ics-mobile-ui';
+import { showDialog } from 'fx-mobile-ui';
 
 showDialog({
   title: '标题',
@@ -99,7 +99,7 @@ showDialog({
 通过 `beforeClose` 属性可以传入一个回调函数，在弹窗关闭前进行特定操作。
 
 ```js
-import { showConfirmDialog } from 'ctf-ics-mobile-ui';
+import { showConfirmDialog } from 'fx-mobile-ui';
 
 const beforeClose = (action) =>
   new Promise((resolve) => {
@@ -122,9 +122,9 @@ showConfirmDialog({
 如果你需要在 Dialog 内嵌入组件或其他自定义内容，可以直接使用 Dialog 组件，并使用默认插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
 
 ```html
-<icsm-dialog v-model:show="show" title="标题" show-cancel-button>
+<fx-dialog v-model:show="show" title="标题" show-cancel-button>
   <img src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-3.jpeg" />
-</icsm-dialog>
+</fx-dialog>
 ```
 
 ```js
@@ -254,7 +254,7 @@ import type {
   DialogMessage,
   DialogOptions,
   DialogMessageAlign,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -265,25 +265,25 @@ import type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-dialog-width | _320px_ | - |
-| --icsm-dialog-small-screen-width | _90%_ | - |
-| --icsm-dialog-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-dialog-transition | _var(--icsm-duration-base)_ | - |
-| --icsm-dialog-radius | _16px_ | - |
-| --icsm-dialog-background | _var(--icsm-background-2)_ | - |
-| --icsm-dialog-header-font-weight | _var(--icsm-font-bold)_ | - |
-| --icsm-dialog-header-line-height | _24px_ | - |
-| --icsm-dialog-header-padding-top | _26px_ | - |
-| --icsm-dialog-header-isolated-padding | _var(--icsm-padding-lg) 0_ | - |
-| --icsm-dialog-message-padding | _var(--icsm-padding-lg)_ | - |
-| --icsm-dialog-message-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-dialog-message-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-dialog-message-max-height | _60vh_ | - |
-| --icsm-dialog-has-title-message-text-color | _var(--icsm-gray-7)_ | - |
-| --icsm-dialog-has-title-message-padding-top | _var(--icsm-padding-xs)_ | - |
-| --icsm-dialog-button-height | _48px_ | - |
-| --icsm-dialog-round-button-height | _36px_ | - |
-| --icsm-dialog-confirm-button-text-color | _var(--icsm-primary-color)_ | - |
+| --fx-dialog-width | _320px_ | - |
+| --fx-dialog-small-screen-width | _90%_ | - |
+| --fx-dialog-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-dialog-transition | _var(--fx-duration-base)_ | - |
+| --fx-dialog-radius | _16px_ | - |
+| --fx-dialog-background | _var(--fx-background-2)_ | - |
+| --fx-dialog-header-font-weight | _var(--fx-font-bold)_ | - |
+| --fx-dialog-header-line-height | _24px_ | - |
+| --fx-dialog-header-padding-top | _26px_ | - |
+| --fx-dialog-header-isolated-padding | _var(--fx-padding-lg) 0_ | - |
+| --fx-dialog-message-padding | _var(--fx-padding-lg)_ | - |
+| --fx-dialog-message-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-dialog-message-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-dialog-message-max-height | _60vh_ | - |
+| --fx-dialog-has-title-message-text-color | _var(--fx-gray-7)_ | - |
+| --fx-dialog-has-title-message-padding-top | _var(--fx-padding-xs)_ | - |
+| --fx-dialog-button-height | _48px_ | - |
+| --fx-dialog-round-button-height | _36px_ | - |
+| --fx-dialog-confirm-button-text-color | _var(--fx-primary-color)_ | - |
 
 ## 常见问题
 ### 在 beforeRouteLeave 里调用 Dialog 无法展示？
@@ -291,7 +291,7 @@ import type {
 将 `closeOnPopstate` 属性设置为 false 即可。
 
 ```js
-import { showDialog } from 'ctf-ics-mobile-ui';
+import { showDialog } from 'fx-mobile-ui';
 
 showDialog({
   title: '标题',

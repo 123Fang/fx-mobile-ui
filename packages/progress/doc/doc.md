@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Progress } from 'ctf-ics-mobile-ui';
+import { Progress } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Progress);
@@ -23,7 +23,7 @@ app.use(Progress);
 进度条默认为蓝色，使用 `percentage` 属性来设置当前进度。
 
 ```html
-<icsm-progress :percentage="50" />
+<fx-progress :percentage="50" />
 ```
 
 ### 线条粗细
@@ -31,7 +31,7 @@ app.use(Progress);
 通过 `stroke-width` 可以设置进度条的粗细。
 
 ```html
-<icsm-progress :percentage="50" stroke-width="8" />
+<fx-progress :percentage="50" stroke-width="8" />
 ```
 
 ### 置灰
@@ -39,7 +39,7 @@ app.use(Progress);
 设置 `inactive` 属性后进度条将置灰。
 
 ```html
-<icsm-progress inactive :percentage="50" />
+<fx-progress inactive :percentage="50" />
 ```
 
 ### 样式定制
@@ -47,9 +47,9 @@ app.use(Progress);
 可以使用 `pivot-text` 属性自定义文字，`color` 属性自定义进度条颜色。
 
 ```html
-<icsm-progress pivot-text="橙色" color="#f2826a" :percentage="25" />
-<icsm-progress pivot-text="红色" color="#ee0a24" :percentage="50" />
-<icsm-progress
+<fx-progress pivot-text="橙色" color="#f2826a" :percentage="25" />
+<fx-progress pivot-text="红色" color="#ee0a24" :percentage="50" />
+<fx-progress
   :percentage="75"
   pivot-text="紫色"
   pivot-color="#7232dd"
@@ -62,12 +62,12 @@ app.use(Progress);
 通过 `pivot` 插槽可以自定义进度文字的内容。
 
 ```html
-<icsm-progress :percentage="50">
+<fx-progress :percentage="50">
   <template #pivot="{ percentage }">
-    <icsm-icon name="fire" />
+    <fx-icon name="fire" />
     <span>{{ percentage }}%</span>
   </template>
-</icsm-progress>
+</fx-progress>
 ```
 
 ## API
@@ -97,7 +97,7 @@ app.use(Progress);
 组件导出以下类型定义：
 
 ```ts
-import type { ProgressProps, ProgressInstance } from 'ctf-ics-mobile-ui';
+import type { ProgressProps, ProgressInstance } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -108,14 +108,14 @@ import type { ProgressProps, ProgressInstance } from 'ctf-ics-mobile-ui';
 
 | 名称                             | 默认值                     | 描述 |
 | -------------------------------- | -------------------------- | ---- |
-| --icsm-progress-height            | _4px_                      | -    |
-| --icsm-progress-color             | _var(--icsm-primary-color)_ | -    |
-| --icsm-progress-inactive-color    | _var(--icsm-gray-5)_        | -    |
-| --icsm-progress-background        | _var(--icsm-gray-3)_        | -    |
-| --icsm-progress-pivot-padding     | _0 5px_                    | -    |
-| --icsm-progress-pivot-text-color  | _var(--icsm-white)_         | -    |
-| --icsm-progress-pivot-font-size   | _var(--icsm-font-size-xs)_  | -    |
-| --icsm-progress-pivot-line-height | _1.6_                      | -    |
-| --icsm-progress-pivot-background  | _var(--icsm-primary-color)_ | -    |
+| --fx-progress-height            | _4px_                      | -    |
+| --fx-progress-color             | _var(--fx-primary-color)_ | -    |
+| --fx-progress-inactive-color    | _var(--fx-gray-5)_        | -    |
+| --fx-progress-background        | _var(--fx-gray-3)_        | -    |
+| --fx-progress-pivot-padding     | _0 5px_                    | -    |
+| --fx-progress-pivot-text-color  | _var(--fx-white)_         | -    |
+| --fx-progress-pivot-font-size   | _var(--fx-font-size-xs)_  | -    |
+| --fx-progress-pivot-line-height | _1.6_                      | -    |
+| --fx-progress-pivot-background  | _var(--fx-primary-color)_ | -    |
 
 <br/><br/><br/><br/><br/><br/>

@@ -11,7 +11,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Area } from 'ctf-ics-mobile-ui';
+import { Area } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Area);
@@ -24,7 +24,7 @@ app.use(Area);
 初始化省市区组件时，需要通过 `area-list` 属性传入省市区数据。
 
 ```html
-<icsm-area title="标题" :area-list="areaList" />
+<fx-area title="标题" :area-list="areaList" />
 ```
 
 ### areaList 格式
@@ -88,7 +88,7 @@ export default {
 通过 `v-model` 绑定当前选中的地区码。
 
 ```html
-<icsm-area v-model="value" title="标题" :area-list="areaList" />
+<fx-area v-model="value" title="标题" :area-list="areaList" />
 ```
 
 ```js
@@ -107,7 +107,7 @@ export default {
 可以通过 `columns-num` 属性配置省市区显示的列数，默认情况下会显示省市区，当你设置为 `2`，则只会显示省市选择。
 
 ```html
-<icsm-area title="标题" :area-list="areaList" :columns-num="2" />
+<fx-area title="标题" :area-list="areaList" :columns-num="2" />
 ```
 
 ### 配置列占位提示文字
@@ -115,7 +115,7 @@ export default {
 可以通过 `columns-placeholder` 属性配置每一列的占位提示文字。
 
 ```html
-<icsm-area
+<fx-area
   title="标题"
   :area-list="areaList"
   :columns-placeholder="['省份', '城市', '区县']"
@@ -174,14 +174,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { AreaProps, AreaList, AreaInstance } from 'ctf-ics-mobile-ui';
+import type { AreaProps, AreaList, AreaInstance } from 'fx-mobile-ui';
 ```
 
 `AreaInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { AreaInstance } from 'ctf-ics-mobile-ui';
+import type { AreaInstance } from 'fx-mobile-ui';
 
 const areaRef = ref<AreaInstance>();
 

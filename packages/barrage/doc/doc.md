@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Barrage } from 'ctf-ics-mobile';
+import { Barrage } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Barrage);
@@ -23,12 +23,12 @@ app.use(Barrage);
 可以通过 `v-model` 双向绑定弹幕数据，`Barrage` 会在组件区域内播放文字弹幕，使用数组数据 `push()` 可以发送弹幕文字。
 
 ```html
-<icsm-barrage v-model="list">
+<fx-barrage v-model="list">
   <div class="video" style="width: 100%; height: 150px"></div>
-</icsm-barrage>
-<icsm-space style="margin-top: 10px">
-  <icsm-button @click="add" type="primary" size="small"> 弹幕 </icsm-button>
-</icsm-space>
+</fx-barrage>
+<fx-space style="margin-top: 10px">
+  <fx-button @click="add" type="primary" size="small"> 弹幕</fx-button>
+</fx-space>
 ```
 
 ```ts
@@ -59,17 +59,17 @@ export default {
 设置 `auto-play` 为 `false` 属性后，需要使用 `play()` 进行弹幕播放，暂停可以使用 `pause()` 实现。
 
 ```html
-<icsm-barrage v-model="list" ref="barrage" :auto-play="false">
+<fx-barrage v-model="list" ref="barrage" :auto-play="false">
   <div class="video" style="width: 100%; height: 150px"></div>
-</icsm-barrage>
-<icsm-space style="margin-top: 10px">
-  <icsm-button @click="add" type="primary" size="small" :disabled="!isPlay">
+</fx-barrage>
+<fx-space style="margin-top: 10px">
+  <fx-button @click="add" type="primary" size="small" :disabled="!isPlay">
     弹幕
-  </icsm-button>
-  <icsm-button @click="toggle()" size="small">
+ </fx-button>
+  <fx-button @click="toggle()" size="small">
     {{ isPlay ? '暂停' : '开始' }}
-  </icsm-button>
-</icsm-space>
+ </fx-button>
+</fx-space>
 ```
 
 ```ts
@@ -136,7 +136,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { BarrageProps, BarrageItem, BarrageInstance } from 'ctf-ics-mobile';
+import type { BarrageProps, BarrageItem, BarrageInstance } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -147,10 +147,10 @@ import type { BarrageProps, BarrageItem, BarrageInstance } from 'ctf-ics-mobile'
 
 | 名称                    | 默认值             | 描述 |
 | ----------------------- | ------------------ | ---- |
-| --icsm-barrage-font-size | _16px_             | -    |
-| --icsm-barrage-space     | _10px_             | -    |
-| --icsm-barrage-color     | _var(--icsm-white)_ | -    |
-| --icsm-barrage-font      | _inherit_          | -    |
+| --fx-barrage-font-size | _16px_             | -    |
+| --fx-barrage-space     | _10px_             | -    |
+| --fx-barrage-color     | _var(--fx-white)_ | -    |
+| --fx-barrage-font      | _inherit_          | -    |
 
 
 

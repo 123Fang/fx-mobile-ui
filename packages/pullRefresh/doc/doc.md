@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { PullRefresh } from 'ctf-ics-mobile-ui';
+import { PullRefresh } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(PullRefresh);
@@ -23,14 +23,14 @@ app.use(PullRefresh);
 下拉刷新时会触发 `refresh` 事件，在事件的回调函数中可以进行同步或异步操作，操作完成后将 `v-model` 设置为 `false`，表示加载完成。
 
 ```html
-<icsm-pull-refresh v-model="loading" @refresh="onRefresh">
+<fx-pull-refresh v-model="loading" @refresh="onRefresh">
   <p>刷新次数: {{ count }}</p>
-</icsm-pull-refresh>
+</fx-pull-refresh>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -58,13 +58,13 @@ export default {
 通过 `success-text` 可以设置刷新成功后的顶部提示文案。
 
 ```html
-<icsm-pull-refresh
+<fx-pull-refresh
   v-model="isLoading"
   success-text="刷新成功"
   @refresh="onRefresh"
 >
   <p>刷新次数: {{ count }}</p>
-</icsm-pull-refresh>
+</fx-pull-refresh>
 ```
 
 ### 自定义提示
@@ -72,7 +72,7 @@ export default {
 通过插槽可以自定义下拉刷新过程中的提示内容。
 
 ```html
-<icsm-pull-refresh v-model="isLoading" :head-height="80" @refresh="onRefresh">
+<fx-pull-refresh v-model="isLoading" :head-height="80" @refresh="onRefresh">
   <!-- 下拉提示，通过 scale 实现一个缩放效果 -->
   <template #pulling="props">
     <img
@@ -98,7 +98,7 @@ export default {
     />
   </template>
   <p>刷新次数: {{ count }}</p>
-</icsm-pull-refresh>
+</fx-pull-refresh>
 
 <style>
   .doge {
@@ -150,7 +150,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PullRefreshProps } from 'ctf-ics-mobile-ui';
+import type { PullRefreshProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -161,10 +161,10 @@ import type { PullRefreshProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                 | 默认值                    | 描述 |
 | ------------------------------------ | ------------------------- | ---- |
-| --icsm-pull-refresh-head-height       | _50px_                    | -    |
-| --icsm-pull-refresh-head-font-size    | _var(--icsm-font-size-md)_ | -    |
-| --icsm-pull-refresh-head-text-color   | _var(--icsm-text-color-2)_ | -    |
-| --icsm-pull-refresh-loading-icon-size | _16px_                    | -    |
+| --fx-pull-refresh-head-height       | _50px_                    | -    |
+| --fx-pull-refresh-head-font-size    | _var(--fx-font-size-md)_ | -    |
+| --fx-pull-refresh-head-text-color   | _var(--fx-text-color-2)_ | -    |
+| --fx-pull-refresh-loading-icon-size | _16px_                    | -    |
 
 ## 常见问题
 
@@ -173,7 +173,7 @@ import type { PullRefreshProps } from 'ctf-ics-mobile-ui';
 默认情况下，下拉区域的高度是和内容高度保持一致的，如果需要让下拉区域始终为全屏，可以给 PullRefresh 设置一个与屏幕大小相等的最小高度：
 
 ```html
-<icsm-pull-refresh style="min-height: 100vh;" />
+<fx-pull-refresh style="min-height: 100vh;" />
 ```
 
 ### PullRefresh 的触发条件是？

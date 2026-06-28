@@ -42,52 +42,52 @@ const nextStep = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-steps :active="active">
-      <icsm-step>{{ t('step1') }}</icsm-step>
-      <icsm-step>{{ t('step2') }}</icsm-step>
-      <icsm-step>{{ t('step3') }}</icsm-step>
-      <icsm-step>{{ t('step4') }}</icsm-step>
-    </icsm-steps>
+    <fx-steps :active="active">
+      <fx-step>{{ t('step1') }}</fx-step>
+      <fx-step>{{ t('step2') }}</fx-step>
+      <fx-step>{{ t('step3') }}</fx-step>
+      <fx-step>{{ t('step4') }}</fx-step>
+   </fx-steps>
 
-    <icsm-button @click="nextStep">{{ t('nextStep') }}</icsm-button>
+    <fx-button @click="nextStep">{{ t('nextStep') }}</fx-button>
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-steps
+    <fx-steps
       :active="active"
       active-icon="success"
       inactive-icon="arrow"
       active-color="#07c160"
     >
-      <icsm-step>{{ t('step1') }}</icsm-step>
-      <icsm-step>{{ t('step2') }}</icsm-step>
-      <icsm-step>{{ t('step3') }}</icsm-step>
-      <icsm-step>{{ t('step4') }}</icsm-step>
-    </icsm-steps>
+      <fx-step>{{ t('step1') }}</fx-step>
+      <fx-step>{{ t('step2') }}</fx-step>
+      <fx-step>{{ t('step3') }}</fx-step>
+      <fx-step>{{ t('step4') }}</fx-step>
+   </fx-steps>
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-steps :active="0" direction="vertical">
-      <icsm-step>
+    <fx-steps :active="0" direction="vertical">
+      <fx-step>
         <h3>{{ t('status1') }}</h3>
         <p>2016-07-12 12:40</p>
-      </icsm-step>
-      <icsm-step>
+     </fx-step>
+      <fx-step>
         <h3>{{ t('status2') }}</h3>
         <p>2016-07-11 10:00</p>
-      </icsm-step>
-      <icsm-step>
+     </fx-step>
+      <fx-step>
         <h3>{{ t('status3') }}</h3>
         <p>2016-07-10 09:30</p>
-      </icsm-step>
-    </icsm-steps>
+     </fx-step>
+   </fx-steps>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-steps {
-  .icsm-button {
-    margin: var(--icsm-padding-md) 0 0 var(--icsm-padding-md);
+  .fx-button {
+    margin: var(--fx-padding-md) 0 0 var(--fx-padding-md);
   }
 
   p,

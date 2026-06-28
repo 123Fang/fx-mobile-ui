@@ -38,25 +38,25 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-notice-bar :text="t('text1')" scrollable left-icon="volume-o" />
+    <fx-notice-bar :text="t('text1')" scrollable left-icon="volume-o" />
   </demo-block>
 
   <demo-block :title="t('scrollable')">
-    <icsm-notice-bar scrollable :text="t('haiku')" />
-    <icsm-notice-bar :scrollable="false" :text="t('text2')" />
+    <fx-notice-bar scrollable :text="t('haiku')" />
+    <fx-notice-bar :scrollable="false" :text="t('text2')" />
   </demo-block>
 
   <demo-block :title="t('wrapable')">
-    <icsm-notice-bar wrapable :scrollable="false" :text="t('text2')" />
+    <fx-notice-bar wrapable :scrollable="false" :text="t('text2')" />
   </demo-block>
 
   <demo-block :title="t('mode')">
-    <icsm-notice-bar mode="closeable" :text="t('haiku')" />
-    <icsm-notice-bar mode="link" :text="t('haiku')" />
+    <fx-notice-bar mode="closeable" :text="t('haiku')" />
+    <fx-notice-bar mode="link" :text="t('haiku')" />
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-notice-bar
+    <fx-notice-bar
       :text="t('haiku')"
       color="#1989fa"
       background="#ecf9ff"
@@ -65,29 +65,29 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('verticalScroll')">
-    <icsm-notice-bar left-icon="volume-o" :scrollable="false">
-      <icsm-swipe
+    <fx-notice-bar left-icon="volume-o" :scrollable="false">
+      <fx-swipe
         vertical
         class="notice-swipe"
         :autoplay="3000"
         :touchable="false"
         :show-indicators="false"
       >
-        <icsm-swipe-item>{{ t('poetry1') }}</icsm-swipe-item>
-        <icsm-swipe-item>{{ t('poetry2') }}</icsm-swipe-item>
-        <icsm-swipe-item>{{ t('poetry3') }}</icsm-swipe-item>
-      </icsm-swipe>
-    </icsm-notice-bar>
+        <fx-swipe-item>{{ t('poetry1') }}</fx-swipe-item>
+        <fx-swipe-item>{{ t('poetry2') }}</fx-swipe-item>
+        <fx-swipe-item>{{ t('poetry3') }}</fx-swipe-item>
+     </fx-swipe>
+   </fx-notice-bar>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-notice-bar {
-  .icsm-notice-bar:not(:first-of-type) {
+  .fx-notice-bar:not(:first-of-type) {
     margin-top: 4px;
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-top: 24px;
   }
 

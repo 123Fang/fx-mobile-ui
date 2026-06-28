@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ContactEdit } from 'ctf-ics-mobile-ui';
+import { ContactEdit } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ContactEdit);
@@ -21,7 +21,7 @@ app.use(ContactEdit);
 ### 基础用法
 
 ```html
-<icsm-contact-edit
+<fx-contact-edit
   is-edit
   show-set-default
   :contact-info="editingContact"
@@ -33,7 +33,7 @@ app.use(ContactEdit);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -87,7 +87,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ContactEditInfo, ContactEditProps } from 'ctf-ics-mobile-ui';
+import type { ContactEditInfo, ContactEditProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -98,12 +98,12 @@ import type { ContactEditInfo, ContactEditProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                    | 默认值                    | 描述 |
 | --------------------------------------- | ------------------------- | ---- |
-| --icsm-contact-edit-padding              | _var(--icsm-padding-md)_   | -    |
-| --icsm-contact-edit-fields-radius        | _var(--icsm-radius-md)_    | -    |
-| --icsm-contact-edit-buttons-padding      | _var(--icsm-padding-xl) 0_ | -    |
-| --icsm-contact-edit-button-margin-bottom | _var(--icsm-padding-sm)_   | -    |
-| --icsm-contact-edit-button-font-size     | _var(--icsm-font-size-lg)_ | -    |
-| --icsm-contact-edit-field-label-width    | _4.1em_                   | -    |
+| --fx-contact-edit-padding              | _var(--fx-padding-md)_   | -    |
+| --fx-contact-edit-fields-radius        | _var(--fx-radius-md)_    | -    |
+| --fx-contact-edit-buttons-padding      | _var(--fx-padding-xl) 0_ | -    |
+| --fx-contact-edit-button-margin-bottom | _var(--fx-padding-sm)_   | -    |
+| --fx-contact-edit-button-font-size     | _var(--fx-font-size-lg)_ | -    |
+| --fx-contact-edit-field-label-width    | _4.1em_                   | -    |
 
 
 

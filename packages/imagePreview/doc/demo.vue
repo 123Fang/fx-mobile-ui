@@ -4,7 +4,7 @@ import { ref } from 'vue';
 // import { cdnURL, useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast, showImagePreview } from 'ctf-ics-mobile-ui';
+import { showToast, showImagePreview } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -89,21 +89,21 @@ const showFunctionCall = (options: Partial<ImagePreviewOptions> = {}) => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('showImages')" @click="showFunctionCall()" />
+    <fx-cell is-link :title="t('showImages')" @click="showFunctionCall()" />
   </demo-block>
 
   <demo-block card :title="t('customConfig')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('startPosition')"
       @click="showFunctionCall({ startPosition: 1 })"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('showClose')"
       @click="showFunctionCall({ closeable: true })"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('closeEvent')"
       @click="showFunctionCall({ onClose })"
@@ -111,7 +111,7 @@ const showFunctionCall = (options: Partial<ImagePreviewOptions> = {}) => {
   </demo-block>
 
   <demo-block card :title="t('beforeClose')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('beforeClose')"
       @click="showFunctionCall({ beforeClose })"
@@ -119,19 +119,19 @@ const showFunctionCall = (options: Partial<ImagePreviewOptions> = {}) => {
   </demo-block>
 
   <demo-block card :title="t('useComponent')">
-    <icsm-cell is-link :title="t('useComponent')" @click="showComponentCall" />
-    <icsm-image-preview v-model:show="show" :images="images" @change="onChange">
+    <fx-cell is-link :title="t('useComponent')" @click="showComponentCall" />
+    <fx-image-preview v-model:show="show" :images="images" @change="onChange">
       <template #index>{{ t('index', index) }}</template>
-    </icsm-image-preview>
+   </fx-image-preview>
   </demo-block>
 
   <demo-block card :title="t('useImageSlot')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('useImageSlot')"
       @click="showComponentCallSlot"
     />
-    <icsm-image-preview
+    <fx-image-preview
       v-model:show="showSlot"
       :images="imagesSlot"
       :close-on-click-image="false"
@@ -141,7 +141,7 @@ const showFunctionCall = (options: Partial<ImagePreviewOptions> = {}) => {
           <source :src="src" />
         </video>
       </template>
-    </icsm-image-preview>
+   </fx-image-preview>
   </demo-block>
 </template>
 

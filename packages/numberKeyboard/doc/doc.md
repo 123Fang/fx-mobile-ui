@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { NumberKeyboard } from 'ctf-ics-mobile-ui';
+import { NumberKeyboard } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(NumberKeyboard);
@@ -23,8 +23,8 @@ app.use(NumberKeyboard);
 数字键盘提供了 `input`、`delete`、`blur` 事件，分别对应输入内容、删除内容和失去焦点的动作。
 
 ```html
-<icsm-cell @touchstart.stop="show = true">弹出默认键盘</icsm-cell>
-<icsm-number-keyboard
+<fx-cell @touchstart.stop="show = true">弹出默认键盘</fx-cell>
+<fx-number-keyboard
   :show="show"
   @blur="show = false"
   @input="onInput"
@@ -34,7 +34,7 @@ app.use(NumberKeyboard);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -58,7 +58,7 @@ export default {
 将 theme 属性设置为 `custom` 来展示键盘的右侧栏，常用于输入金额的场景。
 
 ```html
-<icsm-number-keyboard
+<fx-number-keyboard
   :show="show"
   theme="custom"
   extra-key="."
@@ -74,10 +74,10 @@ export default {
 通过 `extra-key` 属性可以设置左下角按键内容，比如需要输入身份证号时，可以将 `extra-key` 设置为 `X`。
 
 ```html
-<icsm-cell plain type="primary" @touchstart.stop="show = true">
+<fx-cell plain type="primary" @touchstart.stop="show = true">
   弹出身份证号键盘
-</icsm-cell>
-<icsm-number-keyboard
+</fx-cell>
+<fx-number-keyboard
   :show="show"
   extra-key="X"
   close-button-text="完成"
@@ -92,10 +92,10 @@ export default {
 通过 `title` 属性可以设置键盘标题。
 
 ```html
-<icsm-cell plain type="primary" @touchstart.stop="show = true">
+<fx-cell plain type="primary" @touchstart.stop="show = true">
   弹出带标题的键盘
-</icsm-cell>
-<icsm-number-keyboard
+</fx-cell>
+<fx-number-keyboard
   :show="show"
   title="键盘标题"
   extra-key="."
@@ -111,10 +111,10 @@ export default {
 当 theme 为 `custom` 时，支持以数组的形式配置两个 `extra-key`。
 
 ```html
-<icsm-cell plain type="primary" @touchstart.stop="show = true">
+<fx-cell plain type="primary" @touchstart.stop="show = true">
   弹出配置多个按键的键盘
-</icsm-cell>
-<icsm-number-keyboard
+</fx-cell>
+<fx-number-keyboard
   :show="show"
   theme="custom"
   :extra-key="['00', '.']"
@@ -130,8 +130,8 @@ export default {
 通过 `random-key-order` 属性可以随机排序数字键盘，常用于安全等级较高的场景。
 
 ```html
-<icsm-cell @touchstart.stop="show = true"> 弹出配置随机数字的键盘 </icsm-cell>
-<icsm-number-keyboard
+<fx-cell @touchstart.stop="show = true"> 弹出配置随机数字的键盘</fx-cell>
+<fx-number-keyboard
   :show="show"
   random-key-order
   @blur="show = false"
@@ -145,8 +145,8 @@ export default {
 可以通过 `v-model` 绑定键盘当前输入值，并通过 `maxlength` 属性来限制输入长度。
 
 ```html
-<icsm-field v-model="value" readonly clickable @touchstart.stop="show = true" />
-<icsm-number-keyboard
+<fx-field v-model="value" readonly clickable @touchstart.stop="show = true" />
+<fx-number-keyboard
   v-model="value"
   :show="show"
   :maxlength="6"
@@ -217,7 +217,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { NumberKeyboardProps, NumberKeyboardTheme } from 'ctf-ics-mobile-ui';
+import type { NumberKeyboardProps, NumberKeyboardTheme } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -228,21 +228,21 @@ import type { NumberKeyboardProps, NumberKeyboardTheme } from 'ctf-ics-mobile-ui
 
 | 名称                                    | 默认值                     | 描述 |
 | --------------------------------------- | -------------------------- | ---- |
-| --icsm-number-keyboard-background        | _var(--icsm-gray-2)_        | -    |
-| --icsm-number-keyboard-key-height        | _48px_                     | -    |
-| --icsm-number-keyboard-key-font-size     | _28px_                     | -    |
-| --icsm-number-keyboard-key-active-color  | _var(--icsm-gray-3)_        | -    |
-| --icsm-number-keyboard-key-background    | _var(--icsm-white)_         | -    |
-| --icsm-number-keyboard-delete-font-size  | _var(--icsm-font-size-lg)_  | -    |
-| --icsm-number-keyboard-title-color       | _var(--icsm-gray-7)_        | -    |
-| --icsm-number-keyboard-title-height      | _34px_                     | -    |
-| --icsm-number-keyboard-title-font-size   | _var(--icsm-font-size-lg)_  | -    |
-| --icsm-number-keyboard-close-padding     | _0 var(--icsm-padding-md)_  | -    |
-| --icsm-number-keyboard-close-color       | _var(--icsm-primary-color)_ | -    |
-| --icsm-number-keyboard-close-font-size   | _var(--icsm-font-size-md)_  | -    |
-| --icsm-number-keyboard-button-text-color | _var(--icsm-white)_         | -    |
-| --icsm-number-keyboard-button-background | _var(--icsm-primary-color)_ | -    |
-| --icsm-number-keyboard-z-index           | _100_                      | -    |
+| --fx-number-keyboard-background        | _var(--fx-gray-2)_        | -    |
+| --fx-number-keyboard-key-height        | _48px_                     | -    |
+| --fx-number-keyboard-key-font-size     | _28px_                     | -    |
+| --fx-number-keyboard-key-active-color  | _var(--fx-gray-3)_        | -    |
+| --fx-number-keyboard-key-background    | _var(--fx-white)_         | -    |
+| --fx-number-keyboard-delete-font-size  | _var(--fx-font-size-lg)_  | -    |
+| --fx-number-keyboard-title-color       | _var(--fx-gray-7)_        | -    |
+| --fx-number-keyboard-title-height      | _34px_                     | -    |
+| --fx-number-keyboard-title-font-size   | _var(--fx-font-size-lg)_  | -    |
+| --fx-number-keyboard-close-padding     | _0 var(--fx-padding-md)_  | -    |
+| --fx-number-keyboard-close-color       | _var(--fx-primary-color)_ | -    |
+| --fx-number-keyboard-close-font-size   | _var(--fx-font-size-md)_  | -    |
+| --fx-number-keyboard-button-text-color | _var(--fx-white)_         | -    |
+| --fx-number-keyboard-button-background | _var(--fx-primary-color)_ | -    |
+| --fx-number-keyboard-z-index           | _100_                      | -    |
 
 ## 常见问题
 

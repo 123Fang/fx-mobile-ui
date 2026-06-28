@@ -27,19 +27,19 @@ const value = ref('330302');
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-area :title="t('title')" :area-list="t('areaList')" />
+    <fx-area :title="t('title')" :area-list="t('areaList')" />
   </demo-block>
 
   <demo-block card :title="t('title2')">
-    <icsm-area v-model="value" :title="t('title')" :area-list="t('areaList')" />
+    <fx-area v-model="value" :title="t('title')" :area-list="t('areaList')" />
   </demo-block>
 
   <demo-block card :title="t('title3')">
-    <icsm-area :title="t('title')" :area-list="t('areaList')" :columns-num="2" />
+    <fx-area :title="t('title')" :area-list="t('areaList')" :columns-num="2" />
   </demo-block>
 
   <demo-block card :title="t('title4')">
-    <icsm-area
+    <fx-area
       :title="t('title')"
       :area-list="t('areaList')"
       :columns-placeholder="t('columnsPlaceholder')"

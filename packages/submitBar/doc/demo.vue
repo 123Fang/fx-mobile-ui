@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -32,7 +32,7 @@ const onClickLink = () => showToast(t('clickLink'));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-submit-bar
+    <fx-submit-bar
       :price="3050"
       :button-text="t('submit')"
       @submit="onSubmit"
@@ -40,7 +40,7 @@ const onClickLink = () => showToast(t('clickLink'));
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-submit-bar
+    <fx-submit-bar
       disabled
       :price="3050"
       :button-text="t('submit')"
@@ -51,7 +51,7 @@ const onClickLink = () => showToast(t('clickLink'));
   </demo-block>
 
   <demo-block :title="t('loadingStatus')">
-    <icsm-submit-bar
+    <fx-submit-bar
       loading
       :price="3050"
       :button-text="t('submit')"
@@ -60,31 +60,31 @@ const onClickLink = () => showToast(t('clickLink'));
   </demo-block>
 
   <demo-block :title="t('advancedUsage')">
-    <icsm-submit-bar :price="3050" :button-text="t('submit')" @submit="onSubmit">
-      <icsm-checkbox v-model="checked">{{ t('check') }}</icsm-checkbox>
+    <fx-submit-bar :price="3050" :button-text="t('submit')" @submit="onSubmit">
+      <fx-checkbox v-model="checked">{{ t('check') }}</fx-checkbox>
       <template #tip>
         {{ t('tip2') }}
         <span class="edit-address" @click="onClickLink">
           {{ t('tip3') }}
         </span>
       </template>
-    </icsm-submit-bar>
+   </fx-submit-bar>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-submit-bar {
-  .icsm-submit-bar {
+  .fx-submit-bar {
     position: relative;
     padding-bottom: 0;
   }
 
   .edit-address {
-    color: var(--icsm-blue);
+    color: var(--fx-blue);
   }
 
-  .icsm-checkbox {
-    margin-right: var(--icsm-padding-sm);
+  .fx-checkbox {
+    margin-right: var(--fx-padding-sm);
   }
 }
 </style>

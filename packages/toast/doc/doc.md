@@ -16,7 +16,7 @@ import Attributes from './Attributes.vue'
 
 ```js
 import { createApp } from 'vue';
-import { Toast } from 'ctf-ics-mobile-ui';
+import { Toast } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Toast);
@@ -29,7 +29,7 @@ app.use(Toast);
 比如使用 `showToast` 函数，调用后会直接在页面中渲染对应的轻提示。
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 showToast('提示内容');
 ```
@@ -41,7 +41,7 @@ showToast('提示内容');
 使用 `showToast` 方法在屏幕中间展示一条文字提示。
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 showToast('提示内容');
 ```
@@ -51,7 +51,7 @@ showToast('提示内容');
 使用 `showLoadingToast` 方法展示加载提示，通过 `forbidClick` 选项可以禁用背景点击。
 
 ```js
-import { showLoadingToast } from 'ctf-ics-mobile-ui';
+import { showLoadingToast } from 'fx-mobile-ui';
 
 showLoadingToast({
   message: '加载中...',
@@ -64,7 +64,7 @@ showLoadingToast({
 使用 `showSuccessToast` 方法展示成功提示，使用 `showFailToast` 方法展示失败提示。
 
 ```js
-import { showSuccessToast, showFailToast } from 'ctf-ics-mobile-ui';
+import { showSuccessToast, showFailToast } from 'fx-mobile-ui';
 
 showSuccessToast('成功文案');
 showFailToast('失败文案');
@@ -75,7 +75,7 @@ showFailToast('失败文案');
 通过 `icon` 选项可以自定义图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](#/zh-CN/icon#props)。
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 showToast({
   message: '自定义图标',
@@ -91,7 +91,7 @@ showToast({
 通过 `loadingType` 属性可以自定义加载图标类型。
 
 ```js
-import { showLoadingToast } from 'ctf-ics-mobile-ui';
+import { showLoadingToast } from 'fx-mobile-ui';
 
 showLoadingToast({
   message: '加载中...',
@@ -105,7 +105,7 @@ showLoadingToast({
 Toast 默认渲染在屏幕正中位置，通过 `position` 属性可以控制 Toast 展示的位置。
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 showToast({
   message: '顶部展示',
@@ -123,7 +123,7 @@ showToast({
 通过 `wordBreak` 选项可以控制 Toast 中的文字过长时的截断方式，默认值为 `break-all`，可选值为 `break-word` 和 `normal`。
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 // 换行时截断单词
 showToast({
@@ -143,7 +143,7 @@ showToast({
 执行 Toast 方法时会返回对应的 Toast 实例，通过修改实例上的 `message` 属性可以实现动态更新提示的效果。
 
 ```js
-import { showLoadingToast, closeToast } from 'ctf-ics-mobile-ui';
+import { showLoadingToast, closeToast } from 'fx-mobile-ui';
 
 const toast = showLoadingToast({
   duration: 0,
@@ -168,7 +168,7 @@ const timer = setInterval(() => {
 Toast 默认采用单例模式，即同一时间只会存在一个 Toast，如果需要在同一时间弹出多个 Toast，可以参考下面的示例：
 
 ```js
-import { showToast, showSuccessToast, allowMultipleToast } from 'ctf-ics-mobile-ui';
+import { showToast, showSuccessToast, allowMultipleToast } from 'fx-mobile-ui';
 
 allowMultipleToast();
 
@@ -184,7 +184,7 @@ toast2.close();
 通过 `setToastDefaultOptions` 函数可以全局修改 `showToast` 等方法的默认配置。
 
 ```js
-import { setToastDefaultOptions, resetToastDefaultOptions } from 'ctf-ics-mobile-ui';
+import { setToastDefaultOptions, resetToastDefaultOptions } from 'fx-mobile-ui';
 
 setToastDefaultOptions({ duration: 2000 });
 
@@ -200,7 +200,7 @@ resetToastDefaultOptions('loading');
 如果你需要在 Toast 内嵌入组件或其他自定义内容，可以直接使用 Toast 组件，并使用 message 插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
 
 ```html
-<icsm-toast v-model:show="show" style="padding: 0">
+<fx-toast v-model:show="show" style="padding: 0">
   <template #message>
     <van-image :src="image" width="200" height="140" style="display: block" />
   </template>
@@ -318,7 +318,7 @@ import type {
   ToastPosition,
   ToastWordBreak,
   ToastWrapperInstance,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制

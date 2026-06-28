@@ -33,66 +33,66 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-grid>
-      <icsm-grid-item v-for="i in 4" :key="i" icon="photo-o" :text="t('text')" />
-    </icsm-grid>
+    <fx-grid>
+      <fx-grid-item v-for="i in 4" :key="i" icon="photo-o" :text="t('text')" />
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('columnNum')">
-    <icsm-grid :column-num="3">
-      <icsm-grid-item v-for="i in 6" :key="i" icon="photo-o" :text="t('text')" />
-    </icsm-grid>
+    <fx-grid :column-num="3">
+      <fx-grid-item v-for="i in 6" :key="i" icon="photo-o" :text="t('text')" />
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-grid :border="false" :column-num="3">
-      <icsm-grid-item>
-        <icsm-image fit="contain" :src="cdnURL('apple-1.jpeg')" />
-      </icsm-grid-item>
-      <icsm-grid-item>
-        <icsm-image fit="contain" :src="cdnURL('apple-2.jpeg')" />
-      </icsm-grid-item>
-      <icsm-grid-item>
-        <icsm-image fit="contain" :src="cdnURL('apple-3.jpeg')" />
-      </icsm-grid-item>
-    </icsm-grid>
+    <fx-grid :border="false" :column-num="3">
+      <fx-grid-item>
+        <fx-image fit="contain" :src="cdnURL('apple-1.jpeg')" />
+     </fx-grid-item>
+      <fx-grid-item>
+        <fx-image fit="contain" :src="cdnURL('apple-2.jpeg')" />
+     </fx-grid-item>
+      <fx-grid-item>
+        <fx-image fit="contain" :src="cdnURL('apple-3.jpeg')" />
+     </fx-grid-item>
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('square')">
-    <icsm-grid square>
-      <icsm-grid-item v-for="i in 8" :key="i" icon="photo-o" :text="t('text')" />
-    </icsm-grid>
+    <fx-grid square>
+      <fx-grid-item v-for="i in 8" :key="i" icon="photo-o" :text="t('text')" />
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('gutter')">
-    <icsm-grid :gutter="10">
-      <icsm-grid-item v-for="i in 8" :key="i" icon="photo-o" :text="t('text')" />
-    </icsm-grid>
+    <fx-grid :gutter="10">
+      <fx-grid-item v-for="i in 8" :key="i" icon="photo-o" :text="t('text')" />
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('horizontal')">
-    <icsm-grid direction="horizontal" :column-num="3">
-      <icsm-grid-item icon="photo-o" :text="t('text')" />
-      <icsm-grid-item icon="photo-o" :text="t('text')" />
-      <icsm-grid-item icon="photo-o" :text="t('text')" />
-    </icsm-grid>
+    <fx-grid direction="horizontal" :column-num="3">
+      <fx-grid-item icon="photo-o" :text="t('text')" />
+      <fx-grid-item icon="photo-o" :text="t('text')" />
+      <fx-grid-item icon="photo-o" :text="t('text')" />
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('route')">
-    <icsm-grid clickable :column-num="2">
-      <icsm-grid-item icon="home-o" :text="t('vueRoute')" to="/" />
-      <icsm-grid-item
+    <fx-grid clickable :column-num="2">
+      <fx-grid-item icon="home-o" :text="t('vueRoute')" to="/" />
+      <fx-grid-item
         icon="search"
         :text="t('urlRoute')"
         url="https://github.com/vant-ui/vant"
       />
-    </icsm-grid>
+   </fx-grid>
   </demo-block>
 
   <demo-block :title="t('showBadge')">
-    <icsm-grid :column-num="2">
-      <icsm-grid-item icon="home-o" :text="t('text')" dot />
-      <icsm-grid-item icon="search" :text="t('text')" badge="99+" />
-    </icsm-grid>
+    <fx-grid :column-num="2">
+      <fx-grid-item icon="home-o" :text="t('text')" dot />
+      <fx-grid-item icon="search" :text="t('text')" badge="99+" />
+   </fx-grid>
   </demo-block>
 </template>

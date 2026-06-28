@@ -47,103 +47,103 @@ const toggleAll = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-collapse v-model="active1">
-      <icsm-collapse-item :title="t('title') + 1">
+    <fx-collapse v-model="active1">
+      <fx-collapse-item :title="t('title') + 1">
         {{ t('text1') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 2">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 2">
         {{ t('text2') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 3">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 3">
         {{ t('text3') }}
-      </icsm-collapse-item>
-    </icsm-collapse>
+     </fx-collapse-item>
+   </fx-collapse>
   </demo-block>
 
   <demo-block :title="t('accordion')">
-    <icsm-collapse v-model="active2" accordion>
-      <icsm-collapse-item :title="t('title') + 1">
+    <fx-collapse v-model="active2" accordion>
+      <fx-collapse-item :title="t('title') + 1">
         {{ t('text1') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 2">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 2">
         {{ t('text2') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 3">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 3">
         {{ t('text3') }}
-      </icsm-collapse-item>
-    </icsm-collapse>
+     </fx-collapse-item>
+   </fx-collapse>
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-collapse v-model="active3">
-      <icsm-collapse-item :title="t('title') + 1">
+    <fx-collapse v-model="active3">
+      <fx-collapse-item :title="t('title') + 1">
         {{ t('text1') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 2" disabled>
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 2" disabled>
         {{ t('text2') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 3" disabled>
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 3" disabled>
         {{ t('text3') }}
-      </icsm-collapse-item>
-    </icsm-collapse>
+     </fx-collapse-item>
+   </fx-collapse>
   </demo-block>
 
   <demo-block :title="t('titleSlot')">
-    <icsm-collapse v-model="active4">
-      <icsm-collapse-item>
+    <fx-collapse v-model="active4">
+      <fx-collapse-item>
         <template #title>
-          {{ t('title') + 1 }}<icsm-icon name="question-o" />
+          {{ t('title') + 1 }}<fx-icon name="question-o" />
         </template>
         {{ t('text1') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item
+     </fx-collapse-item>
+      <fx-collapse-item
         :title="t('title') + 2"
         :value="t('content')"
         icon="shop-o"
       >
         {{ t('text2') }}
-      </icsm-collapse-item>
-    </icsm-collapse>
+     </fx-collapse-item>
+   </fx-collapse>
   </demo-block>
 
   <demo-block :title="t('toggleAll')">
-    <icsm-collapse v-model="active5" ref="collapse">
-      <icsm-collapse-item :title="t('title') + 1" name="1">
+    <fx-collapse v-model="active5" ref="collapse">
+      <fx-collapse-item :title="t('title') + 1" name="1">
         {{ t('text1') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 2" name="2">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 2" name="2">
         {{ t('text2') }}
-      </icsm-collapse-item>
-      <icsm-collapse-item :title="t('title') + 3" name="3">
+     </fx-collapse-item>
+      <fx-collapse-item :title="t('title') + 3" name="3">
         {{ t('text3') }}
-      </icsm-collapse-item>
-    </icsm-collapse>
+     </fx-collapse-item>
+   </fx-collapse>
 
     <div class="demo-collapse-buttons">
-      <icsm-button type="primary" @click="openAll">
+      <fx-button type="primary" @click="openAll">
         {{ t('openAll') }}
-      </icsm-button>
-      <icsm-button type="primary" @click="toggleAll">
+     </fx-button>
+      <fx-button type="primary" @click="toggleAll">
         {{ t('inverse') }}
-      </icsm-button>
+     </fx-button>
     </div>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-collapse {
-  .icsm-icon-question-o {
+  .fx-icon-question-o {
     margin-left: 5px;
-    color: var(--icsm-blue);
+    color: var(--fx-blue);
     font-size: 15px;
     vertical-align: -3px;
   }
 
   &-buttons {
-    margin-top: var(--icsm-padding-md);
+    margin-top: var(--fx-padding-md);
 
-    .icsm-button {
-      margin-left: var(--icsm-padding-md);
+    .fx-button {
+      margin-left: var(--fx-padding-md);
     }
   }
 }

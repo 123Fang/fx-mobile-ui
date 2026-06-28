@@ -18,7 +18,7 @@ PickerGroup 中可以放置以下组件：
 
 ```js
 import { createApp } from 'vue';
-import { PickerGroup } from 'ctf-ics-mobile-ui';
+import { PickerGroup } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(PickerGroup);
@@ -33,24 +33,24 @@ app.use(PickerGroup);
 `PickerGroup` 会代替子组件来渲染统一的标题栏，这意味着子组件不会渲染单独的标题栏，与标题栏有关的 props 和 events 需要设置到 `PickerGroup` 上，比如 `title` 属性、`confirm` 事件、`cancel` 事件等，而子组件中与标题栏无关的属性和事件可以正常使用。
 
 ```html
-<icsm-picker-group
+<fx-picker-group
   title="预约日期"
   :tabs="['选择日期', '选择时间']"
   @confirm="onConfirm"
   @cancel="onCancel"
 >
-  <icsm-date-picker
+  <fx-date-picker
     v-model="currentDate"
     :min-date="minDate"
     :max-date="maxDate"
   />
-  <icsm-time-picker v-model="currentTime" />
-</icsm-picker-group>
+  <fx-time-picker v-model="currentTime" />
+</fx-picker-group>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -84,25 +84,25 @@ export default {
 部分场景下，为了保证用户能够依次选择所有的 Picker，你可以设置 PickerGroup 的 `next-step-text` 属性。在设置 `next-step-text` 属性后，如果用户未切换到最后一个标签页，那么右上角的按钮会变成「下一步」，点击后自动切换到下一个 Picker。当用户切换到最后一个标签页时，右上角的按钮会变为「确认」。
 
 ```html
-<icsm-picker-group
+<fx-picker-group
   title="预约日期"
   :tabs="['选择日期', '选择时间']"
   next-step-text="下一步"
   @confirm="onConfirm"
   @cancel="onCancel"
 >
-  <icsm-date-picker
+  <fx-date-picker
     v-model="currentDate"
     :min-date="minDate"
     :max-date="maxDate"
   />
-  <icsm-time-picker v-model="currentTime" />
-</icsm-picker-group>
+  <fx-time-picker v-model="currentTime" />
+</fx-picker-group>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -136,28 +136,28 @@ export default {
 在 `PickerGroup` 的默认插槽中放置两个 `DatePicker` 组件，可以实现选择日期范围的交互效果。
 
 ```html
-<icsm-picker-group
+<fx-picker-group
   title="预约日期"
   :tabs="['开始日期', '结束日期']"
   @confirm="onConfirm"
   @cancel="onCancel"
 >
-  <icsm-date-picker
+  <fx-date-picker
     v-model="startDate"
     :min-date="minDate"
     :max-date="maxDate"
   />
-  <icsm-date-picker
+  <fx-date-picker
     v-model="endDate"
     :min-date="endMinDate"
     :max-date="maxDate"
   />
-</icsm-picker-group>
+</fx-picker-group>
 ```
 
 ```js
 import { computed, ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -198,20 +198,20 @@ export default {
 在 `PickerGroup` 的默认插槽中放置两个 `TimePicker` 组件，可以实现选择时间范围的交互效果。
 
 ```html
-<icsm-picker-group
+<fx-picker-group
   title="预约时间"
   :tabs="['开始时间', '结束时间']"
   @confirm="onConfirm"
   @cancel="onCancel"
 >
-  <icsm-time-picker v-model="startTime" />
-  <icsm-time-picker v-model="endTime" />
-</icsm-picker-group>
+  <fx-time-picker v-model="startTime" />
+  <fx-time-picker v-model="endTime" />
+</fx-picker-group>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -244,28 +244,28 @@ export default {
 - 当绑定 `v-model:active-tab` 时，PickerGroup 支持受控模式，此时组件 `tab` 的切换同时支持 `v-model:active-tab` 的值和组件本身控制。
 
 ```html
-<icsm-button type="primary" @click="setActiveTab">
+<fx-button type="primary" @click="setActiveTab">
   点击切换 tab，当前为 {{ activeTab }}
-</icsm-button>
-<icsm-picker-group
+</fx-button>
+<fx-picker-group
   v-model:active-tab="activeTab"
   title="预约日期"
   :tabs="['选择日期', '选择时间']"
   @confirm="onConfirm"
   @cancel="onCancel"
 >
-  <icsm-date-picker
+  <fx-date-picker
     v-model="currentDate"
     :min-date="minDate"
     :max-date="maxDate"
   />
-  <icsm-time-picker v-model="currentTime" />
-</icsm-picker-group>
+  <fx-time-picker v-model="currentTime" />
+</fx-picker-group>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -329,7 +329,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PickerGroupProps, PickerGroupThemeVars } from 'ctf-ics-mobile-ui';
+import type { PickerGroupProps, PickerGroupThemeVars } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -340,7 +340,7 @@ import type { PickerGroupProps, PickerGroupThemeVars } from 'ctf-ics-mobile-ui';
 
 | 名称                          | 默认值               | 描述 |
 | ----------------------------- | -------------------- | ---- |
-| --icsm-picker-group-background | _--icsm-background-2_ | -    |
+| --fx-picker-group-background | _--fx-background-2_ | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

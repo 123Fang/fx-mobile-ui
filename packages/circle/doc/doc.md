@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Circle } from 'ctf-ics-mobile-ui';
+import { Circle } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Circle);
@@ -23,7 +23,7 @@ app.use(Circle);
 `rate` 属性表示进度条的目标进度，`v-model:current-rate` 表示动画过程中的实时进度。当 `rate` 发生变化时，`v-model:current-rate` 会以 `speed` 的速度变化，直至达到 `rate` 设定的值。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="30"
   :speed="100"
@@ -52,7 +52,7 @@ export default {
 通过 `stroke-width` 属性来控制进度条宽度，`stroke-width` 指的是 SVG 中 `path` 的宽度，默认值为 `40`。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   :stroke-width="60"
@@ -78,7 +78,7 @@ const pxWidth = (strokeWidth * circleWidth) / viewBox;
 通过 `color` 属性来控制进度条颜色，`layer-color` 属性来控制轨道颜色。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   layer-color="#ebedf0"
@@ -91,7 +91,7 @@ const pxWidth = (strokeWidth * circleWidth) / viewBox;
 `color` 属性支持传入对象格式来定义渐变色。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   :color="gradientColor"
@@ -123,7 +123,7 @@ export default {
 将 `clockwise` 设置为 `false`，进度会从逆时针方向开始。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   :clockwise="false"
@@ -136,7 +136,7 @@ export default {
 通过 `size` 属性设置圆环直径。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   size="120px"
@@ -149,19 +149,19 @@ export default {
 进度条默认从顶部开始，可以通过 `start-position` 属性设置起始位置。
 
 ```html
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   text="左侧"
   start-position="left"
 />
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   text="右侧"
   start-position="right"
 />
-<icsm-circle
+<fx-circle
   v-model:current-rate="currentRate"
   :rate="rate"
   text="底部"
@@ -199,7 +199,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { CircleProps, CircleStartPosition } from 'ctf-ics-mobile-ui';
+import type { CircleProps, CircleStartPosition } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -210,13 +210,13 @@ import type { CircleProps, CircleStartPosition } from 'ctf-ics-mobile-ui';
 
 | 名称                          | 默认值                      | 描述 |
 | ----------------------------- | --------------------------- | ---- |
-| --icsm-circle-size             | _100px_                     | -    |
-| --icsm-circle-color            | _var(--icsm-primary-color)_  | -    |
-| --icsm-circle-layer-color      | _var(--icsm-white)_          | -    |
-| --icsm-circle-text-color       | _var(--icsm-text-color)_     | -    |
-| --icsm-circle-text-font-weight | _var(--icsm-font-bold)_      | -    |
-| --icsm-circle-text-font-size   | _var(--icsm-font-size-md)_   | -    |
-| --icsm-circle-text-line-height | _var(--icsm-line-height-md)_ | -    |
+| --fx-circle-size             | _100px_                     | -    |
+| --fx-circle-color            | _var(--fx-primary-color)_  | -    |
+| --fx-circle-layer-color      | _var(--fx-white)_          | -    |
+| --fx-circle-text-color       | _var(--fx-text-color)_     | -    |
+| --fx-circle-text-font-weight | _var(--fx-font-bold)_      | -    |
+| --fx-circle-text-font-size   | _var(--fx-font-size-md)_   | -    |
+| --fx-circle-text-line-height | _var(--fx-line-height-md)_ | -    |
 
 
 

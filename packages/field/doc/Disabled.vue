@@ -20,17 +20,17 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('disabled')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         :model-value="t('inputReadonly')"
         :label="t('text')"
         readonly
       />
-      <icsm-field
+      <fx-field
         :model-value="t('inputDisabled')"
         :label="t('text')"
         disabled
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { NavBar } from 'ctf-ics-mobile-ui';
+import { NavBar } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(NavBar);
@@ -23,7 +23,7 @@ app.use(NavBar);
 通过 `title` 属性设置导航栏标题。
 
 ```html
-<icsm-nav-bar title="标题" />
+<fx-nav-bar title="标题" />
 ```
 
 ### 返回上级
@@ -31,7 +31,7 @@ app.use(NavBar);
 在导航栏实现返回上级功能。
 
 ```html
-<icsm-nav-bar
+<fx-nav-bar
   title="标题"
   left-text="返回"
   left-arrow
@@ -55,7 +55,7 @@ export default {
 在导航栏右侧添加可点击的按钮。
 
 ```html
-<icsm-nav-bar
+<fx-nav-bar
   title="标题"
   left-text="返回"
   right-text="按钮"
@@ -66,7 +66,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -85,11 +85,11 @@ export default {
 可以通过插槽自定义导航栏两侧的内容。
 
 ```html
-<icsm-nav-bar title="标题" left-text="返回" left-arrow>
+<fx-nav-bar title="标题" left-text="返回" left-arrow>
   <template #right>
-    <icsm-icon name="search" size="18" />
+    <fx-icon name="search" size="18" />
   </template>
-</icsm-nav-bar>
+</fx-nav-bar>
 ```
 
 ### 禁用按钮
@@ -97,7 +97,7 @@ export default {
 通过 `left-disabled` 或 `right-disabled` 属性来禁用两侧的按钮。按钮被禁用时透明度降低，且无法点击。
 
 ```html
-<icsm-nav-bar
+<fx-nav-bar
   title="标题"
   left-text="返回"
   right-text="按钮"
@@ -146,7 +146,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { NavBarProps } from 'ctf-ics-mobile-ui';
+import type { NavBarProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -157,14 +157,14 @@ import type { NavBarProps } from 'ctf-ics-mobile-ui';
 
 | 名称                           | 默认值                     | 描述 |
 | ------------------------------ | -------------------------- | ---- |
-| --icsm-nav-bar-height           | _46px_                     | -    |
-| --icsm-nav-bar-background       | _var(--icsm-background-2)_  | -    |
-| --icsm-nav-bar-arrow-size       | _16px_                     | -    |
-| --icsm-nav-bar-icon-color       | _var(--icsm-primary-color)_ | -    |
-| --icsm-nav-bar-text-color       | _var(--icsm-primary-color)_ | -    |
-| --icsm-nav-bar-title-font-size  | _var(--icsm-font-size-lg)_  | -    |
-| --icsm-nav-bar-title-text-color | _var(--icsm-text-color)_    | -    |
-| --icsm-nav-bar-z-index          | _1_                        | -    |
+| --fx-nav-bar-height           | _46px_                     | -    |
+| --fx-nav-bar-background       | _var(--fx-background-2)_  | -    |
+| --fx-nav-bar-arrow-size       | _16px_                     | -    |
+| --fx-nav-bar-icon-color       | _var(--fx-primary-color)_ | -    |
+| --fx-nav-bar-text-color       | _var(--fx-primary-color)_ | -    |
+| --fx-nav-bar-title-font-size  | _var(--fx-font-size-lg)_  | -    |
+| --fx-nav-bar-title-text-color | _var(--fx-text-color)_    | -    |
+| --fx-nav-bar-z-index          | _1_                        | -    |
 
 
 

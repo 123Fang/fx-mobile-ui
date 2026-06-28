@@ -2,7 +2,7 @@
 import VanContactList from '..';
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -60,7 +60,7 @@ const onSelect = (contact: { id: string }) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-contact-list
+    <fx-contact-list
       v-model="chosenContactId"
       :list="t('list')"
       :default-tag-text="t('defaultTagText')"
@@ -73,7 +73,7 @@ const onSelect = (contact: { id: string }) => {
 
 <style lang="scss">
 .demo-contact-list {
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-bottom: 0;
   }
 }

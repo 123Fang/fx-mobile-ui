@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Tabbar, TabbarItem } from 'ctf-ics-mobile-ui';
+import { Tabbar, TabbarItem } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Tabbar);
@@ -24,12 +24,12 @@ app.use(TabbarItem);
 `v-model` 默认绑定选中标签的索引值，通过修改 `v-model` 即可切换选中的标签。
 
 ```html
-<icsm-tabbar v-model="active">
-  <icsm-tabbar-item icon="home-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="search">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="friends-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="setting-o">标签</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar v-model="active">
+  <fx-tabbar-item icon="home-o">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="search">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="friends-o">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="setting-o">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ```js
@@ -48,12 +48,12 @@ export default {
 在标签指定 `name` 属性的情况下，`v-model` 的值为当前标签的 `name`。
 
 ```html
-<icsm-tabbar v-model="active">
-  <icsm-tabbar-item name="home" icon="home-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item name="search" icon="search">标签</icsm-tabbar-item>
-  <icsm-tabbar-item name="friends" icon="friends-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item name="setting" icon="setting-o">标签</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar v-model="active">
+  <fx-tabbar-item name="home" icon="home-o">标签</fx-tabbar-item>
+  <fx-tabbar-item name="search" icon="search">标签</fx-tabbar-item>
+  <fx-tabbar-item name="friends" icon="friends-o">标签</fx-tabbar-item>
+  <fx-tabbar-item name="setting" icon="setting-o">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ```js
@@ -72,12 +72,12 @@ export default {
 设置 `dot` 属性后，会在图标右上角展示一个小红点；设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<icsm-tabbar v-model="active">
-  <icsm-tabbar-item icon="home-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="search" dot>标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="friends-o" badge="5">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="setting-o" badge="20">标签</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar v-model="active">
+  <fx-tabbar-item icon="home-o">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="search" dot>标签</fx-tabbar-item>
+  <fx-tabbar-item icon="friends-o" badge="5">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="setting-o" badge="20">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ### 自定义图标
@@ -85,16 +85,16 @@ export default {
 通过 `icon` 插槽自定义图标，可以通过 `slot-scope` 判断标签是否选中。
 
 ```html
-<icsm-tabbar v-model="active">
-  <icsm-tabbar-item badge="3">
+<fx-tabbar v-model="active">
+  <fx-tabbar-item badge="3">
     <span>自定义</span>
     <template #icon="props">
       <img :src="props.active ? icon.active : icon.inactive" />
     </template>
-  </icsm-tabbar-item>
-  <icsm-tabbar-item icon="search">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="setting-o">标签</icsm-tabbar-item>
-</icsm-tabbar>
+ </fx-tabbar-item>
+  <fx-tabbar-item icon="search">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="setting-o">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ```js
@@ -121,12 +121,12 @@ export default {
 通过 `active-color` 属性设置选中标签的颜色，通过 `inactive-color` 属性设置未选中标签的颜色。
 
 ```html
-<icsm-tabbar v-model="active" active-color="#ee0a24">
-  <icsm-tabbar-item icon="home-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="search">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="friends-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item icon="setting-o">标签</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar v-model="active" active-color="#ee0a24">
+  <fx-tabbar-item icon="home-o">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="search">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="friends-o">标签</fx-tabbar-item>
+  <fx-tabbar-item icon="setting-o">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ### 监听切换事件
@@ -134,17 +134,17 @@ export default {
 通过 `change` 事件来监听选中标签的变化。
 
 ```html
-<icsm-tabbar v-model="active" @change="onChange">
-  <icsm-tabbar-item icon="home-o">标签 1</icsm-tabbar-item>
-  <icsm-tabbar-item icon="search">标签 2</icsm-tabbar-item>
-  <icsm-tabbar-item icon="friends-o">标签 3</icsm-tabbar-item>
-  <icsm-tabbar-item icon="setting-o">标签 4</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar v-model="active" @change="onChange">
+  <fx-tabbar-item icon="home-o">标签 1</fx-tabbar-item>
+  <fx-tabbar-item icon="search">标签 2</fx-tabbar-item>
+  <fx-tabbar-item icon="friends-o">标签 3</fx-tabbar-item>
+  <fx-tabbar-item icon="setting-o">标签 4</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -165,10 +165,10 @@ export default {
 ```html
 <router-view />
 
-<icsm-tabbar route>
-  <icsm-tabbar-item replace to="/home" icon="home-o">标签</icsm-tabbar-item>
-  <icsm-tabbar-item replace to="/search" icon="search">标签</icsm-tabbar-item>
-</icsm-tabbar>
+<fx-tabbar route>
+  <fx-tabbar-item replace to="/home" icon="home-o">标签</fx-tabbar-item>
+  <fx-tabbar-item replace to="/search" icon="search">标签</fx-tabbar-item>
+</fx-tabbar>
 ```
 
 ## API
@@ -219,7 +219,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TabbarProps, TabbarItemProps } from 'ctf-ics-mobile-ui';
+import type { TabbarProps, TabbarItemProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -230,16 +230,16 @@ import type { TabbarProps, TabbarItemProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                 | 默认值                     | 描述 |
 | ------------------------------------ | -------------------------- | ---- |
-| --icsm-tabbar-height                  | _50px_                     | -    |
-| --icsm-tabbar-z-index                 | _1_                        | -    |
-| --icsm-tabbar-background              | _var(--icsm-background-2)_  | -    |
-| --icsm-tabbar-item-font-size          | _var(--icsm-font-size-sm)_  | -    |
-| --icsm-tabbar-item-text-color         | _var(--icsm-text-color)_    | -    |
-| --icsm-tabbar-item-active-color       | _var(--icsm-primary-color)_ | -    |
-| --icsm-tabbar-item-active-background  | _var(--icsm-background-2)_  | -    |
-| --icsm-tabbar-item-line-height        | _1_                        | -    |
-| --icsm-tabbar-item-icon-size          | _22px_                     | -    |
-| --icsm-tabbar-item-icon-margin-bottom | _var(--icsm-padding-base)_  | -    |
+| --fx-tabbar-height                  | _50px_                     | -    |
+| --fx-tabbar-z-index                 | _1_                        | -    |
+| --fx-tabbar-background              | _var(--fx-background-2)_  | -    |
+| --fx-tabbar-item-font-size          | _var(--fx-font-size-sm)_  | -    |
+| --fx-tabbar-item-text-color         | _var(--fx-text-color)_    | -    |
+| --fx-tabbar-item-active-color       | _var(--fx-primary-color)_ | -    |
+| --fx-tabbar-item-active-background  | _var(--fx-background-2)_  | -    |
+| --fx-tabbar-item-line-height        | _1_                        | -    |
+| --fx-tabbar-item-icon-size          | _22px_                     | -    |
+| --fx-tabbar-item-icon-margin-bottom | _var(--fx-padding-base)_  | -    |
 
 
 

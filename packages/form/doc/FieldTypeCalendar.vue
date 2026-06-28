@@ -27,7 +27,7 @@ const onConfirm = (date: Date) => {
 </script>
 
 <template>
-  <icsm-field
+  <fx-field
     v-model="result"
     is-link
     readonly
@@ -36,7 +36,7 @@ const onConfirm = (date: Date) => {
     :placeholder="t('placeholder')"
     @click="showCalendar = true"
   />
-  <icsm-calendar
+  <fx-calendar
     v-model:show="showCalendar"
     round
     teleport="body"

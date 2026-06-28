@@ -12,7 +12,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-date-picker',
+  name: 'fx-date-picker',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -20,5 +20,5 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-datePicker-container {}
+.fx-datePicker-container {}
 </style>

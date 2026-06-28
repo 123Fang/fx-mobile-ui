@@ -3,21 +3,21 @@ export default [
     "title-cn": "安装",
     "title-en": "Quick start",
     "list": [
-      {
-        "title-cn": "更新日志",
-        "title-en": "Participation and contribution",
-        "path": "/ics/updatelog"
-      },
+      // {
+      //   "title-cn": "更新日志",
+      //   "title-en": "Participation and contribution",
+      //   "path": "/ics/updatelog"
+      // },
       {
         "title-cn": "安装使用",
         "title-en": "Install and use",
         "path": "/ics/install"
       },
-      {
-        "title-cn": "进阶用法",
-        "title-en": "advanced usage",
-        "path": "/ics/advanced-usage"
-      }
+      // {
+      //   "title-cn": "进阶用法",
+      //   "title-en": "advanced usage",
+      //   "path": "/ics/advanced-usage"
+      // }
     ]
   },
   {
@@ -464,66 +464,66 @@ export default [
       }
     ]
   },
-  {
-    "title-cn": "组合式 API",
-    "title-en": "compsition Api",
-    "list": [
-      {
-        "title-cn": "useClickAway",
-        "title-en": "useClickAway",
-        "path": "/ics/use-click-away"
-      },
-      {
-        "title-cn": "useCountDown",
-        "title-en": "useCountDown",
-        "path": "/ics/useCountDown"
-      },
-      {
-        "title-cn": "useCustomFieldValue",
-        "title-en": "useCustomFieldValue",
-        "path": "/ics/useCustomFieldValue"
-      },
-      {
-        "title-cn": "useEventListener",
-        "title-en": "useEventListener",
-        "path": "/ics/useEventListener"
-      },
-      {
-        "title-cn": "usePageVisibility",
-        "title-en": "usePageVisibility",
-        "path": "/ics/usePageVisibility"
-      },
-      {
-        "title-cn": "useRect",
-        "title-en": "useRect",
-        "path": "/ics/useRect"
-      },
-      {
-        "title-cn": "useRelation",
-        "title-en": "useRelation",
-        "path": "/ics/useRelation"
-      },
-      {
-        "title-cn": "useScrollParent",
-        "title-en": "useScrollParent",
-        "path": "/ics/useScrollParent"
-      },
-      {
-        "title-cn": "useToggle",
-        "title-en": "useToggle",
-        "path": "/ics/useToggle"
-      },
-      {
-        "title-cn": "useWindowSize",
-        "title-en": "useWindowSize",
-        "path": "/ics/useWindowSize"
-      },
-      {
-        "title-cn": "useRaf",
-        "title-en": "useRaf",
-        "path": "/ics/useRaf"
-      }
+  // {
+  //   "title-cn": "组合式 API",
+  //   "title-en": "compsition Api",
+  //   "list": [
+  //     {
+  //       "title-cn": "useClickAway",
+  //       "title-en": "useClickAway",
+  //       "path": "/ics/use-click-away"
+  //     },
+  //     {
+  //       "title-cn": "useCountDown",
+  //       "title-en": "useCountDown",
+  //       "path": "/ics/useCountDown"
+  //     },
+  //     {
+  //       "title-cn": "useCustomFieldValue",
+  //       "title-en": "useCustomFieldValue",
+  //       "path": "/ics/useCustomFieldValue"
+  //     },
+  //     {
+  //       "title-cn": "useEventListener",
+  //       "title-en": "useEventListener",
+  //       "path": "/ics/useEventListener"
+  //     },
+  //     {
+  //       "title-cn": "usePageVisibility",
+  //       "title-en": "usePageVisibility",
+  //       "path": "/ics/usePageVisibility"
+  //     },
+  //     {
+  //       "title-cn": "useRect",
+  //       "title-en": "useRect",
+  //       "path": "/ics/useRect"
+  //     },
+  //     {
+  //       "title-cn": "useRelation",
+  //       "title-en": "useRelation",
+  //       "path": "/ics/useRelation"
+  //     },
+  //     {
+  //       "title-cn": "useScrollParent",
+  //       "title-en": "useScrollParent",
+  //       "path": "/ics/useScrollParent"
+  //     },
+  //     {
+  //       "title-cn": "useToggle",
+  //       "title-en": "useToggle",
+  //       "path": "/ics/useToggle"
+  //     },
+  //     {
+  //       "title-cn": "useWindowSize",
+  //       "title-en": "useWindowSize",
+  //       "path": "/ics/useWindowSize"
+  //     },
+  //     {
+  //       "title-cn": "useRaf",
+  //       "title-en": "useRaf",
+  //       "path": "/ics/useRaf"
+  //     }
 
-    ]
-  }
+  //   ]
+  // }
 ]

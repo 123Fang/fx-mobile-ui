@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Grid, GridItem } from 'ctf-ics-mobile-ui';
+import { Grid, GridItem } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Grid);
@@ -24,12 +24,12 @@ app.use(GridItem);
 通过 `icon` 属性设置格子内的图标，`text` 属性设置文字内容。
 
 ```html
-<icsm-grid>
-  <icsm-grid-item icon="photo-o" text="文字" />
-  <icsm-grid-item icon="photo-o" text="文字" />
-  <icsm-grid-item icon="photo-o" text="文字" />
-  <icsm-grid-item icon="photo-o" text="文字" />
-</icsm-grid>
+<fx-grid>
+  <fx-grid-item icon="photo-o" text="文字" />
+  <fx-grid-item icon="photo-o" text="文字" />
+  <fx-grid-item icon="photo-o" text="文字" />
+  <fx-grid-item icon="photo-o" text="文字" />
+</fx-grid>
 ```
 
 ### 自定义列数
@@ -37,9 +37,9 @@ app.use(GridItem);
 默认一行展示四个格子，可以通过 `column-num` 自定义列数。
 
 ```html
-<icsm-grid :column-num="3">
-  <icsm-grid-item v-for="value in 6" :key="value" icon="photo-o" text="文字" />
-</icsm-grid>
+<fx-grid :column-num="3">
+  <fx-grid-item v-for="value in 6" :key="value" icon="photo-o" text="文字" />
+</fx-grid>
 ```
 
 ### 自定义内容
@@ -47,23 +47,23 @@ app.use(GridItem);
 通过插槽可以自定义格子展示的内容。
 
 ```html
-<icsm-grid :border="false" :column-num="3">
-  <icsm-grid-item>
-    <icsm-image
+<fx-grid :border="false" :column-num="3">
+  <fx-grid-item>
+    <fx-image
       src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg"
     />
-  </icsm-grid-item>
-  <icsm-grid-item>
-    <icsm-image
+ </fx-grid-item>
+  <fx-grid-item>
+    <fx-image
       src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-2.jpeg"
     />
-  </icsm-grid-item>
-  <icsm-grid-item>
-    <icsm-image
+ </fx-grid-item>
+  <fx-grid-item>
+    <fx-image
       src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-3.jpeg"
     />
-  </icsm-grid-item>
-</icsm-grid>
+ </fx-grid-item>
+</fx-grid>
 ```
 
 ### 正方形格子
@@ -71,9 +71,9 @@ app.use(GridItem);
 设置 `square` 属性后，格子的高度会和宽度保持一致。
 
 ```html
-<icsm-grid square>
-  <icsm-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
-</icsm-grid>
+<fx-grid square>
+  <fx-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+</fx-grid>
 ```
 
 ### 格子间距
@@ -81,9 +81,9 @@ app.use(GridItem);
 通过 `gutter` 属性设置格子之间的距离。
 
 ```html
-<icsm-grid :gutter="10">
-  <icsm-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
-</icsm-grid>
+<fx-grid :gutter="10">
+  <fx-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+</fx-grid>
 ```
 
 ### 内容横排
@@ -91,11 +91,11 @@ app.use(GridItem);
 将 `direction` 属性设置为 `horizontal`，可以让宫格的内容呈横向排列。
 
 ```html
-<icsm-grid direction="horizontal" :column-num="3">
-  <icsm-grid-item icon="photo-o" text="文字" />
-  <icsm-grid-item icon="photo-o" text="文字" />
-  <icsm-grid-item icon="photo-o" text="文字" />
-</icsm-grid>
+<fx-grid direction="horizontal" :column-num="3">
+  <fx-grid-item icon="photo-o" text="文字" />
+  <fx-grid-item icon="photo-o" text="文字" />
+  <fx-grid-item icon="photo-o" text="文字" />
+</fx-grid>
 ```
 
 ### 页面导航
@@ -103,10 +103,10 @@ app.use(GridItem);
 通过 `to` 属性设置 Vue Router 跳转链接，通过 `url` 属性设置 URL 跳转链接。
 
 ```html
-<icsm-grid clickable :column-num="2">
-  <icsm-grid-item icon="home-o" text="路由跳转" to="/" />
-  <icsm-grid-item icon="search" text="URL 跳转" url="https://github.com" />
-</icsm-grid>
+<fx-grid clickable :column-num="2">
+  <fx-grid-item icon="home-o" text="路由跳转" to="/" />
+  <fx-grid-item icon="search" text="URL 跳转" url="https://github.com" />
+</fx-grid>
 ```
 
 ### 徽标提示
@@ -114,10 +114,10 @@ app.use(GridItem);
 设置 `dot` 属性后，会在图标右上角展示一个小红点。设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<icsm-grid :column-num="2">
-  <icsm-grid-item icon="home-o" text="文字" dot />
-  <icsm-grid-item icon="search" text="文字" badge="99+" />
-</icsm-grid>
+<fx-grid :column-num="2">
+  <fx-grid-item icon="home-o" text="文字" dot />
+  <fx-grid-item icon="search" text="文字" badge="99+" />
+</fx-grid>
 ```
 
 ## API
@@ -170,7 +170,7 @@ app.use(GridItem);
 组件导出以下类型定义：
 
 ```ts
-import type { GridProps, GridDirection, GridItemProps } from 'ctf-ics-mobile-ui';
+import type { GridProps, GridDirection, GridItemProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -181,11 +181,11 @@ import type { GridProps, GridDirection, GridItemProps } from 'ctf-ics-mobile-ui'
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-grid-item-content-padding | _var(--icsm-padding-md) var(--icsm-padding-xs)_ | - |
-| --icsm-grid-item-content-background | _var(--icsm-background-2)_ | - |
-| --icsm-grid-item-content-active-color | _var(--icsm-active-color)_ | - |
-| --icsm-grid-item-icon-size | _28px_ | - |
-| --icsm-grid-item-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-grid-item-text-font-size | _var(--icsm-font-size-sm)_ | - |
+| --fx-grid-item-content-padding | _var(--fx-padding-md) var(--fx-padding-xs)_ | - |
+| --fx-grid-item-content-background | _var(--fx-background-2)_ | - |
+| --fx-grid-item-content-active-color | _var(--fx-active-color)_ | - |
+| --fx-grid-item-icon-size | _28px_ | - |
+| --fx-grid-item-text-color | _var(--fx-text-color)_ | - |
+| --fx-grid-item-text-font-size | _var(--fx-font-size-sm)_ | - |
 
 <br/><br/><br/><br/><br/><br/>

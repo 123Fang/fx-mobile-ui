@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-skeleton-paragraph',
+  name: 'fx-skeleton-paragraph',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-skeleton-paragraph-container {}
+.fx-skeleton-paragraph-container {}
 </style>

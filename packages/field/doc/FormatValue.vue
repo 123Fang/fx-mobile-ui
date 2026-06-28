@@ -27,20 +27,20 @@ const formatter = (value: string) => value.replace(/\d/g, '');
 
 <template>
   <demo-block :title="t('formatValue')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="value1"
         :label="t('text')"
         :formatter="formatter"
         :placeholder="t('formatOnChange')"
       />
-      <icsm-field
+      <fx-field
         v-model="value2"
         :label="t('text')"
         :formatter="formatter"
         format-trigger="onBlur"
         :placeholder="t('formatOnBlur')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

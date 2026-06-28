@@ -9,7 +9,7 @@ import {
   disabledColumns,
   customKeyColumns,
 } from './data';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 // import { useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
@@ -70,7 +70,7 @@ const onCancel = () => showToast(t('cancel'));
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-picker
+    <fx-picker
       :title="t('title')"
       :columns="t('basicColumns')"
       @change="onChange1"
@@ -82,7 +82,7 @@ const onCancel = () => showToast(t('cancel'));
   <WithPopup />
 
   <demo-block card :title="t('modelValue')">
-    <icsm-picker
+    <fx-picker
       v-model="selectedValues"
       :title="t('title')"
       :columns="t('basicColumns')"
@@ -90,7 +90,7 @@ const onCancel = () => showToast(t('cancel'));
   </demo-block>
 
   <demo-block card :title="t('multipleColumns')">
-    <icsm-picker
+    <fx-picker
       :title="t('title')"
       :columns="t('dateColumns')"
       @cancel="onCancel"
@@ -99,31 +99,31 @@ const onCancel = () => showToast(t('cancel'));
   </demo-block>
 
   <demo-block card :title="t('cascade')">
-    <icsm-picker :title="t('title')" :columns="t('cascadeColumns')" />
+    <fx-picker :title="t('title')" :columns="t('cascadeColumns')" />
   </demo-block>
 
   <demo-block card :title="t('disableOption')">
-    <icsm-picker :title="t('title')" :columns="t('disabledColumns')" />
+    <fx-picker :title="t('title')" :columns="t('disabledColumns')" />
   </demo-block>
 
   <demo-block card :title="t('loadingStatus')">
-    <icsm-picker loading :title="t('title')" />
+    <fx-picker loading :title="t('title')" />
   </demo-block>
 
   <demo-block card :title="t('emptyStatus')">
-    <icsm-picker :title="t('title')">
+    <fx-picker :title="t('title')">
       <template #empty>
-        <icsm-empty
+        <fx-empty
           image="https://fastly.jsdelivr.net/npm/@vant/assets/custom-empty-image.png"
           image-size="80"
           :description="t('emptyDescription')"
         />
       </template>
-    </icsm-picker>
+   </fx-picker>
   </demo-block>
 
   <demo-block card :title="t('customChildrenKey')">
-    <icsm-picker
+    <fx-picker
       :title="t('title')"
       :columns="t('customChildrenColumns')"
       :columns-field-names="customFieldName"

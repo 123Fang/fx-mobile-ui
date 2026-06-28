@@ -3,7 +3,7 @@
 // import VanSwipeItem from '../../swipe-item';
 // import { cdnURL, useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -36,65 +36,65 @@ const onChange = (index: number) => showToast(t('message') + index);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-swipe :autoplay="3000" indicator-color="white">
-      <icsm-swipe-item>1</icsm-swipe-item>
-      <icsm-swipe-item>2</icsm-swipe-item>
-      <icsm-swipe-item>3</icsm-swipe-item>
-      <icsm-swipe-item>4</icsm-swipe-item>
-    </icsm-swipe>
+    <fx-swipe :autoplay="3000" indicator-color="white">
+      <fx-swipe-item>1</fx-swipe-item>
+      <fx-swipe-item>2</fx-swipe-item>
+      <fx-swipe-item>3</fx-swipe-item>
+      <fx-swipe-item>4</fx-swipe-item>
+   </fx-swipe>
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-swipe :autoplay="3000" lazy-render>
-      <icsm-swipe-item v-for="image in images" :key="image">
+    <fx-swipe :autoplay="3000" lazy-render>
+      <fx-swipe-item v-for="image in images" :key="image">
         <img :src="image" />
-      </icsm-swipe-item>
-    </icsm-swipe>
+     </fx-swipe-item>
+   </fx-swipe>
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-swipe indicator-color="white" @change="onChange">
-      <icsm-swipe-item>1</icsm-swipe-item>
-      <icsm-swipe-item>2</icsm-swipe-item>
-      <icsm-swipe-item>3</icsm-swipe-item>
-      <icsm-swipe-item>4</icsm-swipe-item>
-    </icsm-swipe>
+    <fx-swipe indicator-color="white" @change="onChange">
+      <fx-swipe-item>1</fx-swipe-item>
+      <fx-swipe-item>2</fx-swipe-item>
+      <fx-swipe-item>3</fx-swipe-item>
+      <fx-swipe-item>4</fx-swipe-item>
+   </fx-swipe>
   </demo-block>
 
   <demo-block :title="t('title4')">
-    <icsm-swipe
+    <fx-swipe
       vertical
       :autoplay="3000"
       indicator-color="white"
       style="height: 200px"
       class="demo-swipe--vertical"
     >
-      <icsm-swipe-item>1</icsm-swipe-item>
-      <icsm-swipe-item>2</icsm-swipe-item>
-      <icsm-swipe-item>3</icsm-swipe-item>
-      <icsm-swipe-item>4</icsm-swipe-item>
-    </icsm-swipe>
+      <fx-swipe-item>1</fx-swipe-item>
+      <fx-swipe-item>2</fx-swipe-item>
+      <fx-swipe-item>3</fx-swipe-item>
+      <fx-swipe-item>4</fx-swipe-item>
+   </fx-swipe>
   </demo-block>
 
   <demo-block :title="t('title5')">
-    <icsm-swipe :width="300" :loop="false" indicator-color="white">
-      <icsm-swipe-item>1</icsm-swipe-item>
-      <icsm-swipe-item>2</icsm-swipe-item>
-      <icsm-swipe-item>3</icsm-swipe-item>
-      <icsm-swipe-item>4</icsm-swipe-item>
-    </icsm-swipe>
+    <fx-swipe :width="300" :loop="false" indicator-color="white">
+      <fx-swipe-item>1</fx-swipe-item>
+      <fx-swipe-item>2</fx-swipe-item>
+      <fx-swipe-item>3</fx-swipe-item>
+      <fx-swipe-item>4</fx-swipe-item>
+   </fx-swipe>
   </demo-block>
 
   <demo-block :title="t('title6')">
-    <icsm-swipe>
-      <icsm-swipe-item>1</icsm-swipe-item>
-      <icsm-swipe-item>2</icsm-swipe-item>
-      <icsm-swipe-item>3</icsm-swipe-item>
-      <icsm-swipe-item>4</icsm-swipe-item>
+    <fx-swipe>
+      <fx-swipe-item>1</fx-swipe-item>
+      <fx-swipe-item>2</fx-swipe-item>
+      <fx-swipe-item>3</fx-swipe-item>
+      <fx-swipe-item>4</fx-swipe-item>
       <template #indicator="{ active, total }">
         <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
       </template>
-    </icsm-swipe>
+   </fx-swipe>
   </demo-block>
 </template>
 
@@ -102,9 +102,9 @@ const onChange = (index: number) => showToast(t('message') + index);
 .demo-swipe {
   padding-bottom: 30px;
 
-  .icsm-swipe {
+  .fx-swipe {
     &-item {
-      color: var(--icsm-white);
+      color: var(--fx-white);
       font-size: 20px;
       line-height: 150px;
       text-align: center;
@@ -124,13 +124,13 @@ const onChange = (index: number) => showToast(t('message') + index);
       width: 100%;
       height: 240px;
       padding: 30px 60px;
-      background-color: var(--icsm-white);
+      background-color: var(--fx-white);
       pointer-events: none;
     }
   }
 
   &--vertical {
-    .icsm-swipe-item {
+    .fx-swipe-item {
       line-height: 200px;
     }
   }
@@ -140,7 +140,7 @@ const onChange = (index: number) => showToast(t('message') + index);
     right: 5px;
     bottom: 5px;
     padding: 2px 5px;
-    color: var(--icsm-white);
+    color: var(--fx-white);
     font-size: 12px;
     background: rgba(0, 0, 0, 0.1);
   }

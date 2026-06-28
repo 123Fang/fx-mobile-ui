@@ -1,10 +1,10 @@
 <template>
   <headerBlockVue @changeTheme="changeTheme" />
-  <icsm-config-provider :theme="theme">
+  <fx-config-provider :theme="theme">
     <div :class="isInIframe ? 'in-iframe-container' : 'not-iframe-container'">
       <router-view></router-view>
     </div>
-  </icsm-config-provider>
+ </fx-config-provider>
 </template>
 <script setup>
 import { watch, ref, computed } from "vue";
@@ -60,14 +60,14 @@ const switchIframeTheme = (value) => {
     const iframeDoc = window.myIframe?.contentWindow?.document
     if (iframeDoc) {
       const elements = iframeDoc.querySelector('body');
-      elements.classList.add('iframe-body--dark', 'icsm-doc-theme-dark');
-      // icsm-doc-theme-dark
+      elements.classList.add('iframe-body--dark', 'fx-doc-theme-dark');
+      // fx-doc-theme-dark
     }
   } else {
     const iframeDoc = window.myIframe?.contentWindow?.document
     if (iframeDoc) {
       const elements = iframeDoc.querySelector('body');
-      elements.classList.remove('iframe-body--dark', 'icsm-doc-theme-dark');
+      elements.classList.remove('iframe-body--dark', 'fx-doc-theme-dark');
     }
   }
 }

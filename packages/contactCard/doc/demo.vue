@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -31,11 +31,11 @@ const onEdit = () => showToast(t('edit'));
 
 <template>
   <demo-block :title="t('addContact')">
-    <icsm-contact-card type="add" @click="onAdd" />
+    <fx-contact-card type="add" @click="onAdd" />
   </demo-block>
 
   <demo-block :title="t('editContact')">
-    <icsm-contact-card
+    <fx-contact-card
       type="edit"
       :name="currentContact.name"
       :tel="currentContact.tel"
@@ -44,7 +44,7 @@ const onEdit = () => showToast(t('edit'));
   </demo-block>
 
   <demo-block :title="t('uneditable')">
-    <icsm-contact-card
+    <fx-contact-card
       type="edit"
       :name="currentContact.name"
       :tel="currentContact.tel"

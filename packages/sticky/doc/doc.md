@@ -10,7 +10,7 @@ Sticky 组件与 CSS 中 `position: sticky` 属性实现的效果一致，当组
 
 ```js
 import { createApp } from 'vue';
-import { Sticky } from 'ctf-ics-mobile-ui';
+import { Sticky } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Sticky);
@@ -23,9 +23,9 @@ app.use(Sticky);
 将内容包裹在 `Sticky` 组件内即可。
 
 ```html
-<icsm-sticky>
-  <icsm-button type="primary">基础用法</icsm-button>
-</icsm-sticky>
+<fx-sticky>
+  <fx-button type="primary">基础用法</fx-button>
+</fx-sticky>
 ```
 
 ### 吸顶距离
@@ -33,9 +33,9 @@ app.use(Sticky);
 通过 `offset-top` 属性可以设置组件在吸顶时与顶部的距离。
 
 ```html
-<icsm-sticky :offset-top="50">
-  <icsm-button type="primary">吸顶距离</icsm-button>
-</icsm-sticky>
+<fx-sticky :offset-top="50">
+  <fx-button type="primary">吸顶距离</fx-button>
+</fx-sticky>
 ```
 
 ### 指定容器
@@ -44,9 +44,9 @@ app.use(Sticky);
 
 ```html
 <div ref="container" style="height: 150px;">
-  <icsm-sticky :container="container">
-    <icsm-button type="warning">指定容器</icsm-button>
-  </icsm-sticky>
+  <fx-sticky :container="container">
+    <fx-button type="warning">指定容器</fx-button>
+ </fx-sticky>
 </div>
 ```
 
@@ -64,9 +64,9 @@ export default {
 将 `position` 设置为 `bottom` 可以让组件吸附在底部。通过 `offset-bottom` 属性可以设置组件在吸底时与底部的距离。
 
 ```html
-<icsm-sticky :offset-bottom="50" position="bottom">
-  <icsm-button type="primary">吸底距离</icsm-button>
-</icsm-sticky>
+<fx-sticky :offset-bottom="50" position="bottom">
+  <fx-button type="primary">吸底距离</fx-button>
+</fx-sticky>
 ```
 
 ## API
@@ -93,7 +93,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { StickyProps, StickyPosition } from 'ctf-ics-mobile-ui';
+import type { StickyProps, StickyPosition } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -104,7 +104,7 @@ import type { StickyProps, StickyPosition } from 'ctf-ics-mobile-ui';
 
 | 名称                 | 默认值 | 描述 |
 | -------------------- | ------ | ---- |
-| --icsm-sticky-z-index | _99_   | -    |
+| --fx-sticky-z-index | _99_   | -    |
 
 
 

@@ -62,28 +62,28 @@ const onConfirm = () => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-dropdown-menu>
-      <icsm-dropdown-item v-model="value1" :options="option1" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-    </icsm-dropdown-menu>
+    <fx-dropdown-menu>
+      <fx-dropdown-item v-model="value1" :options="option1" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+   </fx-dropdown-menu>
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-dropdown-menu>
-      <icsm-dropdown-item v-model="value1" :options="option1" />
-      <icsm-dropdown-item :title="t('itemTitle')" ref="item">
-        <icsm-cell center :title="t('switchTitle1')">
+    <fx-dropdown-menu>
+      <fx-dropdown-item v-model="value1" :options="option1" />
+      <fx-dropdown-item :title="t('itemTitle')" ref="item">
+        <fx-cell center :title="t('switchTitle1')">
           <template #right-icon>
-            <icsm-switch v-model="switch1" />
+            <fx-switch v-model="switch1" />
           </template>
-        </icsm-cell>
-        <icsm-cell center :title="t('switchTitle2')">
+       </fx-cell>
+        <fx-cell center :title="t('switchTitle2')">
           <template #right-icon>
-            <icsm-switch v-model="switch2" />
+            <fx-switch v-model="switch2" />
           </template>
-        </icsm-cell>
+       </fx-cell>
         <div style="padding: 5px 16px">
-          <icsm-button
+          <fx-button
             type="primary"
             block
             round
@@ -91,41 +91,41 @@ const onConfirm = () => {
             @click="onConfirm"
           >
             {{ t('confirm') }}
-          </icsm-button>
+         </fx-button>
         </div>
-      </icsm-dropdown-item>
-    </icsm-dropdown-menu>
+     </fx-dropdown-item>
+   </fx-dropdown-menu>
   </demo-block>
 
   <demo-block :title="t('customActiveColor')">
-    <icsm-dropdown-menu active-color="#ee0a24">
-      <icsm-dropdown-item v-model="value1" :options="option1" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-    </icsm-dropdown-menu>
+    <fx-dropdown-menu active-color="#ee0a24">
+      <fx-dropdown-item v-model="value1" :options="option1" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+   </fx-dropdown-menu>
   </demo-block>
 
   <demo-block :title="t('swipeItems')">
-    <icsm-dropdown-menu swipe-threshold="4">
-      <icsm-dropdown-item v-model="value1" :options="option1" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-    </icsm-dropdown-menu>
+    <fx-dropdown-menu swipe-threshold="4">
+      <fx-dropdown-item v-model="value1" :options="option1" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+   </fx-dropdown-menu>
   </demo-block>
 
   <demo-block :title="t('expandDirection')">
-    <icsm-dropdown-menu direction="up">
-      <icsm-dropdown-item v-model="value1" :options="option1" />
-      <icsm-dropdown-item v-model="value2" :options="option2" />
-    </icsm-dropdown-menu>
+    <fx-dropdown-menu direction="up">
+      <fx-dropdown-item v-model="value1" :options="option1" />
+      <fx-dropdown-item v-model="value2" :options="option2" />
+   </fx-dropdown-menu>
   </demo-block>
 
   <demo-block :title="t('disableMenu')">
-    <icsm-dropdown-menu>
-      <icsm-dropdown-item v-model="value1" disabled :options="option1" />
-      <icsm-dropdown-item v-model="value2" disabled :options="option2" />
-    </icsm-dropdown-menu>
+    <fx-dropdown-menu>
+      <fx-dropdown-item v-model="value1" disabled :options="option1" />
+      <fx-dropdown-item v-model="value2" disabled :options="option2" />
+   </fx-dropdown-menu>
   </demo-block>
 </template>
 

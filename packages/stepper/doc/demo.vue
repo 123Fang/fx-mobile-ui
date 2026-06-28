@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -51,70 +51,70 @@ const beforeChange = () => {
 
 <template>
   <demo-block card>
-    <icsm-cell center :title="t('basicUsage')">
+    <fx-cell center :title="t('basicUsage')">
       <template #value>
-        <icsm-stepper v-model="stepper1" />
+        <fx-stepper v-model="stepper1" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('step')">
+    <fx-cell center :title="t('step')">
       <template #value>
-        <icsm-stepper v-model="stepper2" step="2" />
+        <fx-stepper v-model="stepper2" step="2" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('range')">
+    <fx-cell center :title="t('range')">
       <template #value>
-        <icsm-stepper v-model="stepper3" :min="5" :max="8" />
+        <fx-stepper v-model="stepper3" :min="5" :max="8" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('integer')">
+    <fx-cell center :title="t('integer')">
       <template #value>
-        <icsm-stepper v-model="stepper4" integer />
+        <fx-stepper v-model="stepper4" integer />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('disabled')">
+    <fx-cell center :title="t('disabled')">
       <template #value>
-        <icsm-stepper v-model="stepper5" disabled />
+        <fx-stepper v-model="stepper5" disabled />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('disableInput')">
+    <fx-cell center :title="t('disableInput')">
       <template #value>
-        <icsm-stepper v-model="disabledInput" disable-input />
+        <fx-stepper v-model="disabledInput" disable-input />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('decimalLength')">
+    <fx-cell center :title="t('decimalLength')">
       <template #value>
-        <icsm-stepper v-model="stepper8" :decimal-length="1" step="0.2" />
+        <fx-stepper v-model="stepper8" :decimal-length="1" step="0.2" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('customSize')">
+    <fx-cell center :title="t('customSize')">
       <template #value>
-        <icsm-stepper v-model="stepper7" button-size="32px" input-width="40px" />
+        <fx-stepper v-model="stepper7" button-size="32px" input-width="40px" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('beforeChange')">
+    <fx-cell center :title="t('beforeChange')">
       <template #value>
-        <icsm-stepper v-model="stepper6" :before-change="beforeChange" />
+        <fx-stepper v-model="stepper6" :before-change="beforeChange" />
       </template>
-    </icsm-cell>
+   </fx-cell>
 
-    <icsm-cell center :title="t('roundTheme')">
+    <fx-cell center :title="t('roundTheme')">
       <template #value>
-        <icsm-stepper
+        <fx-stepper
           v-model="stepperRound"
           theme="round"
           button-size="22"
           disable-input
         />
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 </template>
 

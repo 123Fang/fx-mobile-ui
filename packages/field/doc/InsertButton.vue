@@ -24,8 +24,8 @@ const sms = ref('');
 
 <template>
   <demo-block :title="t('insertButton')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="sms"
         center
         clearable
@@ -33,11 +33,11 @@ const sms = ref('');
         :placeholder="t('smsPlaceholder')"
       >
         <template #button>
-          <icsm-button size="small" type="primary">
+          <fx-button size="small" type="primary">
             {{ t('sendSMS') }}
-          </icsm-button>
+         </fx-button>
         </template>
-      </icsm-field>
-    </icsm-cell-group>
+     </fx-field>
+   </fx-cell-group>
   </demo-block>
 </template>

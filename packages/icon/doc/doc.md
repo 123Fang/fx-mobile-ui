@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Icon } from 'ctf-ics-mobile-ui';
+import { Icon } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Icon);
@@ -23,7 +23,7 @@ app.use(Icon);
 通过 `name` 属性来指定需要使用的图标，Vant 内置了一套图标库（见右侧示例），可以直接传入对应的名称来使用。
 
 ```html
-<icsm-icon name="chat-o" />
+<fx-icon name="chat-o" />
 ```
 
 ### 使用图片 URL
@@ -31,7 +31,7 @@ app.use(Icon);
 你也可以直接在 `name` 属性中传入一个图片 URL 来作为图标。
 
 ```html
-<icsm-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
+<fx-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
 ```
 
 ### 徽标提示
@@ -39,9 +39,9 @@ app.use(Icon);
 设置 `dot` 属性后，会在图标右上角展示一个小红点；设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<icsm-icon name="chat-o" dot />
-<icsm-icon name="chat-o" badge="9" />
-<icsm-icon name="chat-o" badge="99+" />
+<fx-icon name="chat-o" dot />
+<fx-icon name="chat-o" badge="9" />
+<fx-icon name="chat-o" badge="99+" />
 ```
 
 ### 图标颜色
@@ -49,8 +49,8 @@ app.use(Icon);
 通过 `color` 属性来设置图标的颜色。
 
 ```html
-<icsm-icon name="cart-o" color="#1989fa" />
-<icsm-icon name="fire-o" color="#ee0a24" />
+<fx-icon name="cart-o" color="#1989fa" />
+<fx-icon name="fire-o" color="#ee0a24" />
 ```
 
 ### 图标大小
@@ -59,9 +59,9 @@ app.use(Icon);
 
 ```html
 <!-- 不指定单位，默认使用 px -->
-<icsm-icon name="chat-o" size="40" />
+<fx-icon name="chat-o" size="40" />
 <!-- 指定使用 rem 单位 -->
-<icsm-icon name="chat-o" size="3rem" />
+<fx-icon name="chat-o" size="3rem" />
 ```
 
 ### 自定义图标
@@ -86,7 +86,7 @@ app.use(Icon);
 
 ```html
 <!-- 通过 class-prefix 指定类名为 my-icon -->
-<icsm-icon class-prefix="my-icon" name="extra" />
+<fx-icon class-prefix="my-icon" name="extra" />
 ```
 
 ## API
@@ -115,7 +115,7 @@ app.use(Icon);
 组件导出以下类型定义：
 
 ```ts
-import type { IconProps } from 'ctf-ics-mobile-ui';
+import type { IconProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -126,6 +126,6 @@ import type { IconProps } from 'ctf-ics-mobile-ui';
 
 | 名称                   | 默认值       | 描述 |
 | ---------------------- | ------------ | ---- |
-| --icsm-icon-font-family | _'icsm-icon'_ | -    |
+| --fx-icon-font-family | _'icsm-icon'_ | -    |
 
 <br/><br/><br/><br/><br/><br/>

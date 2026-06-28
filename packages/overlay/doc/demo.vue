@@ -22,37 +22,37 @@ const showZIndex = ref(false);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-button
+    <fx-button
       type="primary"
       :text="t('showOverlay')"
       style="margin-left: 16px"
       @click="show = true"
     />
-    <icsm-overlay :show="show" @click="show = false" />
+    <fx-overlay :show="show" @click="show = false" />
   </demo-block>
 
   <demo-block :title="t('embeddedContent')">
-    <icsm-button
+    <fx-button
       type="primary"
       :text="t('embeddedContent')"
       style="margin-left: 16px"
       @click="showEmbedded = true"
     />
-    <icsm-overlay :show="showEmbedded" @click="showEmbedded = false">
+    <fx-overlay :show="showEmbedded" @click="showEmbedded = false">
       <div class="wrapper">
         <div class="block" @click.stop />
       </div>
-    </icsm-overlay>
+   </fx-overlay>
   </demo-block>
 
   <demo-block :title="t('setZIndex')">
-    <icsm-button
+    <fx-button
       type="primary"
       :text="t('setZIndex')"
       style="margin-left: 16px"
       @click="showZIndex = true"
     />
-    <icsm-overlay :show="showZIndex" @click="showZIndex = false" z-index="100" />
+    <fx-overlay :show="showZIndex" @click="showZIndex = false" z-index="100" />
   </demo-block>
 </template>
 
@@ -68,7 +68,7 @@ const showZIndex = ref(false);
   .block {
     width: 120px;
     height: 120px;
-    background-color: var(--icsm-background-2);
+    background-color: var(--fx-background-2);
     border-radius: 4px;
   }
 }

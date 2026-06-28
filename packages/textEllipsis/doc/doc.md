@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TextEllipsis } from 'ctf-ics-mobile-ui';
+import { TextEllipsis } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(TextEllipsis);
@@ -23,7 +23,7 @@ app.use(TextEllipsis);
 默认展示 `1` 行，超过 `1` 行显示省略号。
 
 ```html
-<icsm-text-ellipsis :content="text" />
+<fx-text-ellipsis :content="text" />
 ```
 
 ```js
@@ -40,7 +40,7 @@ export default {
 超过行数支持展开/收起。
 
 ```html
-<icsm-text-ellipsis :content="text" expand-text="展开" collapse-text="收起" />
+<fx-text-ellipsis :content="text" expand-text="展开" collapse-text="收起" />
 ```
 
 ```js
@@ -58,7 +58,7 @@ export default {
 通过设置 `rows` 限制展示行数。
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="3"
   :content="text"
   expand-text="展开"
@@ -83,7 +83,7 @@ export default {
 - 头部省略：
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="1"
   :content="text"
   expand-text="展开"
@@ -105,7 +105,7 @@ export default {
 - 中部省略：
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="2"
   :content="text"
   expand-text="展开"
@@ -129,9 +129,9 @@ export default {
 通过插槽 `action` 自定义操作内容。
 
 ```html
-<icsm-text-ellipsis :content="text">
+<fx-text-ellipsis :content="text">
   <template #action="{ expanded }">{{ expanded ? '收起' : '展开' }}</template>
-</icsm-text-ellipsis>
+</fx-text-ellipsis>
 ```
 
 ```js
@@ -197,7 +197,7 @@ import type {
 
 ```js
 import { createApp } from 'vue';
-import { TextEllipsis } from 'ctf-ics-mobile-ui';
+import { TextEllipsis } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(TextEllipsis);
@@ -210,7 +210,7 @@ app.use(TextEllipsis);
 默认展示 `1` 行，超过 `1` 行显示省略号。
 
 ```html
-<icsm-text-ellipsis :content="text" />
+<fx-text-ellipsis :content="text" />
 ```
 
 ```js
@@ -227,7 +227,7 @@ export default {
 超过行数支持展开/收起。
 
 ```html
-<icsm-text-ellipsis :content="text" expand-text="展开" collapse-text="收起" />
+<fx-text-ellipsis :content="text" expand-text="展开" collapse-text="收起" />
 ```
 
 ```js
@@ -245,7 +245,7 @@ export default {
 通过设置 `rows` 限制展示行数。
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="3"
   :content="text"
   expand-text="展开"
@@ -270,7 +270,7 @@ export default {
 - 头部省略：
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="1"
   :content="text"
   expand-text="展开"
@@ -292,7 +292,7 @@ export default {
 - 中部省略：
 
 ```html
-<icsm-text-ellipsis
+<fx-text-ellipsis
   rows="2"
   :content="text"
   expand-text="展开"
@@ -316,9 +316,9 @@ export default {
 通过插槽 `action` 自定义操作内容。
 
 ```html
-<icsm-text-ellipsis :content="text">
+<fx-text-ellipsis :content="text">
   <template #action="{ expanded }">{{ expanded ? '收起' : '展开' }}</template>
-</icsm-text-ellipsis>
+</fx-text-ellipsis>
 ```
 
 ```js
@@ -372,14 +372,14 @@ import type {
   TextEllipsisProps,
   TextEllipsisInstance,
   TextEllipsisThemeVars,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `TextEllipsisInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { TextEllipsisInstance } from 'ctf-ics-mobile-ui';
+import type { TextEllipsisInstance } from 'fx-mobile-ui';
 
 const textEllipsisRef = ref<TextEllipsisInstance>();
 
@@ -394,8 +394,8 @@ textEllipsisRef.value?.toggle();
 
 | 名称                             | 默认值            | 描述           |
 | -------------------------------- | ----------------- | -------------- |
-| --icsm-text-ellipsis-action-color | _var(--icsm-blue)_ | 操作按钮的颜色 |
-| --icsm-text-ellipsis-line-height  | _1.6_             | 文本的行高     |
+| --fx-text-ellipsis-action-color | _var(--fx-blue)_ | 操作按钮的颜色 |
+| --fx-text-ellipsis-line-height  | _1.6_             | 文本的行高     |
 ;
 ```
 
@@ -403,7 +403,7 @@ textEllipsisRef.value?.toggle();
 
 ```ts
 import { ref } from 'vue';
-import type { TextEllipsisInstance } from 'ctf-ics-mobile-ui';
+import type { TextEllipsisInstance } from 'fx-mobile-ui';
 
 const textEllipsisRef = ref<TextEllipsisInstance>();
 
@@ -418,8 +418,8 @@ textEllipsisRef.value?.toggle();
 
 | 名称                             | 默认值            | 描述           |
 | -------------------------------- | ----------------- | -------------- |
-| --icsm-text-ellipsis-action-color | _var(--icsm-blue)_ | 操作按钮的颜色 |
-| --icsm-text-ellipsis-line-height  | _1.6_             | 文本的行高     |
+| --fx-text-ellipsis-action-color | _var(--fx-blue)_ | 操作按钮的颜色 |
+| --fx-text-ellipsis-line-height  | _1.6_             | 文本的行高     |
 
 
 

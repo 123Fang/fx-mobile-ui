@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { showDialog, showConfirmDialog, Dialog as VanDialog } from 'ctf-ics-mobile-ui';
+import { showDialog, showConfirmDialog, Dialog as VanDialog } from 'fx-mobile-ui';
 import { ref } from 'vue';
 // import { cdnURL, useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
@@ -90,30 +90,30 @@ const onClickBeforeClose = () => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('alert1')" @click="onClickAlert" />
-    <icsm-cell is-link :title="t('alert2')" @click="onClickAlert2" />
-    <icsm-cell is-link :title="t('confirm')" @click="onClickConfirm" />
+    <fx-cell is-link :title="t('alert1')" @click="onClickAlert" />
+    <fx-cell is-link :title="t('alert2')" @click="onClickAlert2" />
+    <fx-cell is-link :title="t('confirm')" @click="onClickConfirm" />
   </demo-block>
 
   <demo-block card :title="t('roundButton')">
-    <icsm-cell is-link :title="t('alert1')" @click="onClickRound" />
-    <icsm-cell is-link :title="t('alert2')" @click="onClickRound2" />
+    <fx-cell is-link :title="t('alert1')" @click="onClickRound" />
+    <fx-cell is-link :title="t('alert2')" @click="onClickRound2" />
   </demo-block>
 
   <demo-block card :title="t('beforeClose')">
-    <icsm-cell is-link :title="t('beforeClose')" @click="onClickBeforeClose" />
+    <fx-cell is-link :title="t('beforeClose')" @click="onClickBeforeClose" />
   </demo-block>
 
   <demo-block card :title="t('useComponent')">
-    <icsm-cell is-link :title="t('useComponent')" @click="show = true" />
-    <icsm-dialog
+    <fx-cell is-link :title="t('useComponent')" @click="show = true" />
+    <fx-dialog
       v-model:show="show"
       :title="t('title')"
       show-cancel-button
       :lazy-render="false"
     >
       <img :src="image" />
-    </icsm-dialog>
+   </fx-dialog>
   </demo-block>
 </template>
 

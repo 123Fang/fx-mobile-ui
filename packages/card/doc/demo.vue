@@ -19,7 +19,7 @@ const imageURL = cdnURL('ipad.jpeg');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-card
+    <fx-card
       num="2"
       price="2.00"
       :desc="t('desc')"
@@ -29,7 +29,7 @@ const imageURL = cdnURL('ipad.jpeg');
   </demo-block>
 
   <demo-block :title="t('discountInfo')">
-    <icsm-card
+    <fx-card
       num="2"
       price="2.00"
       origin-price="10.00"
@@ -41,7 +41,7 @@ const imageURL = cdnURL('ipad.jpeg');
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-card
+    <fx-card
       num="2"
       price="2.00"
       :desc="t('desc')"
@@ -49,27 +49,27 @@ const imageURL = cdnURL('ipad.jpeg');
       :thumb="imageURL"
     >
       <template #tags>
-        <icsm-tag plain type="primary" style="margin-right: 5px">
+        <fx-tag plain type="primary" style="margin-right: 5px">
           {{ t('tag') }}
-        </icsm-tag>
-        <icsm-tag plain type="primary">{{ t('tag') }}</icsm-tag>
+       </fx-tag>
+        <fx-tag plain type="primary">{{ t('tag') }}</fx-tag>
       </template>
 
       <template #footer>
-        <icsm-button round size="mini">
+        <fx-button round size="mini">
           {{ t('button') }}
-        </icsm-button>
-        <icsm-button round size="mini">
+       </fx-button>
+        <fx-button round size="mini">
           {{ t('button') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-card>
+   </fx-card>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-card {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 }
 </style>
 

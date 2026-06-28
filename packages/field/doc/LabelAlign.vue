@@ -29,31 +29,31 @@ const value = ref('');
 
 <template>
   <demo-block :title="t('labelAlign')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="value"
         :label="t('label')"
         :placeholder="t('top')"
         label-align="top"
       />
-      <icsm-field
+      <fx-field
         v-model="value"
         :label="t('label')"
         :placeholder="t('left')"
         label-align="left"
       />
-      <icsm-field
+      <fx-field
         v-model="value"
         :label="t('label')"
         :placeholder="t('center')"
         label-align="center"
       />
-      <icsm-field
+      <fx-field
         v-model="value"
         :label="t('label')"
         :placeholder="t('right')"
         label-align="right"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

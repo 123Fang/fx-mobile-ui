@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { DatePicker } from 'ctf-ics-mobile-ui';
+import { DatePicker } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(DatePicker);
@@ -23,7 +23,7 @@ app.use(DatePicker);
 通过 `v-model` 绑定当前选中的日期，通过 `min-date` 和 `max-date` 属性来设定可选的时间范围。
 
 ```html
-<icsm-date-picker
+<fx-date-picker
   v-model="currentDate"
   title="选择日期"
   :min-date="minDate"
@@ -58,7 +58,7 @@ export default {
 - 传入 `['month', 'day']` 来选择月份和日期。
 
 ```html
-<icsm-date-picker
+<fx-date-picker
   v-model="currentDate"
   title="选择年月"
   :min-date="minDate"
@@ -89,7 +89,7 @@ export default {
 通过传入 `formatter` 函数，可以对选项文字进行格式化处理。
 
 ```html
-<icsm-date-picker
+<fx-date-picker
   v-model="currentDate"
   title="选择年月"
   :min-date="minDate"
@@ -133,7 +133,7 @@ export default {
 通过传入 `filter` 函数，可以对选项数组进行过滤，实现自定义选项间隔。
 
 ```html
-<icsm-date-picker
+<fx-date-picker
   v-model="currentDate"
   title="选择年月"
   :filter="filter"
@@ -228,14 +228,14 @@ import type {
   DatePickerProps,
   DatePickerColumnType,
   DatePickerInstance,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `DatePickerInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { DatePickerInstance } from 'ctf-ics-mobile-ui';
+import type { DatePickerInstance } from 'fx-mobile-ui';
 
 const datePickerRef = ref<DatePickerInstance>();
 

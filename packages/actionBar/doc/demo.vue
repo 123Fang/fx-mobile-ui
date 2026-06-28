@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -36,71 +36,71 @@ const onClickButton = () => showToast(t('clickButton'));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-action-bar>
-      <icsm-action-bar-icon
+    <fx-action-bar>
+      <fx-action-bar-icon
         icon="chat-o"
         :text="t('icon1')"
         @click="onClickIcon"
       />
-      <icsm-action-bar-icon
+      <fx-action-bar-icon
         icon="cart-o"
         :text="t('icon2')"
         @click="onClickIcon"
       />
-      <icsm-action-bar-icon
+      <fx-action-bar-icon
         icon="shop-o"
         :text="t('icon3')"
         @click="onClickIcon"
       />
-      <icsm-action-bar-button
+      <fx-action-bar-button
         type="danger"
         :text="t('button2')"
         @click="onClickButton"
       />
-    </icsm-action-bar>
+   </fx-action-bar>
   </demo-block>
 
   <demo-block :title="t('iconBadge')">
-    <icsm-action-bar>
-      <icsm-action-bar-icon icon="chat-o" dot :text="t('icon1')" />
-      <icsm-action-bar-icon icon="cart-o" badge="5" :text="t('icon2')" />
-      <icsm-action-bar-icon icon="shop-o" badge="12" :text="t('icon3')" />
-      <icsm-action-bar-button type="warning" :text="t('button1')" />
-      <icsm-action-bar-button type="danger" :text="t('button2')" />
-    </icsm-action-bar>
+    <fx-action-bar>
+      <fx-action-bar-icon icon="chat-o" dot :text="t('icon1')" />
+      <fx-action-bar-icon icon="cart-o" badge="5" :text="t('icon2')" />
+      <fx-action-bar-icon icon="shop-o" badge="12" :text="t('icon3')" />
+      <fx-action-bar-button type="warning" :text="t('button1')" />
+      <fx-action-bar-button type="danger" :text="t('button2')" />
+   </fx-action-bar>
   </demo-block>
 
   <demo-block :title="t('customIconColor')">
-    <icsm-action-bar>
-      <icsm-action-bar-icon icon="chat-o" :text="t('icon1')" color="#ee0a24" />
-      <icsm-action-bar-icon icon="cart-o" :text="t('icon2')" />
-      <icsm-action-bar-icon icon="star" :text="t('collected')" color="#ff5000" />
-      <icsm-action-bar-button type="warning" :text="t('button1')" />
-      <icsm-action-bar-button type="danger" :text="t('button2')" />
-    </icsm-action-bar>
+    <fx-action-bar>
+      <fx-action-bar-icon icon="chat-o" :text="t('icon1')" color="#ee0a24" />
+      <fx-action-bar-icon icon="cart-o" :text="t('icon2')" />
+      <fx-action-bar-icon icon="star" :text="t('collected')" color="#ff5000" />
+      <fx-action-bar-button type="warning" :text="t('button1')" />
+      <fx-action-bar-button type="danger" :text="t('button2')" />
+   </fx-action-bar>
   </demo-block>
 
   <demo-block :title="t('customButtonColor')">
-    <icsm-action-bar>
-      <icsm-action-bar-icon icon="chat-o" :text="t('icon1')" />
-      <icsm-action-bar-icon icon="cart-o" :text="t('icon2')" />
-      <icsm-action-bar-button
+    <fx-action-bar>
+      <fx-action-bar-icon icon="chat-o" :text="t('icon1')" />
+      <fx-action-bar-icon icon="cart-o" :text="t('icon2')" />
+      <fx-action-bar-button
         color="#be99ff"
         type="warning"
         :text="t('button1')"
       />
-      <icsm-action-bar-button
+      <fx-action-bar-button
         color="#7232dd"
         type="danger"
         :text="t('button2')"
       />
-    </icsm-action-bar>
+   </fx-action-bar>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-action-bar {
-  .icsm-action-bar {
+  .fx-action-bar {
     position: relative;
     padding-bottom: 0;
   }

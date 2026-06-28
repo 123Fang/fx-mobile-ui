@@ -26,31 +26,31 @@ for (let i = 0; i < 26; i++) {
 </script>
 
 <template>
-  <icsm-tabs v-model:active="activeTab">
-    <icsm-tab :title="t('basicUsage')">
-      <icsm-index-bar>
+  <fx-tabs v-model:active="activeTab">
+    <fx-tab :title="t('basicUsage')">
+      <fx-index-bar>
         <div v-for="index in indexList" :key="index">
-          <icsm-index-anchor :index="index" />
-          <icsm-cell :title="t('text')" />
-          <icsm-cell :title="t('text')" />
-          <icsm-cell :title="t('text')" />
+          <fx-index-anchor :index="index" />
+          <fx-cell :title="t('text')" />
+          <fx-cell :title="t('text')" />
+          <fx-cell :title="t('text')" />
         </div>
-      </icsm-index-bar>
-    </icsm-tab>
+     </fx-index-bar>
+   </fx-tab>
 
-    <icsm-tab :title="t('customIndexList')">
-      <icsm-index-bar :index-list="customIndexList">
+    <fx-tab :title="t('customIndexList')">
+      <fx-index-bar :index-list="customIndexList">
         <div v-for="index in customIndexList" :key="index">
-          <icsm-index-anchor :index="index">
+          <fx-index-anchor :index="index">
             {{ t('title') + index }}
-          </icsm-index-anchor>
-          <icsm-cell :title="t('text')" />
-          <icsm-cell :title="t('text')" />
-          <icsm-cell :title="t('text')" />
+         </fx-index-anchor>
+          <fx-cell :title="t('text')" />
+          <fx-cell :title="t('text')" />
+          <fx-cell :title="t('text')" />
         </div>
-      </icsm-index-bar>
-    </icsm-tab>
-  </icsm-tabs>
+     </fx-index-bar>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 

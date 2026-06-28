@@ -23,21 +23,21 @@ const icon2 = ref('123');
 
 <template>
   <demo-block :title="t('showIcon')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="icon1"
         :label="t('text')"
         left-icon="smile-o"
         right-icon="warning-o"
         :placeholder="t('showIcon')"
       />
-      <icsm-field
+      <fx-field
         v-model="icon2"
         clearable
         :label="t('text')"
         left-icon="music-o"
         :placeholder="t('showClearIcon')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

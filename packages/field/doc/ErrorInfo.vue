@@ -26,19 +26,19 @@ const username = ref('');
 
 <template>
   <demo-block :title="t('errorInfo')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="username"
         error
         :label="t('username')"
         :placeholder="t('usernamePlaceholder')"
       />
-      <icsm-field
+      <fx-field
         v-model="phone"
         :label="t('phone')"
         :placeholder="t('phonePlaceholder')"
         :error-message="t('phoneError')"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

@@ -28,7 +28,7 @@ const currentPage4 = ref(1);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-pagination
+    <fx-pagination
       v-model="currentPage1"
       :total-items="24"
       :items-per-page="5"
@@ -38,7 +38,7 @@ const currentPage4 = ref(1);
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-pagination
+    <fx-pagination
       v-model="currentPage2"
       :page-count="12"
       :prev-text="t('prevText')"
@@ -49,7 +49,7 @@ const currentPage4 = ref(1);
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-pagination
+    <fx-pagination
       v-model="currentPage3"
       force-ellipses
       :total-items="125"
@@ -60,34 +60,34 @@ const currentPage4 = ref(1);
   </demo-block>
 
   <demo-block :title="t('title4')">
-    <icsm-pagination
+    <fx-pagination
       v-model="currentPage4"
       :total-items="125"
       :show-page-size="5"
     >
       <template #prev-text>
-        <icsm-icon name="arrow-left" />
+        <fx-icon name="arrow-left" />
       </template>
       <template #next-text>
-        <icsm-icon name="arrow" />
+        <fx-icon name="arrow" />
       </template>
       <template #page="{ text }">{{ text }}</template>
-    </icsm-pagination>
+   </fx-pagination>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-pagination {
-  .icsm-pagination {
+  .fx-pagination {
     width: 100%;
     margin: 5px 0;
   }
 
-  .icsm-doc-demo-block {
-    padding: 0 var(--icsm-padding-md);
+  .fx-doc-demo-block {
+    padding: 0 var(--fx-padding-md);
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-left: 0;
   }
 }

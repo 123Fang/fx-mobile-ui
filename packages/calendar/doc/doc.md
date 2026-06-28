@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Calendar } from 'ctf-ics-mobile-ui';
+import { Calendar } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Calendar);
@@ -23,7 +23,7 @@ app.use(Calendar);
 默认所有月份将以平铺方式展示，不显示切换按钮，当月份过多时可能会影响页面交互性能。可以通过设置 `switch-mode` 属性，展示年月切换按钮。
 
 ```html
-<icsm-calendar v-model:show="show" switch-mode="year-month" />
+<fx-calendar v-model:show="show" switch-mode="year-month" />
 ```
 
 ### 选择单个日期
@@ -31,8 +31,8 @@ app.use(Calendar);
 下面演示了结合单元格来使用日历组件的用法，日期选择完成后会触发 `confirm` 事件。
 
 ```html
-<icsm-cell title="选择单个日期" :value="date" @click="show = true" />
-<icsm-calendar v-model:show="show" @confirm="onConfirm" />
+<fx-cell title="选择单个日期" :value="date" @click="show = true" />
+<fx-calendar v-model:show="show" @confirm="onConfirm" />
 ```
 
 ```js
@@ -65,8 +65,8 @@ export default {
 设置 `type` 为 `multiple` 后可以选择多个日期，此时 `confirm` 事件返回的 date 为数组结构，数组包含若干个选中的日期。
 
 ```html
-<icsm-cell title="选择多个日期" :value="text" @click="show = true" />
-<icsm-calendar v-model:show="show" type="multiple" @confirm="onConfirm" />
+<fx-cell title="选择多个日期" :value="text" @click="show = true" />
+<fx-calendar v-model:show="show" type="multiple" @confirm="onConfirm" />
 ```
 
 ```js
@@ -96,8 +96,8 @@ export default {
 设置 `type` 为 `range` 后可以选择日期区间，此时 `confirm` 事件返回的 date 为数组结构，数组第一项为开始时间，第二项为结束时间。
 
 ```html
-<icsm-cell title="选择日期区间" :value="date" @click="show = true" />
-<icsm-calendar v-model:show="show" type="range" @confirm="onConfirm" />
+<fx-cell title="选择日期区间" :value="date" @click="show = true" />
+<fx-calendar v-model:show="show" type="range" @confirm="onConfirm" />
 ```
 
 ```js
@@ -131,7 +131,7 @@ export default {
 将 `show-confirm` 设置为 `false` 可以隐藏确认按钮，这种情况下选择完成后会立即触发 `confirm` 事件。
 
 ```html
-<icsm-calendar v-model:show="show" :show-confirm="false" />
+<fx-calendar v-model:show="show" :show-confirm="false" />
 ```
 
 ### 自定义颜色
@@ -139,7 +139,7 @@ export default {
 通过 `color` 属性可以自定义日历的颜色，对选中日期和底部按钮生效。
 
 ```html
-<icsm-calendar v-model:show="show" color="#ee0a24" />
+<fx-calendar v-model:show="show" color="#ee0a24" />
 ```
 
 ### 自定义日期范围
@@ -147,7 +147,7 @@ export default {
 通过 `min-date` 和 `max-date` 定义日历的范围。
 
 ```html
-<icsm-calendar v-model:show="show" :min-date="minDate" :max-date="maxDate" />
+<fx-calendar v-model:show="show" :min-date="minDate" :max-date="maxDate" />
 ```
 
 ```js
@@ -171,7 +171,7 @@ export default {
 通过 `confirm-text` 设置按钮文字，通过 `confirm-disabled-text` 设置按钮禁用时的文字。
 
 ```html
-<icsm-calendar
+<fx-calendar
   v-model:show="show"
   type="range"
   confirm-text="完成"
@@ -184,7 +184,7 @@ export default {
 通过传入 `formatter` 函数来对日历上每一格的内容进行格式化。
 
 ```html
-<icsm-calendar v-model:show="show" type="range" :formatter="formatter" />
+<fx-calendar v-model:show="show" type="range" :formatter="formatter" />
 ```
 
 ```js
@@ -225,7 +225,7 @@ export default {
 通过 `position` 属性自定义弹出层的弹出位置，可选值为 `top`、`left`、`right`。
 
 ```html
-<icsm-calendar v-model:show="show" :round="false" position="right" />
+<fx-calendar v-model:show="show" :round="false" position="right" />
 ```
 
 ### 日期区间最大范围
@@ -233,7 +233,7 @@ export default {
 选择日期区间时，可以通过 `max-range` 属性来指定最多可选天数，选择的范围超过最多可选天数时，会弹出相应的提示文案。
 
 ```html
-<icsm-calendar type="range" :max-range="3" />
+<fx-calendar type="range" :max-range="3" />
 ```
 
 ### 自定义周起始日
@@ -241,7 +241,7 @@ export default {
 通过 `first-day-of-week` 属性设置一周从哪天开始。
 
 ```html
-<icsm-calendar first-day-of-week="1" />
+<fx-calendar first-day-of-week="1" />
 ```
 
 ### 平铺展示
@@ -249,7 +249,7 @@ export default {
 将 `poppable` 设置为 `false`，日历会直接展示在页面内，而不是以弹层的形式出现。
 
 ```html
-<icsm-calendar
+<fx-calendar
   title="日历"
   :poppable="false"
   :show-confirm="false"
@@ -388,14 +388,14 @@ import type {
   CalendarDayItem,
   CalendarDayType,
   CalendarInstance,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `CalendarInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CalendarInstance } from 'ctf-ics-mobile-ui';
+import type { CalendarInstance } from 'fx-mobile-ui';
 
 const calendarRef = ref<CalendarInstance>();
 
@@ -410,35 +410,35 @@ calendarRef.value?.reset();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-calendar-background | _var(--icsm-background-2)_ | - |
-| --icsm-calendar-popup-height | _80%_ | - |
-| --icsm-calendar-header-shadow | _0 2px 10px rgba(125, 126, 128, 0.16)_ | - |
-| --icsm-calendar-header-title-height | _44px_ | - |
-| --icsm-calendar-header-title-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-calendar-header-subtitle-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-calendar-header-action-width | _28px_ | - |
-| --icsm-calendar-header-action-color | _var(--icsm-text-color)_ | - |
-| --icsm-calendar-header-action-disabled-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-calendar-weekdays-height | _30px_ | - |
-| --icsm-calendar-weekdays-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-calendar-month-title-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-calendar-month-mark-color | _fade(var(--icsm-gray-2), 80%)_ | - |
-| --icsm-calendar-month-mark-font-size | _160px_ | - |
-| --icsm-calendar-day-height | _64px_ | - |
-| --icsm-calendar-day-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-calendar-day-margin-bottom | _4px_ | - |
-| --icsm-calendar-day-disabled-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-calendar-range-edge-color | _var(--icsm-white)_ | - |
-| --icsm-calendar-range-edge-background | _var(--icsm-primary-color)_ | - |
-| --icsm-calendar-range-middle-color | _var(--icsm-primary-color)_ | - |
-| --icsm-calendar-range-middle-background-opacity | _0.1_ | - |
-| --icsm-calendar-selected-day-size | _54px_ | - |
-| --icsm-calendar-selected-day-color | _var(--icsm-white)_ | - |
-| --icsm-calendar-selected-day-background | _var(--icsm-primary-color)_ | - |
-| --icsm-calendar-info-font-size | _var(--icsm-font-size-xs)_ | - |
-| --icsm-calendar-info-line-height | _var(--icsm-line-height-xs)_ | - |
-| --icsm-calendar-confirm-button-height | _36px_ | - |
-| --icsm-calendar-confirm-button-margin | _7px 0_ | - |
+| --fx-calendar-background | _var(--fx-background-2)_ | - |
+| --fx-calendar-popup-height | _80%_ | - |
+| --fx-calendar-header-shadow | _0 2px 10px rgba(125, 126, 128, 0.16)_ | - |
+| --fx-calendar-header-title-height | _44px_ | - |
+| --fx-calendar-header-title-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-calendar-header-subtitle-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-calendar-header-action-width | _28px_ | - |
+| --fx-calendar-header-action-color | _var(--fx-text-color)_ | - |
+| --fx-calendar-header-action-disabled-color | _var(--fx-text-color-3)_ | - |
+| --fx-calendar-weekdays-height | _30px_ | - |
+| --fx-calendar-weekdays-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-calendar-month-title-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-calendar-month-mark-color | _fade(var(--fx-gray-2), 80%)_ | - |
+| --fx-calendar-month-mark-font-size | _160px_ | - |
+| --fx-calendar-day-height | _64px_ | - |
+| --fx-calendar-day-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-calendar-day-margin-bottom | _4px_ | - |
+| --fx-calendar-day-disabled-color | _var(--fx-text-color-3)_ | - |
+| --fx-calendar-range-edge-color | _var(--fx-white)_ | - |
+| --fx-calendar-range-edge-background | _var(--fx-primary-color)_ | - |
+| --fx-calendar-range-middle-color | _var(--fx-primary-color)_ | - |
+| --fx-calendar-range-middle-background-opacity | _0.1_ | - |
+| --fx-calendar-selected-day-size | _54px_ | - |
+| --fx-calendar-selected-day-color | _var(--fx-white)_ | - |
+| --fx-calendar-selected-day-background | _var(--fx-primary-color)_ | - |
+| --fx-calendar-info-font-size | _var(--fx-font-size-xs)_ | - |
+| --fx-calendar-info-line-height | _var(--fx-line-height-xs)_ | - |
+| --fx-calendar-confirm-button-height | _36px_ | - |
+| --fx-calendar-confirm-button-margin | _7px 0_ | - |
 
 ## 常见问题
 

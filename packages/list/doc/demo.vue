@@ -82,55 +82,55 @@ const onRefresh = (index: number) => {
 </script>
 
 <template>
-  <icsm-tabs>
-    <icsm-tab :title="t('basicUsage')">
-      <icsm-list
+  <fx-tabs>
+    <fx-tab :title="t('basicUsage')">
+      <fx-list
         v-model:loading="list[0].loading"
         :finished="list[0].finished"
         :finished-text="t('finishedText')"
         @load="onLoad(0)"
       >
-        <icsm-cell v-for="item in list[0].items" :key="item" :title="item" />
-      </icsm-list>
-    </icsm-tab>
+        <fx-cell v-for="item in list[0].items" :key="item" :title="item" />
+     </fx-list>
+   </fx-tab>
 
-    <icsm-tab :title="t('errorInfo')">
-      <icsm-list
+    <fx-tab :title="t('errorInfo')">
+      <fx-list
         v-model:loading="list[1].loading"
         v-model:error="list[1].error"
         :finished="list[1].finished"
         :error-text="t('errorText')"
         @load="onLoad(1)"
       >
-        <icsm-cell v-for="item in list[1].items" :key="item" :title="item" />
-      </icsm-list>
-    </icsm-tab>
+        <fx-cell v-for="item in list[1].items" :key="item" :title="item" />
+     </fx-list>
+   </fx-tab>
 
-    <icsm-tab :title="t('pullRefresh')">
-      <icsm-pull-refresh v-model="list[2].refreshing" @refresh="onRefresh(2)">
-        <icsm-list
+    <fx-tab :title="t('pullRefresh')">
+      <fx-pull-refresh v-model="list[2].refreshing" @refresh="onRefresh(2)">
+        <fx-list
           v-model:loading="list[2].loading"
           :finished="list[2].finished"
           :finished-text="t('finishedText')"
           @load="onLoad(2)"
         >
-          <icsm-cell v-for="item in list[2].items" :key="item" :title="item" />
-        </icsm-list>
-      </icsm-pull-refresh>
-    </icsm-tab>
-  </icsm-tabs>
+          <fx-cell v-for="item in list[2].items" :key="item" :title="item" />
+       </fx-list>
+     </fx-pull-refresh>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 <style lang="scss">
 .demo-list {
-  .icsm-cell {
+  .fx-cell {
     text-align: center;
   }
 
   .page-desc {
     margin: 0;
     padding: 5px 0;
-    color: var(--icsm-gray-7);
+    color: var(--fx-gray-7);
     font-size: 14px;
     text-align: center;
 
@@ -143,8 +143,8 @@ const onRefresh = (index: number) => {
     }
   }
 
-  .icsm-checkbox__label {
-    color: var(--icsm-gray-7);
+  .fx-checkbox__label {
+    color: var(--fx-gray-7);
   }
 }
 </style>

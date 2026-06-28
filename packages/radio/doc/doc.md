@@ -24,10 +24,10 @@ app.use(RadioGroup);
 通过 `v-model` 绑定值当前选中项的 name。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1">单选框 1</icsm-radio>
-  <icsm-radio name="2">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked">
+  <fx-radio name="1">单选框 1</fx-radio>
+  <fx-radio name="2">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ```js
@@ -46,10 +46,10 @@ export default {
 将 `direction` 属性设置为 `horizontal` 后，单选框组会变成水平排列。
 
 ```html
-<icsm-radio-group v-model="checked" direction="horizontal">
-  <icsm-radio name="1">单选框 1</icsm-radio>
-  <icsm-radio name="2">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked" direction="horizontal">
+  <fx-radio name="1">单选框 1</fx-radio>
+  <fx-radio name="2">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 禁用状态
@@ -57,10 +57,10 @@ export default {
 通过 `disabled` 属性禁止选项切换，在 `Radio` 上设置 `disabled` 可以禁用单个选项。
 
 ```html
-<icsm-radio-group v-model="checked" disabled>
-  <icsm-radio name="1">单选框 1</icsm-radio>
-  <icsm-radio name="2">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked" disabled>
+  <fx-radio name="1">单选框 1</fx-radio>
+  <fx-radio name="2">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 自定义形状
@@ -68,15 +68,15 @@ export default {
 `shape` 属性可选值为 `square` 和 `dot`，单选框形状分别对应方形和圆点形。
 
 ```html
-<icsm-radio-group v-model="checked" shape="square">
-  <icsm-radio name="1">单选框 1</icsm-radio>
-  <icsm-radio name="2">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked" shape="square">
+  <fx-radio name="1">单选框 1</fx-radio>
+  <fx-radio name="2">单选框 2</fx-radio>
+</fx-radio-group>
 
-<icsm-radio-group v-model="checked" shape="dot">
-  <icsm-radio name="1">Radio 1</icsm-radio>
-  <icsm-radio name="2">Radio 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked" shape="dot">
+  <fx-radio name="1">Radio 1</fx-radio>
+  <fx-radio name="2">Radio 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 自定义颜色
@@ -84,10 +84,10 @@ export default {
 通过 `checked-color` 属性设置选中状态的图标颜色。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1" checked-color="#ee0a24">单选框 1</icsm-radio>
-  <icsm-radio name="2" checked-color="#ee0a24">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked">
+  <fx-radio name="1" checked-color="#ee0a24">单选框 1</fx-radio>
+  <fx-radio name="2" checked-color="#ee0a24">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 自定义大小
@@ -95,10 +95,10 @@ export default {
 通过 `icon-size` 属性可以自定义图标的大小。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1" icon-size="24px">单选框 1</icsm-radio>
-  <icsm-radio name="2" icon-size="24px">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked">
+  <fx-radio name="1" icon-size="24px">单选框 1</fx-radio>
+  <fx-radio name="2" icon-size="24px">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 自定义图标
@@ -106,20 +106,20 @@ export default {
 通过 `icon` 插槽自定义图标，并通过 `slotProps` 判断是否为选中状态。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1">
+<fx-radio-group v-model="checked">
+  <fx-radio name="1">
     单选框 1
     <template #icon="props">
       <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
     </template>
-  </icsm-radio>
-  <icsm-radio name="2">
+ </fx-radio>
+  <fx-radio name="2">
     单选框 2
     <template #icon="props">
       <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
     </template>
-  </icsm-radio>
-</icsm-radio-group>
+ </fx-radio>
+</fx-radio-group>
 
 <style>
   .img-icon {
@@ -150,10 +150,10 @@ export default {
 将 `label-position` 属性设置为 `'left'`，可以将文本位置调整到单选框左侧。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1" label-position="left">单选框 1</icsm-radio>
-  <icsm-radio name="2" label-position="left">单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked">
+  <fx-radio name="1" label-position="left">单选框 1</fx-radio>
+  <fx-radio name="2" label-position="left">单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 禁用文本点击
@@ -161,10 +161,10 @@ export default {
 设置 `label-disabled` 属性后，点击图标以外的内容不会触发单选框切换。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-radio name="1" label-disabled>单选框 1</icsm-radio>
-  <icsm-radio name="2" label-disabled>单选框 2</icsm-radio>
-</icsm-radio-group>
+<fx-radio-group v-model="checked">
+  <fx-radio name="1" label-disabled>单选框 1</fx-radio>
+  <fx-radio name="2" label-disabled>单选框 2</fx-radio>
+</fx-radio-group>
 ```
 
 ### 搭配单元格组件使用
@@ -172,20 +172,20 @@ export default {
 搭配单元格组件使用时，需要再引入 `Cell` 和 `CellGroup` 组件。
 
 ```html
-<icsm-radio-group v-model="checked">
-  <icsm-cell-group inset>
-    <icsm-cell title="单选框 1" clickable @click="checked = '1'">
+<fx-radio-group v-model="checked">
+  <fx-cell-group inset>
+    <fx-cell title="单选框 1" clickable @click="checked = '1'">
       <template #right-icon>
-        <icsm-radio name="1" />
+        <fx-radio name="1" />
       </template>
-    </icsm-cell>
-    <icsm-cell title="单选框 2" clickable @click="checked = '2'">
+   </fx-cell>
+    <fx-cell title="单选框 2" clickable @click="checked = '2'">
       <template #right-icon>
-        <icsm-radio name="2" />
+        <fx-radio name="2" />
       </template>
-    </icsm-cell>
-  </icsm-cell-group>
-</icsm-radio-group>
+   </fx-cell>
+ </fx-cell-group>
+</fx-radio-group>
 ```
 
 ## API
@@ -254,16 +254,16 @@ import type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-radio-size | _20px_ | - |
-| --icsm-radio-dot-size | _8px_ | 圆点到边界的距离 |
-| --icsm-radio-border-color | _var(--icsm-gray-5)_ | - |
-| --icsm-radio-duration | _var(--icsm-duration-fast)_ | - |
-| --icsm-radio-label-margin | _var(--icsm-padding-xs)_ | - |
-| --icsm-radio-label-color | _var(--icsm-text-color)_ | - |
-| --icsm-radio-checked-icon-color | _var(--icsm-primary-color)_ | - |
-| --icsm-radio-disabled-icon-color | _var(--icsm-gray-5)_ | - |
-| --icsm-radio-disabled-label-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-radio-disabled-background | _var(--icsm-border-color)_ | - |
+| --fx-radio-size | _20px_ | - |
+| --fx-radio-dot-size | _8px_ | 圆点到边界的距离 |
+| --fx-radio-border-color | _var(--fx-gray-5)_ | - |
+| --fx-radio-duration | _var(--fx-duration-fast)_ | - |
+| --fx-radio-label-margin | _var(--fx-padding-xs)_ | - |
+| --fx-radio-label-color | _var(--fx-text-color)_ | - |
+| --fx-radio-checked-icon-color | _var(--fx-primary-color)_ | - |
+| --fx-radio-disabled-icon-color | _var(--fx-gray-5)_ | - |
+| --fx-radio-disabled-label-color | _var(--fx-text-color-3)_ | - |
+| --fx-radio-disabled-background | _var(--fx-border-color)_ | - |
 
 
 <br/><br/><br/><br/><br/><br/>

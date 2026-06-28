@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Cascader } from 'ctf-ics-mobile-ui';
+import { Cascader } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Cascader);
@@ -23,7 +23,7 @@ app.use(Cascader);
 级联选择组件可以搭配 Field 和 Popup 组件使用，示例如下：
 
 ```html
-<icsm-field
+<fx-field
   v-model="fieldValue"
   is-link
   readonly
@@ -31,15 +31,15 @@ app.use(Cascader);
   placeholder="请选择所在地区"
   @click="show = true"
 />
-<icsm-popup v-model:show="show" round position="bottom">
-  <icsm-cascader
+<fx-popup v-model:show="show" round position="bottom">
+  <fx-cascader
     v-model="cascaderValue"
     title="请选择所在地区"
     :options="options"
     @close="show = false"
     @finish="onFinish"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -99,7 +99,7 @@ bun add @vant/area-data
 ```
 
 ```html
-<icsm-field
+<fx-field
   v-model="fieldValue"
   is-link
   readonly
@@ -107,15 +107,15 @@ bun add @vant/area-data
   placeholder="请选择所在地区"
   @click="show = true"
 />
-<icsm-popup v-model:show="show" round position="bottom">
-  <icsm-cascader
+<fx-popup v-model:show="show" round position="bottom">
+  <fx-cascader
     v-model="cascaderValue"
     title="请选择所在地区"
     :options="options"
     @close="show = false"
     @finish="onFinish"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -150,7 +150,7 @@ export default {
 通过 `active-color` 属性来设置选中状态的高亮颜色。
 
 ```html
-<icsm-cascader
+<fx-cascader
   v-model="cascaderValue"
   title="请选择所在地区"
   :options="options"
@@ -165,7 +165,7 @@ export default {
 可以监听 `change` 事件并动态设置 `options`，实现异步加载选项。
 
 ```html
-<icsm-field
+<fx-field
   v-model="fieldValue"
   is-link
   readonly
@@ -173,8 +173,8 @@ export default {
   placeholder="请选择所在地区"
   @click="show = true"
 />
-<icsm-popup v-model:show="show" round position="bottom">
-  <icsm-cascader
+<fx-popup v-model:show="show" round position="bottom">
+  <fx-cascader
     v-model="cascaderValue"
     title="请选择所在地区"
     :options="options"
@@ -182,12 +182,12 @@ export default {
     @change="onChange"
     @finish="onFinish"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
 import { ref } from 'vue';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -238,7 +238,7 @@ export default {
 通过 `field-names` 属性可以自定义 `options` 里的字段名称。
 
 ```html
-<icsm-cascader
+<fx-cascader
   v-model="code"
   title="请选择所在地区"
   :options="options"
@@ -282,17 +282,17 @@ export default {
 ### 自定义选项上方内容
 
 ```html
-<icsm-cascader v-model="code" title="请选择所在地区" :options="options">
+<fx-cascader v-model="code" title="请选择所在地区" :options="options">
   <template #options-top="{ tabIndex }">
     <div class="current-level">当前为第 {{ tabIndex + 1 }} 级</div>
   </template>
-</icsm-cascader>
+</fx-cascader>
 
 <style>
   .current-level {
     font-size: 14px;
     padding: 16px 16px 0;
-    color: var(--icsm-gray-6);
+    color: var(--fx-gray-6);
   }
 </style>
 ```
@@ -377,7 +377,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { CascaderProps, CascaderOption, CascaderFieldNames } from 'ctf-ics-mobile-ui';
+import type { CascaderProps, CascaderOption, CascaderFieldNames } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -388,19 +388,19 @@ import type { CascaderProps, CascaderOption, CascaderFieldNames } from 'ctf-ics-
 
 | 名称                                 | 默认值                    | 描述 |
 | ------------------------------------ | ------------------------- | ---- |
-| --icsm-cascader-header-height         | _48px_                    | -    |
-| --icsm-cascader-header-padding        | _0 var(--icsm-padding-md)_ | -    |
-| --icsm-cascader-title-font-size       | _var(--icsm-font-size-lg)_ | -    |
-| --icsm-cascader-title-line-height     | _20px_                    | -    |
-| --icsm-cascader-close-icon-size       | _22px_                    | -    |
-| --icsm-cascader-close-icon-color      | _var(--icsm-gray-5)_       | -    |
-| --icsm-cascader-selected-icon-size    | _18px_                    | -    |
-| --icsm-cascader-tabs-height           | _48px_                    | -    |
-| --icsm-cascader-active-color          | _var(--icsm-danger-color)_ | -    |
-| --icsm-cascader-options-height        | _384px_                   | -    |
-| --icsm-cascader-option-disabled-color | _var(--icsm-text-color-3)_ | -    |
-| --icsm-cascader-tab-color             | _var(--icsm-text-color)_   | -    |
-| --icsm-cascader-unselected-tab-color  | _var(--icsm-text-color-2)_ | -    |
+| --fx-cascader-header-height         | _48px_                    | -    |
+| --fx-cascader-header-padding        | _0 var(--fx-padding-md)_ | -    |
+| --fx-cascader-title-font-size       | _var(--fx-font-size-lg)_ | -    |
+| --fx-cascader-title-line-height     | _20px_                    | -    |
+| --fx-cascader-close-icon-size       | _22px_                    | -    |
+| --fx-cascader-close-icon-color      | _var(--fx-gray-5)_       | -    |
+| --fx-cascader-selected-icon-size    | _18px_                    | -    |
+| --fx-cascader-tabs-height           | _48px_                    | -    |
+| --fx-cascader-active-color          | _var(--fx-danger-color)_ | -    |
+| --fx-cascader-options-height        | _384px_                   | -    |
+| --fx-cascader-option-disabled-color | _var(--fx-text-color-3)_ | -    |
+| --fx-cascader-tab-color             | _var(--fx-text-color)_   | -    |
+| --fx-cascader-unselected-tab-color  | _var(--fx-text-color-2)_ | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

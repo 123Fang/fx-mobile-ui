@@ -22,13 +22,13 @@ const value = ref('');
 
 <template>
   <demo-block :title="t('inputAlign')">
-    <icsm-cell-group inset>
-      <icsm-field
+    <fx-cell-group inset>
+      <fx-field
         v-model="value"
         :label="t('text')"
         :placeholder="t('alignPlaceHolder')"
         input-align="right"
       />
-    </icsm-cell-group>
+   </fx-cell-group>
   </demo-block>
 </template>

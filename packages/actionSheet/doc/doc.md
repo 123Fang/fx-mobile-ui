@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ActionSheet } from 'ctf-ics-mobile-ui';
+import { ActionSheet } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ActionSheet);
@@ -23,13 +23,13 @@ app.use(ActionSheet);
 动作面板通过 `actions` 属性来定义选项，`actions` 属性是一个由对象构成的数组，数组中的每个对象配置一列，对象格式见文档下方表格。
 
 ```html
-<icsm-cell is-link title="基础用法" @click="show = true" />
-<icsm-action-sheet v-model:show="show" :actions="actions" @select="onSelect" />
+<fx-cell is-link title="基础用法" @click="show = true" />
+<fx-action-sheet v-model:show="show" :actions="actions" @select="onSelect" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -60,13 +60,13 @@ export default {
 使用 `actions` 的 `icon` 字段可以为选项设置图标。
 
 ```html
-<icsm-cell is-link title="展示图标" @click="show = true" />
-<icsm-action-sheet v-model:show="show" :actions="actions" @select="onSelect" />
+<fx-cell is-link title="展示图标" @click="show = true" />
+<fx-action-sheet v-model:show="show" :actions="actions" @select="onSelect" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -95,7 +95,7 @@ export default {
 设置 `cancel-text` 属性后，会在底部展示取消按钮，点击后关闭当前面板并触发 `cancel` 事件。
 
 ```html
-<icsm-action-sheet
+<fx-action-sheet
   v-model:show="show"
   :actions="actions"
   cancel-text="取消"
@@ -106,7 +106,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -132,7 +132,7 @@ export default {
 通过 `description` 可以在菜单顶部显示描述信息，通过选项的 `subname` 属性可以在选项文字的右侧展示描述信息。
 
 ```html
-<icsm-action-sheet
+<fx-action-sheet
   v-model:show="show"
   :actions="actions"
   cancel-text="取消"
@@ -166,7 +166,7 @@ export default {
 可以通过 `loading` 和 `disabled` 将选项设置为加载状态或禁用状态，或者通过`color`设置选项的颜色
 
 ```html
-<icsm-action-sheet
+<fx-action-sheet
   v-model:show="show"
   :actions="actions"
   cancel-text="取消"
@@ -199,9 +199,9 @@ export default {
 通过插槽可以自定义面板的展示内容，同时可以使用`title`属性展示标题栏
 
 ```html
-<icsm-action-sheet v-model:show="show" title="标题">
+<fx-action-sheet v-model:show="show" title="标题">
   <div class="content">内容</div>
-</icsm-action-sheet>
+</fx-action-sheet>
 
 <style>
   .content {
@@ -279,7 +279,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ActionSheetProps, ActionSheetAction } from 'ctf-ics-mobile-ui';
+import type { ActionSheetProps, ActionSheetAction } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -290,29 +290,29 @@ import type { ActionSheetProps, ActionSheetAction } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-action-sheet-max-height | _80%_ | - |
-| --icsm-action-sheet-header-height | _48px_ | - |
-| --icsm-action-sheet-header-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-action-sheet-description-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-action-sheet-description-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-action-sheet-description-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-action-sheet-item-background | _var(--icsm-background-2)_ | - |
-| --icsm-action-sheet-item-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-action-sheet-item-line-height | _var(--icsm-line-height-lg)_ | - |
-| --icsm-action-sheet-item-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-action-sheet-item-disabled-text-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-action-sheet-item-icon-size | _18px_ | - |
-| --icsm-action-sheet-item-icon-margin-right | _var(--icsm-padding-xs)_ | - |
-| --icsm-action-sheet-subname-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-action-sheet-subname-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-action-sheet-subname-line-height | _var(--icsm-line-height-sm)_ | - |
-| --icsm-action-sheet-close-icon-size | _22px_ | - |
-| --icsm-action-sheet-close-icon-color | _var(--icsm-gray-5)_ | - |
-| --icsm-action-sheet-close-icon-padding | _0 var(--icsm-padding-md)_ | - |
-| --icsm-action-sheet-cancel-text-color | _var(--icsm-gray-7)_ | - |
-| --icsm-action-sheet-cancel-padding-top | _var(--icsm-padding-xs)_ | - |
-| --icsm-action-sheet-cancel-padding-color | _var(--icsm-background)_ | - |
-| --icsm-action-sheet-loading-icon-size | _22px_ | - |
+| --fx-action-sheet-max-height | _80%_ | - |
+| --fx-action-sheet-header-height | _48px_ | - |
+| --fx-action-sheet-header-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-action-sheet-description-color | _var(--fx-text-color-2)_ | - |
+| --fx-action-sheet-description-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-action-sheet-description-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-action-sheet-item-background | _var(--fx-background-2)_ | - |
+| --fx-action-sheet-item-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-action-sheet-item-line-height | _var(--fx-line-height-lg)_ | - |
+| --fx-action-sheet-item-text-color | _var(--fx-text-color)_ | - |
+| --fx-action-sheet-item-disabled-text-color | _var(--fx-text-color-3)_ | - |
+| --fx-action-sheet-item-icon-size | _18px_ | - |
+| --fx-action-sheet-item-icon-margin-right | _var(--fx-padding-xs)_ | - |
+| --fx-action-sheet-subname-color | _var(--fx-text-color-2)_ | - |
+| --fx-action-sheet-subname-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-action-sheet-subname-line-height | _var(--fx-line-height-sm)_ | - |
+| --fx-action-sheet-close-icon-size | _22px_ | - |
+| --fx-action-sheet-close-icon-color | _var(--fx-gray-5)_ | - |
+| --fx-action-sheet-close-icon-padding | _0 var(--fx-padding-md)_ | - |
+| --fx-action-sheet-cancel-text-color | _var(--fx-gray-7)_ | - |
+| --fx-action-sheet-cancel-padding-top | _var(--fx-padding-xs)_ | - |
+| --fx-action-sheet-cancel-padding-color | _var(--fx-background)_ | - |
+| --fx-action-sheet-loading-icon-size | _22px_ | - |
 
 
 <br/><br/><br/><br/><br/><br/>

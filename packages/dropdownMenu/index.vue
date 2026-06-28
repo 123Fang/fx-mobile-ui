@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-dropdown-menu',
+  name: 'fx-dropdown-menu',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-dropdown-menu-container {}
+.fx-dropdown-menu-container {}
 </style>

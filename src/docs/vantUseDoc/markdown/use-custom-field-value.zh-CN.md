@@ -36,15 +36,15 @@ export default {
 接着，在 Form 组件中嵌入你的自定义组件，当提交表单时，即可获取到自定义表单项的值。
 
 ```html
-<icsm-form>
+<fx-form>
   <!-- 这是一个自定义表单项 -->
   <!-- 当表单提交时，会包括 useCustomFieldValue 中传入的值 -->
-  <icsm-field name="my-field" label="自定义表单项">
+  <fx-field name="my-field" label="自定义表单项">
     <template #input>
       <my-component />
     </template>
-  </icsm-field>
-</icsm-form>
+ </fx-field>
+</fx-form>
 ```
 
 ## API

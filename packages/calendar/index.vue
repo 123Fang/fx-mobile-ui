@@ -4,7 +4,7 @@
 
 <script lang="ts">
 export default {
-  name: 'icsm-calendar',
+  name: 'fx-calendar',
 }
 </script>
 <script lang="ts" setup>

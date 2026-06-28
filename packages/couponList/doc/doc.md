@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { CouponCell, CouponList } from 'ctf-ics-mobile-ui';
+import { CouponCell, CouponList } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(CouponCell);
@@ -23,26 +23,26 @@ app.use(CouponList);
 
 ```html
 <!-- 优惠券单元格 -->
-<icsm-coupon-cell
+<fx-coupon-cell
   :coupons="coupons"
   :chosen-coupon="chosenCoupon"
   @click="showList = true"
 />
 <!-- 优惠券列表 -->
-<icsm-popup
+<fx-popup
   v-model:show="showList"
   round
   position="bottom"
   style="height: 90%; padding-top: 4px;"
 >
-  <icsm-coupon-list
+  <fx-coupon-list
     :coupons="coupons"
     :chosen-coupon="chosenCoupon"
     :disabled-coupons="disabledCoupons"
     @change="onChange"
     @exchange="onExchange"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -157,7 +157,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { CouponCellProps, CouponListProps, CouponInfo } from 'ctf-ics-mobile-ui';
+import type { CouponCellProps, CouponListProps, CouponInfo } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -168,31 +168,31 @@ import type { CouponCellProps, CouponListProps, CouponInfo } from 'ctf-ics-mobil
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-coupon-margin | _0 var(--icsm-padding-sm) var(--icsm-padding-sm)_ | - |
-| --icsm-coupon-content-height | _84px_ | - |
-| --icsm-coupon-content-padding | _14px 0_ | - |
-| --icsm-coupon-content-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-coupon-background | _var(--icsm-background-2)_ | - |
-| --icsm-coupon-active-background | _var(--icsm-active-color)_ | - |
-| --icsm-coupon-radius | _var(--icsm-radius-lg)_ | - |
-| --icsm-coupon-shadow | _0 0 4px rgba(0, 0, 0, 0.1)_ | - |
-| --icsm-coupon-head-width | _96px_ | - |
-| --icsm-coupon-amount-color | _var(--icsm-danger-color)_ | - |
-| --icsm-coupon-amount-font-size | _30px_ | - |
-| --icsm-coupon-currency-font-size | _40%_ | - |
-| --icsm-coupon-name-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-coupon-disabled-text-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-coupon-description-padding | _var(--icsm-padding-xs) var(--icsm-padding-md)_ | - |
-| --icsm-coupon-description-border-color | _var(--icsm-border-color)_ | - |
-| --icsm-coupon-checkbox-color | _var(--icsm-danger-color)_ | - |
-| --icsm-coupon-list-background | _var(--icsm-background)_ | - |
-| --icsm-coupon-list-field-padding | _5px 0 5px var(--icsm-padding-md)_ | - |
-| --icsm-coupon-list-exchange-button-height | _32px_ | - |
-| --icsm-coupon-list-close-button-height | _40px_ | - |
-| --icsm-coupon-list-empty-tip-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-coupon-list-empty-tip-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-coupon-list-empty-tip-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-coupon-cell-selected-text-color | _var(--icsm-text-color)_ | - |
+| --fx-coupon-margin | _0 var(--fx-padding-sm) var(--fx-padding-sm)_ | - |
+| --fx-coupon-content-height | _84px_ | - |
+| --fx-coupon-content-padding | _14px 0_ | - |
+| --fx-coupon-content-text-color | _var(--fx-text-color)_ | - |
+| --fx-coupon-background | _var(--fx-background-2)_ | - |
+| --fx-coupon-active-background | _var(--fx-active-color)_ | - |
+| --fx-coupon-radius | _var(--fx-radius-lg)_ | - |
+| --fx-coupon-shadow | _0 0 4px rgba(0, 0, 0, 0.1)_ | - |
+| --fx-coupon-head-width | _96px_ | - |
+| --fx-coupon-amount-color | _var(--fx-danger-color)_ | - |
+| --fx-coupon-amount-font-size | _30px_ | - |
+| --fx-coupon-currency-font-size | _40%_ | - |
+| --fx-coupon-name-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-coupon-disabled-text-color | _var(--fx-text-color-2)_ | - |
+| --fx-coupon-description-padding | _var(--fx-padding-xs) var(--fx-padding-md)_ | - |
+| --fx-coupon-description-border-color | _var(--fx-border-color)_ | - |
+| --fx-coupon-checkbox-color | _var(--fx-danger-color)_ | - |
+| --fx-coupon-list-background | _var(--fx-background)_ | - |
+| --fx-coupon-list-field-padding | _5px 0 5px var(--fx-padding-md)_ | - |
+| --fx-coupon-list-exchange-button-height | _32px_ | - |
+| --fx-coupon-list-close-button-height | _40px_ | - |
+| --fx-coupon-list-empty-tip-color | _var(--fx-text-color-2)_ | - |
+| --fx-coupon-list-empty-tip-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-coupon-list-empty-tip-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-coupon-cell-selected-text-color | _var(--fx-text-color)_ | - |
 
 
 

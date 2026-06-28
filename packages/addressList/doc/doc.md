@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { AddressList } from 'ctf-ics-mobile-ui';
+import { AddressList } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(AddressList);
@@ -21,7 +21,7 @@ app.use(AddressList);
 ### 基础用法
 
 ```html
-<icsm-address-list
+<fx-address-list
   v-model="chosenAddressId"
   :list="list"
   :disabled-list="disabledList"
@@ -34,7 +34,7 @@ app.use(AddressList);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -128,7 +128,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { AddressListProps, AddressListAddress } from 'ctf-ics-mobile-ui';
+import type { AddressListProps, AddressListAddress } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -139,19 +139,19 @@ import type { AddressListProps, AddressListAddress } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-address-list-padding | _var(--icsm-padding-sm) var(--icsm-padding-sm) 80px_ | - |
-| --icsm-address-list-disabled-text-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-address-list-disabled-text-padding | _var(--icsm-padding-base) \* 5 0 var(--icsm-padding-md)_ | - |
-| --icsm-address-list-disabled-text-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-address-list-disabled-text-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-address-list-add-button-z-index | _999_ | - |
-| --icsm-address-list-item-padding | _var(--icsm-padding-sm)_ | - |
-| --icsm-address-list-item-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-address-list-item-disabled-text-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-address-list-item-font-size | _13px_ | - |
-| --icsm-address-list-item-line-height | _var(--icsm-line-height-sm)_ | - |
-| --icsm-address-list-radio-color | _var(--icsm-primary-color)_ | - |
-| --icsm-address-list-edit-icon-size | _20px_ | - |
+| --fx-address-list-padding | _var(--fx-padding-sm) var(--fx-padding-sm) 80px_ | - |
+| --fx-address-list-disabled-text-color | _var(--fx-text-color-2)_ | - |
+| --fx-address-list-disabled-text-padding | _var(--fx-padding-base) \* 5 0 var(--fx-padding-md)_ | - |
+| --fx-address-list-disabled-text-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-address-list-disabled-text-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-address-list-add-button-z-index | _999_ | - |
+| --fx-address-list-item-padding | _var(--fx-padding-sm)_ | - |
+| --fx-address-list-item-text-color | _var(--fx-text-color)_ | - |
+| --fx-address-list-item-disabled-text-color | _var(--fx-text-color-3)_ | - |
+| --fx-address-list-item-font-size | _13px_ | - |
+| --fx-address-list-item-line-height | _var(--fx-line-height-sm)_ | - |
+| --fx-address-list-radio-color | _var(--fx-primary-color)_ | - |
+| --fx-address-list-edit-icon-size | _20px_ | - |
 
 
 

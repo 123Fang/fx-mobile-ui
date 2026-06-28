@@ -5,7 +5,7 @@ import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
 
 // import { FieldValidateError } from '../../field/types';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -68,42 +68,42 @@ const onFailed = (errorInfo: {
 
 <template>
   <demo-block :title="t('title')">
-    <icsm-form @sumbit="onSubmit" @failed="onFailed">
-      <icsm-cell-group inset>
-        <icsm-field
+    <fx-form @sumbit="onSubmit" @failed="onFailed">
+      <fx-cell-group inset>
+        <fx-field
           v-model="value1"
           name="pattern"
           :label="t('label')"
           :rules="[{ pattern, message: t('message') }]"
           :placeholder="t('pattern')"
         />
-        <icsm-field
+        <fx-field
           v-model="value2"
           name="validator"
           :label="t('label')"
           :rules="[{ validator, message: t('message') }]"
           :placeholder="t('validator')"
         />
-        <icsm-field
+        <fx-field
           v-model="value3"
           name="validatorMessage"
           :label="t('label')"
           :rules="[{ validator: validatorMessage }]"
           :placeholder="t('validatorMessage')"
         />
-        <icsm-field
+        <fx-field
           v-model="value4"
           name="asyncValidator"
           :label="t('label')"
           :rules="[{ validator: asyncValidator, message: t('message') }]"
           :placeholder="t('asyncValidator')"
         />
-      </icsm-cell-group>
+     </fx-cell-group>
       <div style="margin: 16px 16px 0">
-        <icsm-button round block type="primary" native-type="submit">
+        <fx-button round block type="primary" native-type="submit">
           {{ t('submit') }}
-        </icsm-button>
+       </fx-button>
       </div>
-    </icsm-form>
+   </fx-form>
   </demo-block>
 </template>

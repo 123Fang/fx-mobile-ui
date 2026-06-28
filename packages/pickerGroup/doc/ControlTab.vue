@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import {showToast} from 'ctf-ics-mobile-ui'
+import {showToast} from 'fx-mobile-ui'
 import { cdnURL, useTranslate } from '@/docs/site';
 
 // import VanPickerGroup from '..';
@@ -42,21 +42,21 @@ const setActiveTab = () => {
 </script>
 
 <template>
-  <icsm-button style="margin: 10px 0" type="primary" @click="setActiveTab">
+  <fx-button style="margin: 10px 0" type="primary" @click="setActiveTab">
     {{ t('btnText') + activeTab }}
-  </icsm-button>
-  <icsm-picker-group
+ </fx-button>
+  <fx-picker-group
     v-model:active-tab="activeTab"
     :title="t('title')"
     :tabs="[t('date'), t('time')]"
     @confirm="onConfirm"
     @cancel="onCancel"
   >
-    <icsm-date-picker
+    <fx-date-picker
       v-model="currentDate"
       :min-date="minDate"
       :max-date="maxDate"
     />
-    <icsm-time-picker v-model="currentTime" />
-  </icsm-picker-group>
+    <fx-time-picker v-model="currentTime" />
+ </fx-picker-group>
 </template>

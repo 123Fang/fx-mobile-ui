@@ -24,7 +24,7 @@ app.use(Image);
 基础用法与原生 `img` 标签一致，可以设置 `src`、`width`、`height`、`alt` 等原生属性。
 
 ```html
-<icsm-image
+<fx-image
   width="100"
   height="100"
   src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
@@ -36,7 +36,7 @@ app.use(Image);
 通过 `fit` 属性可以设置图片填充模式，等同于原生的 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性，可选值见下方表格。
 
 ```html
-<icsm-image
+<fx-image
   width="10rem"
   height="10rem"
   fit="contain"
@@ -49,7 +49,7 @@ app.use(Image);
 通过 `position` 属性可以设置图片位置，结合 `fit` 属性使用，等同于原生的 [object-position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-position) 属性。
 
 ```html
-<icsm-image
+<fx-image
   width="10rem"
   height="10rem"
   fit="cover"
@@ -63,7 +63,7 @@ app.use(Image);
 通过 `round` 属性可以设置图片变圆，注意当图片宽高不相等且 `fit` 为 `contain` 或 `scale-down` 时，将无法填充一个完整的圆形。
 
 ```html
-<icsm-image
+<fx-image
   round
   width="10rem"
   height="10rem"
@@ -76,7 +76,7 @@ app.use(Image);
 设置 `lazy-load` 属性来开启图片懒加载，需要搭配 [Lazyload](#/zh-CN/lazyload) 组件使用。
 
 ```html
-<icsm-image
+<fx-image
   width="100"
   height="100"
   lazy-load
@@ -97,11 +97,11 @@ app.use(Lazyload);
 `Image` 组件提供了默认的加载中提示，支持通过 `loading` 插槽自定义内容。
 
 ```html
-<icsm-image src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg">
+<fx-image src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg">
   <template v-slot:loading>
-    <icsm-loading type="spinner" size="20" />
+    <fx-loading type="spinner" size="20" />
   </template>
-</icsm-image>
+</fx-image>
 ```
 
 ### 加载失败提示
@@ -109,9 +109,9 @@ app.use(Lazyload);
 `Image` 组件提供了默认的加载失败提示，支持通过 `error` 插槽自定义内容。
 
 ```html
-<icsm-image src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg">
+<fx-image src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg">
   <template v-slot:error>加载失败</template>
-</icsm-image>
+</fx-image>
 ```
 
 ## API
@@ -182,13 +182,13 @@ import type { ImageFit, ImagePosition, ImageProps } from ‘ctf-ics-mobile-ui’
 
 | 名称                               | 默认值                    | 描述 |
 | ---------------------------------- | ------------------------- | ---- |
-| --icsm-image-placeholder-text-color | _var(--icsm-text-color-2)_ | -    |
-| --icsm-image-placeholder-font-size  | _var(--icsm-font-size-md)_ | -    |
-| --icsm-image-placeholder-background | _var(--icsm-background)_   | -    |
-| --icsm-image-loading-icon-size      | _32px_                    | -    |
-| --icsm-image-loading-icon-color     | _var(--icsm-gray-4)_       | -    |
-| --icsm-image-error-icon-size        | _32px_                    | -    |
-| --icsm-image-error-icon-color       | _var(--icsm-gray-4)_       | -    |
+| --fx-image-placeholder-text-color | _var(--fx-text-color-2)_ | -    |
+| --fx-image-placeholder-font-size  | _var(--fx-font-size-md)_ | -    |
+| --fx-image-placeholder-background | _var(--fx-background)_   | -    |
+| --fx-image-loading-icon-size      | _32px_                    | -    |
+| --fx-image-loading-icon-color     | _var(--fx-gray-4)_       | -    |
+| --fx-image-error-icon-size        | _32px_                    | -    |
+| --fx-image-error-icon-color       | _var(--fx-gray-4)_       | -    |
 
 ## 常见问题
 
@@ -198,10 +198,10 @@ import type { ImageFit, ImagePosition, ImageProps } from ‘ctf-ics-mobile-ui’
 
 ```html
 <!-- 错误写法 -->
-<icsm-image src="./image.png" />
+<fx-image src="./image.png" />
 
 <!-- 正确写法 -->
-<icsm-image :src="require('./image.png')" />
+<fx-image :src="require('./image.png')" />
 ```
 
 > 对此更详细的解释可以参考 vue-loader 的[处理资源路径](https://vue-loader.vuejs.org/zh/guide/asset-url.html)章节。
@@ -226,7 +226,7 @@ export default {
 <script>
 ```
 
-这是因为 \<image> 标签是原生的 SVG 标签，Vue 不允许将原生标签名注册为组件名，使用 \<icsm-image> 即可规避这个问题。
+这是因为 \<image> 标签是原生的 SVG 标签，Vue 不允许将原生标签名注册为组件名，使用 \<fx-image> 即可规避这个问题。
 
 
 <br/><br/><br/><br/><br/><br/>

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TimePicker } from 'ctf-ics-mobile-ui';
+import { TimePicker } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(TimePicker);
@@ -23,7 +23,7 @@ app.use(TimePicker);
 通过 `v-model` 绑定当前选中的时间。
 
 ```html
-<icsm-time-picker v-model="currentTime" title="选择时间" />
+<fx-time-picker v-model="currentTime" title="选择时间" />
 ```
 
 ```js
@@ -49,7 +49,7 @@ export default {
 - 传入 `['hour', 'minute', 'second']` 来选择小时、分钟和秒。
 
 ```html
-<icsm-time-picker
+<fx-time-picker
   v-model="currentTime"
   title="选择时间"
   :columns-type="columnsType"
@@ -78,7 +78,7 @@ export default {
 比如以下示例，用户可以选择的小时是 `10 ~ 20` ，分钟是 `30 ~ 40`。
 
 ```html
-<icsm-time-picker
+<fx-time-picker
   v-model="currentTime"
   title="选择时间"
   :min-hour="10"
@@ -109,7 +109,7 @@ export default {
 比如以下示例，用户可以选择从 `09:40:10` 到 `20:20:50` 的任意时间。
 
 ```html
-<icsm-time-picker
+<fx-time-picker
   v-model="currentTime"
   title="选择时间"
   :columns-type="['hour', 'minute', 'second']"
@@ -134,7 +134,7 @@ export default {
 通过传入 `formatter` 函数，可以对选项的文字进行格式化。
 
 ```html
-<icsm-time-picker
+<fx-time-picker
   v-model="currentTime"
   title="选择时间"
   :formatter="formatter"
@@ -170,7 +170,7 @@ export default {
 通过传入 `filter` 函数，可以对选项数组进行过滤，剔除不需要的时间，实现自定义时间间隔。
 
 ```html
-<icsm-time-picker v-model="currentTime" title="选择时间" :filter="filter" />
+<fx-time-picker v-model="currentTime" title="选择时间" :filter="filter" />
 ```
 
 ```js
@@ -199,7 +199,7 @@ export default {
 `filter` 函数的第三个参数能获取到当前选择的时间，这在使用非受控模式时，可以更灵活地过滤掉不需要的时间。
 
 ```html
-<icsm-time-picker title="选择时间" :filter="filter" />
+<fx-time-picker title="选择时间" :filter="filter" />
 ```
 
 ```js
@@ -298,14 +298,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TimePickerProps, TimePickerColumnType } from 'ctf-ics-mobile-ui';
+import type { TimePickerProps, TimePickerColumnType } from 'fx-mobile-ui';
 ```
 
 `TimePickerInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { TimePickerInstance } from 'ctf-ics-mobile-ui';
+import type { TimePickerInstance } from 'fx-mobile-ui';
 
 const timePickerRef = ref<TimePickerInstance>();
 

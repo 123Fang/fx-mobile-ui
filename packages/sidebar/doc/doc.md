@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Sidebar, SidebarItem } from 'ctf-ics-mobile-ui';
+import { Sidebar, SidebarItem } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Sidebar);
@@ -24,11 +24,11 @@ app.use(SidebarItem);
 通过 `v-model` 绑定当前选中项的索引。
 
 ```html
-<icsm-sidebar v-model="active">
-  <icsm-sidebar-item title="标签名称" />
-  <icsm-sidebar-item title="标签名称" />
-  <icsm-sidebar-item title="标签名称" />
-</icsm-sidebar>
+<fx-sidebar v-model="active">
+  <fx-sidebar-item title="标签名称" />
+  <fx-sidebar-item title="标签名称" />
+  <fx-sidebar-item title="标签名称" />
+</fx-sidebar>
 ```
 
 ```js
@@ -47,11 +47,11 @@ export default {
 设置 `dot` 属性后，会在右上角展示一个小红点；设置 `badge` 属性后，会在右上角展示相应的徽标。
 
 ```html
-<icsm-sidebar v-model="active">
-  <icsm-sidebar-item title="标签名称" dot />
-  <icsm-sidebar-item title="标签名称" badge="5" />
-  <icsm-sidebar-item title="标签名称" />
-</icsm-sidebar>
+<fx-sidebar v-model="active">
+  <fx-sidebar-item title="标签名称" dot />
+  <fx-sidebar-item title="标签名称" badge="5" />
+  <fx-sidebar-item title="标签名称" />
+</fx-sidebar>
 ```
 
 ### 禁用选项
@@ -59,11 +59,11 @@ export default {
 通过 `disabled` 属性禁用选项。
 
 ```html
-<icsm-sidebar v-model="active">
-  <icsm-sidebar-item title="标签名称" />
-  <icsm-sidebar-item title="标签名称" disabled />
-  <icsm-sidebar-item title="标签名称" />
-</icsm-sidebar>
+<fx-sidebar v-model="active">
+  <fx-sidebar-item title="标签名称" />
+  <fx-sidebar-item title="标签名称" disabled />
+  <fx-sidebar-item title="标签名称" />
+</fx-sidebar>
 ```
 
 ### 监听切换事件
@@ -71,16 +71,16 @@ export default {
 设置 `change` 方法来监听切换导航项时的事件。
 
 ```html
-<icsm-sidebar v-model="active" @change="onChange">
-  <icsm-sidebar-item title="标签名 1" />
-  <icsm-sidebar-item title="标签名 2" />
-  <icsm-sidebar-item title="标签名 3" />
-</icsm-sidebar>
+<fx-sidebar v-model="active" @change="onChange">
+  <fx-sidebar-item title="标签名 1" />
+  <fx-sidebar-item title="标签名 2" />
+  <fx-sidebar-item title="标签名 3" />
+</fx-sidebar>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -138,7 +138,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SidebarProps, SidebarItemProps } from 'ctf-ics-mobile-ui';
+import type { SidebarProps, SidebarItemProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -149,20 +149,20 @@ import type { SidebarProps, SidebarItemProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                 | 默认值                       | 描述 |
 | ------------------------------------ | ---------------------------- | ---- |
-| --icsm-sidebar-width                  | _80px_                       | -    |
-| --icsm-sidebar-font-size              | _var(--icsm-font-size-md)_    | -    |
-| --icsm-sidebar-line-height            | _var(--icsm-line-height-md)_  | -    |
-| --icsm-sidebar-text-color             | _var(--icsm-text-color)_      | -    |
-| --icsm-sidebar-disabled-text-color    | _var(--icsm-text-color-3)_    | -    |
-| --icsm-sidebar-padding                | _20px var(--icsm-padding-sm)_ | -    |
-| --icsm-sidebar-active-color           | _var(--icsm-active-color)_    | -    |
-| --icsm-sidebar-background             | _var(--icsm-background)_      | -    |
-| --icsm-sidebar-selected-font-weight   | _var(--icsm-font-bold)_       | -    |
-| --icsm-sidebar-selected-text-color    | _var(--icsm-text-color)_      | -    |
-| --icsm-sidebar-selected-border-width  | _4px_                        | -    |
-| --icsm-sidebar-selected-border-height | _16px_                       | -    |
-| --icsm-sidebar-selected-border-color  | _var(--icsm-primary-color)_   | -    |
-| --icsm-sidebar-selected-background    | _var(--icsm-background-2)_    | -    |
+| --fx-sidebar-width                  | _80px_                       | -    |
+| --fx-sidebar-font-size              | _var(--fx-font-size-md)_    | -    |
+| --fx-sidebar-line-height            | _var(--fx-line-height-md)_  | -    |
+| --fx-sidebar-text-color             | _var(--fx-text-color)_      | -    |
+| --fx-sidebar-disabled-text-color    | _var(--fx-text-color-3)_    | -    |
+| --fx-sidebar-padding                | _20px var(--fx-padding-sm)_ | -    |
+| --fx-sidebar-active-color           | _var(--fx-active-color)_    | -    |
+| --fx-sidebar-background             | _var(--fx-background)_      | -    |
+| --fx-sidebar-selected-font-weight   | _var(--fx-font-bold)_       | -    |
+| --fx-sidebar-selected-text-color    | _var(--fx-text-color)_      | -    |
+| --fx-sidebar-selected-border-width  | _4px_                        | -    |
+| --fx-sidebar-selected-border-height | _16px_                       | -    |
+| --fx-sidebar-selected-border-color  | _var(--fx-primary-color)_   | -    |
+| --fx-sidebar-selected-background    | _var(--fx-background-2)_    | -    |
 
 
 

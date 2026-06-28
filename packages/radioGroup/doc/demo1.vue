@@ -1,6 +1,6 @@
 <!-- html -->
 <template>
-  <icsm-radio-group></icsm-radio-group>
+  <fx-radio-group></fx-radio-group>
 </template>
 
 <!-- js -->

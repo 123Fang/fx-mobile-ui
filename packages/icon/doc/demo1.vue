@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import icons from '@vant/icons';
-import { showNotify } from 'ctf-ics-mobile-ui';
+import { showNotify } from 'fx-mobile-ui';
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
 
@@ -61,7 +61,7 @@ const demoIcon = 'chat-o';
 const demoImage = cdnURL('icon-demo.png');
 
 const copy = (icon: string, option: Record<string, unknown> = {}) => {
-  let tag = `<icsm-icon name="${icon}"`;
+  let tag = `<fx-icon name="${icon}"`;
   if ('dot' in option) {
     tag = `${tag} ${option.dot ? 'dot' : ''}`;
   }
@@ -87,103 +87,103 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
 </script>
 
 <template>
-  <icsm-tabs v-model:active="tab" sticky>
-    <icsm-tab class="demo-icon-tab-panel" :title="t('demo')">
+  <fx-tabs v-model:active="tab" sticky>
+    <fx-tab class="demo-icon-tab-panel" :title="t('demo')">
       <demo-block :title="t('basicUsage')">
-        <icsm-row>
-          <icsm-col span="6" @click="copy(demoIcon)">
-            <icsm-icon :name="demoIcon" />
-          </icsm-col>
-        </icsm-row>
+        <fx-row>
+          <fx-col span="6" @click="copy(demoIcon)">
+            <fx-icon :name="demoIcon" />
+         </fx-col>
+       </fx-row>
       </demo-block>
 
       <demo-block :title="t('usingUrl')">
-        <icsm-row>
-          <icsm-col span="6" @click="copy(demoImage)">
-            <icsm-icon :name="demoImage" />
-          </icsm-col>
-        </icsm-row>
+        <fx-row>
+          <fx-col span="6" @click="copy(demoImage)">
+            <fx-icon :name="demoImage" />
+         </fx-col>
+       </fx-row>
       </demo-block>
 
       <demo-block :title="t('badge')">
-        <icsm-row>
-          <icsm-col span="6" @click="copy(demoIcon, { dot: true })">
-            <icsm-icon :name="demoIcon" dot />
-          </icsm-col>
-          <icsm-col span="6" @click="copy(demoIcon, { badge: '9' })">
-            <icsm-icon :name="demoIcon" badge="9" />
-          </icsm-col>
-          <icsm-col span="6" @click="copy(demoIcon, { badge: '99+' })">
-            <icsm-icon :name="demoIcon" badge="99+" />
-          </icsm-col>
-        </icsm-row>
+        <fx-row>
+          <fx-col span="6" @click="copy(demoIcon, { dot: true })">
+            <fx-icon :name="demoIcon" dot />
+         </fx-col>
+          <fx-col span="6" @click="copy(demoIcon, { badge: '9' })">
+            <fx-icon :name="demoIcon" badge="9" />
+         </fx-col>
+          <fx-col span="6" @click="copy(demoIcon, { badge: '99+' })">
+            <fx-icon :name="demoIcon" badge="99+" />
+         </fx-col>
+       </fx-row>
       </demo-block>
 
       <demo-block :title="t('color')">
-        <icsm-row>
-          <icsm-col span="6" @click="copy('cart-o', { color: '#1989fa' })">
-            <icsm-icon name="cart-o" color="#1989fa" />
-          </icsm-col>
-          <icsm-col span="6" @click="copy('fire-o', { color: '#ee0a24' })">
-            <icsm-icon name="fire-o" color="#ee0a24" />
-          </icsm-col>
-        </icsm-row>
+        <fx-row>
+          <fx-col span="6" @click="copy('cart-o', { color: '#1989fa' })">
+            <fx-icon name="cart-o" color="#1989fa" />
+         </fx-col>
+          <fx-col span="6" @click="copy('fire-o', { color: '#ee0a24' })">
+            <fx-icon name="fire-o" color="#ee0a24" />
+         </fx-col>
+       </fx-row>
       </demo-block>
 
       <demo-block :title="t('size')">
-        <icsm-row>
-          <icsm-col span="6" @click="copy(demoIcon, { size: '40' })">
-            <icsm-icon :name="demoIcon" size="40" />
-          </icsm-col>
-          <icsm-col span="6" @click="copy(demoIcon, { size: '3rem' })">
-            <icsm-icon :name="demoIcon" size="3rem" />
-          </icsm-col>
-        </icsm-row>
+        <fx-row>
+          <fx-col span="6" @click="copy(demoIcon, { size: '40' })">
+            <fx-icon :name="demoIcon" size="40" />
+         </fx-col>
+          <fx-col span="6" @click="copy(demoIcon, { size: '3rem' })">
+            <fx-icon :name="demoIcon" size="3rem" />
+         </fx-col>
+       </fx-row>
       </demo-block>
-    </icsm-tab>
+   </fx-tab>
 
-    <icsm-tab class="demo-icon-tab-panel" :title="t('basic')">
-      <icsm-row>
-        <icsm-col
+    <fx-tab class="demo-icon-tab-panel" :title="t('basic')">
+      <fx-row>
+        <fx-col
           v-for="icon in icons.basic"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <icsm-icon :name="icon" />
+          <fx-icon :name="icon" />
           <span>{{ icon }}</span>
-        </icsm-col>
-      </icsm-row>
-    </icsm-tab>
+       </fx-col>
+     </fx-row>
+   </fx-tab>
 
-    <icsm-tab class="demo-icon-tab-panel" :title="t('outline')">
-      <icsm-row>
-        <icsm-col
+    <fx-tab class="demo-icon-tab-panel" :title="t('outline')">
+      <fx-row>
+        <fx-col
           v-for="icon in icons.outline"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <icsm-icon :name="icon" />
+          <fx-icon :name="icon" />
           <span>{{ icon }}</span>
-        </icsm-col>
-      </icsm-row>
-    </icsm-tab>
+       </fx-col>
+     </fx-row>
+   </fx-tab>
 
-    <icsm-tab class="demo-icon-tab-panel" :title="t('filled')">
-      <icsm-row>
-        <icsm-col
+    <fx-tab class="demo-icon-tab-panel" :title="t('filled')">
+      <fx-row>
+        <fx-col
           v-for="icon in icons.filled"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <icsm-icon :name="icon" />
+          <fx-icon :name="icon" />
           <span>{{ icon }}</span>
-        </icsm-col>
-      </icsm-row>
-    </icsm-tab>
-  </icsm-tabs>
+       </fx-col>
+     </fx-row>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 <style lang="scss">
@@ -197,11 +197,11 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
   &-tab-panel {
     width: auto;
     margin: 20px;
-    background-color: var(--icsm-background-2);
+    background-color: var(--fx-background-2);
     border-radius: 12px;
   }
 
-  .icsm-col {
+  .fx-col {
     display: inline-block;
     float: none;
     text-align: center;
@@ -213,19 +213,19 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
       height: 36px;
       margin: -4px 0 4px;
       padding: 0 5px;
-      color: var(--icsm-text-color);
+      color: var(--fx-text-color);
       font-size: 12px;
       line-height: 18px;
     }
 
     &:active {
-      background-color: var(--icsm-active-color);
+      background-color: var(--fx-active-color);
     }
   }
 
-  .icsm-icon {
+  .fx-icon {
     margin: 16px 0 16px;
-    color: var(--icsm-text-color);
+    color: var(--fx-text-color);
     font-size: 32px;
   }
 }

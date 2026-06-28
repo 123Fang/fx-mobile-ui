@@ -22,76 +22,76 @@ const align = ref('center');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-space>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-    </icsm-space>
+    <fx-space>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+   </fx-space>
   </demo-block>
 
   <demo-block :title="t('vertical')">
-    <icsm-space direction="vertical" fill>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-    </icsm-space>
+    <fx-space direction="vertical" fill>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+   </fx-space>
   </demo-block>
 
   <demo-block :title="t('customSize')">
-    <icsm-space :size="20" style="margin-bottom: 16px">
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-    </icsm-space>
+    <fx-space :size="20" style="margin-bottom: 16px">
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+   </fx-space>
 
-    <icsm-space size="3rem">
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-      <icsm-button type="primary">{{ t('button') }}</icsm-button>
-    </icsm-space>
+    <fx-space size="3rem">
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+      <fx-button type="primary">{{ t('button') }}</fx-button>
+   </fx-space>
   </demo-block>
 
   <demo-block :title="t('align')">
-    <icsm-radio-group
+    <fx-radio-group
       v-model="align"
       direction="horizontal"
       style="margin-bottom: 16px"
     >
-      <icsm-radio name="start">start</icsm-radio>
-      <icsm-radio name="center">center</icsm-radio>
-      <icsm-radio name="end">end</icsm-radio>
-      <icsm-radio name="baseline">baseline</icsm-radio>
-    </icsm-radio-group>
-    <icsm-space :align="align" style="padding: 16px; background: #f3f2f5">
-      <icsm-button type="primary">{{ align }}</icsm-button>
+      <fx-radio name="start">start</fx-radio>
+      <fx-radio name="center">center</fx-radio>
+      <fx-radio name="end">end</fx-radio>
+      <fx-radio name="baseline">baseline</fx-radio>
+   </fx-radio-group>
+    <fx-space :align="align" style="padding: 16px; background: #f3f2f5">
+      <fx-button type="primary">{{ align }}</fx-button>
       <div style="padding: 40px 20px; background: #fff">Block</div>
-    </icsm-space>
+   </fx-space>
   </demo-block>
 
   <demo-block :title="t('wrap')">
-    <icsm-space wrap>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-      <icsm-button type="primary" block>{{ t('button') }}</icsm-button>
-    </icsm-space>
+    <fx-space wrap>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+      <fx-button type="primary" block>{{ t('button') }}</fx-button>
+   </fx-space>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-space {
-  background: var(--icsm-background-2);
+  background: var(--fx-background-2);
 
-  .icsm-doc-demo-block {
-    padding: 0 var(--icsm-padding-md);
+  .fx-doc-demo-block {
+    padding: 0 var(--fx-padding-md);
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-left: 0;
   }
 }

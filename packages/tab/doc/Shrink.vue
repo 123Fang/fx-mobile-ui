@@ -22,20 +22,20 @@ const active2 = ref(0);
 
 <template>
   <demo-block :title="t('shrink')">
-    <icsm-tabs v-model:active="active1" shrink>
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+    <fx-tabs v-model:active="active1" shrink>
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
-    <icsm-tabs
+     </fx-tab>
+   </fx-tabs>
+    <fx-tabs
       v-model:active="active2"
       type="card"
       shrink
-      style="margin-top: var(--icsm-padding-lg)"
+      style="margin-top: var(--fx-padding-lg)"
     >
-      <icsm-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
+      <fx-tab :title="t('tab') + index" v-for="index in tabs" :key="index">
         {{ t('content') }} {{ index }}
-      </icsm-tab>
-    </icsm-tabs>
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 </template>

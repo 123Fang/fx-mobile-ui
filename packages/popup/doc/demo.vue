@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import {showToast } from 'ctf-ics-mobile-ui'
+import {showToast } from 'fx-mobile-ui'
 
 const t = useTranslate({
   'zh-CN': {
@@ -59,52 +59,52 @@ const showDisplayEvents = ref(false);
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell :title="t('buttonBasic')" is-link @click="showBasic = true" />
-    <icsm-popup v-model:show="showBasic" :style="{ padding: '64px' }">
+    <fx-cell :title="t('buttonBasic')" is-link @click="showBasic = true" />
+    <fx-popup v-model:show="showBasic" :style="{ padding: '64px' }">
       {{ t('content') }}
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block card :title="t('position')">
-    <icsm-grid clickable>
-      <icsm-grid-item
+    <fx-grid clickable>
+      <fx-grid-item
         icon="arrow-up"
         :text="t('buttonTop')"
         @click="showTop = true"
       />
-      <icsm-grid-item
+      <fx-grid-item
         icon="arrow-down"
         :text="t('buttonBottom')"
         @click="showBottom = true"
       />
-      <icsm-grid-item
+      <fx-grid-item
         icon="arrow-left"
         :text="t('buttonLeft')"
         @click="showLeft = true"
       />
-      <icsm-grid-item
+      <fx-grid-item
         icon="arrow"
         :text="t('buttonRight')"
         @click="showRight = true"
       />
-    </icsm-grid>
+   </fx-grid>
 
-    <icsm-popup
+    <fx-popup
       v-model:show="showTop"
       position="top"
       :style="{ height: '30%' }"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showBottom"
       position="bottom"
       :style="{ height: '30%' }"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showLeft"
       position="left"
       :style="{ width: '30%', height: '100%' }"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showRight"
       position="right"
       :style="{ width: '30%', height: '100%' }"
@@ -112,32 +112,32 @@ const showDisplayEvents = ref(false);
   </demo-block>
 
   <demo-block card :title="t('closeIcon')">
-    <icsm-cell :title="t('closeIcon')" is-link @click="showCloseIcon = true" />
-    <icsm-cell
+    <fx-cell :title="t('closeIcon')" is-link @click="showCloseIcon = true" />
+    <fx-cell
       :title="t('customCloseIcon')"
       is-link
       @click="showCustomCloseIcon = true"
     />
-    <icsm-cell
+    <fx-cell
       :title="t('customIconPosition')"
       is-link
       @click="showCustomIconPosition = true"
     />
 
-    <icsm-popup
+    <fx-popup
       v-model:show="showCloseIcon"
       closeable
       position="bottom"
       :style="{ height: '30%' }"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showCustomCloseIcon"
       closeable
       close-icon="close"
       position="bottom"
       :style="{ height: '30%' }"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showCustomIconPosition"
       closeable
       close-icon-position="top-left"
@@ -147,23 +147,23 @@ const showDisplayEvents = ref(false);
   </demo-block>
 
   <demo-block card :title="t('roundCorner')">
-    <icsm-cell
+    <fx-cell
       :title="t('roundCornerCenter')"
       is-link
       @click="showRoundCornerCenter = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showRoundCornerCenter"
       round
       :style="{ padding: '64px' }"
     />
 
-    <icsm-cell
+    <fx-cell
       :title="t('roundCornerBottom')"
       is-link
       @click="showRoundCornerBottom = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showRoundCornerBottom"
       round
       position="bottom"
@@ -172,12 +172,12 @@ const showDisplayEvents = ref(false);
   </demo-block>
 
   <demo-block card :title="t('listenEvents')">
-    <icsm-cell
+    <fx-cell
       :title="t('clickEvents')"
       is-link
       @click="showClickEvents = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showClickEvents"
       position="bottom"
       :style="{ height: '30%' }"
@@ -186,12 +186,12 @@ const showDisplayEvents = ref(false);
       @click-close-icon="showToast('click-close-icon')"
     />
 
-    <icsm-cell
+    <fx-cell
       :title="t('displayEvents')"
       is-link
       @click="showDisplayEvents = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showDisplayEvents"
       position="bottom"
       :style="{ height: '30%' }"
@@ -203,8 +203,8 @@ const showDisplayEvents = ref(false);
   </demo-block>
 
   <demo-block card :title="t('teleport')">
-    <icsm-cell :title="t('teleport')" is-link @click="showGetContainer = true" />
-    <icsm-popup
+    <fx-cell :title="t('teleport')" is-link @click="showGetContainer = true" />
+    <fx-popup
       v-model:show="showGetContainer"
       teleport="body"
       :style="{ padding: '64px' }"
@@ -214,12 +214,12 @@ const showDisplayEvents = ref(false);
 
 <style lang="scss">
 .demo-popup {
-  .icsm-row {
-    margin-bottom: var(--icsm-padding-md);
+  .fx-row {
+    margin-bottom: var(--fx-padding-md);
   }
 
-  .icsm-button {
-    margin-left: var(--icsm-padding-md);
+  .fx-button {
+    margin-left: var(--fx-padding-md);
   }
 }
 </style>

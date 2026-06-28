@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Card } from 'ctf-ics-mobile-ui';
+import { Card } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Card);
@@ -21,7 +21,7 @@ app.use(Card);
 ### 基础用法
 
 ```html
-<icsm-card
+<fx-card
   num="2"
   price="2.00"
   desc="描述信息"
@@ -35,7 +35,7 @@ app.use(Card);
 通过 `origin-price` 设置商品原价，通过 `tag` 设置商品左上角标签。
 
 ```html
-<icsm-card
+<fx-card
   num="2"
   tag="标签"
   price="2.00"
@@ -51,7 +51,7 @@ app.use(Card);
 `Card` 组件提供了多个插槽，可以灵活地自定义内容。
 
 ```html
-<icsm-card
+<fx-card
   num="2"
   price="2.00"
   desc="描述信息"
@@ -59,14 +59,14 @@ app.use(Card);
   thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
 >
   <template #tags>
-    <icsm-tag plain type="primary">标签</icsm-tag>
-    <icsm-tag plain type="primary">标签</icsm-tag>
+    <fx-tag plain type="primary">标签</fx-tag>
+    <fx-tag plain type="primary">标签</fx-tag>
   </template>
   <template #footer>
-    <icsm-button size="mini">按钮</icsm-button>
-    <icsm-button size="mini">按钮</icsm-button>
+    <fx-button size="mini">按钮</fx-button>
+    <fx-button size="mini">按钮</fx-button>
   </template>
-</icsm-card>
+</fx-card>
 ```
 
 ## API
@@ -115,7 +115,7 @@ app.use(Card);
 组件导出以下类型定义：
 
 ```ts
-import type { CardProps } from 'ctf-ics-mobile-ui';
+import type { CardProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -126,22 +126,22 @@ import type { CardProps } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-card-padding | _var(--icsm-padding-xs) var(--icsm-padding-md)_ | - |
-| --icsm-card-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-card-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-card-background | _var(--icsm-background)_ | - |
-| --icsm-card-thumb-size | _88px_ | - |
-| --icsm-card-thumb-radius | _var(--icsm-radius-lg)_ | - |
-| --icsm-card-title-line-height | _16px_ | - |
-| --icsm-card-desc-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-card-desc-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-card-price-color | _var(--icsm-text-color)_ | - |
-| --icsm-card-origin-price-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-card-num-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-card-origin-price-font-size | _var(--icsm-font-size-xs)_ | - |
-| --icsm-card-price-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-card-price-integer-font-size | _var(--icsm-font-size-lg)_ | - |
-| --icsm-card-price-font | _var(--icsm-price-font)_ | - |
+| --fx-card-padding | _var(--fx-padding-xs) var(--fx-padding-md)_ | - |
+| --fx-card-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-card-text-color | _var(--fx-text-color)_ | - |
+| --fx-card-background | _var(--fx-background)_ | - |
+| --fx-card-thumb-size | _88px_ | - |
+| --fx-card-thumb-radius | _var(--fx-radius-lg)_ | - |
+| --fx-card-title-line-height | _16px_ | - |
+| --fx-card-desc-color | _var(--fx-text-color-2)_ | - |
+| --fx-card-desc-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-card-price-color | _var(--fx-text-color)_ | - |
+| --fx-card-origin-price-color | _var(--fx-text-color-2)_ | - |
+| --fx-card-num-color | _var(--fx-text-color-2)_ | - |
+| --fx-card-origin-price-font-size | _var(--fx-font-size-xs)_ | - |
+| --fx-card-price-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-card-price-integer-font-size | _var(--fx-font-size-lg)_ | - |
+| --fx-card-price-font | _var(--fx-price-font)_ | - |
 
 
 

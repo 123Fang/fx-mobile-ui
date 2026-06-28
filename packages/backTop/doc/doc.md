@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { BackTop } from 'ctf-ics-mobile-ui';
+import { BackTop } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(BackTop);
@@ -23,9 +23,9 @@ app.use(BackTop);
 请滚动右侧的示例页面，当页面滚动 `200px` 时，右下角会出现返回顶部按钮。
 
 ```html
-<icsm-cell v-for="item in list" :key="item" :title="item" />
+<fx-cell v-for="item in list" :key="item" :title="item" />
 
-<icsm-back-top />
+<fx-back-top />
 ```
 
 ```js
@@ -42,8 +42,8 @@ export default {
 通过 `right` 和 `bottom` 属性来设置组件距离右侧和底部的位置。
 
 ```html
-<icsm-cell v-for="item in list" :key="item" :title="item" />
-<icsm-back-top right="15vw" bottom="10vh" />
+<fx-cell v-for="item in list" :key="item" :title="item" />
+<fx-back-top right="15vw" bottom="10vh" />
 ```
 
 ```js
@@ -60,8 +60,8 @@ export default {
 使用默认插槽来自定义组件展示的内容。
 
 ```html
-<icsm-cell v-for="item in list" :key="item" :title="item" />
-<icsm-back-top class="custom">返回顶部</icsm-back-top>
+<fx-cell v-for="item in list" :key="item" :title="item" />
+<fx-back-top class="custom">返回顶部</fx-back-top>
 
 <style>
   .custom {
@@ -87,8 +87,8 @@ export default {
 
 ```html
 <div class="container">
-  <icsm-cell v-for="item in list" :key="item" :title="item" />
-  <icsm-back-top target=".container" bottom="30vh" />
+  <fx-cell v-for="item in list" :key="item" :title="item" />
+  <fx-back-top target=".container" bottom="30vh" />
 </div>
 
 <style>
@@ -113,7 +113,7 @@ export default {
 当设置 `immediate` 属性后，页面滚动的过程不再有过渡效果，而是瞬间滚动到顶部。
 
 ```html
-<icsm-back-top immediate />
+<fx-back-top immediate />
 ```
 
 ## API
@@ -147,7 +147,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { BackTopProps, BackTopThemeVars } from 'ctf-ics-mobile-ui';
+import type { BackTopProps, BackTopThemeVars } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -158,13 +158,13 @@ import type { BackTopProps, BackTopThemeVars } from 'ctf-ics-mobile-ui';
 
 | 名称                      | 默认值            | 描述 |
 | ------------------------- | ----------------- | ---- |
-| --icsm-back-top-size       | _40px_            | -    |
-| --icsm-back-top-icon-size  | _20px_            | -    |
-| --icsm-back-top-right      | _30px_            | -    |
-| --icsm-back-top-bottom     | _40px_            | -    |
-| --icsm-back-top-z-index    | _100_             | -    |
-| --icsm-back-top-text-color | _#fff_            | -    |
-| --icsm-back-top-background | _var(--icsm-blue)_ | -    |
+| --fx-back-top-size       | _40px_            | -    |
+| --fx-back-top-icon-size  | _20px_            | -    |
+| --fx-back-top-right      | _30px_            | -    |
+| --fx-back-top-bottom     | _40px_            | -    |
+| --fx-back-top-z-index    | _100_             | -    |
+| --fx-back-top-text-color | _#fff_            | -    |
+| --fx-back-top-background | _var(--fx-blue)_ | -    |
 
 
 

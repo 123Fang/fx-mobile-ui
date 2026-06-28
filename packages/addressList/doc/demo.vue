@@ -2,7 +2,7 @@
 import VanAddressList from '..';
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -76,7 +76,7 @@ const onEdit = (item: unknown, index: number) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-address-list
+    <fx-address-list
       v-model="chosenAddressId"
       :list="t('list')"
       :disabled-list="t('disabledList')"
@@ -90,7 +90,7 @@ const onEdit = (item: unknown, index: number) => {
 
 <style lang="scss">
 .demo-address-list {
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-bottom: 0;
   }
 }

@@ -41,52 +41,52 @@ const height = ref(anchors[0]);
 </script>
 
 <template>
-  <icsm-tabs swipe-threshold="3">
-    <icsm-tab :title="t('basicUsage')">
-      <icsm-floating-panel>
-        <icsm-cell-group>
-          <icsm-cell
+  <fx-tabs swipe-threshold="3">
+    <fx-tab :title="t('basicUsage')">
+      <fx-floating-panel>
+        <fx-cell-group>
+          <fx-cell
             v-for="i in 26"
             :key="i"
             :title="String.fromCharCode(i + 64)"
             size="large"
           />
-        </icsm-cell-group>
-      </icsm-floating-panel>
-    </icsm-tab>
+       </fx-cell-group>
+     </fx-floating-panel>
+   </fx-tab>
 
-    <icsm-tab :title="t('customAnchors')">
-      <icsm-floating-panel v-model:height="height" :anchors="anchors">
+    <fx-tab :title="t('customAnchors')">
+      <fx-floating-panel v-model:height="height" :anchors="anchors">
         <div style="text-align: center; padding: 15px">
           <p>{{ t('panelShowHeight') }} {{ height.toFixed(0) }} px</p>
         </div>
-      </icsm-floating-panel>
-    </icsm-tab>
+     </fx-floating-panel>
+   </fx-tab>
 
-    <icsm-tab :title="t('headDragOnly')">
-      <icsm-floating-panel :content-draggable="false">
+    <fx-tab :title="t('headDragOnly')">
+      <fx-floating-panel :content-draggable="false">
         <div style="text-align: center; padding: 15px">
           <p>{{ t('contentUnDrag') }}</p>
         </div>
-      </icsm-floating-panel>
-    </icsm-tab>
+     </fx-floating-panel>
+   </fx-tab>
 
-    <icsm-tab :title="t('disableMagnetic')">
-      <icsm-floating-panel :magnetic="false">
+    <fx-tab :title="t('disableMagnetic')">
+      <fx-floating-panel :magnetic="false">
         <div style="text-align: center; padding: 15px">
           <p>{{ t('magneticDisabled') }}</p>
         </div>
-      </icsm-floating-panel>
-    </icsm-tab>
+     </fx-floating-panel>
+   </fx-tab>
 
-    <icsm-tab :title="t('disableDragging')">
-      <icsm-floating-panel :draggable="false">
+    <fx-tab :title="t('disableDragging')">
+      <fx-floating-panel :draggable="false">
         <div style="text-align: center; padding: 15px">
           <p>{{ t('panelUnDrag') }}</p>
         </div>
-      </icsm-floating-panel>
-    </icsm-tab>
-  </icsm-tabs>
+     </fx-floating-panel>
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 

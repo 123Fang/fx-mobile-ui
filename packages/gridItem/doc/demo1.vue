@@ -1,6 +1,6 @@
 <!-- html -->
 <template>
-  <icsm-grid-item></icsm-grid-item>
+  <fx-grid-item></fx-grid-item>
 </template>
 
 <!-- js -->

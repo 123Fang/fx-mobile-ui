@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -81,10 +81,10 @@ const onCancel = () => showToast(t('cancel'));
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell is-link :title="t('basicUsage')" @click="showBasic = true" />
-    <icsm-cell is-link :title="t('showIcon')" @click="showIcon = true" />
-    <icsm-cell is-link :title="t('showCancel')" @click="showCancel = true" />
-    <icsm-cell
+    <fx-cell is-link :title="t('basicUsage')" @click="showBasic = true" />
+    <fx-cell is-link :title="t('showIcon')" @click="showIcon = true" />
+    <fx-cell is-link :title="t('showCancel')" @click="showCancel = true" />
+    <fx-cell
       is-link
       :title="t('showDescription')"
       @click="showDescription = true"
@@ -92,26 +92,26 @@ const onCancel = () => showToast(t('cancel'));
   </demo-block>
 
   <demo-block card :title="t('optionStatus')">
-    <icsm-cell is-link :title="t('optionStatus')" @click="showStatus = true" />
+    <fx-cell is-link :title="t('optionStatus')" @click="showStatus = true" />
   </demo-block>
 
   <demo-block card :title="t('customPanel')">
-    <icsm-cell is-link :title="t('customPanel')" @click="showTitle = true" />
+    <fx-cell is-link :title="t('customPanel')" @click="showTitle = true" />
   </demo-block>
 
-  <icsm-action-sheet
+  <fx-action-sheet
     v-model:show="showBasic"
     :actions="simpleActions"
     @select="onSelect"
   />
 
-  <icsm-action-sheet
+  <fx-action-sheet
     v-model:show="showIcon"
     :actions="iconActions"
     @select="onSelectIcon"
   />
 
-  <icsm-action-sheet
+  <fx-action-sheet
     v-model:show="showCancel"
     :actions="simpleActions"
     close-on-click-action
@@ -119,7 +119,7 @@ const onCancel = () => showToast(t('cancel'));
     @cancel="onCancel"
   />
 
-  <icsm-action-sheet
+  <fx-action-sheet
     v-model:show="showDescription"
     :actions="actionsWithDescription"
     close-on-click-action
@@ -127,23 +127,23 @@ const onCancel = () => showToast(t('cancel'));
     :description="t('description')"
   />
 
-  <icsm-action-sheet
+  <fx-action-sheet
     v-model:show="showStatus"
     close-on-click-action
     :actions="statusActions"
     :cancel-text="t('cancel')"
   />
 
-  <icsm-action-sheet v-model:show="showTitle" :title="t('title')">
+  <fx-action-sheet v-model:show="showTitle" :title="t('title')">
     <div class="demo-action-sheet-content">{{ t('content') }}</div>
-  </icsm-action-sheet>
+ </fx-action-sheet>
 </template>
 
 <style lang="scss">
 .demo-action-sheet {
   &-content {
-    padding: var(--icsm-padding-md) var(--icsm-padding-md)
-      calc(var(--icsm-padding-md) * 10);
+    padding: var(--fx-padding-md) var(--fx-padding-md)
+      calc(var(--fx-padding-md) * 10);
   }
 }
 </style>

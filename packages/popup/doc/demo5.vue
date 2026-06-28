@@ -1,10 +1,10 @@
 <template>
-    <icsm-cell
+    <fx-cell
       title="监听点击事件"
       is-link
       @click="showClickEvents = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showClickEvents"
       position="bottom"
       :style="{ height: '30%' }"
@@ -13,12 +13,12 @@
       @click-close-icon="showToast('click-close-icon')"
     />
 
-    <icsm-cell
+    <fx-cell
       title="监听显示事件"
       is-link
       @click="showDisplayEvents = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="showDisplayEvents"
       position="bottom"
       :style="{ height: '30%' }"

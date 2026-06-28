@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Popup } from 'ctf-ics-mobile-ui';
+import { Popup } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Popup);
@@ -23,8 +23,8 @@ app.use(Popup);
 通过 `v-model:show` 控制弹出层是否展示。
 
 ```html
-<icsm-cell title="展示弹出层" is-link @click="showPopup" />
-<icsm-popup v-model:show="show" :style="{ padding: '64px' }">内容</icsm-popup>
+<fx-cell title="展示弹出层" is-link @click="showPopup" />
+<fx-popup v-model:show="show" :style="{ padding: '64px' }">内容</fx-popup>
 ```
 
 ```js
@@ -53,24 +53,24 @@ export default {
 
 ```html
 <!-- 顶部弹出 -->
-<icsm-popup v-model:show="showTop" position="top" :style="{ height: '30%' }" />
+<fx-popup v-model:show="showTop" position="top" :style="{ height: '30%' }" />
 
 <!-- 底部弹出 -->
-<icsm-popup
+<fx-popup
   v-model:show="showBottom"
   position="bottom"
   :style="{ height: '30%' }"
 />
 
 <!-- 左侧弹出 -->
-<icsm-popup
+<fx-popup
   v-model:show="showLeft"
   position="left"
   :style="{ width: '30%', height: '100%' }"
 />
 
 <!-- 右侧弹出 -->
-<icsm-popup
+<fx-popup
   v-model:show="showRight"
   position="right"
   :style="{ width: '30%', height: '100%' }"
@@ -82,14 +82,14 @@ export default {
 设置 `closeable` 属性后，会在弹出层的右上角显示关闭图标，并且可以通过 `close-icon` 属性自定义图标，使用 `close-icon-position` 属性可以自定义图标位置。
 
 ```html
-<icsm-popup
+<fx-popup
   v-model:show="show"
   closeable
   position="bottom"
   :style="{ height: '30%' }"
 />
 <!-- 自定义图标 -->
-<icsm-popup
+<fx-popup
   v-model:show="show"
   closeable
   close-icon="close"
@@ -97,7 +97,7 @@ export default {
   :style="{ height: '30%' }"
 />
 <!-- 图标位置 -->
-<icsm-popup
+<fx-popup
   v-model:show="show"
   closeable
   close-icon-position="top-left"
@@ -112,10 +112,10 @@ export default {
 
 ```html
 <!-- 圆角弹窗（居中） -->
-<icsm-popup v-model:show="showCenter" round :style="{ padding: '64px' }" />
+<fx-popup v-model:show="showCenter" round :style="{ padding: '64px' }" />
 
 <!-- 圆角弹窗（底部） -->
-<icsm-popup
+<fx-popup
   v-model:show="showBottom"
   round
   position="bottom"
@@ -132,8 +132,8 @@ Popup 支持以下点击事件：
 - `click-close-icon`: 点击关闭图标时触发。
 
 ```html
-<icsm-cell title="监听点击事件" is-link @click="show = true" />
-<icsm-popup
+<fx-cell title="监听点击事件" is-link @click="show = true" />
+<fx-popup
   v-model:show="show"
   position="bottom"
   :style="{ height: '30%' }"
@@ -145,7 +145,7 @@ Popup 支持以下点击事件：
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -175,8 +175,8 @@ export default {
 - `closed`: 关闭弹出层且动画结束后触发。
 
 ```html
-<icsm-cell title="监听显示事件" is-link @click="show = true" />
-<icsm-popup
+<fx-cell title="监听显示事件" is-link @click="show = true" />
+<fx-popup
   v-model:show="show"
   position="bottom"
   :style="{ height: '30%' }"
@@ -189,7 +189,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -208,10 +208,10 @@ export default {
 
 ```html
 <!-- 挂载到 body 节点下 -->
-<icsm-popup v-model:show="show" teleport="body" />
+<fx-popup v-model:show="show" teleport="body" />
 
 <!-- 挂载到 #app 节点下 -->
-<icsm-popup v-model:show="show" teleport="#app" />
+<fx-popup v-model:show="show" teleport="#app" />
 ```
 
 ## API
@@ -274,7 +274,7 @@ import type {
   PopupPosition,
   PopupInstance,
   PopupCloseIconPosition,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -285,13 +285,13 @@ import type {
 
 | 名称                           | 默认值                               | 描述 |
 | ------------------------------ | ------------------------------------ | ---- |
-| --icsm-popup-background         | _var(--icsm-background-2)_            | -    |
-| --icsm-popup-transition         | _transform var(--icsm-duration-base)_ | -    |
-| --icsm-popup-round-radius       | _16px_                               | -    |
-| --icsm-popup-close-icon-size    | _22px_                               | -    |
-| --icsm-popup-close-icon-color   | _var(--icsm-gray-5)_                  | -    |
-| --icsm-popup-close-icon-margin  | _16px_                               | -    |
-| --icsm-popup-close-icon-z-index | _1_                                  | -    |
+| --fx-popup-background         | _var(--fx-background-2)_            | -    |
+| --fx-popup-transition         | _transform var(--fx-duration-base)_ | -    |
+| --fx-popup-round-radius       | _16px_                               | -    |
+| --fx-popup-close-icon-size    | _22px_                               | -    |
+| --fx-popup-close-icon-color   | _var(--fx-gray-5)_                  | -    |
+| --fx-popup-close-icon-margin  | _16px_                               | -    |
+| --fx-popup-close-icon-z-index | _1_                                  | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

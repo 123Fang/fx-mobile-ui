@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-skeleton-avatar',
+  name: 'fx-skeleton-avatar',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -27,5 +27,5 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-skeleton-avatar-container {}
+.fx-skeleton-avatar-container {}
 </style>

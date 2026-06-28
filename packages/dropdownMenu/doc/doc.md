@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { DropdownMenu, DropdownItem } from 'ctf-ics-mobile-ui'';
+import { DropdownMenu, DropdownItem } from 'fx-mobile-ui'';
 
 const app = createApp();
 app.use(DropdownMenu);
@@ -22,10 +22,10 @@ app.use(DropdownItem);
 ### 基础用法
 
 ```html
-<icsm-dropdown-menu>
-  <icsm-dropdown-item v-model="value1" :options="option1" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu>
+  <fx-dropdown-item v-model="value1" :options="option1" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+</fx-dropdown-menu>
 ```
 
 ```js
@@ -61,26 +61,26 @@ export default {
 通过插槽可以自定义 `DropdownItem` 的内容，此时需要使用 `DropdownMenu` 实例上的 `close` 或指定 `DropdownItem` 的 `toggle` 方法手动控制菜单的显示。
 
 ```html
-<icsm-dropdown-menu ref="menuRef">
-  <icsm-dropdown-item v-model="value" :options="options" />
-  <icsm-dropdown-item title="筛选" ref="itemRef">
-    <icsm-cell center title="包邮">
+<fx-dropdown-menu ref="menuRef">
+  <fx-dropdown-item v-model="value" :options="options" />
+  <fx-dropdown-item title="筛选" ref="itemRef">
+    <fx-cell center title="包邮">
       <template #right-icon>
-        <icsm-switch v-model="switch1" />
+        <fx-switch v-model="switch1" />
       </template>
-    </icsm-cell>
-    <icsm-cell center title="团购">
+   </fx-cell>
+    <fx-cell center title="团购">
       <template #right-icon>
-        <icsm-switch v-model="switch2" />
+        <fx-switch v-model="switch2" />
       </template>
-    </icsm-cell>
+   </fx-cell>
     <div style="padding: 5px 16px;">
-      <icsm-button type="primary" block round @click="onConfirm">
+      <fx-button type="primary" block round @click="onConfirm">
         确认
-      </icsm-button>
+     </fx-button>
     </div>
-  </icsm-dropdown-item>
-</icsm-dropdown-menu>
+ </fx-dropdown-item>
+</fx-dropdown-menu>
 ```
 
 ```js
@@ -122,10 +122,10 @@ export default {
 通过 `active-color` 属性可以自定义菜单标题和选项的选中态颜色。
 
 ```html
-<icsm-dropdown-menu active-color="#ee0a24">
-  <icsm-dropdown-item v-model="value1" :options="option1" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu active-color="#ee0a24">
+  <fx-dropdown-item v-model="value1" :options="option1" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+</fx-dropdown-menu>
 ```
 
 ### 横向滚动
@@ -133,13 +133,13 @@ export default {
 通过 `swipe-threshold` 属性可以自定义滚动阈值。
 
 ```html
-<icsm-dropdown-menu swipe-threshold="4">
-  <icsm-dropdown-item v-model="value1" :options="option1" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu swipe-threshold="4">
+  <fx-dropdown-item v-model="value1" :options="option1" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+</fx-dropdown-menu>
 ```
 
 ### 向上展开
@@ -147,19 +147,19 @@ export default {
 将 `direction` 属性值设置为 `up`，菜单即可向上展开。
 
 ```html
-<icsm-dropdown-menu direction="up">
-  <icsm-dropdown-item v-model="value1" :options="option1" />
-  <icsm-dropdown-item v-model="value2" :options="option2" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu direction="up">
+  <fx-dropdown-item v-model="value1" :options="option1" />
+  <fx-dropdown-item v-model="value2" :options="option2" />
+</fx-dropdown-menu>
 ```
 
 ### 禁用菜单
 
 ```html
-<icsm-dropdown-menu>
-  <icsm-dropdown-item v-model="value1" disabled :options="option1" />
-  <icsm-dropdown-item v-model="value2" disabled :options="option2" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu>
+  <fx-dropdown-item v-model="value1" disabled :options="option1" />
+  <fx-dropdown-item v-model="value2" disabled :options="option2" />
+</fx-dropdown-menu>
 ```
 
 ## API
@@ -235,14 +235,14 @@ import type {
   DropdownItemInstance,
   DropdownMenuInstance,
   DropdownMenuDirection,
-} from 'ctf-ics-mobile-ui'';
+} from 'fx-mobile-ui'';
 ```
 
 `DropdownMenuInstance` 和 `DropdownItemInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { DropdownMenuInstance, DropdownItemInstance } from 'ctf-ics-mobile-ui'';
+import type { DropdownMenuInstance, DropdownItemInstance } from 'fx-mobile-ui'';
 
 const dropdownMenuRef = ref<DropdownMenuInstance>();
 const dropdownItemRef = ref<DropdownItemInstance>();
@@ -268,19 +268,19 @@ dropdownItemRef.value?.toggle();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-dropdown-menu-height | _48px_ | - |
-| --icsm-dropdown-menu-background | _var(--icsm-background-2)_ | - |
-| --icsm-dropdown-menu-shadow | _0 2px 12px fade(var(--icsm-gray-7), 12)_ | - |
-| --icsm-dropdown-menu-title-font-size | _15px_ | - |
-| --icsm-dropdown-menu-title-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-dropdown-menu-title-active-text-color | _var(--icsm-primary-color)_ | - |
-| --icsm-dropdown-menu-title-disabled-text-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-dropdown-menu-title-padding | _0 var(--icsm-padding-xs)_ | - |
-| --icsm-dropdown-menu-title-line-height | _var(--icsm-line-height-lg)_ | - |
-| --icsm-dropdown-menu-option-active-color | _var(--icsm-primary-color)_ | - |
-| --icsm-dropdown-menu-option-disabled-color | _var(--icsm-text-color-3)_ | - |
-| --icsm-dropdown-menu-content-max-height | _80%_ | - |
-| --icsm-dropdown-item-z-index | _10_ | - |
+| --fx-dropdown-menu-height | _48px_ | - |
+| --fx-dropdown-menu-background | _var(--fx-background-2)_ | - |
+| --fx-dropdown-menu-shadow | _0 2px 12px fade(var(--fx-gray-7), 12)_ | - |
+| --fx-dropdown-menu-title-font-size | _15px_ | - |
+| --fx-dropdown-menu-title-text-color | _var(--fx-text-color)_ | - |
+| --fx-dropdown-menu-title-active-text-color | _var(--fx-primary-color)_ | - |
+| --fx-dropdown-menu-title-disabled-text-color | _var(--fx-text-color-2)_ | - |
+| --fx-dropdown-menu-title-padding | _0 var(--fx-padding-xs)_ | - |
+| --fx-dropdown-menu-title-line-height | _var(--fx-line-height-lg)_ | - |
+| --fx-dropdown-menu-option-active-color | _var(--fx-primary-color)_ | - |
+| --fx-dropdown-menu-option-disabled-color | _var(--fx-text-color-3)_ | - |
+| --fx-dropdown-menu-content-max-height | _80%_ | - |
+| --fx-dropdown-item-z-index | _10_ | - |
 
 ## 常见问题
 
@@ -291,19 +291,19 @@ dropdownItemRef.value?.toggle();
 将 `DropdownItem` 的 `teleport` 属性设置为 `body` 即可避免此问题：
 
 ```html
-<icsm-dropdown-menu>
-  <icsm-dropdown-item teleport="body" />
-  <icsm-dropdown-item teleport="body" />
-</icsm-dropdown-menu>
+<fx-dropdown-menu>
+  <fx-dropdown-item teleport="body" />
+  <fx-dropdown-item teleport="body" />
+</fx-dropdown-menu>
 ```
 
 也可以将 `DropdownMenu` 的 `auto-locate` 属性设置为 `true`：
 
 ```html
-<icsm-dropdown-menu auto-locate>
-  <icsm-dropdown-item />
-  <icsm-dropdown-item />
-</icsm-dropdown-menu>
+<fx-dropdown-menu auto-locate>
+  <fx-dropdown-item />
+  <fx-dropdown-item />
+</fx-dropdown-menu>
 ```
 
 

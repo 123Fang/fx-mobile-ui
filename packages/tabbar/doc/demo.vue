@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -39,79 +39,79 @@ const onChange = (index: number) => {
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-tabbar v-model="active">
-      <icsm-tabbar-item icon="home-o">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="search">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="friends-o">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="setting-o">{{ t('tab') }}</icsm-tabbar-item>
-    </icsm-tabbar>
+    <fx-tabbar v-model="active">
+      <fx-tabbar-item icon="home-o">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="search">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="friends-o">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="setting-o">{{ t('tab') }}</fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 
   <demo-block :title="t('matchByName')">
-    <icsm-tabbar v-model="activeName">
-      <icsm-tabbar-item name="home" icon="home-o">
+    <fx-tabbar v-model="activeName">
+      <fx-tabbar-item name="home" icon="home-o">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-      <icsm-tabbar-item name="search" icon="search">
+     </fx-tabbar-item>
+      <fx-tabbar-item name="search" icon="search">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-      <icsm-tabbar-item name="friends" icon="friends-o">
+     </fx-tabbar-item>
+      <fx-tabbar-item name="friends" icon="friends-o">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-      <icsm-tabbar-item name="setting" icon="setting-o">
+     </fx-tabbar-item>
+      <fx-tabbar-item name="setting" icon="setting-o">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-    </icsm-tabbar>
+     </fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 
   <demo-block :title="t('badge')">
-    <icsm-tabbar v-model="active2">
-      <icsm-tabbar-item icon="home-o">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="search" dot>{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="friends-o" badge="5">
+    <fx-tabbar v-model="active2">
+      <fx-tabbar-item icon="home-o">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="search" dot>{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="friends-o" badge="5">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-      <icsm-tabbar-item icon="setting-o" badge="20">
+     </fx-tabbar-item>
+      <fx-tabbar-item icon="setting-o" badge="20">
         {{ t('tab') }}
-      </icsm-tabbar-item>
-    </icsm-tabbar>
+     </fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 
   <demo-block :title="t('customIcon')">
-    <icsm-tabbar v-model="active3">
-      <icsm-tabbar-item badge="3">
+    <fx-tabbar v-model="active3">
+      <fx-tabbar-item badge="3">
         <span>{{ t('custom') }}</span>
         <template #icon="props">
           <img :src="props.active ? icon.active : icon.inactive" />
         </template>
-      </icsm-tabbar-item>
-      <icsm-tabbar-item icon="search">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="setting-o">{{ t('tab') }}</icsm-tabbar-item>
-    </icsm-tabbar>
+     </fx-tabbar-item>
+      <fx-tabbar-item icon="search">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="setting-o">{{ t('tab') }}</fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 
   <demo-block :title="t('customColor')">
-    <icsm-tabbar v-model="active4" active-color="#ee0a24">
-      <icsm-tabbar-item icon="home-o">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="search">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="friends-o">{{ t('tab') }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="setting-o">{{ t('tab') }}</icsm-tabbar-item>
-    </icsm-tabbar>
+    <fx-tabbar v-model="active4" active-color="#ee0a24">
+      <fx-tabbar-item icon="home-o">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="search">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="friends-o">{{ t('tab') }}</fx-tabbar-item>
+      <fx-tabbar-item icon="setting-o">{{ t('tab') }}</fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 
   <demo-block :title="t('switchEvent')">
-    <icsm-tabbar v-model="active5" @change="onChange">
-      <icsm-tabbar-item icon="home-o">{{ `${t('tab')} 1` }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="search">{{ `${t('tab')} 2` }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="friends-o">{{ `${t('tab')} 3` }}</icsm-tabbar-item>
-      <icsm-tabbar-item icon="setting-o">{{ `${t('tab')} 4` }}</icsm-tabbar-item>
-    </icsm-tabbar>
+    <fx-tabbar v-model="active5" @change="onChange">
+      <fx-tabbar-item icon="home-o">{{ `${t('tab')} 1` }}</fx-tabbar-item>
+      <fx-tabbar-item icon="search">{{ `${t('tab')} 2` }}</fx-tabbar-item>
+      <fx-tabbar-item icon="friends-o">{{ `${t('tab')} 3` }}</fx-tabbar-item>
+      <fx-tabbar-item icon="setting-o">{{ `${t('tab')} 4` }}</fx-tabbar-item>
+   </fx-tabbar>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-tabbar {
-  .icsm-tabbar {
+  .fx-tabbar {
     position: relative;
     padding-bottom: 0;
   }

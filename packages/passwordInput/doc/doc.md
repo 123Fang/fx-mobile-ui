@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { PasswordInput, NumberKeyboard } from 'ctf-ics-mobile-ui';
+import { PasswordInput, NumberKeyboard } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(PasswordInput);
@@ -25,13 +25,13 @@ app.use(NumberKeyboard);
 
 ```html
 <!-- 密码输入框 -->
-<icsm-password-input
+<fx-password-input
   :value="value"
   :focused="showKeyboard"
   @focus="showKeyboard = true"
 />
 <!-- 数字键盘 -->
-<icsm-number-keyboard
+<fx-number-keyboard
   v-model="value"
   :show="showKeyboard"
   @blur="showKeyboard = false"
@@ -59,7 +59,7 @@ export default {
 通过 `length` 属性来设置密码长度。
 
 ```html
-<icsm-password-input
+<fx-password-input
   :value="value"
   :length="4"
   :focused="showKeyboard"
@@ -72,7 +72,7 @@ export default {
 通过 `gutter` 属性来设置格子之间的间距。
 
 ```html
-<icsm-password-input
+<fx-password-input
   :value="value"
   :gutter="10"
   :focused="showKeyboard"
@@ -85,7 +85,7 @@ export default {
 将 `mask` 设置为 `false` 可以明文展示输入的内容，适用于短信验证码等场景。
 
 ```html
-<icsm-password-input
+<fx-password-input
   :value="value"
   :mask="false"
   :focused="showKeyboard"
@@ -98,14 +98,14 @@ export default {
 通过 `info` 属性设置提示信息，通过 `error-info` 属性设置错误提示，例如当输入六位时提示密码错误。
 
 ```html
-<icsm-password-input
+<fx-password-input
   :value="value"
   info="密码为 6 位数字"
   :error-info="errorInfo"
   :focused="showKeyboard"
   @focus="showKeyboard = true"
 />
-<icsm-number-keyboard
+<fx-number-keyboard
   v-model="value"
   :show="showKeyboard"
   @blur="showKeyboard = false"
@@ -163,7 +163,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PasswordInputProps } from 'ctf-ics-mobile-ui';
+import type { PasswordInputProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -174,20 +174,20 @@ import type { PasswordInputProps } from 'ctf-ics-mobile-ui';
 
 | 名称                                  | 默认值                    | 描述 |
 | ------------------------------------- | ------------------------- | ---- |
-| --icsm-password-input-height           | _50px_                    | -    |
-| --icsm-password-input-margin           | _0 var(--icsm-padding-md)_ | -    |
-| --icsm-password-input-font-size        | _20px_                    | -    |
-| --icsm-password-input-radius           | _6px_                     | -    |
-| --icsm-password-input-background       | _var(--icsm-background-2)_ | -    |
-| --icsm-password-input-info-color       | _var(--icsm-text-color-2)_ | -    |
-| --icsm-password-input-info-font-size   | _var(--icsm-font-size-md)_ | -    |
-| --icsm-password-input-error-info-color | _var(--icsm-danger-color)_ | -    |
-| --icsm-password-input-dot-size         | _10px_                    | -    |
-| --icsm-password-input-dot-color        | _var(--icsm-text-color)_   | -    |
-| --icsm-password-input-text-color       | _var(--icsm-text-color)_   | -    |
-| --icsm-password-input-cursor-color     | _var(--icsm-text-color)_   | -    |
-| --icsm-password-input-cursor-width     | _1px_                     | -    |
-| --icsm-password-input-cursor-height    | _40%_                     | -    |
-| --icsm-password-input-cursor-duration  | _1s_                      | -    |
+| --fx-password-input-height           | _50px_                    | -    |
+| --fx-password-input-margin           | _0 var(--fx-padding-md)_ | -    |
+| --fx-password-input-font-size        | _20px_                    | -    |
+| --fx-password-input-radius           | _6px_                     | -    |
+| --fx-password-input-background       | _var(--fx-background-2)_ | -    |
+| --fx-password-input-info-color       | _var(--fx-text-color-2)_ | -    |
+| --fx-password-input-info-font-size   | _var(--fx-font-size-md)_ | -    |
+| --fx-password-input-error-info-color | _var(--fx-danger-color)_ | -    |
+| --fx-password-input-dot-size         | _10px_                    | -    |
+| --fx-password-input-dot-color        | _var(--fx-text-color)_   | -    |
+| --fx-password-input-text-color       | _var(--fx-text-color)_   | -    |
+| --fx-password-input-cursor-color     | _var(--fx-text-color)_   | -    |
+| --fx-password-input-cursor-width     | _1px_                     | -    |
+| --fx-password-input-cursor-height    | _40%_                     | -    |
+| --fx-password-input-cursor-duration  | _1s_                      | -    |
 
 <br/><br/><br/><br/><br/><br/>

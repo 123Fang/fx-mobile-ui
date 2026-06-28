@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { SubmitBar } from 'ctf-ics-mobile-ui';
+import { SubmitBar } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(SubmitBar);
@@ -21,11 +21,11 @@ app.use(SubmitBar);
 ### 基础用法
 
 ```html
-<icsm-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" />
+<fx-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" />
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -42,7 +42,7 @@ export default {
 禁用状态下不会触发 `submit` 事件。
 
 ```html
-<icsm-submit-bar
+<fx-submit-bar
   disabled
   :price="3050"
   button-text="提交订单"
@@ -57,7 +57,7 @@ export default {
 加载状态下不会触发 `submit` 事件。
 
 ```html
-<icsm-submit-bar
+<fx-submit-bar
   loading
   :price="3050"
   button-text="提交订单"
@@ -70,16 +70,16 @@ export default {
 通过插槽插入自定义内容。
 
 ```html
-<icsm-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit">
-  <icsm-checkbox v-model="checked">全选</icsm-checkbox>
+<fx-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit">
+  <fx-checkbox v-model="checked">全选</fx-checkbox>
   <template #tip>
     你的收货地址不支持配送, <span @click="onClickLink">修改地址</span>
   </template>
-</icsm-submit-bar>
+</fx-submit-bar>
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -135,7 +135,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SubmitBarProps, SubmitBarTextAlign } from 'ctf-ics-mobile-ui';
+import type { SubmitBarProps, SubmitBarTextAlign } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -146,24 +146,24 @@ import type { SubmitBarProps, SubmitBarTextAlign } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-submit-bar-height | _50px_ | - |
-| --icsm-submit-bar-z-index | _100_ | - |
-| --icsm-submit-bar-background | _var(--icsm-background-2)_ | - |
-| --icsm-submit-bar-button-width | _110px_ | - |
-| --icsm-submit-bar-price-color | _var(--icsm-danger-color)_ | - |
-| --icsm-submit-bar-price-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-submit-bar-price-integer-font-size | _20px_ | - |
-| --icsm-submit-bar-price-font | _var(--icsm-price-font)_ | - |
-| --icsm-submit-bar-text-color | _var(--icsm-text-color)_ | - |
-| --icsm-submit-bar-text-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-submit-bar-tip-padding | _var(--icsm-padding-xs) var(--icsm-padding-sm)_ | - |
-| --icsm-submit-bar-tip-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-submit-bar-tip-line-height | _1.5_ | - |
-| --icsm-submit-bar-tip-color | _var(--icsm-orange-dark)_ | - |
-| --icsm-submit-bar-tip-background | _var(--icsm-orange-light)_ | - |
-| --icsm-submit-bar-tip-icon-size | _12px_ | - |
-| --icsm-submit-bar-button-height | _40px_ | - |
-| --icsm-submit-bar-padding | _0 var(--icsm-padding-md)_ | - |
+| --fx-submit-bar-height | _50px_ | - |
+| --fx-submit-bar-z-index | _100_ | - |
+| --fx-submit-bar-background | _var(--fx-background-2)_ | - |
+| --fx-submit-bar-button-width | _110px_ | - |
+| --fx-submit-bar-price-color | _var(--fx-danger-color)_ | - |
+| --fx-submit-bar-price-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-submit-bar-price-integer-font-size | _20px_ | - |
+| --fx-submit-bar-price-font | _var(--fx-price-font)_ | - |
+| --fx-submit-bar-text-color | _var(--fx-text-color)_ | - |
+| --fx-submit-bar-text-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-submit-bar-tip-padding | _var(--fx-padding-xs) var(--fx-padding-sm)_ | - |
+| --fx-submit-bar-tip-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-submit-bar-tip-line-height | _1.5_ | - |
+| --fx-submit-bar-tip-color | _var(--fx-orange-dark)_ | - |
+| --fx-submit-bar-tip-background | _var(--fx-orange-light)_ | - |
+| --fx-submit-bar-tip-icon-size | _12px_ | - |
+| --fx-submit-bar-button-height | _40px_ | - |
+| --fx-submit-bar-padding | _0 var(--fx-padding-md)_ | - |
 
 
 

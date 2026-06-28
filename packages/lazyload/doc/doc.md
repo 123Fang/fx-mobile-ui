@@ -12,7 +12,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Lazyload } from 'ctf-ics-mobile-ui';
+import { Lazyload } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Lazyload);

@@ -13,7 +13,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-cascader'
+  name: 'fx-cascader'
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -21,6 +21,6 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-cascader-container {
+.fx-cascader-container {
 }
 </style>

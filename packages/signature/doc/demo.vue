@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -27,21 +27,21 @@ const onClear = () => showToast('clear');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-signature @submit="onSubmit" @clear="onClear" />
+    <fx-signature @submit="onSubmit" @clear="onClear" />
   </demo-block>
 
-  <icsm-image v-if="demoUrl" :src="demoUrl" />
+  <fx-image v-if="demoUrl" :src="demoUrl" />
 
   <demo-block :title="t('penColor')">
-    <icsm-signature pen-color="#ff0000" @clear="onClear" @submit="onSubmit" />
+    <fx-signature pen-color="#ff0000" @clear="onClear" @submit="onSubmit" />
   </demo-block>
 
   <demo-block :title="t('lineWidth')">
-    <icsm-signature :line-width="6" @clear="onClear" @submit="onSubmit" />
+    <fx-signature :line-width="6" @clear="onClear" @submit="onSubmit" />
   </demo-block>
 
   <demo-block :title="t('backgroundColor')">
-    <icsm-signature
+    <fx-signature
       background-color="#eee"
       @clear="onClear"
       @submit="onSubmit"

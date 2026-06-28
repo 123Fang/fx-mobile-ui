@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -23,7 +23,7 @@ const onDelete = () => showToast(t('delete'));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-contact-edit
+    <fx-contact-edit
       is-edit
       show-set-default
       :contact-info="editingContact"
@@ -36,7 +36,7 @@ const onDelete = () => showToast(t('delete'));
 
 <style lang="scss">
 .demo-contact-edit {
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-bottom: 0;
   }
 }

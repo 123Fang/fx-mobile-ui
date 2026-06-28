@@ -1,5 +1,5 @@
-import autoprefixer from 'autoprefixer';
-import addCssPrefix from 'postcss-change-css-prefix';
+// import autoprefixer from 'autoprefixer';
+// import addCssPrefix from 'postcss-change-css-prefix';
 
 export default {
   plugins: [

@@ -49,114 +49,114 @@ const inactiveIcon = cdnURL('user-inactive.png');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-radio-group v-model="radio1" class="demo-radio-group">
-      <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="radio1" class="demo-radio-group">
+      <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('horizontal')">
-    <icsm-radio-group
+    <fx-radio-group
       v-model="radioHorizontal"
       class="demo-radio-group"
       direction="horizontal"
     >
-      <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+      <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-radio-group v-model="radio2" class="demo-radio-group" disabled>
-      <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="radio2" class="demo-radio-group" disabled>
+      <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('customShape')">
-    <icsm-radio-group
+    <fx-radio-group
       v-model="radioSquare"
       class="demo-radio-group"
       shape="square"
     >
-      <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
-    <icsm-radio-group
+      <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
+    <fx-radio-group
       v-model="radioDot"
       class="demo-radio-group"
       shape="dot"
       style="margin-top: 20px"
     >
-      <icsm-radio name="1">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+      <fx-radio name="1">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('customColor')">
-    <icsm-radio-group v-model="radio3" class="demo-radio-group">
-      <icsm-radio name="1" checked-color="#ee0a24">
+    <fx-radio-group v-model="radio3" class="demo-radio-group">
+      <fx-radio name="1" checked-color="#ee0a24">
         {{ t('radio') }} 1
-      </icsm-radio>
-      <icsm-radio name="2" checked-color="#ee0a24">
+     </fx-radio>
+      <fx-radio name="2" checked-color="#ee0a24">
         {{ t('radio') }} 2
-      </icsm-radio>
-    </icsm-radio-group>
+     </fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('customIconSize')">
-    <icsm-radio-group v-model="radioIconSize" class="demo-radio-group">
-      <icsm-radio name="1" icon-size="24px"> {{ t('radio') }} 1 </icsm-radio>
-      <icsm-radio name="2" icon-size="24px"> {{ t('radio') }} 2 </icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="radioIconSize" class="demo-radio-group">
+      <fx-radio name="1" icon-size="24px"> {{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2" icon-size="24px"> {{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('customIcon')">
-    <icsm-radio-group v-model="radio4" class="demo-radio-group">
-      <icsm-radio name="1">
+    <fx-radio-group v-model="radio4" class="demo-radio-group">
+      <fx-radio name="1">
         {{ t('radio') }} 1
         <template #icon="{ checked }">
           <img :src="checked ? activeIcon : inactiveIcon" />
         </template>
-      </icsm-radio>
-      <icsm-radio name="2">
+     </fx-radio>
+      <fx-radio name="2">
         {{ t('radio') }} 2
         <template #icon="{ checked }">
           <img :src="checked ? activeIcon : inactiveIcon" />
         </template>
-      </icsm-radio>
-    </icsm-radio-group>
+     </fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('leftLabel')">
-    <icsm-radio-group v-model="radioLeftLabel" class="demo-radio-group">
-      <icsm-radio name="1" label-position="left">{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2" label-position="left">{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="radioLeftLabel" class="demo-radio-group">
+      <fx-radio name="1" label-position="left">{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2" label-position="left">{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('disableLabel')">
-    <icsm-radio-group v-model="radioLabel" class="demo-radio-group">
-      <icsm-radio name="1" label-disabled>{{ t('radio') }} 1</icsm-radio>
-      <icsm-radio name="2" label-disabled>{{ t('radio') }} 2</icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="radioLabel" class="demo-radio-group">
+      <fx-radio name="1" label-disabled>{{ t('radio') }} 1</fx-radio>
+      <fx-radio name="2" label-disabled>{{ t('radio') }} 2</fx-radio>
+   </fx-radio-group>
   </demo-block>
 
   <demo-block :title="t('withCell')">
-    <icsm-radio-group v-model="radio5">
-      <icsm-cell-group inset>
-        <icsm-cell clickable :title="t('radio') + 1" @click="radio5 = '1'">
+    <fx-radio-group v-model="radio5">
+      <fx-cell-group inset>
+        <fx-cell clickable :title="t('radio') + 1" @click="radio5 = '1'">
           <template #right-icon>
-            <icsm-radio name="1" />
+            <fx-radio name="1" />
           </template>
-        </icsm-cell>
-        <icsm-cell clickable :title="t('radio') + 2" @click="radio5 = '2'">
+       </fx-cell>
+        <fx-cell clickable :title="t('radio') + 2" @click="radio5 = '2'">
           <template #right-icon>
-            <icsm-radio name="2" />
+            <fx-radio name="2" />
           </template>
-        </icsm-cell>
-      </icsm-cell-group>
-    </icsm-radio-group>
+       </fx-cell>
+     </fx-cell-group>
+   </fx-radio-group>
   </demo-block>
 </template>
 
@@ -165,7 +165,7 @@ const inactiveIcon = cdnURL('user-inactive.png');
   &-group {
     padding: 0 16px;
 
-    .icsm-radio {
+    .fx-radio {
       margin-bottom: 8px;
     }
   }
@@ -174,7 +174,7 @@ const inactiveIcon = cdnURL('user-inactive.png');
     height: 20px;
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     margin-top: -8px;
   }
 }

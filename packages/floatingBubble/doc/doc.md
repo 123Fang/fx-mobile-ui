@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { FloatingBubble } from 'ctf-ics-mobile-ui';
+import { FloatingBubble } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(FloatingBubble);
@@ -23,11 +23,11 @@ app.use(FloatingBubble);
 浮动气泡默认展示在右下角，并允许在 y 轴方向上下拖拽，你可以通过 `icon` 属性设置气泡的图标。
 
 ```html
-<icsm-floating-bubble icon="chat" @click="onClick" />
+<fx-floating-bubble icon="chat" @click="onClick" />
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -44,7 +44,7 @@ export default {
 允许 x 和 y 轴方向拖拽，吸附到 x 轴方向最近一边。
 
 ```html
-<icsm-floating-bubble
+<fx-floating-bubble
   axis="xy"
   icon="chat"
   magnetic="x"
@@ -53,7 +53,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -70,7 +70,7 @@ export default {
 使用 `v-model:offset` 控制 FloatingBubble 的位置。
 
 ```html
-<icsm-floating-bubble v-model:offset="offset" axis="xy" icon="chat" />
+<fx-floating-bubble v-model:offset="offset" axis="xy" icon="chat" />
 ```
 
 ```js
@@ -120,7 +120,7 @@ export type {
   FloatingBubbleAxis,
   FloatingBubbleMagnetic,
   FloatingBubbleOffset,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -131,13 +131,13 @@ export type {
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-floating-bubble-size | _48px_ | - |
-| --icsm-floating-bubble-initial-gap | _24px_ | - |
-| --icsm-floating-bubble-icon-size | _28px_ | - |
-| --icsm-floating-bubble-background | _var(--icsm-primary-color)_ | - |
-| --icsm-floating-bubble-color | _var(--icsm-background-2)_ | - |
-| --icsm-floating-bubble-z-index | _999_ | - |
-| --icsm-floating-bubble-border-radius | _--icsm-floating-bubble-border-radius_ | - |
+| --fx-floating-bubble-size | _48px_ | - |
+| --fx-floating-bubble-initial-gap | _24px_ | - |
+| --fx-floating-bubble-icon-size | _28px_ | - |
+| --fx-floating-bubble-background | _var(--fx-primary-color)_ | - |
+| --fx-floating-bubble-color | _var(--fx-background-2)_ | - |
+| --fx-floating-bubble-z-index | _999_ | - |
+| --fx-floating-bubble-border-radius | _--fx-floating-bubble-border-radius_ | - |
 
 
 

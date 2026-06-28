@@ -46,7 +46,7 @@ const badgeItems = computed(() => {
 
 <template>
   <demo-block :title="t('radioMode')">
-    <icsm-tree-select
+    <fx-tree-select
       v-model:active-id="activeId"
       v-model:main-active-index="activeIndex"
       :items="items"
@@ -54,7 +54,7 @@ const badgeItems = computed(() => {
   </demo-block>
 
   <demo-block :title="t('multipleMode')">
-    <icsm-tree-select
+    <fx-tree-select
       v-model:active-id="activeIds"
       v-model:main-active-index="activeIndex2"
       :items="items"
@@ -62,28 +62,28 @@ const badgeItems = computed(() => {
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-tree-select
+    <fx-tree-select
       v-model:main-active-index="activeIndex3"
       height="55vw"
       :items="simpleItems"
     >
       <template #content>
-        <icsm-image
+        <fx-image
           v-if="activeIndex3 === 0"
           :show-loading="false"
           :src="cdnURL('apple-1.jpeg')"
         />
-        <icsm-image
+        <fx-image
           v-if="activeIndex3 === 1"
           :show-loading="false"
           :src="cdnURL('apple-2.jpeg')"
         />
       </template>
-    </icsm-tree-select>
+   </fx-tree-select>
   </demo-block>
 
   <demo-block :title="t('showBadge')">
-    <icsm-tree-select
+    <fx-tree-select
       v-model:active-id="activeId2"
       v-model:main-active-index="activeIndex4"
       height="55vw"

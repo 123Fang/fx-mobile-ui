@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Tab, Tabs } from 'ctf-ics-mobile-ui';
+import { Tab, Tabs } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Tab);
@@ -24,12 +24,12 @@ app.use(Tabs);
 通过 `v-model:active` 绑定当前激活标签对应的索引值，默认情况下启用第一个标签。
 
 ```html
-<icsm-tabs v-model:active="active">
-  <icsm-tab title="标签 1">内容 1</icsm-tab>
-  <icsm-tab title="标签 2">内容 2</icsm-tab>
-  <icsm-tab title="标签 3">内容 3</icsm-tab>
-  <icsm-tab title="标签 4">内容 4</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active">
+  <fx-tab title="标签 1">内容 1</fx-tab>
+  <fx-tab title="标签 2">内容 2</fx-tab>
+  <fx-tab title="标签 3">内容 3</fx-tab>
+  <fx-tab title="标签 4">内容 4</fx-tab>
+</fx-tabs>
 ```
 
 ```js
@@ -48,11 +48,11 @@ export default {
 在标签指定 `name` 属性的情况下，`v-model:active` 的值为当前标签的 `name`（此时无法通过索引值来匹配标签）。
 
 ```html
-<icsm-tabs v-model:active="activeName">
-  <icsm-tab title="标签 1" name="a">内容 1</icsm-tab>
-  <icsm-tab title="标签 2" name="b">内容 2</icsm-tab>
-  <icsm-tab title="标签 3" name="c">内容 3</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="activeName">
+  <fx-tab title="标签 1" name="a">内容 1</fx-tab>
+  <fx-tab title="标签 2" name="b">内容 2</fx-tab>
+  <fx-tab title="标签 3" name="c">内容 3</fx-tab>
+</fx-tabs>
 ```
 
 ```js
@@ -71,11 +71,11 @@ export default {
 标签数量超过 5 个时，标签栏可以在水平方向上滚动，切换时会自动将当前标签居中。
 
 ```html
-<icsm-tabs v-model:active="active">
-  <icsm-tab v-for="index in 8" :title="'标签 ' + index">
+<fx-tabs v-model:active="active">
+  <fx-tab v-for="index in 8" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 禁用标签
@@ -83,11 +83,11 @@ export default {
 设置 `disabled` 属性即可禁用标签。
 
 ```html
-<icsm-tabs v-model:active="active">
-  <icsm-tab title="标签 1">内容 1</icsm-tab>
-  <icsm-tab title="标签 2" disabled>内容 2</icsm-tab>
-  <icsm-tab title="标签 3">内容 3</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active">
+  <fx-tab title="标签 1">内容 1</fx-tab>
+  <fx-tab title="标签 2" disabled>内容 2</fx-tab>
+  <fx-tab title="标签 3">内容 3</fx-tab>
+</fx-tabs>
 ```
 
 ### 样式风格
@@ -95,11 +95,11 @@ export default {
 `Tab` 支持两种样式风格：`line` 和`card`，默认为 `line` 样式，可以通过 `type` 属性切换样式风格。
 
 ```html
-<icsm-tabs v-model:active="active" type="card">
-  <icsm-tab title="标签 1">内容 1</icsm-tab>
-  <icsm-tab title="标签 2">内容 2</icsm-tab>
-  <icsm-tab title="标签 3">内容 3</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active" type="card">
+  <fx-tab title="标签 1">内容 1</fx-tab>
+  <fx-tab title="标签 2">内容 2</fx-tab>
+  <fx-tab title="标签 3">内容 3</fx-tab>
+</fx-tabs>
 ```
 
 ### 点击事件
@@ -107,15 +107,15 @@ export default {
 点击标签页时，会触发 `click-tab` 事件。
 
 ```html
-<icsm-tabs v-model:active="active" @click-tab="onClickTab">
-  <icsm-tab title="标签 1">内容 1</icsm-tab>
-  <icsm-tab title="标签 2">内容 2</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active" @click-tab="onClickTab">
+  <fx-tab title="标签 1">内容 1</fx-tab>
+  <fx-tab title="标签 2">内容 2</fx-tab>
+</fx-tabs>
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -134,11 +134,11 @@ export default {
 通过 `sticky` 属性可以开启粘性布局，粘性布局下，标签页滚动到顶部时会自动吸顶。
 
 ```html
-<icsm-tabs v-model:active="active" sticky>
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" sticky>
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 > Tips: 如果页面顶部有其他内容，可以通过 offset-top 属性设置吸顶时与顶部的距离。
@@ -148,17 +148,17 @@ export default {
 通过 `shrink` 属性可以开启收缩布局，开启后，所有的标签会向左侧收缩对齐。
 
 ```html
-<icsm-tabs v-model:active="active" shrink>
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" shrink>
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 
-<icsm-tabs v-model:active="active" shrink type="card">
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" shrink type="card">
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 自定义标签
@@ -166,12 +166,12 @@ export default {
 通过 `title` 插槽可以自定义标签内容。
 
 ```html
-<icsm-tabs v-model:active="active">
-  <icsm-tab v-for="index in 2">
-    <template #title><icsm-icon name="more-o" />标签</template>
+<fx-tabs v-model:active="active">
+  <fx-tab v-for="index in 2">
+    <template #title><fx-icon name="more-o" />标签</template>
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 切换动画
@@ -179,11 +179,11 @@ export default {
 通过 `animated` 属性可以开启切换标签内容时的转场动画。
 
 ```html
-<icsm-tabs v-model:active="active" animated>
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" animated>
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 滑动切换
@@ -191,11 +191,11 @@ export default {
 通过 `swipeable` 属性可以开启滑动切换标签页。
 
 ```html
-<icsm-tabs v-model:active="active" swipeable>
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" swipeable>
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 滚动导航
@@ -203,11 +203,11 @@ export default {
 通过 `scrollspy` 属性可以开启滚动导航模式，该模式下，内容将会平铺展示。
 
 ```html
-<icsm-tabs v-model:active="active" scrollspy sticky>
-  <icsm-tab v-for="index in 8" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" scrollspy sticky>
+  <fx-tab v-for="index in 8" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ### 异步切换
@@ -215,11 +215,11 @@ export default {
 通过 `before-change` 属性可以在切换标签前执行特定的逻辑。
 
 ```html
-<icsm-tabs v-model:active="active" :before-change="beforeChange">
-  <icsm-tab v-for="index in 4" :title="'标签 ' + index">
+<fx-tabs v-model:active="active" :before-change="beforeChange">
+  <fx-tab v-for="index in 4" :title="'标签 ' + index">
     内容 {{ index }}
-  </icsm-tab>
-</icsm-tabs>
+ </fx-tab>
+</fx-tabs>
 ```
 
 ```js
@@ -255,9 +255,9 @@ export default {
 通过将 `showHeader` 属性设置为 `false`，可以不渲染 Tabs 的标题栏。在这种情况下，你可以通过一些自定义组件来控制 Tabs 的 `active` 属性。
 
 ```html
-<icsm-tabs v-model:active="active" :show-header="false">
-  <icsm-tab v-for="index in 4">内容 {{ index }}</icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active" :show-header="false">
+  <fx-tab v-for="index in 4">内容 {{ index }}</fx-tab>
+</fx-tabs>
 ```
 
 ## API
@@ -329,14 +329,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TabProps, TabsType, TabsProps, TabsInstance } from 'ctf-ics-mobile-ui';
+import type { TabProps, TabsType, TabsProps, TabsInstance } from 'fx-mobile-ui';
 ```
 
 `TabsInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { TabsInstance } from 'ctf-ics-mobile-ui';
+import type { TabsInstance } from 'fx-mobile-ui';
 
 const tabsRef = ref<TabsInstance>();
 
@@ -366,18 +366,18 @@ tabsRef.value?.scrollTo(0);
 
 | 名称                          | 默认值                      | 描述 |
 | ----------------------------- | --------------------------- | ---- |
-| --icsm-tab-text-color          | _var(--icsm-gray-7)_         | -    |
-| --icsm-tab-active-text-color   | _var(--icsm-text-color)_     | -    |
-| --icsm-tab-disabled-text-color | _var(--icsm-text-color-3)_   | -    |
-| --icsm-tab-font-size           | _var(--icsm-font-size-md)_   | -    |
-| --icsm-tab-line-height         | _var(--icsm-line-height-md)_ | -    |
-| --icsm-tabs-default-color      | _var(--icsm-primary-color)_  | -    |
-| --icsm-tabs-line-height        | _44px_                      | -    |
-| --icsm-tabs-card-height        | _30px_                      | -    |
-| --icsm-tabs-nav-background     | _var(--icsm-background-2)_   | -    |
-| --icsm-tabs-bottom-bar-width   | _40px_                      | -    |
-| --icsm-tabs-bottom-bar-height  | _3px_                       | -    |
-| --icsm-tabs-bottom-bar-color   | _var(--icsm-primary-color)_  | -    |
+| --fx-tab-text-color          | _var(--fx-gray-7)_         | -    |
+| --fx-tab-active-text-color   | _var(--fx-text-color)_     | -    |
+| --fx-tab-disabled-text-color | _var(--fx-text-color-3)_   | -    |
+| --fx-tab-font-size           | _var(--fx-font-size-md)_   | -    |
+| --fx-tab-line-height         | _var(--fx-line-height-md)_ | -    |
+| --fx-tabs-default-color      | _var(--fx-primary-color)_  | -    |
+| --fx-tabs-line-height        | _44px_                      | -    |
+| --fx-tabs-card-height        | _30px_                      | -    |
+| --fx-tabs-nav-background     | _var(--fx-background-2)_   | -    |
+| --fx-tabs-bottom-bar-width   | _40px_                      | -    |
+| --fx-tabs-bottom-bar-height  | _3px_                       | -    |
+| --fx-tabs-bottom-bar-color   | _var(--fx-primary-color)_  | -    |
 
 ## 常见问题
 
@@ -391,15 +391,15 @@ Tabs 组件在挂载时，会获取自身的宽度，并计算出底部条的位
 
 ```html
 <!-- Before -->
-<icsm-tabs v-show="show" />
+<fx-tabs v-show="show" />
 <!-- After -->
-<icsm-tabs v-if="show" />
+<fx-tabs v-if="show" />
 ```
 
 方法二，调用组件的 resize 方法来主动触发重绘：
 
 ```html
-<icsm-tabs v-show="show" ref="tabs" />
+<fx-tabs v-show="show" ref="tabs" />
 ```
 
 ```js
@@ -413,13 +413,13 @@ this.$refs.tabs.resize();
 比如下面的代码：
 
 ```html
-<icsm-tabs v-model:active="active" swipeable>
-  <icsm-tab>
-    <icsm-sticky>
-      <icsm-button>sticky button</icsm-button>
-    </icsm-sticky>
-  </icsm-tab>
-</icsm-tabs>
+<fx-tabs v-model:active="active" swipeable>
+  <fx-tab>
+    <fx-sticky>
+      <fx-button>sticky button</fx-button>
+   </fx-sticky>
+ </fx-tab>
+</fx-tabs>
 ```
 
 这是因为 `transform` 元素内部的 `fixed` 定位会相对于该元素进行计算，而不是相对于整个文档，从而导致布局异常。

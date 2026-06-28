@@ -14,7 +14,7 @@ import { ref,useSlots } from 'vue'
   console.log('slots',slots)
 
 defineOptions({
-  name: 'icsm-cell-group'
+  name: 'fx-cell-group'
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -22,6 +22,6 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-cell-group-container {
+.fx-cell-group-container {
 }
 </style>

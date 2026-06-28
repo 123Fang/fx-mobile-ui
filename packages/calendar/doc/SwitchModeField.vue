@@ -39,18 +39,18 @@ const onPickerConfirm = ({ selectedOptions }: PickerConfirmEventParams) => {
 
 <template>
   <demo-block card :title="t('switchMode')">
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('switchMode')"
       :value="switchMode"
       @click="onClickField"
     />
-    <icsm-popup v-model:show="showPicker" round position="bottom">
-      <icsm-picker
+    <fx-popup v-model:show="showPicker" round position="bottom">
+      <fx-picker
         :columns="switchModeColumns"
         @cancel="onPickerCancel"
         @confirm="onPickerConfirm"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 </template>

@@ -74,7 +74,7 @@ const vueComponentContent = `
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-${camelToKebab(NORMALIZED_NAME)}',
+  name: 'fx-${camelToKebab(NORMALIZED_NAME)}',
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -87,7 +87,7 @@ defineExpose({
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-${camelToKebab(NORMALIZED_NAME)}-container {}
+.fx-${camelToKebab(NORMALIZED_NAME)}-container {}
 </style>
 `
 fs.writeFileSync(path.join(DIRNAME, 'index.vue'), vueComponentContent);

@@ -35,7 +35,7 @@ const onCancel = () => {
 </script>
 
 <template>
-  <icsm-field
+  <fx-field
     v-model="result"
     is-link
     readonly
@@ -44,17 +44,17 @@ const onCancel = () => {
     :placeholder="t('placeholder')"
     @click="showPicker = true"
   />
-  <icsm-popup
+  <fx-popup
     v-model:show="showPicker"
     destroy-on-close
     round
     position="bottom"
     teleport="body"
   >
-    <icsm-date-picker
+    <fx-date-picker
       :model-value="pickerValue"
       @confirm="onConfirm"
       @cancel="onCancel"
     />
-  </icsm-popup>
+ </fx-popup>
 </template>

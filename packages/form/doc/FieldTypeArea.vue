@@ -40,7 +40,7 @@ const onCancel = () => {
 </script>
 
 <template>
-  <icsm-field
+  <fx-field
     v-model="areaCode"
     is-link
     readonly
@@ -49,18 +49,18 @@ const onCancel = () => {
     :placeholder="t('placeholder')"
     @click="showArea = true"
   />
-  <icsm-popup
+  <fx-popup
     v-model:show="showArea"
     destroy-on-close
     round
     position="bottom"
     teleport="body"
   >
-    <icsm-area
+    <fx-area
       :area-list="t('areaList')"
       :model-value="pickerValue"
       @confirm="onConfirm"
       @cancel="onCancel"
     />
-  </icsm-popup>
+ </fx-popup>
 </template>

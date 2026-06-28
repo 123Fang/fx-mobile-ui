@@ -11,7 +11,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Watermark } from 'ctf-ics-mobile-ui';
+import { Watermark } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Watermark);
@@ -24,7 +24,7 @@ app.use(Watermark);
 通过 `content` 属性来设置水印的文字。
 
 ```html
-<icsm-watermark content="Vant" />
+<fx-watermark content="Vant" />
 ```
 
 ### 图片水印
@@ -32,7 +32,7 @@ app.use(Watermark);
 通过 `image` 属性来设置水印图片，并使用 `opacity` 来调整水印的整体透明度。
 
 ```html
-<icsm-watermark
+<fx-watermark
   image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
   opacity="0.2"
 />
@@ -43,7 +43,7 @@ app.use(Watermark);
 通过 `gap-x` 和 `gap-y` 属性来控制多个重复水印之间的间隔。
 
 ```html
-<icsm-watermark
+<fx-watermark
   image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
   :gap-x="30"
   :gap-y="10"
@@ -56,7 +56,7 @@ app.use(Watermark);
 通过 `rotate` 属性来控制水印的倾斜角度，默认值为`-22`。
 
 ```html
-<icsm-watermark
+<fx-watermark
   image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
   rotate="22"
   opacity="0.2"
@@ -68,7 +68,7 @@ app.use(Watermark);
 通过 `full-page` 属性来控制水印的显示范围。
 
 ```html
-<icsm-watermark
+<fx-watermark
   image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
   opacity="0.2"
   :full-page="true"
@@ -80,13 +80,13 @@ app.use(Watermark);
 通过 `content` 插槽可以直接传入 HTML 作为水印。HTML 中的样式仅支持行内样式，同时不支持传入自闭合标签。
 
 ```html
-<icsm-watermark :width="150">
+<fx-watermark :width="150">
   <template #content>
     <div style="background: linear-gradient(45deg, #000 0, #000 50%, #fff 50%)">
       <p style="mix-blend-mode: difference; color: #fff">Vant watermark</p>
     </div>
   </template>
-</icsm-watermark>
+</fx-watermark>
 ```
 
 ## API
@@ -118,7 +118,7 @@ app.use(Watermark);
 组件导出以下类型定义：
 
 ```ts
-import type { WaterProps } from 'ctf-ics-mobile-ui';
+import type { WaterProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -129,7 +129,7 @@ import type { WaterProps } from 'ctf-ics-mobile-ui';
 
 | 名称                    | 默认值 | 描述                  |
 | ----------------------- | ------ | --------------------- |
-| --icsm-watermark-z-index | _100_  | 根节点的 z-index 层级 |
+| --fx-watermark-z-index | _100_  | 根节点的 z-index 层级 |
 
 
 

@@ -32,29 +32,29 @@ const active = ref('error');
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-empty :description="t('description')" />
+    <fx-empty :description="t('description')" />
   </demo-block>
 
   <demo-block :title="t('imageType')">
-    <icsm-tabs v-model:active="active">
-      <icsm-tab name="error" :title="t('error')">
-        <icsm-empty image="error" :description="t('description')" />
-      </icsm-tab>
-      <icsm-tab name="network" :title="t('network')">
-        <icsm-empty image="network" :description="t('description')" />
-      </icsm-tab>
-      <icsm-tab name="search" :title="t('search')">
-        <icsm-empty image="search" :description="t('description')" />
-      </icsm-tab>
-    </icsm-tabs>
+    <fx-tabs v-model:active="active">
+      <fx-tab name="error" :title="t('error')">
+        <fx-empty image="error" :description="t('description')" />
+     </fx-tab>
+      <fx-tab name="network" :title="t('network')">
+        <fx-empty image="network" :description="t('description')" />
+     </fx-tab>
+      <fx-tab name="search" :title="t('search')">
+        <fx-empty image="search" :description="t('description')" />
+     </fx-tab>
+   </fx-tabs>
   </demo-block>
 
   <demo-block :title="t('customSize')">
-    <icsm-empty image-size="100" :description="t('description')" />
+    <fx-empty image-size="100" :description="t('description')" />
   </demo-block>
 
   <demo-block :title="t('customImage')">
-    <icsm-empty
+    <fx-empty
       :image="cdnURL('custom-empty-image.png')"
       :image-size="80"
       :description="t('description')"
@@ -62,17 +62,17 @@ const active = ref('error');
   </demo-block>
 
   <demo-block :title="t('bottomContent')">
-    <icsm-empty :description="t('description')">
-      <icsm-button round type="primary" class="bottom-button">
+    <fx-empty :description="t('description')">
+      <fx-button round type="primary" class="bottom-button">
         {{ t('button') }}
-      </icsm-button>
-    </icsm-empty>
+     </fx-button>
+   </fx-empty>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-empty {
-  background: var(--icsm-background-2);
+  background: var(--fx-background-2);
 
   .bottom-button {
     width: 160px;

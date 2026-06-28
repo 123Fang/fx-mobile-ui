@@ -87,11 +87,11 @@ const formatter = (type: string, option: PickerOption) => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-time-picker v-model="baseTime" :title="t('chooseTime')" />
+    <fx-time-picker v-model="baseTime" :title="t('chooseTime')" />
   </demo-block>
 
   <demo-block card :title="t('columnsType')">
-    <icsm-time-picker
+    <fx-time-picker
       v-model="secondTime"
       :title="t('chooseTime')"
       :columns-type="columnsType"
@@ -99,7 +99,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('timeRange')">
-    <icsm-time-picker
+    <fx-time-picker
       v-model="rangeTime"
       :title="t('chooseTime')"
       :min-hour="10"
@@ -110,7 +110,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('overallTimeRange')">
-    <icsm-time-picker
+    <fx-time-picker
       v-model="hourMinuteTime"
       :title="t('chooseTime')"
       :columns-type="['hour', 'minute', 'second']"
@@ -120,7 +120,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('optionsFormatter')">
-    <icsm-time-picker
+    <fx-time-picker
       v-model="formatterTime"
       :title="t('chooseTime')"
       :formatter="formatter"
@@ -128,7 +128,7 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('optionsFilter')">
-    <icsm-time-picker
+    <fx-time-picker
       v-model="filterTime"
       :title="t('chooseTime')"
       :filter="filter"
@@ -136,6 +136,6 @@ const formatter = (type: string, option: PickerOption) => {
   </demo-block>
 
   <demo-block card :title="t('advancedUsage')">
-    <icsm-time-picker :title="t('chooseTime')" :filter="timeFilter" />
+    <fx-time-picker :title="t('chooseTime')" :filter="timeFilter" />
   </demo-block>
 </template>

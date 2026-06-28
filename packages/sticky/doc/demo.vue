@@ -22,41 +22,41 @@ const container = ref<Element>();
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-sticky>
-      <icsm-button type="primary" style="margin-left: 15px">
+    <fx-sticky>
+      <fx-button type="primary" style="margin-left: 15px">
         {{ t('basicUsage') }}
-      </icsm-button>
-    </icsm-sticky>
+     </fx-button>
+   </fx-sticky>
   </demo-block>
 
   <demo-block :title="t('offsetTop')">
-    <icsm-sticky :offset-top="50">
-      <icsm-button type="primary" style="margin-left: 115px">
+    <fx-sticky :offset-top="50">
+      <fx-button type="primary" style="margin-left: 115px">
         {{ t('offsetTop') }}
-      </icsm-button>
-    </icsm-sticky>
+     </fx-button>
+   </fx-sticky>
   </demo-block>
 
   <demo-block :title="t('setContainer')">
     <div
       ref="container"
-      style="height: 150px; background-color: var(--icsm-background-2)"
+      style="height: 150px; background-color: var(--fx-background-2)"
     >
-      <icsm-sticky :container="container">
-        <icsm-button type="warning" style="margin-left: 215px">
+      <fx-sticky :container="container">
+        <fx-button type="warning" style="margin-left: 215px">
           {{ t('setContainer') }}
-        </icsm-button>
-      </icsm-sticky>
+       </fx-button>
+     </fx-sticky>
     </div>
   </demo-block>
 
   <demo-block :title="t('offsetBottom')">
     <div style="height: 200px"></div>
-    <icsm-sticky :offset-bottom="50" position="bottom">
-      <icsm-button type="primary" style="margin-left: 15px">
+    <fx-sticky :offset-bottom="50" position="bottom">
+      <fx-button type="primary" style="margin-left: 15px">
         {{ t('offsetBottom') }}
-      </icsm-button>
-    </icsm-sticky>
+     </fx-button>
+   </fx-sticky>
   </demo-block>
 </template>
 
@@ -64,8 +64,8 @@ const container = ref<Element>();
 .demo-sticky {
   height: 200vh;
 
-  .icsm-button {
-    margin-left: var(--icsm-padding-md);
+  .fx-button {
+    margin-left: var(--fx-padding-md);
   }
 }
 </style>

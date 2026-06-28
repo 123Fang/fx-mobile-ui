@@ -41,7 +41,7 @@ onMounted(() => {
       body {
         margin: 0!important;
         padding:0!important;
-        background-color: var(--icsm-doc-gray-1);;
+        background-color: var(--fx-doc-gray-1);;
       }
       *::-webkit-scrollbar {
         width: 0px; /* Chrome/Safari/Edge */

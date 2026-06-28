@@ -18,81 +18,81 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-row>
-      <icsm-col span="8">span: 8</icsm-col>
-      <icsm-col span="8">span: 8</icsm-col>
-      <icsm-col span="8">span: 8</icsm-col>
-    </icsm-row>
+    <fx-row>
+      <fx-col span="8">span: 8</fx-col>
+      <fx-col span="8">span: 8</fx-col>
+      <fx-col span="8">span: 8</fx-col>
+   </fx-row>
 
-    <icsm-row>
-      <icsm-col span="4">span: 4</icsm-col>
-      <icsm-col span="10" offset="4"> offset: 4, span: 10 </icsm-col>
-    </icsm-row>
+    <fx-row>
+      <fx-col span="4">span: 4</fx-col>
+      <fx-col span="10" offset="4"> offset: 4, span: 10</fx-col>
+   </fx-row>
 
-    <icsm-row>
-      <icsm-col offset="12" span="12"> offset: 12, span: 12 </icsm-col>
-    </icsm-row>
+    <fx-row>
+      <fx-col offset="12" span="12"> offset: 12, span: 12</fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-row gutter="20">
-      <icsm-col span="8">span: 8</icsm-col>
-      <icsm-col span="8">span: 8</icsm-col>
-      <icsm-col span="8">span: 8</icsm-col>
-    </icsm-row>
+    <fx-row gutter="20">
+      <fx-col span="8">span: 8</fx-col>
+      <fx-col span="8">span: 8</fx-col>
+      <fx-col span="8">span: 8</fx-col>
+   </fx-row>
   </demo-block>
 
   <demo-block :title="t('vertical')">
     <div class="demo-vertical-space">
-      <icsm-row :gutter="[20, 20]">
-        <icsm-col span="12">span: 12</icsm-col>
-        <icsm-col span="12">span: 12</icsm-col>
-        <icsm-col span="12">span: 12</icsm-col>
-        <icsm-col span="12">span: 12</icsm-col>
-      </icsm-row>
+      <fx-row :gutter="[20, 20]">
+        <fx-col span="12">span: 12</fx-col>
+        <fx-col span="12">span: 12</fx-col>
+        <fx-col span="12">span: 12</fx-col>
+        <fx-col span="12">span: 12</fx-col>
+     </fx-row>
     </div>
   </demo-block>
 
   <demo-block :title="t('justify')">
-    <icsm-row justify="center">
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-    </icsm-row>
+    <fx-row justify="center">
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+   </fx-row>
 
-    <icsm-row justify="end">
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-    </icsm-row>
+    <fx-row justify="end">
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+   </fx-row>
 
-    <icsm-row justify="space-between">
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-    </icsm-row>
+    <fx-row justify="space-between">
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+   </fx-row>
 
-    <icsm-row justify="space-around">
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-      <icsm-col span="6">span: 6</icsm-col>
-    </icsm-row>
+    <fx-row justify="space-around">
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+      <fx-col span="6">span: 6</fx-col>
+   </fx-row>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-col {
-  .icsm-doc-demo-block {
-    padding: 0 var(--icsm-padding-md);
+  .fx-doc-demo-block {
+    padding: 0 var(--fx-padding-md);
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-left: 0;
   }
 
-  .icsm-col {
+  .fx-col {
     margin-bottom: 10px;
-    color: var(--icsm-white);
+    color: var(--fx-white);
     font-size: 13px;
     line-height: 30px;
     text-align: center;
@@ -109,7 +109,7 @@ const t = useTranslate({
 }
 
 .demo-vertical-space {
-  .icsm-col {
+  .fx-col {
     margin-bottom: 0;
   }
 }

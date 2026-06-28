@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 import { cdnURL, useTranslate } from '@/docs/site';
 
 
@@ -112,35 +112,35 @@ const onSelect = (action: { text: string }) => showToast(action.text);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-popover
+    <fx-popover
       v-model:show="show.lightTheme"
       :actions="t('actions')"
       placement="bottom-start"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('lightTheme') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
 
-    <icsm-popover
+    <fx-popover
       v-model:show="show.darkTheme"
       theme="dark"
       :actions="t('actions')"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('darkTheme') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
   </demo-block>
 
   <demo-block :title="t('placement')">
-    <icsm-field
+    <fx-field
       is-link
       readonly
       name="picker"
@@ -148,14 +148,14 @@ const onSelect = (action: { text: string }) => showToast(action.text);
       @click="onClickChoosePlacement"
     />
 
-    <icsm-popup
+    <fx-popup
       v-model:show="showPicker"
       round
       position="bottom"
       teleport="body"
     >
       <div class="demo-popover-box">
-        <icsm-popover
+        <fx-popover
           v-model:show="show.placement"
           theme="dark"
           :actions="t('shortActions')"
@@ -165,18 +165,18 @@ const onSelect = (action: { text: string }) => showToast(action.text);
           <template #reference>
             <div class="demo-popover-refer" />
           </template>
-        </icsm-popover>
+       </fx-popover>
       </div>
-      <icsm-picker
+      <fx-picker
         :columns="placements"
         :show-toolbar="false"
         @change="onPickerChange"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block :title="t('actionsDirection')">
-    <icsm-popover
+    <fx-popover
       v-model:show="show.horizontal"
       :actions="t('actions')"
       actions-direction="horizontal"
@@ -184,93 +184,93 @@ const onSelect = (action: { text: string }) => showToast(action.text);
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('horizontal') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
 
-    <icsm-popover
+    <fx-popover
       v-model:show="show.vertical"
       :actions="t('actions')"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('vertical') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
   </demo-block>
 
   <demo-block :title="t('actionOptions')">
-    <icsm-popover
+    <fx-popover
       v-model:show="show.showIcon"
       :actions="t('actionsWithIcon')"
       placement="bottom-start"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('showIcon') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
 
-    <icsm-popover
+    <fx-popover
       v-model:show="show.disableAction"
       :actions="t('actionsDisabled')"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('disableAction') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-popover
+    <fx-popover
       v-model:show="show.customContent"
       placement="top-start"
       @select="onSelect"
     >
-      <icsm-grid
+      <fx-grid
         square
         clickable
         :border="false"
         column-num="3"
         style="width: 240px"
       >
-        <icsm-grid-item
+        <fx-grid-item
           v-for="i in 6"
           :key="i"
           icon="photo-o"
           :text="t('option')"
           @click="show.customContent = false"
         />
-      </icsm-grid>
+     </fx-grid>
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('customContent') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
   </demo-block>
 
   <demo-block :title="t('uncontrolled')">
-    <icsm-popover
+    <fx-popover
       :actions="t('actions')"
       placement="top-start"
       @select="onSelect"
     >
       <template #reference>
-        <icsm-button type="primary">
+        <fx-button type="primary">
           {{ t('uncontrolled') }}
-        </icsm-button>
+       </fx-button>
       </template>
-    </icsm-popover>
+   </fx-popover>
   </demo-block>
 </template>
 
@@ -279,15 +279,15 @@ const onSelect = (action: { text: string }) => showToast(action.text);
   &-refer {
     width: 60px;
     height: 60px;
-    background-color: var(--icsm-blue);
+    background-color: var(--fx-blue);
     border-radius: 8px;
   }
 
-  .icsm-popover__wrapper {
-    margin-left: var(--icsm-padding-md);
+  .fx-popover__wrapper {
+    margin-left: var(--fx-padding-md);
   }
 
-  .icsm-field {
+  .fx-field {
     width: auto;
     margin: 0 12px;
     overflow: hidden;
@@ -299,7 +299,7 @@ const onSelect = (action: { text: string }) => showToast(action.text);
     justify-content: center;
     margin: 110px 0;
 
-    .icsm-popover__wrapper {
+    .fx-popover__wrapper {
       margin-left: 0;
     }
   }

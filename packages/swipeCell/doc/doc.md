@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { SwipeCell } from 'ctf-ics-mobile-ui';
+import { SwipeCell } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(SwipeCell);
@@ -23,16 +23,16 @@ app.use(SwipeCell);
 `SwipeCell` 组件提供了 `left` 和 `right` 两个插槽，用于定义两侧滑动区域的内容。
 
 ```html
-<icsm-swipe-cell>
+<fx-swipe-cell>
   <template #left>
-    <icsm-button square type="primary" text="选择" />
+    <fx-button square type="primary" text="选择" />
   </template>
-  <icsm-cell :border="false" title="单元格" value="内容" />
+  <fx-cell :border="false" title="单元格" value="内容" />
   <template #right>
-    <icsm-button square type="danger" text="删除" />
-    <icsm-button square type="primary" text="收藏" />
+    <fx-button square type="danger" text="删除" />
+    <fx-button square type="primary" text="收藏" />
   </template>
-</icsm-swipe-cell>
+</fx-swipe-cell>
 ```
 
 ### 自定义内容
@@ -40,8 +40,8 @@ app.use(SwipeCell);
 `SwipeCell` 可以嵌套任意内容，比如嵌套一个商品卡片。
 
 ```html
-<icsm-swipe-cell>
-  <icsm-card
+<fx-swipe-cell>
+  <fx-card
     num="2"
     price="2.00"
     desc="描述信息"
@@ -50,9 +50,9 @@ app.use(SwipeCell);
     thumb="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
   />
   <template #right>
-    <icsm-button square text="删除" type="danger" class="delete-button" />
+    <fx-button square text="删除" type="danger" class="delete-button" />
   </template>
-</icsm-swipe-cell>
+</fx-swipe-cell>
 
 <style>
   .goods-card {
@@ -71,19 +71,19 @@ app.use(SwipeCell);
 通过传入 `before-close` 回调函数，可以自定义两侧滑动内容关闭时的行为。
 
 ```html
-<icsm-swipe-cell :before-close="beforeClose">
+<fx-swipe-cell :before-close="beforeClose">
   <template #left>
-    <icsm-button square type="primary" text="选择" />
+    <fx-button square type="primary" text="选择" />
   </template>
-  <icsm-cell :border="false" title="单元格" value="内容" />
+  <fx-cell :border="false" title="单元格" value="内容" />
   <template #right>
-    <icsm-button square type="danger" text="删除" />
+    <fx-button square type="danger" text="删除" />
   </template>
-</icsm-swipe-cell>
+</fx-swipe-cell>
 ```
 
 ```js
-import { showConfirmDialog } from 'ctf-ics-mobile-ui';
+import { showConfirmDialog } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -168,14 +168,14 @@ import type {
   SwipeCellProps,
   SwipeCellPosition,
   SwipeCellInstance,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `SwipeCellInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { SwipeCellInstance } from 'ctf-ics-mobile-ui';
+import type { SwipeCellInstance } from 'fx-mobile-ui';
 
 const swipeCellRef = ref<SwipeCellInstance>();
 

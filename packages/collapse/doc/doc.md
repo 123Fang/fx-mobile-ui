@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Collapse, CollapseItem } from 'ctf-ics-mobile-ui';
+import { Collapse, CollapseItem } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Collapse);
@@ -24,17 +24,17 @@ app.use(CollapseItem);
 通过 `v-model` 控制展开的面板列表，`activeNames` 为数组格式。
 
 ```html
-<icsm-collapse v-model="activeNames">
-  <icsm-collapse-item title="标题1" name="1">
+<fx-collapse v-model="activeNames">
+  <fx-collapse-item title="标题1" name="1">
     代码是写出来给人看的，附带能在机器上运行。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题2" name="2">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题2" name="2">
     技术无非就是那些开发它的人的共同灵魂。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题3" name="3">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题3" name="3">
     在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </icsm-collapse-item>
-</icsm-collapse>
+ </fx-collapse-item>
+</fx-collapse>
 ```
 
 ```js
@@ -53,17 +53,17 @@ export default {
 通过 `accordion` 可以设置为手风琴模式，最多展开一个面板，此时 `activeName` 为字符串格式。
 
 ```html
-<icsm-collapse v-model="activeName" accordion>
-  <icsm-collapse-item title="标题1" name="1">
+<fx-collapse v-model="activeName" accordion>
+  <fx-collapse-item title="标题1" name="1">
     代码是写出来给人看的，附带能在机器上运行。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题2" name="2">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题2" name="2">
     技术无非就是那些开发它的人的共同灵魂。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题3" name="3">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题3" name="3">
     在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </icsm-collapse-item>
-</icsm-collapse>
+ </fx-collapse-item>
+</fx-collapse>
 ```
 
 ```js
@@ -82,17 +82,17 @@ export default {
 通过 `disabled` 属性来禁用单个面板。
 
 ```html
-<icsm-collapse v-model="activeNames">
-  <icsm-collapse-item title="标题1" name="1">
+<fx-collapse v-model="activeNames">
+  <fx-collapse-item title="标题1" name="1">
     代码是写出来给人看的，附带能在机器上运行。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题2" name="2" disabled>
+ </fx-collapse-item>
+  <fx-collapse-item title="标题2" name="2" disabled>
     技术无非就是那些开发它的人的共同灵魂。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题3" name="3" disabled>
+ </fx-collapse-item>
+  <fx-collapse-item title="标题3" name="3" disabled>
     在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </icsm-collapse-item>
-</icsm-collapse>
+ </fx-collapse-item>
+</fx-collapse>
 ```
 
 ### 自定义标题内容
@@ -100,17 +100,17 @@ export default {
 通过 `title` 插槽可以自定义标题栏的内容。
 
 ```html
-<icsm-collapse v-model="activeNames">
-  <icsm-collapse-item name="1">
+<fx-collapse v-model="activeNames">
+  <fx-collapse-item name="1">
     <template #title>
-      <div>标题1 <icsm-icon name="question-o" /></div>
+      <div>标题1 <fx-icon name="question-o" /></div>
     </template>
     代码是写出来给人看的，附带能在机器上运行。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题2" name="2" icon="shop-o">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题2" name="2" icon="shop-o">
     技术无非就是那些开发它的人的共同灵魂。
-  </icsm-collapse-item>
-</icsm-collapse>
+ </fx-collapse-item>
+</fx-collapse>
 ```
 
 ```js
@@ -129,20 +129,20 @@ export default {
 通过 `Collapse` 实例上的 `toggleAll` 方法可以实现全部展开与全部切换。
 
 ```html
-<icsm-collapse v-model="activeNames" ref="collapse">
-  <icsm-collapse-item title="标题1" name="1">
+<fx-collapse v-model="activeNames" ref="collapse">
+  <fx-collapse-item title="标题1" name="1">
     代码是写出来给人看的，附带能在机器上运行。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题2" name="2">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题2" name="2">
     技术无非就是那些开发它的人的共同灵魂。
-  </icsm-collapse-item>
-  <icsm-collapse-item title="标题3" name="3">
+ </fx-collapse-item>
+  <fx-collapse-item title="标题3" name="3">
     在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </icsm-collapse-item>
-</icsm-collapse>
+ </fx-collapse-item>
+</fx-collapse>
 
-<icsm-button type="primary" @click="openAll">全部展开</icsm-button>
-<icsm-button type="primary" @click="toggleAll">全部切换</icsm-button>
+<fx-button type="primary" @click="openAll">全部展开</fx-button>
+<fx-button type="primary" @click="toggleAll">全部切换</fx-button>
 ```
 
 ```js
@@ -219,7 +219,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import type { CollapseInstance } from 'ctf-ics-mobile-ui';
+import type { CollapseInstance } from 'fx-mobile-ui';
 
 const collapseRef = ref<CollapseInstance>();
 
@@ -259,14 +259,14 @@ import type {
   CollapseItemProps,
   CollapseItemInstance,
   CollapseToggleAllOptions,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `CollapseItemInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CollapseItemInstance } from 'ctf-ics-mobile-ui';
+import type { CollapseItemInstance } from 'fx-mobile-ui';
 
 const collapseItemRef = ref<CollapseItemInstance>();
 
@@ -292,13 +292,13 @@ collapseItemRef.value?.toggle();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-collapse-item-duration | _var(--icsm-duration-base)_ | - |
-| --icsm-collapse-item-content-padding | _var(--icsm-padding-sm) var(--icsm-padding-md)_ | - |
-| --icsm-collapse-item-content-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-collapse-item-content-line-height | _1.5_ | - |
-| --icsm-collapse-item-content-text-color | _var(--icsm-text-color-2)_ | - |
-| --icsm-collapse-item-content-background | _var(--icsm-background-2)_ | - |
-| --icsm-collapse-item-title-disabled-color | _var(--icsm-text-color-3)_ | - |
+| --fx-collapse-item-duration | _var(--fx-duration-base)_ | - |
+| --fx-collapse-item-content-padding | _var(--fx-padding-sm) var(--fx-padding-md)_ | - |
+| --fx-collapse-item-content-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-collapse-item-content-line-height | _1.5_ | - |
+| --fx-collapse-item-content-text-color | _var(--fx-text-color-2)_ | - |
+| --fx-collapse-item-content-background | _var(--fx-background-2)_ | - |
+| --fx-collapse-item-title-disabled-color | _var(--fx-text-color-3)_ | - |
 
 
 

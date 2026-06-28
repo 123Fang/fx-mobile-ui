@@ -35,13 +35,13 @@ const fullPage = ref(false);
 <template>
   <demo-block :title="t('textWatermark')">
     <div class="demo-watermark-wrapper">
-      <icsm-watermark content="Vant" :full-page="false" />
+      <fx-watermark content="Vant" :full-page="false" />
     </div>
   </demo-block>
 
   <demo-block :title="t('imageWatermark')">
     <div class="demo-watermark-wrapper">
-      <icsm-watermark
+      <fx-watermark
         image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
         opacity="0.2"
         :full-page="false"
@@ -51,7 +51,7 @@ const fullPage = ref(false);
 
   <demo-block :title="t('customGap')">
     <div class="demo-watermark-wrapper">
-      <icsm-watermark
+      <fx-watermark
         image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
         :gap-x="30"
         :gap-y="10"
@@ -63,7 +63,7 @@ const fullPage = ref(false);
 
   <demo-block :title="t('customRotate')">
     <div class="demo-watermark-wrapper">
-      <icsm-watermark
+      <fx-watermark
         image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
         rotate="22"
         opacity="0.2"
@@ -74,21 +74,21 @@ const fullPage = ref(false);
 
   <demo-block :title="t('displayRange')">
     <div class="demo-watermark-wrapper">
-      <icsm-button type="primary" @click="fullPage = !fullPage">
+      <fx-button type="primary" @click="fullPage = !fullPage">
         {{ t('switch') }}
-      </icsm-button>
-      <icsm-watermark
+     </fx-button>
+      <fx-watermark
         :full-page="fullPage"
         opacity="0.2"
         image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
       >
-      </icsm-watermark>
+     </fx-watermark>
     </div>
   </demo-block>
 
   <demo-block :title="t('htmlWatermark')">
     <div class="demo-watermark-wrapper">
-      <icsm-watermark :width="150" :full-page="false">
+      <fx-watermark :width="150" :full-page="false">
         <template #content>
           <div
             style="
@@ -100,7 +100,7 @@ const fullPage = ref(false);
             </p>
           </div>
         </template>
-      </icsm-watermark>
+     </fx-watermark>
     </div>
   </demo-block>
 </template>
@@ -109,8 +109,8 @@ const fullPage = ref(false);
 .demo-watermark-wrapper {
   position: relative;
   height: 150px;
-  background-color: var(--icsm-background-2);
-  padding: var(--icsm-padding-md);
+  background-color: var(--fx-background-2);
+  padding: var(--fx-padding-md);
 }
 </style>
 

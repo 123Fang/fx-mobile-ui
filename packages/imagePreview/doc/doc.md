@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ImagePreview } from 'ctf-ics-mobile-ui';
+import { ImagePreview } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ImagePreview);
@@ -23,7 +23,7 @@ app.use(ImagePreview);
 比如使用 `showImagePreview` 函数，调用后会直接在页面中渲染对应的图片预览组件。
 
 ```js
-import { showImagePreview } from 'ctf-ics-mobile-ui';
+import { showImagePreview } from 'fx-mobile-ui';
 
 showImagePreview(['https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg']);
 ```
@@ -35,7 +35,7 @@ showImagePreview(['https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg']);
 在调用 `showImagePreview` 时，直接传入图片数组，即可展示图片预览。
 
 ```js
-import { showImagePreview } from 'ctf-ics-mobile-ui';
+import { showImagePreview } from 'fx-mobile-ui';
 
 showImagePreview([
   'https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg',
@@ -48,7 +48,7 @@ showImagePreview([
 `showImagePreview` 支持传入配置对象，并通过 `startPosition` 选项指定图片的初始位置（索引值）。
 
 ```js
-import { showImagePreview } from 'ctf-ics-mobile-ui';
+import { showImagePreview } from 'fx-mobile-ui';
 
 showImagePreview({
   images: [
@@ -64,7 +64,7 @@ showImagePreview({
 开启 `closeable` 选项后，会在弹出层的右上角显示关闭图标，并且可以通过 `close-icon` 属性自定义图标，使用`close-icon-position` 属性可以自定义图标位置。
 
 ```js
-import { showImagePreview } from 'ctf-ics-mobile-ui';
+import { showImagePreview } from 'fx-mobile-ui';
 
 showImagePreview({
   images: [
@@ -80,7 +80,7 @@ showImagePreview({
 通过 `onClose` 选项监听图片预览的关闭事件。
 
 ```js
-import { showToast, showImagePreview } from 'ctf-ics-mobile-ui';
+import { showToast, showImagePreview } from 'fx-mobile-ui';
 
 showImagePreview({
   images: [
@@ -98,7 +98,7 @@ showImagePreview({
 通过 `beforeClose` 属性可以传入一个回调函数，在图片预览关闭前进行特定操作。
 
 ```js
-import { showImagePreview } from 'ctf-ics-mobile-ui';
+import { showImagePreview } from 'fx-mobile-ui';
 
 const instance = showImagePreview({
   images: [
@@ -119,9 +119,9 @@ setTimeout(() => {
 如果需要在 ImagePreview 内嵌入组件或其他自定义内容，可以直接使用 ImagePreview 组件，并使用 `index` 插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
 
 ```html
-<icsm-image-preview v-model:show="show" :images="images" @change="onChange">
+<fx-image-preview v-model:show="show" :images="images" @change="onChange">
   <template v-slot:index>第{{ index + 1 }}页</template>
-</icsm-image-preview>
+</fx-image-preview>
 ```
 
 ```js
@@ -154,7 +154,7 @@ export default {
 当以组件调用的方式使用 ImagePreview 时，可以通过 `image` 插槽来插入自定义的内容，比如展示一个视频内容。在这个例子中，你可以将 `close-on-click-image` 属性设置为 `false`，这样当你点击视频时就不会意外关闭预览了。
 
 ```html
-<icsm-image-preview
+<fx-image-preview
   v-model:show="show"
   :images="images"
   :close-on-click-image="false"
@@ -164,7 +164,7 @@ export default {
       <source :src="src" />
     </video>
   </template>
-</icsm-image-preview>
+</fx-image-preview>
 ```
 
 ```js
@@ -189,7 +189,7 @@ export default {
 当你通过 `image` 插槽自定义图片时，可以通过插槽的参数绑定 `style` 样式和 `onLoad` 回调函数，这可以让 `<img>` 标签支持图片缩放。
 
 ```html
-<icsm-image-preview
+<fx-image-preview
   v-model:show="show"
   :images="images"
   :close-on-click-image="false"
@@ -197,7 +197,7 @@ export default {
   <template #image="{ src, style, onLoad }">
     <img :src="src" :style="[{ width: '100%' }, style]" @load="onLoad" />
   </template>
-</icsm-image-preview>
+</fx-image-preview>
 ```
 
 ## API
@@ -303,14 +303,14 @@ import type {
   ImagePreviewOptions,
   ImagePreviewInstance,
   ImagePreviewScaleEventParams,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `ImagePreviewInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { ImagePreviewInstance } from 'ctf-ics-mobile-ui';
+import type { ImagePreviewInstance } from 'fx-mobile-ui';
 
 const imagePreviewRef = ref<ImagePreviewInstance>();
 
@@ -349,15 +349,15 @@ imagePreviewRef.value?.swipeTo(1);
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-image-preview-index-text-color | _var(--icsm-white)_ | - |
-| --icsm-image-preview-index-font-size | _var(--icsm-font-size-md)_ | - |
-| --icsm-image-preview-index-line-height | _var(--icsm-line-height-md)_ | - |
-| --icsm-image-preview-index-text-shadow | _0 1px 1px var(--icsm-gray-8)_ | - |
-| --icsm-image-preview-overlay-background | _rgba(0, 0, 0, 0.9)_ | - |
-| --icsm-image-preview-close-icon-size | _22px_ | - |
-| --icsm-image-preview-close-icon-color | _var(--icsm-gray-5)_ | - |
-| --icsm-image-preview-close-icon-margin | _var(--icsm-padding-md)_ | - |
-| --icsm-image-preview-close-icon-z-index | _1_ | - |
+| --fx-image-preview-index-text-color | _var(--fx-white)_ | - |
+| --fx-image-preview-index-font-size | _var(--fx-font-size-md)_ | - |
+| --fx-image-preview-index-line-height | _var(--fx-line-height-md)_ | - |
+| --fx-image-preview-index-text-shadow | _0 1px 1px var(--fx-gray-8)_ | - |
+| --fx-image-preview-overlay-background | _rgba(0, 0, 0, 0.9)_ | - |
+| --fx-image-preview-close-icon-size | _22px_ | - |
+| --fx-image-preview-close-icon-color | _var(--fx-gray-5)_ | - |
+| --fx-image-preview-close-icon-margin | _var(--fx-padding-md)_ | - |
+| --fx-image-preview-close-icon-z-index | _1_ | - |
 
 ## 常见问题
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -147,23 +147,23 @@ const fileList6 = ref([{ url: cdnURL('leaf.jpeg') }]);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-uploader :after-read="afterRead" />
+    <fx-uploader :after-read="afterRead" />
   </demo-block>
 
   <demo-block :title="t('preview')">
-    <icsm-uploader v-model="fileList" multiple accept="*" />
+    <fx-uploader v-model="fileList" multiple accept="*" />
   </demo-block>
 
   <demo-block :title="t('status')">
-    <icsm-uploader v-model="statusFileList" :after-read="afterReadFailed" />
+    <fx-uploader v-model="statusFileList" :after-read="afterReadFailed" />
   </demo-block>
 
   <demo-block :title="t('maxCount')">
-    <icsm-uploader v-model="fileList2" multiple :max-count="2" />
+    <fx-uploader v-model="fileList2" multiple :max-count="2" />
   </demo-block>
 
   <demo-block :title="t('maxSize')">
-    <icsm-uploader
+    <fx-uploader
       v-model="fileList4"
       multiple
       :max-size="500 * 1024"
@@ -172,48 +172,48 @@ const fileList6 = ref([{ url: cdnURL('leaf.jpeg') }]);
   </demo-block>
 
   <demo-block :title="t('customUpload')">
-    <icsm-uploader>
-      <icsm-button type="primary" icon="plus">
+    <fx-uploader>
+      <fx-button type="primary" icon="plus">
         {{ t('upload') }}
-      </icsm-button>
-    </icsm-uploader>
+     </fx-button>
+   </fx-uploader>
   </demo-block>
 
   <demo-block :title="t('previewCover')">
-    <icsm-uploader v-model="previewCoverFiles">
+    <fx-uploader v-model="previewCoverFiles">
       <template #preview-cover="{ file }">
         <div class="preview-cover icsm-ellipsis">{{ file.name }}</div>
       </template>
-    </icsm-uploader>
+   </fx-uploader>
   </demo-block>
 
   <demo-block :title="t('previewSize')">
-    <icsm-uploader v-model="previewSizeFiles" preview-size="60" />
+    <fx-uploader v-model="previewSizeFiles" preview-size="60" />
   </demo-block>
 
   <demo-block :title="t('beforeRead')">
-    <icsm-uploader v-model="fileList3" :before-read="beforeRead" />
+    <fx-uploader v-model="fileList3" :before-read="beforeRead" />
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-uploader :after-read="afterRead" disabled />
+    <fx-uploader :after-read="afterRead" disabled />
   </demo-block>
 
   <demo-block :title="t('customPreviewImage')">
-    <icsm-uploader v-model="fileList5" multiple accept="*" :deletable="false" />
+    <fx-uploader v-model="fileList5" multiple accept="*" :deletable="false" />
   </demo-block>
 
   <demo-block :title="t('reupload')">
-    <icsm-uploader v-model="fileList6" reupload max-count="2" />
+    <fx-uploader v-model="fileList6" reupload max-count="2" />
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-uploader {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-uploader {
-    margin-left: var(--icsm-padding-md);
+  .fx-uploader {
+    margin-left: var(--fx-padding-md);
   }
 
   .preview-cover {

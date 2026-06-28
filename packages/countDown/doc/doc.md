@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { CountDown } from 'ctf-ics-mobile-ui';
+import { CountDown } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(CountDown);
@@ -23,7 +23,7 @@ app.use(CountDown);
 `time` 属性表示倒计时总时长，单位为毫秒。
 
 ```html
-<icsm-count-down :time="time" />
+<fx-count-down :time="time" />
 ```
 
 ```js
@@ -42,7 +42,7 @@ export default {
 通过 `format` 属性设置倒计时文本的内容。
 
 ```html
-<icsm-count-down :time="time" format="DD 天 HH 时 mm 分 ss 秒" />
+<fx-count-down :time="time" format="DD 天 HH 时 mm 分 ss 秒" />
 ```
 
 ### 毫秒级渲染
@@ -50,7 +50,7 @@ export default {
 倒计时默认每秒渲染一次，设置 `millisecond` 属性可以开启毫秒级渲染。
 
 ```html
-<icsm-count-down millisecond :time="time" format="HH:mm:ss:SS" />
+<fx-count-down millisecond :time="time" format="HH:mm:ss:SS" />
 ```
 
 ### 自定义样式
@@ -58,7 +58,7 @@ export default {
 通过插槽自定义倒计时的样式，`timeData` 对象格式见下方表格。
 
 ```html
-<icsm-count-down :time="time">
+<fx-count-down :time="time">
   <template #default="timeData">
     <span class="block">{{ timeData.hours }}</span>
     <span class="colon">:</span>
@@ -66,7 +66,7 @@ export default {
     <span class="colon">:</span>
     <span class="block">{{ timeData.seconds }}</span>
   </template>
-</icsm-count-down>
+</fx-count-down>
 
 <style>
   .colon {
@@ -90,7 +90,7 @@ export default {
 通过 ref 获取到组件实例后，可以调用 `start`、`pause`、`reset` 方法。
 
 ```html
-<icsm-count-down
+<fx-count-down
   ref="countDown"
   millisecond
   :time="3000"
@@ -98,15 +98,15 @@ export default {
   format="ss:SSS"
   @finish="onFinish"
 />
-<icsm-grid clickable>
-  <icsm-grid-item text="开始" icon="play-circle-o" @click="start" />
-  <icsm-grid-item text="暂停" icon="pause-circle-o" @click="pause" />
-  <icsm-grid-item text="重置" icon="replay" @click="reset" />
-</icsm-grid>
+<fx-grid clickable>
+  <fx-grid-item text="开始" icon="play-circle-o" @click="start" />
+  <fx-grid-item text="暂停" icon="pause-circle-o" @click="pause" />
+  <fx-grid-item text="重置" icon="replay" @click="reset" />
+</fx-grid>
 ```
 
 ```js
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -200,14 +200,14 @@ import type {
   CountDownProps,
   CountDownInstance,
   CountDownCurrentTime,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `CountDownInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CountDownInstance } from 'ctf-ics-mobile-ui';
+import type { CountDownInstance } from 'fx-mobile-ui';
 
 const countDownRef = ref<CountDownInstance>();
 
@@ -222,9 +222,9 @@ countDownRef.value?.start();
 
 | 名称                         | 默认值                      | 描述 |
 | ---------------------------- | --------------------------- | ---- |
-| --icsm-count-down-text-color  | _var(--icsm-text-color)_     | -    |
-| --icsm-count-down-font-size   | _var(--icsm-font-size-md)_   | -    |
-| --icsm-count-down-line-height | _var(--icsm-line-height-md)_ | -    |
+| --fx-count-down-text-color  | _var(--fx-text-color)_     | -    |
+| --fx-count-down-font-size   | _var(--fx-font-size-md)_   | -    |
+| --fx-count-down-line-height | _var(--fx-line-height-md)_ | -    |
 
 ## 常见问题
 

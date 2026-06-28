@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Form, Field, CellGroup } from 'ctf-ics-mobile-ui';
+import { Form, Field, CellGroup } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Form);
@@ -25,16 +25,16 @@ app.use(CellGroup);
 在表单中，每个 [Field 组件](#/zh-CN/field) 代表一个表单项，使用 Field 的 `rules` 属性定义校验规则。
 
 ```html
-<icsm-form @submit="onSubmit">
-  <icsm-cell-group inset>
-    <icsm-field
+<fx-form @submit="onSubmit">
+  <fx-cell-group inset>
+    <fx-field
       v-model="username"
       name="username"
       label="用户名"
       placeholder="用户名"
       :rules="[{ required: true, message: '请填写用户名' }]"
     />
-    <icsm-field
+    <fx-field
       v-model="password"
       type="password"
       name="password"
@@ -42,13 +42,13 @@ app.use(CellGroup);
       placeholder="密码"
       :rules="[{ required: true, message: '请填写密码' }]"
     />
-  </icsm-cell-group>
+ </fx-cell-group>
   <div style="margin: 16px;">
-    <icsm-button round block type="primary" native-type="submit">
+    <fx-button round block type="primary" native-type="submit">
       提交
-    </icsm-button>
+   </fx-button>
   </div>
-</icsm-form>
+</fx-form>
 ```
 
 ```js
@@ -76,48 +76,48 @@ export default {
 通过 `rules` 定义表单校验规则，所有可用字段见[下方表格](#/zh-CN/form#rule-shu-ju-jie-gou)。
 
 ```html
-<icsm-form @failed="onFailed">
-  <icsm-cell-group inset>
+<fx-form @failed="onFailed">
+  <fx-cell-group inset>
     <!-- 通过 pattern 进行正则校验 -->
-    <icsm-field
+    <fx-field
       v-model="value1"
       name="pattern"
       placeholder="正则校验"
       :rules="[{ pattern, message: '请输入正确内容' }]"
     />
     <!-- 通过 validator 进行函数校验 -->
-    <icsm-field
+    <fx-field
       v-model="value2"
       name="validator"
       placeholder="函数校验"
       :rules="[{ validator, message: '请输入正确内容' }]"
     />
     <!-- 通过 validator 返回错误提示 -->
-    <icsm-field
+    <fx-field
       v-model="value3"
       name="validatorMessage"
       placeholder="校验函数返回错误提示"
       :rules="[{ validator: validatorMessage }]"
     />
     <!-- 通过 validator 进行异步函数校验 -->
-    <icsm-field
+    <fx-field
       v-model="value4"
       name="asyncValidator"
       placeholder="异步函数校验"
       :rules="[{ validator: asyncValidator, message: '请输入正确内容' }]"
     />
-  </icsm-cell-group>
+ </fx-cell-group>
   <div style="margin: 16px;">
-    <icsm-button round block type="primary" native-type="submit">
+    <fx-button round block type="primary" native-type="submit">
       提交
-    </icsm-button>
+   </fx-button>
   </div>
-</icsm-form>
+</fx-form>
 ```
 
 ```js
 import { ref } from 'vue';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -167,11 +167,11 @@ export default {
 在表单中使用 [Switch 组件](#/zh-CN/switch)。
 
 ```html
-<icsm-field name="switch" label="开关">
+<fx-field name="switch" label="开关">
   <template #input>
-    <icsm-switch v-model="checked" />
+    <fx-switch v-model="checked" />
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -190,19 +190,19 @@ export default {
 在表单中使用 [Checkbox 组件](#/zh-CN/checkbox)。
 
 ```html
-<icsm-field name="checkbox" label="复选框">
+<fx-field name="checkbox" label="复选框">
   <template #input>
-    <icsm-checkbox v-model="checked" shape="square" />
+    <fx-checkbox v-model="checked" shape="square" />
   </template>
-</icsm-field>
-<icsm-field name="checkboxGroup" label="复选框组">
+</fx-field>
+<fx-field name="checkboxGroup" label="复选框组">
   <template #input>
-    <icsm-checkbox-group v-model="groupChecked" direction="horizontal">
-      <icsm-checkbox name="1" shape="square">复选框 1</icsm-checkbox>
-      <icsm-checkbox name="2" shape="square">复选框 2</icsm-checkbox>
-    </icsm-checkbox-group>
+    <fx-checkbox-group v-model="groupChecked" direction="horizontal">
+      <fx-checkbox name="1" shape="square">复选框 1</fx-checkbox>
+      <fx-checkbox name="2" shape="square">复选框 2</fx-checkbox>
+   </fx-checkbox-group>
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -225,14 +225,14 @@ export default {
 在表单中使用 [Radio 组件](#/zh-CN/radio)。
 
 ```html
-<icsm-field name="radio" label="单选框">
+<fx-field name="radio" label="单选框">
   <template #input>
-    <icsm-radio-group v-model="checked" direction="horizontal">
-      <icsm-radio name="1">单选框 1</icsm-radio>
-      <icsm-radio name="2">单选框 2</icsm-radio>
-    </icsm-radio-group>
+    <fx-radio-group v-model="checked" direction="horizontal">
+      <fx-radio name="1">单选框 1</fx-radio>
+      <fx-radio name="2">单选框 2</fx-radio>
+   </fx-radio-group>
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -251,11 +251,11 @@ export default {
 在表单中使用 [Stepper 组件](#/zh-CN/stepper)。
 
 ```html
-<icsm-field name="stepper" label="步进器">
+<fx-field name="stepper" label="步进器">
   <template #input>
-    <icsm-stepper v-model="value" />
+    <fx-stepper v-model="value" />
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -274,11 +274,11 @@ export default {
 在表单中使用 [Rate 组件](#/zh-CN/rate)。
 
 ```html
-<icsm-field name="rate" label="评分">
+<fx-field name="rate" label="评分">
   <template #input>
-    <icsm-rate v-model="value" />
+    <fx-rate v-model="value" />
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -297,11 +297,11 @@ export default {
 在表单中使用 [Slider 组件](#/zh-CN/slider)。
 
 ```html
-<icsm-field name="slider" label="滑块">
+<fx-field name="slider" label="滑块">
   <template #input>
-    <icsm-slider v-model="value" />
+    <fx-slider v-model="value" />
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -320,11 +320,11 @@ export default {
 在表单中使用 [Uploader 组件](#/zh-CN/uploader)。
 
 ```html
-<icsm-field name="uploader" label="文件上传">
+<fx-field name="uploader" label="文件上传">
   <template #input>
-    <icsm-uploader v-model="value" />
+    <fx-uploader v-model="value" />
   </template>
-</icsm-field>
+</fx-field>
 ```
 
 ```js
@@ -345,7 +345,7 @@ export default {
 在表单中使用 [Picker 组件](#/zh-CN/picker)。
 
 ```html
-<icsm-field
+<fx-field
   v-model="result"
   is-link
   readonly
@@ -354,14 +354,14 @@ export default {
   placeholder="点击选择城市"
   @click="showPicker = true"
 />
-<icsm-popup v-model:show="showPicker" destroy-on-close position="bottom">
-  <icsm-picker
+<fx-popup v-model:show="showPicker" destroy-on-close position="bottom">
+  <fx-picker
     :columns="columns"
     :model-value="pickerValue"
     @confirm="onConfirm"
     @cancel="showPicker = false"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -402,7 +402,7 @@ export default {
 在表单中使用 [DatePicker 组件](#/zh-CN/date-picker)。
 
 ```html
-<icsm-field
+<fx-field
   v-model="result"
   is-link
   readonly
@@ -411,13 +411,13 @@ export default {
   placeholder="点击选择时间"
   @click="showPicker = true"
 />
-<icsm-popup v-model:show="showPicker" destroy-on-close position="bottom">
-  <icsm-date-picker
+<fx-popup v-model:show="showPicker" destroy-on-close position="bottom">
+  <fx-date-picker
     :model-value="pickerValue"
     @confirm="onConfirm"
     @cancel="showPicker = false"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -449,7 +449,7 @@ export default {
 在表单中使用 [Area 组件](#/zh-CN/area)。
 
 ```html
-<icsm-field
+<fx-field
   v-model="result"
   is-link
   readonly
@@ -458,14 +458,14 @@ export default {
   placeholder="点击选择省市区"
   @click="showArea = true"
 />
-<icsm-popup v-model:show="showArea" destroy-on-close position="bottom">
-  <icsm-area
+<fx-popup v-model:show="showArea" destroy-on-close position="bottom">
+  <fx-area
     :area-list="areaList"
     :model-value="pickerValue"
     @confirm="onConfirm"
     @cancel="showArea = false"
   />
-</icsm-popup>
+</fx-popup>
 ```
 
 ```js
@@ -501,7 +501,7 @@ export default {
 在表单中使用 [Calendar 组件](#/zh-CN/calendar)。
 
 ```html
-<icsm-field
+<fx-field
   v-model="result"
   is-link
   readonly
@@ -510,7 +510,7 @@ export default {
   placeholder="点击选择日期"
   @click="showCalendar = true"
 />
-<icsm-calendar v-model:show="showCalendar" @confirm="onConfirm" />
+<fx-calendar v-model:show="showCalendar" @confirm="onConfirm" />
 ```
 
 ```js
@@ -607,14 +607,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { FormProps, FormInstance } from 'ctf-ics-mobile-ui';
+import type { FormProps, FormInstance } from 'fx-mobile-ui';
 ```
 
 `FormInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { FormInstance } from 'ctf-ics-mobile-ui';
+import type { FormInstance } from 'fx-mobile-ui';
 
 const formRef = ref<FormInstance>();
 

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Badge } from 'ctf-ics-mobile-ui';
+import { Badge } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Badge);
@@ -23,18 +23,18 @@ app.use(Badge);
 设置 `content` 属性后，Badge 会在子元素的右上角显示对应的徽标，也可以通过 `dot` 来显示小红点。
 
 ```html
-<icsm-badge :content="5">
+<fx-badge :content="5">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="10">
+</fx-badge>
+<fx-badge :content="10">
   <div class="child" />
-</icsm-badge>
-<icsm-badge content="Hot">
+</fx-badge>
+<fx-badge content="Hot">
   <div class="child" />
-</icsm-badge>
-<icsm-badge dot>
+</fx-badge>
+<fx-badge dot>
   <div class="child" />
-</icsm-badge>
+</fx-badge>
 
 <style>
   .child {
@@ -51,15 +51,15 @@ app.use(Badge);
 设置 `max` 属性后，当 `content` 的数值超过最大值时，会自动显示为 `{max}+`。
 
 ```html
-<icsm-badge :content="20" max="9">
+<fx-badge :content="20" max="9">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="50" max="20">
+</fx-badge>
+<fx-badge :content="50" max="20">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="200" max="99">
+</fx-badge>
+<fx-badge :content="200" max="99">
   <div class="child" />
-</icsm-badge>
+</fx-badge>
 ```
 
 ### 自定义颜色
@@ -67,15 +67,15 @@ app.use(Badge);
 通过 `color` 属性来设置徽标的颜色。
 
 ```html
-<icsm-badge :content="5" color="#1989fa">
+<fx-badge :content="5" color="#1989fa">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="10" color="#1989fa">
+</fx-badge>
+<fx-badge :content="10" color="#1989fa">
   <div class="child" />
-</icsm-badge>
-<icsm-badge dot color="#1989fa">
+</fx-badge>
+<fx-badge dot color="#1989fa">
   <div class="child" />
-</icsm-badge>
+</fx-badge>
 ```
 
 ### 自定义徽标内容
@@ -83,24 +83,24 @@ app.use(Badge);
 通过 `content` 插槽可以自定义徽标的内容，比如插入一个图标。
 
 ```html
-<icsm-badge>
+<fx-badge>
   <div class="child" />
   <template #content>
-    <icsm-icon name="success" class="badge-icon" />
+    <fx-icon name="success" class="badge-icon" />
   </template>
-</icsm-badge>
-<icsm-badge>
+</fx-badge>
+<fx-badge>
   <div class="child" />
   <template #content>
-    <icsm-icon name="cross" class="badge-icon" />
+    <fx-icon name="cross" class="badge-icon" />
   </template>
-</icsm-badge>
-<icsm-badge>
+</fx-badge>
+<fx-badge>
   <div class="child" />
   <template #content>
-    <icsm-icon name="down" class="badge-icon" />
+    <fx-icon name="down" class="badge-icon" />
   </template>
-</icsm-badge>
+</fx-badge>
 ```
 
 ```css
@@ -116,15 +116,15 @@ app.use(Badge);
 通过 `position` 属性来设置徽标的位置。
 
 ```html
-<icsm-badge :content="10" position="top-left">
+<fx-badge :content="10" position="top-left">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="10" position="bottom-left">
+</fx-badge>
+<fx-badge :content="10" position="bottom-left">
   <div class="child" />
-</icsm-badge>
-<icsm-badge :content="10" position="bottom-right">
+</fx-badge>
+<fx-badge :content="10" position="bottom-right">
   <div class="child" />
-</icsm-badge>
+</fx-badge>
 ```
 
 ### 独立展示
@@ -132,9 +132,9 @@ app.use(Badge);
 当 Badge 没有子元素时，会作为一个独立的元素进行展示。
 
 ```html
-<icsm-badge :content="20" />
+<fx-badge :content="20" />
 
-<icsm-badge :content="200" max="99" />
+<fx-badge :content="200" max="99" />
 ```
 
 ## API
@@ -163,7 +163,7 @@ app.use(Badge);
 组件导出以下类型定义：
 
 ```ts
-import type { BadgeProps, BadgePosition } from 'ctf-ics-mobile-ui';
+import type { BadgeProps, BadgePosition } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -174,16 +174,16 @@ import type { BadgeProps, BadgePosition } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-badge-size | _16px_ | - |
-| --icsm-badge-color | _var(--icsm-white)_ | - |
-| --icsm-badge-padding | _0 3px_ | - |
-| --icsm-badge-font-size | _var(--icsm-font-size-sm)_ | - |
-| --icsm-badge-font-weight | _var(--icsm-font-bold)_ | - |
-| --icsm-badge-border-width | _var(--icsm-border-width)_ | - |
-| --icsm-badge-background | _var(--icsm-danger-color)_ | - |
-| --icsm-badge-dot-color | _var(--icsm-danger-color)_ | - |
-| --icsm-badge-dot-size | _8px_ | - |
-| --icsm-badge-font | _-apple-system-font, Helvetica Neue, Arial, sans-serif_ | - |
+| --fx-badge-size | _16px_ | - |
+| --fx-badge-color | _var(--fx-white)_ | - |
+| --fx-badge-padding | _0 3px_ | - |
+| --fx-badge-font-size | _var(--fx-font-size-sm)_ | - |
+| --fx-badge-font-weight | _var(--fx-font-bold)_ | - |
+| --fx-badge-border-width | _var(--fx-border-width)_ | - |
+| --fx-badge-background | _var(--fx-danger-color)_ | - |
+| --fx-badge-dot-color | _var(--fx-danger-color)_ | - |
+| --fx-badge-dot-size | _8px_ | - |
+| --fx-badge-font | _-apple-system-font, Helvetica Neue, Arial, sans-serif_ | - |
 
 
 

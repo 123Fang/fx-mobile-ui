@@ -1,15 +1,15 @@
 <!-- html -->
 <template>
-  <icsm-cell-group title="分组1">
-    <icsm-cell title="单元格" value="内容" />
-    <icsm-cell title="单元格" value="内容" />
-    <icsm-cell title="单元格" value="内容" />
-  </icsm-cell-group>
-  <icsm-cell-group title="分组2">
-    <icsm-cell title="单元格" value="内容" />
-    <icsm-cell title="单元格" value="内容" />
-    <icsm-cell title="单元格" value="内容" />
-  </icsm-cell-group>
+  <fx-cell-group title="分组1">
+    <fx-cell title="单元格" value="内容" />
+    <fx-cell title="单元格" value="内容" />
+    <fx-cell title="单元格" value="内容" />
+ </fx-cell-group>
+  <fx-cell-group title="分组2">
+    <fx-cell title="单元格" value="内容" />
+    <fx-cell title="单元格" value="内容" />
+    <fx-cell title="单元格" value="内容" />
+ </fx-cell-group>
 </template>
 
 <!-- js -->

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Overlay } from 'ctf-ics-mobile-ui';
+import { Overlay } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Overlay);
@@ -21,8 +21,8 @@ app.use(Overlay);
 ### 基础用法
 
 ```html
-<icsm-button type="primary" text="显示遮罩层" @click="show = true" />
-<icsm-overlay :show="show" @click="show = false" />
+<fx-button type="primary" text="显示遮罩层" @click="show = true" />
+<fx-overlay :show="show" @click="show = false" />
 ```
 
 ```js
@@ -41,11 +41,11 @@ export default {
 通过默认插槽可以在遮罩层上嵌入任意内容。
 
 ```html
-<icsm-overlay :show="show" @click="show = false">
+<fx-overlay :show="show" @click="show = false">
   <div class="wrapper">
     <div class="block" @click.stop />
   </div>
-</icsm-overlay>
+</fx-overlay>
 
 <style>
   .wrapper {
@@ -68,7 +68,7 @@ export default {
 Overlay 组件默认的 z-index 层级为 `1`，你可以通过 `z-index` 属性设置它的 z-index 层级。
 
 ```html
-<icsm-overlay z-index="100" />
+<fx-overlay z-index="100" />
 ```
 
 ## API
@@ -103,7 +103,7 @@ Overlay 组件默认的 z-index 层级为 `1`，你可以通过 `z-index` 属性
 组件导出以下类型定义：
 
 ```ts
-import type { OverlayProps } from 'ctf-ics-mobile-ui';
+import type { OverlayProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -114,8 +114,8 @@ import type { OverlayProps } from 'ctf-ics-mobile-ui';
 
 | 名称                     | 默认值               | 描述 |
 | ------------------------ | -------------------- | ---- |
-| --icsm-overlay-z-index    | _1_                  | -    |
-| --icsm-overlay-background | _rgba(0, 0, 0, 0.7)_ | -    |
+| --fx-overlay-z-index    | _1_                  | -    |
+| --fx-overlay-background | _rgba(0, 0, 0, 0.7)_ | -    |
 
 
 

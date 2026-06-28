@@ -25,16 +25,16 @@ const show = ref(false);
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-skeleton title :row="3" />
+    <fx-skeleton title :row="3" />
   </demo-block>
 
   <demo-block :title="t('showAvatar')">
-    <icsm-skeleton title avatar :row="3" />
+    <fx-skeleton title avatar :row="3" />
   </demo-block>
 
   <demo-block :title="t('showChildren')">
-    <icsm-switch v-model="show" />
-    <icsm-skeleton title avatar :row="3" :loading="!show">
+    <fx-switch v-model="show" />
+    <fx-skeleton title avatar :row="3" :loading="!show">
       <div class="demo-preview">
         <img :src="cdnURL('logo.png')" />
         <div class="demo-content">
@@ -42,37 +42,37 @@ const show = ref(false);
           <p>{{ t('desc') }}</p>
         </div>
       </div>
-    </icsm-skeleton>
+   </fx-skeleton>
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-skeleton>
+    <fx-skeleton>
       <template #template>
         <div :style="{ display: 'flex', width: '100%' }">
-          <icsm-skeleton-image />
+          <fx-skeleton-image />
           <div :style="{ flex: 1, marginLeft: '16px' }">
-            <icsm-skeleton-paragraph row-width="60%" />
-            <icsm-skeleton-paragraph />
-            <icsm-skeleton-paragraph />
-            <icsm-skeleton-paragraph />
+            <fx-skeleton-paragraph row-width="60%" />
+            <fx-skeleton-paragraph />
+            <fx-skeleton-paragraph />
+            <fx-skeleton-paragraph />
           </div>
         </div>
       </template>
-    </icsm-skeleton>
+   </fx-skeleton>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-skeleton {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-switch {
-    margin: 0 var(--icsm-padding-md) var(--icsm-padding-xs);
+  .fx-switch {
+    margin: 0 var(--fx-padding-md) var(--fx-padding-xs);
   }
 
   .demo-preview {
     display: flex;
-    padding: 0 var(--icsm-padding-md);
+    padding: 0 var(--fx-padding-md);
 
     .demo-content {
       padding-top: 6px;
@@ -94,7 +94,7 @@ const show = ref(false);
       flex-shrink: 0;
       width: 32px;
       height: 32px;
-      margin-right: var(--icsm-padding-md);
+      margin-right: var(--fx-padding-md);
     }
   }
 }

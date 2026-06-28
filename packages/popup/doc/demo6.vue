@@ -1,7 +1,7 @@
 <!-- html -->
 <template>
-  <icsm-cell title="展示弹出层" is-link @click="showPopup" />
-  <icsm-popup v-model:show="show" :style="{ padding: '64px' }">内容</icsm-popup>
+  <fx-cell title="展示弹出层" is-link @click="showPopup" />
+  <fx-popup v-model:show="show" :style="{ padding: '64px' }">内容</fx-popup>
 </template>
 
 <!-- js -->

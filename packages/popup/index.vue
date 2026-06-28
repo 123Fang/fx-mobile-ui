@@ -12,7 +12,7 @@
 import { ref } from 'vue'
 
 defineOptions({
-  name: 'icsm-popup'
+  name: 'fx-popup'
 })
 const emit = defineEmits([])
 const props = defineProps({})
@@ -20,6 +20,6 @@ const props = defineProps({})
 // init here
 </script>
 <style lang="scss" scoped>
-.icsm-popup-container {
+.fx-popup-container {
 }
 </style>

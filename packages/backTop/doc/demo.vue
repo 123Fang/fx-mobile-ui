@@ -26,36 +26,36 @@ const targetEl = ref<HTMLElement>();
 </script>
 
 <template>
-  <icsm-tabs v-model:active="activeTab" :ellipsis="false">
-    <icsm-tab :title="t('basicUsage')">
-      <icsm-cell v-for="item in list" :key="item" :title="item" />
-      <icsm-back-top v-if="activeTab === 0" />
-    </icsm-tab>
+  <fx-tabs v-model:active="activeTab" :ellipsis="false">
+    <fx-tab :title="t('basicUsage')">
+      <fx-cell v-for="item in list" :key="item" :title="item" />
+      <fx-back-top v-if="activeTab === 0" />
+   </fx-tab>
 
-    <icsm-tab :title="t('customPosition')">
-      <icsm-cell v-for="item in list" :key="item" :title="item" />
-      <icsm-back-top v-if="activeTab === 1" right="15vw" bottom="10vh" />
-    </icsm-tab>
+    <fx-tab :title="t('customPosition')">
+      <fx-cell v-for="item in list" :key="item" :title="item" />
+      <fx-back-top v-if="activeTab === 1" right="15vw" bottom="10vh" />
+   </fx-tab>
 
-    <icsm-tab :title="t('customContent')">
-      <icsm-cell v-for="item in list" :key="item" :title="item" />
-      <icsm-back-top v-if="activeTab === 2" class="custom-back-top">
+    <fx-tab :title="t('customContent')">
+      <fx-cell v-for="item in list" :key="item" :title="item" />
+      <fx-back-top v-if="activeTab === 2" class="custom-back-top">
         {{ t('backTop') }}
-      </icsm-back-top>
-    </icsm-tab>
+     </fx-back-top>
+   </fx-tab>
 
-    <icsm-tab :title="t('setScrollTarget')">
+    <fx-tab :title="t('setScrollTarget')">
       <div class="back-top-wrapper" ref="targetEl">
-        <icsm-cell v-for="item in list" :key="item" :title="item" />
-        <icsm-back-top v-if="activeTab === 3" :target="targetEl" bottom="30vh" />
+        <fx-cell v-for="item in list" :key="item" :title="item" />
+        <fx-back-top v-if="activeTab === 3" :target="targetEl" bottom="30vh" />
       </div>
-    </icsm-tab>
+   </fx-tab>
 
-    <icsm-tab :title="t('immediateScroll')">
-      <icsm-cell v-for="item in list" :key="item" :title="item" />
-      <icsm-back-top v-if="activeTab === 4" immediate />
-    </icsm-tab>
-  </icsm-tabs>
+    <fx-tab :title="t('immediateScroll')">
+      <fx-cell v-for="item in list" :key="item" :title="item" />
+      <fx-back-top v-if="activeTab === 4" immediate />
+   </fx-tab>
+ </fx-tabs>
 </template>
 
 <style lang="scss">

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ContactList } from 'ctf-ics-mobile-ui';
+import { ContactList } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(ContactList);
@@ -21,7 +21,7 @@ app.use(ContactList);
 ### 基础用法
 
 ```html
-<icsm-contact-list
+<fx-contact-list
   v-model="chosenContactId"
   :list="list"
   default-tag-text="默认"
@@ -33,7 +33,7 @@ app.use(ContactList);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -100,7 +100,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ContactListItem, ContactListProps } from 'ctf-ics-mobile-ui';
+import type { ContactListItem, ContactListProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -111,11 +111,11 @@ import type { ContactListItem, ContactListProps } from 'ctf-ics-mobile-ui';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-contact-list-padding | _var(--icsm-padding-sm) var(--icsm-padding-sm) 80px_ | - |
-| --icsm-contact-list-edit-icon-size | _16px_ | - |
-| --icsm-contact-list-add-button-z-index | _999_ | - |
-| --icsm-contact-list-radio-color | _var(--icsm-primary-color)_ | - |
-| --icsm-contact-list-item-padding | _var(--icsm-padding-md)_ | - |
+| --fx-contact-list-padding | _var(--fx-padding-sm) var(--fx-padding-sm) 80px_ | - |
+| --fx-contact-list-edit-icon-size | _16px_ | - |
+| --fx-contact-list-add-button-z-index | _999_ | - |
+| --fx-contact-list-radio-color | _var(--fx-primary-color)_ | - |
+| --fx-contact-list-item-padding | _var(--fx-padding-md)_ | - |
 
 
 

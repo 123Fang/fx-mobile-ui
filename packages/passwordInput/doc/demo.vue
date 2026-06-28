@@ -97,7 +97,7 @@ watch(current, (value) => {
 
 <template>
   <demo-block ref="basicUsage" :title="t('basicUsage')">
-    <icsm-password-input
+    <fx-password-input
       :value="values.basicUsage"
       :focused="current === 'basicUsage'"
       @focus="current = 'basicUsage'"
@@ -105,7 +105,7 @@ watch(current, (value) => {
   </demo-block>
 
   <demo-block ref="customLength" :title="t('customLength')">
-    <icsm-password-input
+    <fx-password-input
       :value="values.customLength"
       :length="4"
       :focused="current === 'customLength'"
@@ -114,7 +114,7 @@ watch(current, (value) => {
   </demo-block>
 
   <demo-block ref="addGutter" :title="t('addGutter')">
-    <icsm-password-input
+    <fx-password-input
       :value="values.addGutter"
       :gutter="10"
       :focused="current === 'addGutter'"
@@ -123,7 +123,7 @@ watch(current, (value) => {
   </demo-block>
 
   <demo-block ref="removeMask" :title="t('removeMask')">
-    <icsm-password-input
+    <fx-password-input
       :mask="false"
       :value="values.removeMask"
       :focused="current === 'removeMask'"
@@ -132,7 +132,7 @@ watch(current, (value) => {
   </demo-block>
 
   <demo-block ref="showInfo" :title="t('showInfo')">
-    <icsm-password-input
+    <fx-password-input
       :info="t('info')"
       :value="values.showInfo"
       :error-info="errorInfo"
@@ -141,7 +141,7 @@ watch(current, (value) => {
     />
   </demo-block>
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="!!current"
     @blur="current = null"
     @input="onInput"

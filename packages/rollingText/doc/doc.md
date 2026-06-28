@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { RollingText } from 'ctf-ics-mobile-ui';
+import { RollingText } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(RollingText);
@@ -23,7 +23,7 @@ app.use(RollingText);
 你可以通过 `start-num` 设置起始数值，`target-num` 设置目标数值。RollingText 组件会自动开始动画，从起始数值翻滚到目标数值。
 
 ```html
-<icsm-rolling-text :start-num="0" :target-num="123" />
+<fx-rolling-text :start-num="0" :target-num="123" />
 ```
 
 ### 设置翻滚方向
@@ -31,7 +31,7 @@ app.use(RollingText);
 你可以通过 `direction` 属性设置数字的翻滚方向，默认为向下翻滚，设置为 `up` 即可向上翻滚。
 
 ```html
-<icsm-rolling-text :start-num="0" :target-num="432" direction="up" />
+<fx-rolling-text :start-num="0" :target-num="432" direction="up" />
 ```
 
 ### 设置各数位停止顺序
@@ -39,7 +39,7 @@ app.use(RollingText);
 你可以通过 `stop-order` 属性设置动画各个数位的停止先后顺序。默认先停止高位，设置为 `rtl` 可以先从个位停止。
 
 ```html
-<icsm-rolling-text :start-num="0" :target-num="54321" stop-order="rtl" />
+<fx-rolling-text :start-num="0" :target-num="54321" stop-order="rtl" />
 ```
 
 ### 翻转非数字内容
@@ -47,7 +47,7 @@ app.use(RollingText);
 你可以使用 `text-list` 属性设置非数字内容的翻转。组件会从数组的第一项翻转到最后一项，请确保数组长度大于等于 2，以及每一项的长度一致。
 
 ```html
-<icsm-rolling-text :text-list="textList" :duration="1" />
+<fx-rolling-text :text-list="textList" :duration="1" />
 ```
 
 ```js
@@ -74,7 +74,7 @@ export default {
 RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自定义样式，也可以直接修改组件的样式。此外，你还可以通过 `height` 属性设置数字高度。
 
 ```html
-<icsm-rolling-text
+<fx-rolling-text
   class="my-rolling-text"
   :height="54"
   :start-num="12345"
@@ -84,12 +84,12 @@ RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自
 
 ```css
 .my-rolling-text {
-  --icsm-rolling-text-background: #1989fa;
-  --icsm-rolling-text-color: white;
-  --icsm-rolling-text-font-size: 24px;
-  --icsm-rolling-text-gap: 6px;
-  --icsm-rolling-text-item-border-radius: 5px;
-  --icsm-rolling-text-item-width: 40px;
+  --fx-rolling-text-background: #1989fa;
+  --fx-rolling-text-color: white;
+  --fx-rolling-text-font-size: 24px;
+  --fx-rolling-text-gap: 6px;
+  --fx-rolling-text-item-border-radius: 5px;
+  --fx-rolling-text-item-width: 40px;
 }
 ```
 
@@ -98,16 +98,16 @@ RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自
 通过 ref 获取到组件实例后，你可以调用 `start`、`reset` 方法，`start` 方法用于开始动画，`reset` 方法用于重置动画。
 
 ```html
-<icsm-rolling-text
+<fx-rolling-text
   ref="rollingTextRef"
   :start-num="0"
   :target-num="54321"
   :auto-start="false"
 />
-<icsm-grid clickable :column-num="3">
-  <icsm-grid-item icon="play-circle-o" :text="start" @click="start" />
-  <icsm-grid-item icon="replay" :text="reset" @click="reset" />
-</icsm-grid>
+<fx-grid clickable :column-num="3">
+  <fx-grid-item icon="play-circle-o" :text="start" @click="start" />
+  <fx-grid-item icon="replay" :text="reset" @click="reset" />
+</fx-grid>
 ```
 
 ```js
@@ -161,14 +161,14 @@ import type {
   RollingTextInstance,
   RollingTextDirection,
   RollingTextStopOrder,
-} from 'ctf-ics-mobile-ui';
+} from 'fx-mobile-ui';
 ```
 
 `RollingTextInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { RollingTextInstance } from 'ctf-ics-mobile-ui';
+import type { RollingTextInstance } from 'fx-mobile-ui';
 
 const rollingTextRef = ref<RollingTextInstance>();
 
@@ -183,12 +183,12 @@ rollingTextRef.value?.start();
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --icsm-rolling-text-background | _inherit_ | 单个数位背景色 |
-| --icsm-rolling-text-color | _var(--icsm-text-color)_ | 数字颜色 |
-| --icsm-rolling-text-font-size | _var(--icsm-font-size-md)_ | 字体大小 |
-| --icsm-rolling-text-gap | _0px_ | 数位之间的间隔 |
-| --icsm-rolling-text-item-width | _15px_ | 单个数位宽度 |
-| --icsm-rolling-text-item-border-radius | _0px_ | 单个数位边框圆角 |
+| --fx-rolling-text-background | _inherit_ | 单个数位背景色 |
+| --fx-rolling-text-color | _var(--fx-text-color)_ | 数字颜色 |
+| --fx-rolling-text-font-size | _var(--fx-font-size-md)_ | 字体大小 |
+| --fx-rolling-text-gap | _0px_ | 数位之间的间隔 |
+| --fx-rolling-text-item-width | _15px_ | 单个数位宽度 |
+| --fx-rolling-text-item-border-radius | _0px_ | 单个数位边框圆角 |
 
 
 

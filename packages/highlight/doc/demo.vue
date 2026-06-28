@@ -25,15 +25,15 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-highlight :keywords="t('keywords1')" :source-string="t('text1')" />
+    <fx-highlight :keywords="t('keywords1')" :source-string="t('text1')" />
   </demo-block>
 
   <demo-block :title="t('multipleKeywords')">
-    <icsm-highlight :keywords="t('keywords2')" :source-string="t('text1')" />
+    <fx-highlight :keywords="t('keywords2')" :source-string="t('text1')" />
   </demo-block>
 
   <demo-block :title="t('highlightClass')">
-    <icsm-highlight
+    <fx-highlight
       :keywords="t('keywords3')"
       :source-string="t('text1')"
       highlight-class="custom-class"
@@ -43,9 +43,9 @@ const t = useTranslate({
 
 <style lang="scss">
 .demo-highlight {
-  background: var(--icsm-background-2);
+  background: var(--fx-background-2);
 
-  .icsm-highlight {
+  .fx-highlight {
     padding: 0 16px;
   }
 

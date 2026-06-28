@@ -2,7 +2,7 @@
 
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -48,37 +48,37 @@ const onDelete = () => showToast(t('delete'));
 
 <template>
   <demo-block card>
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button1')"
       @touchstart.stop="keyboard = 'default'"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button2')"
       @touchstart.stop="keyboard = 'custom'"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button3')"
       @touchstart.stop="keyboard = 'extraKey'"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button4')"
       @touchstart.stop="keyboard = 'title'"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button5')"
       @touchstart.stop="keyboard = 'multiExtraKey'"
     />
-    <icsm-cell
+    <fx-cell
       is-link
       :title="t('button6')"
       @touchstart.stop="keyboard = 'randomKeyOrder'"
     />
-    <icsm-field
+    <fx-field
       v-model="value"
       readonly
       clickable
@@ -88,14 +88,14 @@ const onDelete = () => showToast(t('delete'));
     />
   </demo-block>
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="keyboard === 'default'"
     @blur="keyboard = ''"
     @input="onInput"
     @delete="onDelete"
   />
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="keyboard === 'custom'"
     :close-button-text="t('close')"
     theme="custom"
@@ -105,7 +105,7 @@ const onDelete = () => showToast(t('delete'));
     @delete="onDelete"
   />
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="keyboard === 'extraKey'"
     :close-button-text="t('close')"
     extra-key="X"
@@ -114,7 +114,7 @@ const onDelete = () => showToast(t('delete'));
     @delete="onDelete"
   />
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="keyboard === 'title'"
     :close-button-text="t('close')"
     :title="t('title')"
@@ -124,7 +124,7 @@ const onDelete = () => showToast(t('delete'));
     @delete="onDelete"
   />
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     :show="keyboard === 'multiExtraKey'"
     :close-button-text="t('close')"
     theme="custom"
@@ -136,7 +136,7 @@ const onDelete = () => showToast(t('delete'));
 
 
 
-  <icsm-number-keyboard
+  <fx-number-keyboard
     v-model="value"
     :show="keyboard === 'bindValue'"
     maxlength="6"
@@ -148,8 +148,8 @@ const onDelete = () => showToast(t('delete'));
 .demo-number-keyboard {
   padding-bottom: 300px;
 
-  .icsm-button {
-    margin-left: var(--icsm-padding-md);
+  .fx-button {
+    margin-left: var(--fx-padding-md);
   }
 }
 </style>

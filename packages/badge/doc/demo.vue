@@ -22,95 +22,95 @@ const t = useTranslate({
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-badge content="5">
+    <fx-badge content="5">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="10">
+   </fx-badge>
+    <fx-badge content="10">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="Hot">
+   </fx-badge>
+    <fx-badge content="Hot">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge dot>
+   </fx-badge>
+    <fx-badge dot>
       <div class="child" />
-    </icsm-badge>
+   </fx-badge>
   </demo-block>
 
   <demo-block :title="t('max')">
-    <icsm-badge content="20" max="9">
+    <fx-badge content="20" max="9">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="50" max="20">
+   </fx-badge>
+    <fx-badge content="50" max="20">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="200" max="99">
+   </fx-badge>
+    <fx-badge content="200" max="99">
       <div class="child" />
-    </icsm-badge>
+   </fx-badge>
   </demo-block>
 
   <demo-block :title="t('customColor')">
-    <icsm-badge content="5" color="#1989fa">
+    <fx-badge content="5" color="#1989fa">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="10" color="#1989fa">
+   </fx-badge>
+    <fx-badge content="10" color="#1989fa">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge dot color="#1989fa">
+   </fx-badge>
+    <fx-badge dot color="#1989fa">
       <div class="child" />
-    </icsm-badge>
+   </fx-badge>
   </demo-block>
 
   <demo-block :title="t('customContent')">
-    <icsm-badge>
+    <fx-badge>
       <div class="child" />
       <template #content>
-        <icsm-icon name="success" class="badge-icon" />
+        <fx-icon name="success" class="badge-icon" />
       </template>
-    </icsm-badge>
-    <icsm-badge>
+   </fx-badge>
+    <fx-badge>
       <div class="child" />
       <template #content>
-        <icsm-icon name="cross" class="badge-icon" />
+        <fx-icon name="cross" class="badge-icon" />
       </template>
-    </icsm-badge>
-    <icsm-badge>
+   </fx-badge>
+    <fx-badge>
       <div class="child" />
       <template #content>
-        <icsm-icon name="down" class="badge-icon" />
+        <fx-icon name="down" class="badge-icon" />
       </template>
-    </icsm-badge>
+   </fx-badge>
   </demo-block>
 
   <demo-block :title="t('customPosition')">
-    <icsm-badge content="10" position="top-left">
+    <fx-badge content="10" position="top-left">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="10" position="bottom-left">
+   </fx-badge>
+    <fx-badge content="10" position="bottom-left">
       <div class="child" />
-    </icsm-badge>
-    <icsm-badge content="10" position="bottom-right">
+   </fx-badge>
+    <fx-badge content="10" position="bottom-right">
       <div class="child" />
-    </icsm-badge>
+   </fx-badge>
   </demo-block>
 
   <demo-block :title="t('standalone')">
-    <icsm-badge content="20" style="margin-left: 16px" />
-    <icsm-badge content="200" max="99" style="margin-left: 16px" />
+    <fx-badge content="20" style="margin-left: 16px" />
+    <fx-badge content="200" max="99" style="margin-left: 16px" />
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-badge {
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-badge__wrapper {
-    margin-left: var(--icsm-padding-md);
+  .fx-badge__wrapper {
+    margin-left: var(--fx-padding-md);
   }
 
   .child {
     width: 40px;
     height: 40px;
-    background: var(--icsm-gray-2);
+    background: var(--fx-gray-2);
     border-radius: 4px;
   }
 

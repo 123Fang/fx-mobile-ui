@@ -42,40 +42,40 @@ const password = ref('');
 
 <template>
   <demo-block :title="t('customType')">
-    <icsm-cell-group inset>
-      <icsm-form>
-        <icsm-field
+    <fx-cell-group inset>
+      <fx-form>
+        <fx-field
           v-model="text"
           :label="t('text')"
           :placeholder="t('textPlaceholder')"
           autocomplete="off"
         />
-        <icsm-field
+        <fx-field
           v-model="phone"
           type="tel"
           :label="t('phone')"
           :placeholder="t('phonePlaceholder')"
         />
-        <icsm-field
+        <fx-field
           v-model="digit"
           type="digit"
           :label="t('digit')"
           :placeholder="t('digitPlaceholder')"
         />
-        <icsm-field
+        <fx-field
           v-model="number"
           type="number"
           :label="t('number')"
           :placeholder="t('numberPlaceholder')"
         />
-        <icsm-field
+        <fx-field
           v-model="password"
           type="password"
           :label="t('password')"
           :placeholder="t('passwordPlaceholder')"
           autocomplete="off"
         />
-      </icsm-form>
-    </icsm-cell-group>
+     </fx-form>
+   </fx-cell-group>
   </demo-block>
 </template>

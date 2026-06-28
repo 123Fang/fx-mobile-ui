@@ -45,47 +45,47 @@ const close = () => {
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-cell :title="`primary ${t('type')}`">
+    <fx-cell :title="`primary ${t('type')}`">
       <template #value>
-        <icsm-tag type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="`success ${t('type')}`">
+   </fx-cell>
+    <fx-cell :title="`success ${t('type')}`">
       <template #value>
-        <icsm-tag type="success">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="success">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="`danger ${t('type')}`">
+   </fx-cell>
+    <fx-cell :title="`danger ${t('type')}`">
       <template #value>
-        <icsm-tag type="danger">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="danger">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="`warning ${t('type')}`">
+   </fx-cell>
+    <fx-cell :title="`warning ${t('type')}`">
       <template #value>
-        <icsm-tag type="warning">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="warning">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 
   <demo-block card :title="t('tagStyle')">
-    <icsm-cell :title="t('plain')">
+    <fx-cell :title="t('plain')">
       <template #value>
-        <icsm-tag plain type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag plain type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('round')">
+   </fx-cell>
+    <fx-cell :title="t('round')">
       <template #value>
-        <icsm-tag round type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag round type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('mark')">
+   </fx-cell>
+    <fx-cell :title="t('mark')">
       <template #value>
-        <icsm-tag mark type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag mark type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('closeable')">
+   </fx-cell>
+    <fx-cell :title="t('closeable')">
       <template #value>
-        <icsm-tag
+        <fx-tag
           closeable
           :show="show"
           size="medium"
@@ -93,52 +93,52 @@ const close = () => {
           @close="close"
         >
           {{ t('tag') }}
-        </icsm-tag>
+       </fx-tag>
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 
   <demo-block card :title="t('customSize')">
-    <icsm-cell :title="t('smallSize')">
+    <fx-cell :title="t('smallSize')">
       <template #value>
-        <icsm-tag type="primary">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="primary">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('mediumSize')">
+   </fx-cell>
+    <fx-cell :title="t('mediumSize')">
       <template #value>
-        <icsm-tag type="primary" size="medium">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="primary" size="medium">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('largeSize')">
+   </fx-cell>
+    <fx-cell :title="t('largeSize')">
       <template #value>
-        <icsm-tag type="primary" size="large">{{ t('tag') }}</icsm-tag>
+        <fx-tag type="primary" size="large">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 
   <demo-block card :title="t('customColor')">
-    <icsm-cell :title="t('customBgColor')">
+    <fx-cell :title="t('customBgColor')">
       <template #value>
-        <icsm-tag color="#7232dd">{{ t('tag') }}</icsm-tag>
+        <fx-tag color="#7232dd">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('customTextColor')">
+   </fx-cell>
+    <fx-cell :title="t('customTextColor')">
       <template #value>
-        <icsm-tag color="#ffe1e1" text-color="#ad0000">{{ t('tag') }}</icsm-tag>
+        <fx-tag color="#ffe1e1" text-color="#ad0000">{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
-    <icsm-cell :title="t('customPlainColor')">
+   </fx-cell>
+    <fx-cell :title="t('customPlainColor')">
       <template #value>
-        <icsm-tag color="#7232dd" plain>{{ t('tag') }}</icsm-tag>
+        <fx-tag color="#7232dd" plain>{{ t('tag') }}</fx-tag>
       </template>
-    </icsm-cell>
+   </fx-cell>
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-tag {
-  .icsm-tag + .icsm-tag {
-    margin-left: var(--icsm-padding-xs);
+  .fx-tag + .fx-tag {
+    margin-left: var(--fx-padding-xs);
   }
 }
 </style>

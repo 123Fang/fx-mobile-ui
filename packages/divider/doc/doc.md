@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Divider } from 'ctf-ics-mobile-ui';
+import { Divider } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Divider);
@@ -23,7 +23,7 @@ app.use(Divider);
 默认渲染一条水平分割线。
 
 ```html
-<icsm-divider />
+<fx-divider />
 ```
 
 ### 展示文本
@@ -31,7 +31,7 @@ app.use(Divider);
 通过插槽在可以分割线中间插入内容。
 
 ```html
-<icsm-divider>文本</icsm-divider>
+<fx-divider>文本</fx-divider>
 ```
 
 ### 内容位置
@@ -39,8 +39,8 @@ app.use(Divider);
 通过 `content-position` 指定内容所在位置。
 
 ```html
-<icsm-divider content-position="left">文本</icsm-divider>
-<icsm-divider content-position="right">文本</icsm-divider>
+<fx-divider content-position="left">文本</fx-divider>
+<fx-divider content-position="right">文本</fx-divider>
 ```
 
 ### 虚线
@@ -48,7 +48,7 @@ app.use(Divider);
 添加 `dashed` 属性使分割线渲染为虚线。
 
 ```html
-<icsm-divider dashed>文本</icsm-divider>
+<fx-divider dashed>文本</fx-divider>
 ```
 
 ### 自定义样式
@@ -56,23 +56,23 @@ app.use(Divider);
 可以直接通过 `style` 属性设置分割线的样式。
 
 ```html
-<icsm-divider
+<fx-divider
   :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }"
 >
   文本
-</icsm-divider>
+</fx-divider>
 ```
 
 ### 垂直
 
 ```html
-<icsm-divider vertical />
+<fx-divider vertical />
 文本
-<icsm-divider vertical dashed />
+<fx-divider vertical dashed />
 文本
-<icsm-divider vertical :hairline="false" />
+<fx-divider vertical :hairline="false" />
 文本
-<icsm-divider vertical :style="{ borderColor: '#1989fa' }" />
+<fx-divider vertical :style="{ borderColor: '#1989fa' }" />
 ```
 
 ## API
@@ -97,7 +97,7 @@ app.use(Divider);
 组件导出以下类型定义：
 
 ```ts
-import type { DividerProps, DividerContentPosition } from 'ctf-ics-mobile-ui';
+import type { DividerProps, DividerContentPosition } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -108,15 +108,15 @@ import type { DividerProps, DividerContentPosition } from 'ctf-ics-mobile-ui';
 
 | 名称                              | 默认值                    | 描述 |
 | --------------------------------- | ------------------------- | ---- |
-| --icsm-divider-margin              | _var(--icsm-padding-md) 0_ | -    |
-| --icsm-divider-vertical-margin     | _0 var(--icsm-padding-xs)_ | -    |
-| --icsm-divider-text-color          | _var(--icsm-text-color-2)_ | -    |
-| --icsm-divider-font-size           | _var(--icsm-font-size-md)_ | -    |
-| --icsm-divider-line-height         | _24px_                    | -    |
-| --icsm-divider-border-color        | _var(--icsm-border-color)_ | -    |
-| --icsm-divider-content-padding     | _var(--icsm-padding-md)_   | -    |
-| --icsm-divider-content-left-width  | _10%_                     | -    |
-| --icsm-divider-content-right-width | _10%_                     | -    |
+| --fx-divider-margin              | _var(--fx-padding-md) 0_ | -    |
+| --fx-divider-vertical-margin     | _0 var(--fx-padding-xs)_ | -    |
+| --fx-divider-text-color          | _var(--fx-text-color-2)_ | -    |
+| --fx-divider-font-size           | _var(--fx-font-size-md)_ | -    |
+| --fx-divider-line-height         | _24px_                    | -    |
+| --fx-divider-border-color        | _var(--fx-border-color)_ | -    |
+| --fx-divider-content-padding     | _var(--fx-padding-md)_   | -    |
+| --fx-divider-content-left-width  | _10%_                     | -    |
+| --fx-divider-content-right-width | _10%_                     | -    |
 
 
 

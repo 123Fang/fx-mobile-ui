@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '@/docs/site';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -43,27 +43,27 @@ const onChange = (value: string) => showToast(t('text') + value);
 
 <template>
   <demo-block :title="t('title1')">
-    <icsm-slider v-model="value1" @change="onChange" />
+    <fx-slider v-model="value1" @change="onChange" />
   </demo-block>
 
   <demo-block :title="t('title2')">
-    <icsm-slider range v-model="value2" @change="onChange" />
+    <fx-slider range v-model="value2" @change="onChange" />
   </demo-block>
 
   <demo-block :title="t('title3')">
-    <icsm-slider v-model="value3" :min="-50" :max="50" @change="onChange" />
+    <fx-slider v-model="value3" :min="-50" :max="50" @change="onChange" />
   </demo-block>
 
   <demo-block :title="t('title4')">
-    <icsm-slider v-model="value4" disabled />
+    <fx-slider v-model="value4" disabled />
   </demo-block>
 
   <demo-block :title="t('title5')">
-    <icsm-slider v-model="value5" :step="10" @change="onChange" />
+    <fx-slider v-model="value5" :step="10" @change="onChange" />
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-slider
+    <fx-slider
       v-model="value6"
       bar-height="4px"
       active-color="#ee0a24"
@@ -72,17 +72,17 @@ const onChange = (value: string) => showToast(t('text') + value);
   </demo-block>
 
   <demo-block :title="t('customButton')">
-    <icsm-slider v-model="value7">
+    <fx-slider v-model="value7">
       <template #button>
         <div class="custom-button">{{ value7 }}</div>
       </template>
-    </icsm-slider>
+   </fx-slider>
   </demo-block>
 
   <demo-block :title="t('vertical')">
     <div :style="{ height: '150px', paddingLeft: '30px' }">
-      <icsm-slider v-model="value8" vertical @change="onChange" />
-      <icsm-slider
+      <fx-slider v-model="value8" vertical @change="onChange" />
+      <fx-slider
         v-model="value9"
         range
         vertical
@@ -97,11 +97,11 @@ const onChange = (value: string) => showToast(t('text') + value);
 .demo-slider {
   user-select: none;
 
-  .icsm-doc-demo-block {
-    padding: 0 var(--icsm-padding-md) 20px;
+  .fx-doc-demo-block {
+    padding: 0 var(--fx-padding-md) 20px;
   }
 
-  .icsm-doc-demo-block__title {
+  .fx-doc-demo-block__title {
     padding-left: 0;
   }
 
@@ -111,7 +111,7 @@ const onChange = (value: string) => showToast(t('text') + value);
     font-size: 10px;
     line-height: 18px;
     text-align: center;
-    background-color: var(--icsm-primary-color);
+    background-color: var(--fx-primary-color);
     border-radius: 100px;
   }
 }

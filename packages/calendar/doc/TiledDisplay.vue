@@ -22,7 +22,7 @@ const t = useTranslate({
 
 <template>
   <demo-block card :title="t('tiledDisplay')">
-    <icsm-calendar
+    <fx-calendar
       :title="t('calendar')"
       :poppable="false"
       :show-confirm="false"

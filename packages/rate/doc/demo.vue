@@ -3,7 +3,7 @@ import { ref } from 'vue';
 // import { useTranslate } from '../../../docs/site';
 import { cdnURL, useTranslate } from '@/docs/site';
 
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 const t = useTranslate({
   'zh-CN': {
@@ -47,15 +47,15 @@ const onChange = (value: number) => showToast(t('toastContent', value));
 
 <template>
   <demo-block :title="t('basicUsage')">
-    <icsm-rate v-model="value1" />
+    <fx-rate v-model="value1" />
   </demo-block>
 
   <demo-block :title="t('customIcon')">
-    <icsm-rate v-model="value2" icon="like" void-icon="like-o" />
+    <fx-rate v-model="value2" icon="like" void-icon="like-o" />
   </demo-block>
 
   <demo-block :title="t('customStyle')">
-    <icsm-rate
+    <fx-rate
       v-model="value3"
       :size="25"
       color="#ffd21e"
@@ -65,41 +65,41 @@ const onChange = (value: number) => showToast(t('toastContent', value));
   </demo-block>
 
   <demo-block :title="t('halfStar')">
-    <icsm-rate v-model="value4" allow-half />
+    <fx-rate v-model="value4" allow-half />
   </demo-block>
 
   <demo-block :title="t('customCount')">
-    <icsm-rate v-model="value5" :count="6" />
+    <fx-rate v-model="value5" :count="6" />
   </demo-block>
 
   <demo-block :title="t('clearable')">
-    <icsm-rate v-model="value9" clearable />
+    <fx-rate v-model="value9" clearable />
   </demo-block>
 
   <demo-block :title="t('disabled')">
-    <icsm-rate v-model="value6" disabled />
+    <fx-rate v-model="value6" disabled />
   </demo-block>
 
   <demo-block :title="t('readonly')">
-    <icsm-rate v-model="value6" readonly />
+    <fx-rate v-model="value6" readonly />
   </demo-block>
 
   <demo-block :title="t('readonlyHalfStar')">
-    <icsm-rate v-model="value7" readonly allow-half />
+    <fx-rate v-model="value7" readonly allow-half />
   </demo-block>
 
   <demo-block :title="t('changeEvent')">
-    <icsm-rate v-model="value8" @change="onChange" />
+    <fx-rate v-model="value8" @change="onChange" />
   </demo-block>
 </template>
 
 <style lang="scss">
 .demo-rate {
   padding-bottom: 20px;
-  background-color: var(--icsm-background-2);
+  background-color: var(--fx-background-2);
 
-  .icsm-rate {
-    margin-left: var(--icsm-padding-md);
+  .fx-rate {
+    margin-left: var(--fx-padding-md);
   }
 }
 </style>

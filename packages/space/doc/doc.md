@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Space } from 'ctf-ics-mobile-ui';
+import { Space } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Space);
@@ -23,12 +23,12 @@ app.use(Space);
 Space 组件会在各个子组件之间设置一定的间距，默认间距为 `8px`。
 
 ```html
-<icsm-space>
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-</icsm-space>
+<fx-space>
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+</fx-space>
 ```
 
 ### 垂直排列
@@ -36,11 +36,11 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 将 `direction` 属性设置为 `vertical`，可以设置垂直方向排列的间距。
 
 ```html
-<icsm-space direction="vertical" fill>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-</icsm-space>
+<fx-space direction="vertical" fill>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+</fx-space>
 ```
 
 ### 自定义间距
@@ -49,18 +49,18 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 
 ```html
 <!-- 20px -->
-<icsm-space :size="20">
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-</icsm-space>
+<fx-space :size="20">
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+</fx-space>
 
 <!-- 2rem -->
-<icsm-space size="2rem">
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-  <icsm-button type="primary">按钮</icsm-button>
-</icsm-space>
+<fx-space size="2rem">
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+  <fx-button type="primary">按钮</fx-button>
+</fx-space>
 ```
 
 ### 对齐方式
@@ -68,21 +68,21 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 通过调整 `align` 的值来设置子元素的对齐方式, 可选值为 `start`, `center` ,`end` ,`baseline`，在水平模式下的默认值为 `center`。
 
 ```html
-<icsm-radio-group
+<fx-radio-group
   v-model="align"
   direction="horizontal"
   style="margin-bottom: 16px"
 >
-  <icsm-radio name="start">start</icsm-radio>
-  <icsm-radio name="center">center</icsm-radio>
-  <icsm-radio name="end">end</icsm-radio>
-  <icsm-radio name="baseline">baseline</icsm-radio>
-</icsm-radio-group>
+  <fx-radio name="start">start</fx-radio>
+  <fx-radio name="center">center</fx-radio>
+  <fx-radio name="end">end</fx-radio>
+  <fx-radio name="baseline">baseline</fx-radio>
+</fx-radio-group>
 
-<icsm-space :align="align" style="padding: 16px; background: #f3f2f5">
-  <icsm-button type="primary">{{ align }}</icsm-button>
+<fx-space :align="align" style="padding: 16px; background: #f3f2f5">
+  <fx-button type="primary">{{ align }}</fx-button>
   <div style="padding: 40px 20px; background: #fff">Block</div>
-</icsm-space>
+</fx-space>
 ```
 
 ```js
@@ -101,16 +101,16 @@ export default {
 在水平模式下, 通过 `wrap` 属性来控制子元素是否自动换行。
 
 ```html
-<icsm-space wrap>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-  <icsm-button type="primary" block>按钮</icsm-button>
-</icsm-space>
+<fx-space wrap>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+  <fx-button type="primary" block>按钮</fx-button>
+</fx-space>
 ```
 
 ## API
@@ -136,7 +136,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SpaceProps, SpaceSize, SpaceAlign } from 'ctf-ics-mobile-ui';
+import type { SpaceProps, SpaceSize, SpaceAlign } from 'fx-mobile-ui';
 ```
 
 <br/><br/><br/><br/><br/><br/>

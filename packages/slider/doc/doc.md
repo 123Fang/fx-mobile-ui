@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Slider } from 'ctf-ics-mobile-ui';
+import { Slider } from 'fx-mobile-ui';
 
 const app = createApp();
 app.use(Slider);
@@ -21,12 +21,12 @@ app.use(Slider);
 ### 基础用法
 
 ```html
-<icsm-slider v-model="value" @change="onChange" />
+<fx-slider v-model="value" @change="onChange" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -45,12 +45,12 @@ export default {
 添加 `range` 属性就可以开启双滑块模式，确保 `value` 的值是一个数组。
 
 ```html
-<icsm-slider v-model="value" range @change="onChange" />
+<fx-slider v-model="value" range @change="onChange" />
 ```
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -68,35 +68,35 @@ export default {
 ### 指定选择范围
 
 ```html
-<icsm-slider v-model="value" :min="-50" :max="50" />
+<fx-slider v-model="value" :min="-50" :max="50" />
 ```
 
 ### 禁用
 
 ```html
-<icsm-slider v-model="value" disabled />
+<fx-slider v-model="value" disabled />
 ```
 
 ### 指定步长
 
 ```html
-<icsm-slider v-model="value" :step="10" />
+<fx-slider v-model="value" :step="10" />
 ```
 
 ### 自定义样式
 
 ```html
-<icsm-slider v-model="value" bar-height="4px" active-color="#ee0a24" />
+<fx-slider v-model="value" bar-height="4px" active-color="#ee0a24" />
 ```
 
 ### 自定义按钮
 
 ```html
-<icsm-slider v-model="value">
+<fx-slider v-model="value">
   <template #button>
     <div class="custom-button">{{ value }}</div>
   </template>
-</icsm-slider>
+</fx-slider>
 
 <style>
   .custom-button {
@@ -105,7 +105,7 @@ export default {
     font-size: 10px;
     line-height: 18px;
     text-align: center;
-    background-color: var(--icsm-primary-color);
+    background-color: var(--fx-primary-color);
     border-radius: 100px;
   }
 </style>
@@ -117,8 +117,8 @@ export default {
 
 ```html
 <div :style="{ height: '150px' }">
-  <icsm-slider v-model="value" vertical @change="onChange" />
-  <icsm-slider
+  <fx-slider v-model="value" vertical @change="onChange" />
+  <fx-slider
     v-model="value2"
     range
     vertical
@@ -130,7 +130,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'ctf-ics-mobile-ui';
+import { showToast } from 'fx-mobile-ui';
 
 export default {
   setup() {
@@ -188,7 +188,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SliderProps } from 'ctf-ics-mobile-ui';
+import type { SliderProps } from 'fx-mobile-ui';
 ```
 
 ## 主题定制
@@ -199,15 +199,15 @@ import type { SliderProps } from 'ctf-ics-mobile-ui';
 
 | 名称                             | 默认值                         | 描述 |
 | -------------------------------- | ------------------------------ | ---- |
-| --icsm-slider-active-background   | _var(--icsm-primary-color)_     | -    |
-| --icsm-slider-inactive-background | _var(--icsm-gray-3)_            | -    |
-| --icsm-slider-disabled-opacity    | _var(--icsm-disabled-opacity)_  | -    |
-| --icsm-slider-bar-height          | _2px_                          | -    |
-| --icsm-slider-button-width        | _24px_                         | -    |
-| --icsm-slider-button-height       | _24px_                         | -    |
-| --icsm-slider-button-radius       | _50%_                          | -    |
-| --icsm-slider-button-background   | _var(--icsm-white)_             | -    |
-| --icsm-slider-button-shadow       | _0 1px 2px rgba(0, 0, 0, 0.5)_ | -    |
+| --fx-slider-active-background   | _var(--fx-primary-color)_     | -    |
+| --fx-slider-inactive-background | _var(--fx-gray-3)_            | -    |
+| --fx-slider-disabled-opacity    | _var(--fx-disabled-opacity)_  | -    |
+| --fx-slider-bar-height          | _2px_                          | -    |
+| --fx-slider-button-width        | _24px_                         | -    |
+| --fx-slider-button-height       | _24px_                         | -    |
+| --fx-slider-button-radius       | _50%_                          | -    |
+| --fx-slider-button-background   | _var(--fx-white)_             | -    |
+| --fx-slider-button-shadow       | _0 1px 2px rgba(0, 0, 0, 0.5)_ | -    |
 
 
 <br/><br/><br/><br/><br/><br/>

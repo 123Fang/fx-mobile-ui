@@ -13,7 +13,7 @@ import enUSOptions from './area-en-US';
 // import { useCurrentLang } from '../../locale';
 //Vant 提供了一份中国省市区数据，你可以安装 @vant/area-data npm 包来引入
 import { useCascaderAreaData } from '@vant/area-data';
-import { closeToast, showLoadingToast } from 'ctf-ics-mobile-ui';
+import { closeToast, showLoadingToast } from 'fx-mobile-ui';
 // import type { Numeric } from '../../utils';
 
 const lang = ref(localStorage.getItem('lang') || 'zh-CN')
@@ -164,7 +164,7 @@ const onFinish = (
 
 <template>
   <demo-block card :title="t('basicUsage')">
-    <icsm-field
+    <fx-field
       v-model="baseState.result"
       is-link
       readonly
@@ -172,24 +172,24 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="baseState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="baseState.show"
       round
       teleport="body"
       position="bottom"
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="baseState.value"
         :title="t('selectArea')"
         :options="t('options')"
         @close="baseState.show = false"
         @finish="onFinish(baseState, $event)"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block v-if="lang === 'zh-CN'" card :title="t('chinaAreaData')">
-    <icsm-field
+    <fx-field
       v-model="chinaAreaDataState.result"
       is-link
       readonly
@@ -197,24 +197,24 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="chinaAreaDataState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="chinaAreaDataState.show"
       round
       teleport="body"
       position="bottom"
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="chinaAreaDataState.value"
         :title="t('selectArea')"
         :options="cascaderAreaData"
         @close="chinaAreaDataState.show = false"
         @finish="onFinish(chinaAreaDataState, $event)"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block card :title="t('customColor')">
-    <icsm-field
+    <fx-field
       v-model="customColorState.result"
       is-link
       readonly
@@ -222,13 +222,13 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="customColorState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="customColorState.show"
       round
       teleport="body"
       position="bottom"
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="customColorState.value"
         :title="t('selectArea')"
         :options="t('options')"
@@ -236,11 +236,11 @@ const onFinish = (
         @close="customColorState.show = false"
         @finish="onFinish(customColorState, $event)"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block card :title="t('asyncOptions')">
-    <icsm-field
+    <fx-field
       v-model="asyncState.result"
       is-link
       readonly
@@ -248,13 +248,13 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="asyncState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="asyncState.show"
       round
       teleport="body"
       position="bottom"
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="asyncState.value"
         :title="t('selectArea')"
         :options="asyncState.options"
@@ -262,11 +262,11 @@ const onFinish = (
         @change="loadDynamicOptions"
         @finish="onFinish(asyncState, $event)"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block card :title="t('customFieldNames')">
-    <icsm-field
+    <fx-field
       v-model="customFieldState.result"
       is-link
       readonly
@@ -274,14 +274,14 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="customFieldState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="customFieldState.show"
       round
       teleport="body"
       position="bottom"
       safe-area-inset-bottom
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="customFieldState.value"
         :title="t('selectArea')"
         :options="customFieldOptions"
@@ -289,11 +289,11 @@ const onFinish = (
         @close="customFieldState.show = false"
         @finish="onFinish(customFieldState, $event)"
       />
-    </icsm-popup>
+   </fx-popup>
   </demo-block>
 
   <demo-block card :title="t('customContent')">
-    <icsm-field
+    <fx-field
       v-model="customContentState.result"
       is-link
       readonly
@@ -301,14 +301,14 @@ const onFinish = (
       :placeholder="t('selectArea')"
       @click="customContentState.show = true"
     />
-    <icsm-popup
+    <fx-popup
       v-model:show="customContentState.show"
       round
       teleport="body"
       position="bottom"
       safe-area-inset-bottom
     >
-      <icsm-cascader
+      <fx-cascader
         v-model="customContentState.value"
         :title="t('selectArea')"
         :options="customFieldOptions"
@@ -319,8 +319,8 @@ const onFinish = (
         <template #options-top="{ tabIndex }">
           <div class="current-level">{{ t('currentLevel', tabIndex + 1) }}</div>
         </template>
-      </icsm-cascader>
-    </icsm-popup>
+     </fx-cascader>
+   </fx-popup>
   </demo-block>
 </template>
 
@@ -328,6 +328,6 @@ const onFinish = (
 .current-level {
   font-size: 14px;
   padding: 16px 16px 0;
-  color: var(--icsm-gray-6);
+  color: var(--fx-gray-6);
 }
 </style>
